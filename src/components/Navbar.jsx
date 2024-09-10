@@ -20,7 +20,7 @@ const Navbar = () => {
         <div>
           <p>LOGO</p>
         </div>
-        <ul className="hidden lg:flex lg:flex-row md:gap-[50px]">
+        <ul className="font-poppins hidden lg:flex lg:flex-row md:gap-[50px]">
           <li className="hover:text-[#FFA700]">
             <a href="#">Home</a>
           </li>
@@ -61,7 +61,7 @@ const Navbar = () => {
     </div>
       {showNav && (
         <div className="lg:hidden z-10 fixed h-1/2 mt-[50px] py-[20px] inset-0 bg-black text-white flex items-center justify-center text-center mx-auto px-4 ">
-          <ul className="flex flex-col gap-7">
+          <ul className="font-poppins flex flex-col gap-7">
           <li className="hover:text-[#FFA700]">
             <a href="#">Home</a>
           </li>
