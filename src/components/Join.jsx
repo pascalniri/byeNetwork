@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Join = () => {
   return (
@@ -27,9 +29,17 @@ const Join = () => {
             <p className="text-[13px] text-[#474747]">
             BYEN uses the Mighty App to manage and streamline our organization. Click below to learn more about its features and benefits.
             </p>
-            <button className=" w-full mt-[20px] font-normal text-black bg-[#FFA700] px-[30px] py-[10px] rounded-full">
-              CLICK HERE
-            </button>
+            <motion.button
+            className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+            initial="hidden"
+            whileHover={{ scale: 1.05, rotate: 5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <p className="text-white">CLICK HERE</p>
+            <span className="bg-white px-[15px] py-[15px] rounded-full">
+              <FaArrowRight />
+            </span>
+          </motion.button>
           </div>
         </div>
 
@@ -50,9 +60,17 @@ const Join = () => {
               Inspire and guide our youth by becoming a mentor. Click below for
               more details on how you can make a positive impact.
             </p>
-            <button className=" w-full mt-[20px] font-normal text-black bg-[#FFA700] px-[30px] py-[10px] rounded-full">
-              CLICK HERE
-            </button>
+            <motion.button
+            className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+            initial="hidden"
+            whileHover={{ scale: 1.05, rotate: 5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <p className="text-white">CLICK HERE</p>
+            <span className="bg-white px-[15px] py-[15px] rounded-full">
+              <FaArrowRight />
+            </span>
+          </motion.button>
           </div>
         </div>
       </div>

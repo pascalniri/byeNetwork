@@ -1,5 +1,7 @@
 import React from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -22,9 +24,17 @@ const Navbar = () => {
             <a href="#">Projects</a>
           </li>
         </ul>
-        <button className="hidden lg:flex lg:font-normal lg:text-black lg:bg-[#FFA700] lg:px-[30px] lg:py-[10px] lg:rounded-full">
-          SHOP
-        </button>
+        <motion.button
+            className="hidden lg:flex font-light bg-yellow-500 flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
+            initial="hidden"
+            whileHover={{ scale: 1.05, rotate: 5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <p className="text-black">SHOP</p>
+            <span className="bg-black px-[10px] py-[10px] rounded-full">
+              <FaArrowRight />
+            </span>
+          </motion.button>
 
         {/* Small devices bar for toggling the links */}
         <FaBarsStaggered className="text-[25px] cursor-pointer flex lg:hidden " />
