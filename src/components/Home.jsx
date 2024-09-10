@@ -29,16 +29,22 @@ const Home = () => {
             support. We aim to foster leadership and opportunities for growth.
           </p>
 
-          <motion.button
-            whileHover={{ scale: 1.05, rotate: 5 }}
-            className="mt-[80px] font-normal bg-[#FFA700] flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
-            whileTap={{ scale: 0.95 }}
+          <a
+            href="https://form.jotform.com/240665208958062"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <p className="text-black">APPLY NOW</p>
-            <span className="bg-black px-[15px] py-[15px] rounded-full">
-              <FaArrowRight />
-            </span>
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              className="mt-[80px] font-normal bg-[#FFA700] flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+              whileTap={{ scale: 0.95 }}
+            >
+              <p className="text-black">APPLY NOW</p>
+              <span className="bg-black px-[15px] py-[15px] rounded-full">
+                <FaArrowRight />
+              </span>
+            </motion.button>
+          </a>
         </div>
       </div>
       <style jsx>{`

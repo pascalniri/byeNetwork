@@ -95,7 +95,10 @@ const About = () => {
   };
 
   return (
-    <div ref={sectionRef} className="mx-auto px-4 mt-[60px] font-poppins md:px-0 md:w-[80%] flex flex-col justify-center items-center">
+    <div
+      ref={sectionRef}
+      className="mx-auto px-4 mt-[60px] font-poppins md:px-0 md:w-[80%] flex flex-col justify-center items-center"
+    >
       <motion.div
         className="flex flex-col justify-center items-center text-center md:w-[80%]"
         initial="hidden"
@@ -173,20 +176,25 @@ const About = () => {
               Seconds
             </span>
           </div>
-
-          <motion.button
-            className="mt-[80px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
-            initial="hidden"
-            animate={startCountdown ? "visible" : "hidden"}
-            variants={buttonAnimation}
-            whileHover={{ scale: 1.05, rotate: 5 }}
-            whileTap={{ scale: 0.95 }}
+          <a
+            href="https://form.jotform.com/240665208958062"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <p className="text-white">ARE YOU INTERESTED !</p>
-            <span className="bg-white px-[15px] py-[15px] rounded-full">
-              <FaArrowRight />
-            </span>
-          </motion.button>
+            <motion.button
+              className="mt-[80px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+              initial="hidden"
+              animate={startCountdown ? "visible" : "hidden"}
+              variants={buttonAnimation}
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <p className="text-white">ARE YOU INTERESTED !</p>
+              <span className="bg-white px-[15px] py-[15px] rounded-full">
+                <FaArrowRight />
+              </span>
+            </motion.button>
+          </a>
         </motion.div>
 
         <motion.div
