@@ -1,23 +1,22 @@
 import React from 'react'
 import './App.css'
-import Home from './components/Home'
-import About from './components/About'
-import Offers from './components/Offers'
-import Join from './components/Join'
-import Latest from './components/Latest'
-import Footer from './components/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import LandingPage from './pages/LandingPage'
+import Navbar from './components/Navbar'
+import Projects from './components/Projects'
+import Resources from './components/Resources'
 
 function App() {
 
   return (
-   <div>
-    <Home />
-    <About />
-    <Offers />
-    <Join />
-    <Latest />
-    <Footer/>
-   </div>
+   <BrowserRouter>
+       <Navbar />
+   <Routes>
+    <Route exact path='/' element={<LandingPage />} />
+    <Route path='/projects' element={<Projects />} />
+    <Route path='/resources' element={<Resources />} />
+   </Routes>
+   </BrowserRouter>
   )
 }
 

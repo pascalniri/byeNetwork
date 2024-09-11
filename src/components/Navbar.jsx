@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className=" top-0 fixed w-full z-10 bg-black">
       <div className="font-poppins mx-auto px-4 md:w-[80%] lg:w-[80%]">
         <div className=" font-light flex flex-row justify-between items-center py-[20px] text-white font-poppins">
           <div>
@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
           <ul className="font-poppins hidden lg:flex lg:flex-row md:gap-[50px]">
             <li className="hover:text-[#FFA700]">
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className="hover:text-[#FFA700]">
               <a href="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
@@ -32,10 +32,10 @@ const Navbar = () => {
               </a>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="#">Resources</a>
+              <a href="/resources">Resources</a>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="#">Projects</a>
+              <a href="/projects">Projects</a>
             </li>
           </ul>
           <motion.button
@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="lg:hidden z-10 fixed h-1/2 mt-[50px] py-[20px] inset-0 bg-black text-white flex items-center justify-center text-center mx-auto px-4 ">
           <ul className="font-poppins flex flex-col gap-7">
             <li className="hover:text-[#FFA700]">
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className="hover:text-[#FFA700]">
               <a
@@ -77,10 +77,10 @@ const Navbar = () => {
               </a>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="#">Resources</a>
+              <a href="/resources">Resources</a>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="#">Projects</a>
+              <a href="/projects">Projects</a>
             </li>
             <motion.button
               className="font-light flex bg-[#FFA700] flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"

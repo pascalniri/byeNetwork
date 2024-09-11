@@ -16,7 +16,7 @@ const Home = () => {
         {/* Dark background with subtle animation */}
       </motion.div>
 
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="flex flex-col justify-center py-[100px] mx-auto px-4 sm:px-0 sm:w-[80%] lg:w-[80%] text-white font-poppins lg:min-h-[100vh] ">
         <div className="flex flex-col justify-center items-center text-center md:text-left md:items-start w-full md:w-2/3">
           <h1 className="font-thin text-[45px] md:text-[60px] transform scale-90 opacity-0 animate-zoom-in">

@@ -18,7 +18,7 @@ const Latest = () => {
       name: "IKARION AMMON",
       description:
         "An Ambassador for the Black Youth Empowerment Network, has made significant strides with the recent launch of his visionary clothing line, '5 Digit.' Demonstrating unwavering dedication to his academic journey, he has chosen to embark on a path of higher education at Kennesaw State University, where he will focus his studies on Environmental Engineering.",
-      image: "https://byenetwork.org/wp-content/uploads/2024/04/IMG_2323.png",
+      image: "https://byenetwork.org/wp-content/uploads/2024/03/426160354_17870931840053975_1626753921150246260_n.jpg",
     },
     {
       id: 3,
