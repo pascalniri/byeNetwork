@@ -9,31 +9,31 @@ const Projects = () => {
   // Sample images for the BYEN PHOTO SHOOT tab
   const images = [
     {
-      src: "1.jpeg",
+      src: "https://byenetwork.org/wp-content/uploads/2024/03/427041481_17870931813053975_5858489400082454964_n.jpg",
       alt: "Team member 1",
     },
     {
-      src: "1.jpeg",
+      src: "https://byenetwork.org/wp-content/uploads/2024/03/426723892_17870931831053975_885328139677086406_n.jpg",
       alt: "Team member 2",
     },
     {
-      src: "1.jpeg",
+      src: "https://byenetwork.org/wp-content/uploads/2024/03/426153753_17870931822053975_445758728552559809_n.jpg",
       alt: "Team member 3",
     },
     {
-      src: "1.jpeg",
+      src: "https://byenetwork.org/wp-content/uploads/2024/03/426723091_17870931858053975_7321406886770890591_n.jpg",
       alt: "Team member 4",
     },
     {
-      src: "1.jpeg",
+      src: "https://byenetwork.org/wp-content/uploads/2024/03/426160354_17870931840053975_1626753921150246260_n.jpg",
       alt: "Team member 5",
     },
     {
-      src: "1.jpeg",
+      src: "https://byenetwork.org/wp-content/uploads/2024/03/425663868_17870931849053975_3086581693884443044_n.jpg",
       alt: "Team member 6",
     },
     {
-      src: "1.jpeg",
+      src: "https://byenetwork.org/wp-content/uploads/2024/02/agwdf-scaled.jpeg",
       alt: "Team member 6",
     },
   ];
@@ -97,7 +97,7 @@ const Projects = () => {
             <div className="shadow-xl rounded-[10px]">
               <iframe
                 className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
-                // src="https://www.youtube.com/embed/1kGuNjF55NI"
+                src="https://www.youtube.com/embed/1kGuNjF55NI"
                 title="Foundation: Part 1. VISIONARIES"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -121,7 +121,7 @@ const Projects = () => {
             <div className="shadow-xl rounded-[10px]">
               <iframe
                 className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
-                // src="https://www.youtube.com/embed/s4n4ZQDOQcA"
+                src="https://www.youtube.com/embed/s4n4ZQDOQcA"
                 title="Foundation: Part 2. IMPACT"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -143,7 +143,7 @@ const Projects = () => {
             <div className="shadow-xl rounded-[10px]">
               <iframe
                 className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
-                // src="https://www.youtube.com/embed/YpZfC0xPMjQ"
+                src="https://www.youtube.com/embed/YpZfC0xPMjQ"
                 title="Foundation: Part 3. BYENGINNING"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
