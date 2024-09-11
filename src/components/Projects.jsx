@@ -97,7 +97,7 @@ const Projects = () => {
             <div className="shadow-xl rounded-[10px]">
               <iframe
                 className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
-                src="https://www.youtube.com/embed/1kGuNjF55NI"
+                // src="https://www.youtube.com/embed/1kGuNjF55NI"
                 title="Foundation: Part 1. VISIONARIES"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -121,7 +121,7 @@ const Projects = () => {
             <div className="shadow-xl rounded-[10px]">
               <iframe
                 className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
-                src="https://www.youtube.com/embed/s4n4ZQDOQcA"
+                // src="https://www.youtube.com/embed/s4n4ZQDOQcA"
                 title="Foundation: Part 2. IMPACT"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -143,7 +143,7 @@ const Projects = () => {
             <div className="shadow-xl rounded-[10px]">
               <iframe
                 className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
-                src="https://www.youtube.com/embed/YpZfC0xPMjQ"
+                // src="https://www.youtube.com/embed/YpZfC0xPMjQ"
                 title="Foundation: Part 3. BYENGINNING"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
