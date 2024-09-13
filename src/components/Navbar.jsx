@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" top-0 fixed w-full z-10 bg-black">
+    <div className=" top-0 fixed w-full z-10 backdrop-blur-lg bg-black bg-opacity-20">
       <div className="font-poppins mx-auto px-4 md:w-[80%] lg:w-[80%]">
         <div className=" font-light flex flex-row justify-between items-center py-[20px] text-white font-poppins">
           <div>
