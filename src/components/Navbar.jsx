@@ -16,23 +16,23 @@ const Navbar = () => {
     <div className=" top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
       <div className="font-poppins px-4 mx-auto md:w-[80%] backdrop-blur-lg bg-black bg-opacity-30 rounded-2xl">
         <div className=" font-light flex flex-row justify-between items-center py-[20px] text-white font-poppins">
-            <a href="/">
+            <Link to ="/">
             <img src={logo} alt="logo" className="w-[100px] h-full" />
-            </a>
+            </Link>
           <ul className="font-poppins hidden lg:flex lg:flex-row md:gap-[50px]">
             <li className="hover:text-[#FFA700]">
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
+              <Link to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
                target="_blank"
                 rel="noopener noreferrer"
               >
                 Membership
-              </a>
+              </Link>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="#">Resources</a>
+              <Link to="#">Resources</Link>
             </li>
             <li className="hover:text-[#FFA700]">
               <Link to="/projects">Projects</Link>
@@ -66,19 +66,19 @@ const Navbar = () => {
         <div className="lg:hidden z-10 fixed h-[400px] mt-[100px] py-[20px] inset-0 backdrop-blur-lg bg-black bg-opacity-30 mx-4 md:mx-auto rounded-2xl md:w-[80%] text-white flex items-center justify-center text-center px-4 ">
           <ul className="font-poppins flex flex-col gap-7">
             <li className="hover:text-[#FFA700]">
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a
-                href="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
+              <Link
+                to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Membership
-              </a>
+              </Link>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="#">Resources</a>
+              <Link to="#">Resources</Link>
             </li>
             <li className="hover:text-[#FFA700]">
               <Link to="/projects">Projects</Link>
