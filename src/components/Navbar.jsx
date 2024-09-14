@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { div, p } from "framer-motion/client";
 import { FaTimes } from "react-icons/fa";
-
+import logo from "../assets/logo.svg"
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
 
@@ -13,12 +12,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" top-0 fixed w-full z-10 bg-black">
-      <div className="font-poppins mx-auto px-4 md:w-[80%] lg:w-[80%]">
+    <div className=" top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
+      <div className="font-poppins px-4 mx-auto md:w-[80%] backdrop-blur-lg bg-black bg-opacity-30 rounded-2xl">
         <div className=" font-light flex flex-row justify-between items-center py-[20px] text-white font-poppins">
-          <div>
-            <p>LOGO</p>
-          </div>
+            <a href="/">
+            <img src={logo} alt="logo" className="w-[100px] h-full" />
+            </a>
           <ul className="font-poppins hidden lg:flex lg:flex-row md:gap-[50px]">
             <li className="hover:text-[#FFA700]">
               <a href="/">Home</a>
@@ -59,10 +58,10 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        <hr className="border-t border-gray-300" />
+        {/* <hr className="border-t border-gray-300" /> */}
       </div>
       {showNav && (
-        <div className="lg:hidden z-10 fixed h-1/2 mt-[50px] py-[20px] inset-0 bg-black text-white flex items-center justify-center text-center mx-auto px-4 ">
+        <div className="lg:hidden z-10 fixed h-[400px] mt-[100px] py-[20px] inset-0 backdrop-blur-lg bg-black bg-opacity-30 mx-4 md:mx-auto rounded-2xl md:w-[80%] text-white flex items-center justify-center text-center px-4 ">
           <ul className="font-poppins flex flex-col gap-7">
             <li className="hover:text-[#FFA700]">
               <a href="/">Home</a>
