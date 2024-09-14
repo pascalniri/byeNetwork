@@ -53,13 +53,12 @@ const Home = () => {
         <div className="flex flex-col justify-center items-center py-[100px] text-center md:text-left md:items-start w-full md:w-2/3">
           <h1 className="font-thin text-[45px] md:text-[60px]">
             <span className="font-medium">Black</span> Youth <br />
-            <span className="font-medium">
             <Typical
+                  className="font-medium"
                   steps={['Empowerment', 3000, 'Network', 3000]}
                   loop={Infinity}
                   wrapper="span"
                 />
-            </span>
           </h1>
           <p className="font-extralight mt-[30px] md:mt-auto">
             Platform dedicated to inspiring and empowering young Black
