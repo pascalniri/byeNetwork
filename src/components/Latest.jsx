@@ -11,21 +11,21 @@ const Latest = () => {
       name: "JABARI MORRISON",
       description:
         "An innovative leader, spearheaded the establishment of the Shiloh Student Athlete Association at Shiloh High School in Snellville, Georgia. In his capacity as founder, he orchestrated and moderated a thought-provoking panel discussion addressing the intricate balance between athletic pursuits and academic excellence.",
-      image: "https://byenetwork.org/wp-content/uploads/2024/04/IMG_2322.jpeg",
+      image: "/jabari.jpeg",
     },
     {
       id: 2,
       name: "IKARION AMMON",
       description:
         "An Ambassador for the Black Youth Empowerment Network, has made significant strides with the recent launch of his visionary clothing line, '5 Digit.' Demonstrating unwavering dedication to his academic journey, he has chosen to embark on a path of higher education at Kennesaw State University, where he will focus his studies on Environmental Engineering.",
-      image: "https://byenetwork.org/wp-content/uploads/2024/03/426160354_17870931840053975_1626753921150246260_n.jpg",
+      image: "/ammon.jpg",
     },
     {
       id: 3,
       name: "A'TEV COGER",
       description:
         "An accomplished athlete with a bold vision, has committed to joining Peru State's esteemed football program. Alongside his athletic endeavors, he is poised to unveil his cutting-edge clothing brand, 'Only Fear Fear,' showcasing his entrepreneurial spirit and drive for success.",
-      image: "https://byenetwork.org/wp-content/uploads/2024/04/IMG_2324.jpeg",
+      image: "/coger.jpeg",
     },
   ];
 

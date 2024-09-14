@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-
+import join from "../assets/join.jpg"
+import mentor from "../assets/mentor.png"
 const Join = () => {
   return (
     <div className="font-poppins mt-[150px] mx-auto px-4 md:w-[80%]">
@@ -17,8 +18,8 @@ const Join = () => {
         {/* first container of joining */}
         <div className="bg-gray-100 rounded-[10px] shadow-lg">
           <img
-            src="https://blog.palpensions.com:8036/wp-content/uploads/2023/08/Importance-of-Mentorship.png"
-            alt=""
+            src={mentor}
+            alt="mentor"
             className="rounded-t-[10px] w-full h-[250px]"
           />
 
@@ -47,8 +48,8 @@ const Join = () => {
 
         <div className="bg-gray-100 rounded-[10px] shadow-lg">
           <img
-            src="https://blog.palpensions.com:8036/wp-content/uploads/2023/08/Importance-of-Mentorship.png"
-            alt=""
+            src={join}
+            alt="Join"
             className="rounded-t-[10px] w-full h-[250px]"
           />
 

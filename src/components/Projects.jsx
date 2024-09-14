@@ -9,32 +9,32 @@ const Projects = () => {
   // Sample images for the BYEN PHOTO SHOOT tab
   const images = [
     {
-      src: "https://byenetwork.org/wp-content/uploads/2024/03/427041481_17870931813053975_5858489400082454964_n.jpg",
+      src: "/1.jpeg",
       alt: "Team member 1",
     },
     {
-      src: "https://byenetwork.org/wp-content/uploads/2024/03/426723892_17870931831053975_885328139677086406_n.jpg",
+      src: "/2.jpg",
       alt: "Team member 2",
     },
     {
-      src: "https://byenetwork.org/wp-content/uploads/2024/03/426153753_17870931822053975_445758728552559809_n.jpg",
+      src: "/3.jpg",
       alt: "Team member 3",
     },
     {
-      src: "https://byenetwork.org/wp-content/uploads/2024/03/426723091_17870931858053975_7321406886770890591_n.jpg",
+      src: "/4.jpg",
       alt: "Team member 4",
     },
     {
-      src: "https://byenetwork.org/wp-content/uploads/2024/03/426160354_17870931840053975_1626753921150246260_n.jpg",
+      src: "/5.jpg",
       alt: "Team member 5",
     },
     {
-      src: "https://byenetwork.org/wp-content/uploads/2024/03/425663868_17870931849053975_3086581693884443044_n.jpg",
+      src: "/6.jpg",
       alt: "Team member 6",
     },
     {
-      src: "https://byenetwork.org/wp-content/uploads/2024/02/agwdf-scaled.jpeg",
-      alt: "Team member 6",
+      src: "/7.jpg",
+      alt: "Team member 7",
     },
   ];
 

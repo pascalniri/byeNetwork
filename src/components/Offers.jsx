@@ -1,5 +1,8 @@
 import React from "react";
-
+import resources from "../assets/resources.webp"
+import event from "../assets/event.jpg"
+import mentor from "../assets/mentor.png"
+import community from "../assets/community.jpg"
 const Offers = () => {
   return (
     <div className="mt-[150px] flex flex-col font-poppins w-full mx-auto px-4 md:w-[80%]">
@@ -19,7 +22,7 @@ const Offers = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-[20px] mt-[60px]">
         <div
           className="relative rounded-lg shadow-lg group w-full h-[250px] bg-cover bg-center"
-          style={{ backgroundImage: "url(https://www.euroschoolindia.com/wp-content/uploads/2024/01/renewable-natural-source-jpg.webp)" }}
+          style={{ backgroundImage: `url(${resources})`}}
         >
           {/* Dark blur overlay with words, initially hidden */}
           <div className="absolute rounded-lg inset-0 bg-black bg-opacity-50 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -29,7 +32,7 @@ const Offers = () => {
 
         <div
           className="relative rounded-lg  shadow-lg group w-full h-[250px] bg-cover bg-center"
-          style={{ backgroundImage: "url(https://www.adobe.com/content/dam/www/us/en/events/overview-page/eventshub_evergreen_opengraph_1200x630_2x.jpg)" }}
+          style={{ backgroundImage: `url(${event})`}}
         >
           {/* Dark blur overlay with words, initially hidden */}
           <div className="absolute rounded-lg inset-0 bg-black bg-opacity-50 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -39,7 +42,7 @@ const Offers = () => {
 
         <div
           className="relative rounded-lg shadow-lg group w-full h-[250px] bg-cover bg-center"
-          style={{ backgroundImage: "url(https://blog.palpensions.com:8036/wp-content/uploads/2023/08/Importance-of-Mentorship.png)" }}
+          style={{ backgroundImage: `url(${mentor})`}}
         >
           {/* Dark blur overlay with words, initially hidden */}
           <div className="absolute rounded-lg inset-0 bg-black bg-opacity-50 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -49,7 +52,7 @@ const Offers = () => {
 
         <div
           className="relative rounded-lg shadow-lg group w-full h-[250px] bg-cover bg-center"
-          style={{ backgroundImage: "url(https://www.wfco.org/image/photos/18374-fitandcrop-1200x681.jpg)" }}
+          style={{ backgroundImage: `url(${community})`}}
         >
           {/* Dark blur overlay with words, initially hidden */}
           <div className="absolute rounded-lg inset-0 bg-black bg-opacity-50 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
