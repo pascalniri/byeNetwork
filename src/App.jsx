@@ -12,8 +12,8 @@ function App() {
    <BrowserRouter>
        <Navbar />
    <Routes>
-    <Route exact path='/' element={<LandingPage />} />
-    <Route path='/projects' element={<Projects />} />
+    <Route  path='/' exact component ={<LandingPage />} />
+    <Route path='/projects' component ={<Projects />} />
     {/* <Route path='/resources' element={<Resources />} /> */}
    </Routes>
    </BrowserRouter>
