@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.svg"
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
 
@@ -34,7 +35,8 @@ const Navbar = () => {
               <a href="#">Resources</a>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="/projects">Projects</a>
+              <Link to="/projects">Projects</Link>
+              
             </li>
           </ul>
           <motion.button
@@ -79,7 +81,7 @@ const Navbar = () => {
               <a href="#">Resources</a>
             </li>
             <li className="hover:text-[#FFA700]">
-              <a href="/projects">Projects</a>
+              <Link to="/projects">Projects</Link>
             </li>
             <motion.button
               className="font-light flex bg-[#FFA700] flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
