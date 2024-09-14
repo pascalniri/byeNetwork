@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Navbar from "./Navbar";
 import { motion } from "framer-motion";
-import Typical from "react-typical";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -53,12 +52,17 @@ const Home = () => {
         <div className="flex flex-col justify-center items-center py-[100px] text-center md:text-left md:items-start w-full md:w-2/3">
           <h1 className="font-thin text-[45px] md:text-[60px]">
             <span className="font-medium">Black</span> Youth <br />
-            <Typical
-                  className="font-medium"
-                  steps={['Empowerment', 3000, 'Network', 3000]}
-                  loop={Infinity}
-                  wrapper="span"
-                />
+            <span className="font-medium">
+          <Typewriter
+            words={['Empowerment', 'Network']}
+            loop={0} // Set to 0 to loop indefinitely
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={3000} // Delay between words
+          />
+        </span>
           </h1>
           <p className="font-extralight mt-[30px] md:mt-auto">
             Platform dedicated to inspiring and empowering young Black
