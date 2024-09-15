@@ -66,13 +66,13 @@ const Projects = () => {
             <h1 className="text-[28px] md:text-[35px] font-light">
               Our<span className="font-bold"> Mentors</span>
               <div className="mt-[50px]">
-                <span className="flex flex-col md:flex-row gap-[100px]">
+                <span className="flex flex-col md:flex-row gap-x-[100px] gap-[10px]">
                   <img
                     src={mentor1}
                     alt="Keshawn Brown"
                     className="md:w-[600px] md:h-[400px]"
                   />
-                  <p className="text-[13px] font-normal">
+                  <p className="text-[16px] font-normal">
                     <span className="text-[#474747]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Fusce volutpat quam nec sapien blandit, et volutpat sem
@@ -100,13 +100,13 @@ const Projects = () => {
           <h1 className="text-[28px] md:text-[35px] font-light">
             Our<span className="font-bold"> Events</span>
             <div className="mt-[50px]">
-              <span className="flex flex-col md:flex-row gap-[100px]">
+              <span className="flex flex-col md:flex-row gap-y-[30px] gap-x-[100px]">
                 <img
                   src={events}
                   alt="Keshawn Brown"
                   className="md:w-[600px] md:h-[400px] rounded-2xl shadow-xl"
                 />
-                <p className="text-[13px] mb-[90px] font-normal">
+                <p className="text-[13px] font-normal">
                     <h1 className="mb-[20px] font-semibold text-[20px]">Conscious Choices: Empowering Black Youth Through Mindful Decision-Making</h1>
                   <span className="text-[#474747]">
                     Hey everyone! We're excited to invite you to a special

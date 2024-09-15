@@ -4,13 +4,16 @@ import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.svg"
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
 
   const toggleMenu = () => {
     setShowNav((prev) => !prev);
   };
+
+  const normalLink = "";
+  const activeLink = "text-[#FFA700] font-bold"
 
   return (
     <div className=" top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
@@ -20,22 +23,22 @@ const Navbar = () => {
             <img src={logo} alt="logo" className="w-[100px] h-full" />
             </Link>
           <ul className="font-poppins hidden lg:flex lg:flex-row md:gap-[50px]">
-            <li className="hover:text-[#FFA700]">
-              <Link to="/">Home</Link>
+            <li>
+              <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink} >Home</NavLink>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
+              <NavLink to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
                target="_blank"
                 rel="noopener noreferrer"
               >
                 Membership
-              </Link>
+              </NavLink>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link to="/resources">Resources</Link>
+              <NavLink to="/resources" className={({isActive}) => isActive ? activeLink : normalLink}>Resources</NavLink>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link to="/projects">Projects</Link>
+              <NavLink to="/projects" className={({isActive}) => isActive ? activeLink : normalLink}>Projects</NavLink>
               
             </li>
           </ul>
@@ -66,22 +69,22 @@ const Navbar = () => {
         <div className="lg:hidden z-10 fixed h-[400px] mt-[100px] py-[20px] inset-0 backdrop-blur-lg bg-black bg-opacity-30 mx-4 md:mx-auto rounded-2xl md:w-[80%] text-white flex items-center justify-center text-center px-4 ">
           <ul className="font-poppins flex flex-col gap-7">
             <li className="hover:text-[#FFA700]">
-              <Link to="/">Home</Link>
+              <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>Home</NavLink>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link
+              <NavLink
                 to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Membership
-              </Link>
+              </NavLink>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link to="/resources">Resources</Link>
+              <NavLink to="/resources" className={({isActive}) => isActive ? activeLink : normalLink}>Resources</NavLink>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link to="/projects">Projects</Link>
+              <NavLink to="/projects" className={({isActive}) => isActive ? activeLink : normalLink}>Projects</NavLink>
             </li>
             <motion.button
               className="font-light flex bg-[#FFA700] flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
