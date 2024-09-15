@@ -92,7 +92,7 @@ const Projects = () => {
           </p>
 
           {/* YouTube Video */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] mb-[100px]">
             {/* First part of the video */}
             <div className="shadow-xl rounded-[10px]">
               <iframe

@@ -4,7 +4,6 @@ import About from '../components/About'
 import Offers from '../components/Offers'
 import Join from '../components/Join'
 import Latest from '../components/Latest'
-import Footer from '../components/Footer'
 
 const LandingPage = () => {
   return (
@@ -14,9 +13,8 @@ const LandingPage = () => {
       <Offers />
       <Join />
       <Latest />
-      <Footer />
     </div>
   )
 }
 
-export default LandingPage
+export default LandingPage;

@@ -32,7 +32,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link to="#">Resources</Link>
+              <Link to="/resources">Resources</Link>
             </li>
             <li className="hover:text-[#FFA700]">
               <Link to="/projects">Projects</Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="hover:text-[#FFA700]">
-              <Link to="#">Resources</Link>
+              <Link to="/resources">Resources</Link>
             </li>
             <li className="hover:text-[#FFA700]">
               <Link to="/projects">Projects</Link>
