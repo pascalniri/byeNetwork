@@ -117,7 +117,7 @@ const About = () => {
         </p>
       </motion.div>
 
-      <div className="mt-[150px] flex flex-col lg:flex-row gap-[20px]">
+      <div className="mt-[70px] flex flex-col lg:flex-row gap-[20px]">
         <motion.div
           className="w-full"
           initial="hidden"

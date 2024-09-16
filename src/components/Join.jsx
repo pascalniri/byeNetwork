@@ -5,7 +5,7 @@ import join from "../assets/join.jpg"
 import mentor from "../assets/mentor.png"
 const Join = () => {
   return (
-    <div className="font-poppins mt-[150px] mx-auto px-4 md:px-0 md:w-[80%]">
+    <div className="font-poppins mt-[80px] md:mt-[150px] mx-auto px-4 md:px-0 md:w-[80%]">
       <h1 className="text-[35px] font-light">
         Want <span className="font-bold">To Join</span> The Network?
       </h1>
