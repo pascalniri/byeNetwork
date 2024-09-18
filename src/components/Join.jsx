@@ -28,16 +28,15 @@ const Join = () => {
               Want to become a mentor?
             </h1>
             <p className="text-[13px] text-[#474747]">
-            BYEN uses the Mighty App to manage and streamline our organization. Click below to learn more about its features and benefits.
-            </p>
+            BYEN provides the tools and resources you need to connect, grow, and make a lasting impact. Click below to learn more about how you can get involved.            </p>
             <motion.button
-            className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+            className="mt-[20px] font-light bg-[#6A402F] flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
             initial="hidden"
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <p className="text-white">CLICK HERE</p>
-            <span className="bg-white px-[15px] py-[15px] rounded-full">
+            <p className="text-black">CLICK HERE</p>
+            <span className="bg-black text-white px-[15px] py-[15px] rounded-full">
               <FaArrowRight />
             </span>
           </motion.button>
@@ -62,13 +61,13 @@ const Join = () => {
               more details on how you can make a positive impact.
             </p>
             <motion.button
-            className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+            className="mt-[20px] font-light bg-[#6A402F] flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
             initial="hidden"
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <p className="text-white">CLICK HERE</p>
-            <span className="bg-white px-[15px] py-[15px] rounded-full">
+            <p className="text-black">CLICK HERE</p>
+            <span className="bg-black text-white px-[15px] py-[15px] rounded-full">
               <FaArrowRight />
             </span>
           </motion.button>

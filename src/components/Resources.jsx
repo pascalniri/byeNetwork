@@ -50,13 +50,13 @@ const Projects = () => {
             ahead.
           </p>
           <motion.button
-            className="mt-[30px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+            className="mt-[30px] font-light bg-[#6A402F] flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
             initial="hidden"
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <p className="text-white">CLICK TO APPLY</p>
-            <span className="bg-white px-[15px] py-[15px] rounded-full">
+            <p className="text-black">CLICK TO APPLY</p>
+            <span className="text-white bg-black px-[15px] py-[15px] rounded-full">
               <FaArrowRight />
             </span>
           </motion.button>
@@ -84,10 +84,10 @@ const Projects = () => {
                       posuere, nisl non cursus tempor,
                     </span>
                     <span className="flex flex-row gap-[30px] mt-[50px]">
-                      <MdEmail className="text-[30px] hover:text-[#EAB308] hover:scale-150 transition cursor-pointer" />
-                      <FiInstagram className="text-[30px] hover:text-[#EAB308] hover:scale-150 transition cursor-pointer" />
-                      <FaFacebook className="text-[30px] hover:text-[#EAB308] hover:scale-150 transition cursor-pointer" />
-                      <FaYoutube className="text-[30px] hover:text-[#EAB308] hover:scale-150 transition cursor-pointer" />
+                      <MdEmail className="text-[30px] hover:text-[#6A402F] hover:scale-150 transition cursor-pointer" />
+                      <FiInstagram className="text-[30px] hover:text-[#6A402F] hover:scale-150 transition cursor-pointer" />
+                      <FaFacebook className="text-[30px] hover:text-[#6A402F] hover:scale-150 transition cursor-pointer" />
+                      <FaYoutube className="text-[30px] hover:text-[#6A402F] hover:scale-150 transition cursor-pointer" />
                     </span>
                   </p>
                 </span>

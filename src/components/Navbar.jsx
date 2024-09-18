@@ -13,20 +13,20 @@ const Navbar = () => {
   };
 
   const normalLink = "";
-  const activeLink = "text-[#FFA700] font-bold"
+  const activeLink = "text-[#6A402F] font-bold"
 
   return (
     <div className=" top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
       <div className="font-poppins px-4 mx-auto md:w-[80%] backdrop-blur-lg bg-black bg-opacity-30 rounded-2xl">
         <div className=" font-light flex flex-row justify-between items-center py-[20px] text-white font-poppins">
             <Link to ="/">
-            <img src={logo} alt="logo" className="w-[100px] h-full" />
+            <img src={logo} alt="logo" className="w-[50px] h-full" />
             </Link>
           <ul className="font-poppins hidden lg:flex lg:flex-row md:gap-[50px]">
             <li>
               <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink} >Home</NavLink>
             </li>
-            <li className="hover:text-[#FFA700]">
+            <li className="hover:text-[#6A402F]">
               <NavLink to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
                target="_blank"
                 rel="noopener noreferrer"
@@ -34,16 +34,16 @@ const Navbar = () => {
                 Membership
               </NavLink>
             </li>
-            <li className="hover:text-[#FFA700]">
+            <li className="hover:text-[#6A402F]">
               <NavLink to="/resources" className={({isActive}) => isActive ? activeLink : normalLink}>Resources</NavLink>
             </li>
-            <li className="hover:text-[#FFA700]">
+            <li className="hover:text-[#6A402F]">
               <NavLink to="/projects" className={({isActive}) => isActive ? activeLink : normalLink}>Projects</NavLink>
               
             </li>
           </ul>
           <motion.button
-            className="hidden lg:flex font-light bg-yellow-500 flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
+            className="hidden lg:flex font-light bg-[#6A402F] flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
             initial="hidden"
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
@@ -68,10 +68,10 @@ const Navbar = () => {
       {showNav && (
         <div className="lg:hidden z-10 fixed h-[400px] mt-[100px] py-[20px] inset-0 backdrop-blur-lg bg-black bg-opacity-30 mx-4 md:mx-auto rounded-2xl md:w-[80%] text-white flex items-center justify-center text-center px-4 ">
           <ul className="font-poppins flex flex-col gap-7">
-            <li className="hover:text-[#FFA700]">
+            <li className="hover:text-[#6A402F]">
               <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>Home</NavLink>
             </li>
-            <li className="hover:text-[#FFA700]">
+            <li className="hover:text-[#6A402F]">
               <NavLink
                 to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
                 target="_blank"
@@ -80,14 +80,14 @@ const Navbar = () => {
                 Membership
               </NavLink>
             </li>
-            <li className="hover:text-[#FFA700]">
+            <li className="hover:text-[#6A402F]">
               <NavLink to="/resources" className={({isActive}) => isActive ? activeLink : normalLink}>Resources</NavLink>
             </li>
-            <li className="hover:text-[#FFA700]">
+            <li className="hover:text-[#6A402F]">
               <NavLink to="/projects" className={({isActive}) => isActive ? activeLink : normalLink}>Projects</NavLink>
             </li>
             <motion.button
-              className="font-light flex bg-[#FFA700] flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
+              className="font-light flex bg-[#6A402F] flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
               initial="hidden"
               whileHover={{ scale: 1.05, rotate: 5 }}
               whileTap={{ scale: 0.95 }}

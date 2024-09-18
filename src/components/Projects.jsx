@@ -166,7 +166,7 @@ const Projects = () => {
         </div>
       ) : (
         <motion.div
-          className="space-y-6"
+          className="space-y-6 py-[80px]"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 100 }}
         >
@@ -189,13 +189,13 @@ const Projects = () => {
           <div className="flex justify-between mt-4">
             <button
               onClick={handlePrevious}
-              className="px-4 py-2 bg-black text-white rounded-lg"
+              className="mt-[50px] px-4 py-2 bg-[#6A402F] text-black rounded-lg"
             >
               Previous
             </button>
             <button
               onClick={handleNext}
-              className="px-4 py-2 bg-black text-white rounded-lg"
+              className="mt-[50px] px-4 py-2 bg-[#6A402F] text-black rounded-lg"
             >
               Next
             </button>

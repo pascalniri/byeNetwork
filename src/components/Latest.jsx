@@ -38,7 +38,7 @@ const Latest = () => {
   };
 
   return (
-    <div className="font-poppins mx-auto px-4 md:w-[80%] mt-[100px] md:mt-[150px]">
+    <div className="font-poppins mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px]">
       <h1 className="text-[40px] font-poppins font-light">
         <span className="font-semibold">Latest</span> News
       </h1>
@@ -71,7 +71,7 @@ const Latest = () => {
             
                 <motion.button
                   onClick={() => handleReadMore(card)}
-                  className="mt-[20px] font-light bg-[#FFA700] flex flex-row items-center justify-center gap-[10px] pl-[20px] pr-[6px] py-[6px] rounded-full"
+                  className="mt-[20px] font-light bg-[#6A402F] flex flex-row items-center justify-center gap-[10px] pl-[20px] pr-[6px] py-[6px] rounded-full"
               initial="hidden"
               whileHover={{ scale: 1.05, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
