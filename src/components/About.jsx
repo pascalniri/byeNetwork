@@ -2,213 +2,46 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import aboutPic from "../assets/aboutPic.jpeg";
 import { FaArrowRight } from "react-icons/fa6";
-
+import mission from "../assets/mission.svg"
+import vision from "../assets/vision.svg"
 const About = () => {
-  const [days, setDays] = useState(10);
-  const [hours, setHours] = useState(24);
-  const [minutes, setMinutes] = useState(60);
-  const [seconds, setSeconds] = useState(60);
-  const [startCountdown, setStartCountdown] = useState(false);
-
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStartCountdown(true); // Start countdown when section is in view
-        }
-      },
-      { threshold: 0.1 } // Adjusted threshold for small devices
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (startCountdown) {
-      const totalDuration = 3000; // 3 seconds
-      const intervalTime = 100; // How often to update (ms)
-
-      const daysStep = days / (totalDuration / intervalTime);
-      const hoursStep = hours / (totalDuration / intervalTime);
-      const minutesStep = minutes / (totalDuration / intervalTime);
-      const secondsStep = seconds / (totalDuration / intervalTime);
-
-      const interval = setInterval(() => {
-        setSeconds((prev) => Math.max(0, prev - secondsStep));
-        setMinutes((prev) => Math.max(0, prev - minutesStep));
-        setHours((prev) => Math.max(0, prev - hoursStep));
-        setDays((prev) => Math.max(0, prev - daysStep));
-      }, intervalTime);
-
-      setTimeout(() => {
-        clearInterval(interval);
-        setDays(0);
-        setHours(0);
-        setMinutes(0);
-        setSeconds(0);
-      }, totalDuration);
-
-      return () => clearInterval(interval);
-    }
-  }, [startCountdown]);
-
-  const textAnimation = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.2 },
-    },
-  };
-
-  const imageAnimation = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1.2 },
-    },
-  };
-
-  const loadAnimation = {
-    opacity: [0, 1],
-    transition: { duration: 1.2 },
-  };
-
-  const buttonAnimation = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1.2 },
-    },
-  };
-
   return (
-    <div
-      ref={sectionRef}
-      className="mx-auto px-4 mt-[60px] font-poppins md:px-0 md:w-[80%] flex flex-col justify-center items-center"
-    >
-      <motion.div
-        className="flex flex-col justify-center items-center text-center md:w-[80%]"
-        initial="hidden"
-        animate={startCountdown ? "visible" : "hidden"}
-        variants={textAnimation}
-      >
+    <div className="mx-auto px-4 pt-[60px] font-poppins md:px-0 md:w-[80%] flex flex-col justify-center items-start text-left">
+      <div className="mb-[50px]">
         <h1 className="text-[40px] font-light">
-          <span className="font-bold">Our</span> Mission
+          <span className="font-bold">About</span> Black Youth Empowerment
+          Network (BYEN)
         </h1>
-        <p className="mt-[30px] text-[#474747]">
-          The Black Youth Empowerment Network (BYEN) is dedicated to empowering
-          young black individuals by providing diverse opportunities for growth
-          and fostering a supportive community where members can both receive
-          and offer assistance, ensuring access to resources for all to achieve
-          their aspirations.
+        <p>
+          At the Black Youth Empowerment Network (BYEN), we are committed to
+          uplifting and inspiring the next generation of young Black leaders,
+          entrepreneurs, and creatives. Founded with a vision rooted in
+          empowerment and opportunity, BYEN serves as a catalyst for change,
+          fostering personal growth, leadership, and community impact. journey.
         </p>
-      </motion.div>
-
-      <div className="mt-[70px] flex flex-col lg:flex-row gap-[20px]">
-        <motion.div
-          className="w-full"
-          initial="hidden"
-          animate={startCountdown ? "visible" : "hidden"}
-          variants={textAnimation}
-        >
-          <h1 className="text-[35px] font-light">
-            <span className="font-bold">Empower Your</span> Legacy Memorial
-            Scholarship
-          </h1>
-          <p className="mt-[30px] text-[#474747] lg:pr-[60px]">
-            The Empower Your Legacy Scholarship, initiated by the Black Youth
-            Empowerment Network, serves as a tribute in memory of Adaisha L.
-            Turner, beloved cousin of our organization's founders. This
-            scholarship is committed to offering crucial financial assistance to
-            college students, enhancing their access to essential resources for
-            a more empowered college journey, thereby continuing Adaisha's
-            lasting impact.
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] gap-y-[50px]">
+        <div>
+          <img src={mission} alt="Mission" className="w-[200px] mb-8" />{" "}
+          <p className="">
+            Our mission is to create a supportive, collaborative, and dynamic
+            space where Black youth can thrive. We believe that through
+            mentorship, access to resources, and a strong network, young people
+            can harness their potential and rise as the change-makers of
+            tomorrow. BYEN provides leadership development, campaign management
+            training, and opportunities for creative expression that equip our
+            members with the tools they need to succeed.
           </p>
-
-          <div className="grid grid-cols-2 mt-[40px] gap-[40px]">
-            <span className="font-light md:text-[25px]">
-              <motion.span
-                className="font-bold text-[30px] md:text-[50px]"
-                animate={loadAnimation}
-              >
-                {Math.floor(days)}
-              </motion.span>
-              Days
-            </span>
-            <span className="font-light md:text-[25px]">
-              <motion.span
-                className="font-bold text-[30px] md:text-[50px]"
-                animate={loadAnimation}
-              >
-                {Math.floor(hours)}
-              </motion.span>
-              Hours
-            </span>
-            <span className="font-light md:text-[25px]">
-              <motion.span
-                className="font-bold text-[30px] md:text-[50px]"
-                animate={loadAnimation}
-              >
-                {Math.floor(minutes)}
-              </motion.span>
-              Minutes
-            </span>
-            <span className="font-light md:text-[25px]">
-              <motion.span
-                className="font-bold text-[30px] md:text-[50px]"
-                animate={loadAnimation}
-              >
-                {Math.floor(seconds)}
-              </motion.span>
-              Seconds
-            </span>
-          </div>
-          <a
-            href="https://form.jotform.com/240665208958062"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <motion.button
-              className="mt-[80px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
-              initial="hidden"
-              animate={startCountdown ? "visible" : "hidden"}
-              variants={buttonAnimation}
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <p className="text-white">ARE YOU INTERESTED !</p>
-              <span className="bg-white px-[15px] py-[15px] rounded-full">
-                <FaArrowRight />
-              </span>
-            </motion.button>
-          </a>
-        </motion.div>
-
-        <motion.div
-          className="w-full"
-          initial="hidden"
-          animate={startCountdown ? "visible" : "hidden"}
-          variants={imageAnimation}
-        >
-          <img
-            src={aboutPic}
-            alt="aboutPic"
-            className="rounded-[20px] shadow-md w-full"
-          />
-        </motion.div>
+        </div>
+        <div>
+        <img src={vision} alt="Mission" className="w-[200px] mb-8" />{" "}
+          <p className="">
+            With our core values of excellence, collaboration, and innovation,
+            we're not just building individuals—we're building a legacy. Whether
+            you're a young leader looking for a community or a creative ready to
+            take the next step, BYEN is here to support you on your
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -7,14 +7,15 @@ import { MdEmail } from "react-icons/md";
 import { FiInstagram } from "react-icons/fi";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoLocation, IoTimerOutline } from "react-icons/io5";
-
+import whole from "../assets/whole.svg"
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("videos"); // State to track active tab
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
 
   return (
-    <div className="w-full md:w-[80%] mx-auto p-4 mt-[150px] font-poppins">
+   <div style={{ backgroundImage: `url(${whole})`, backgroundSize: "cover", backgroundPosition: "center" }} >
+     <div className="w-full md:w-[80%] mx-auto p-4 mt-[150px] font-poppins">
       {/* Tab navigation */}
       <div className="flex justify-center items-start mb-10">
         <button
@@ -96,7 +97,7 @@ const Projects = () => {
           </div>
         </div>
       ) : (
-        <div className="mt-[100px]">
+        <div className="my-[100px]">
           <h1 className="text-[28px] md:text-[35px] font-light">
             Our<span className="font-bold"> Events</span>
             <div className="mt-[50px]">
@@ -145,6 +146,7 @@ const Projects = () => {
         </div>
       )}
     </div>
+   </div>
   );
 };
 

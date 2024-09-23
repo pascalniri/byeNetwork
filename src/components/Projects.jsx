@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import whole from "../assets/whole.svg"
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("videos"); // State to track active tab
   const [currentPage, setCurrentPage] = useState(1);
@@ -54,6 +54,7 @@ const Projects = () => {
   };
 
   return (
+    <div style={{ backgroundImage: `url(${whole})`, backgroundSize: "cover", backgroundPosition: "center" }} >
     <div className="w-full md:w-[80%] mx-auto p-4 mt-[150px] font-poppins">
       {/* Tab navigation */}
       <div className="flex justify-center items-start mb-10">
@@ -202,6 +203,7 @@ const Projects = () => {
           </div>
         </motion.div>
       )}
+    </div>
     </div>
   );
 };
