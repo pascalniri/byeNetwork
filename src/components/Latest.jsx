@@ -71,7 +71,7 @@ const Latest = () => {
             
                 <motion.button
                   onClick={() => handleReadMore(card)}
-                  className="mt-[20px] font-light bg-[#6A402F] flex flex-row items-center justify-center gap-[10px] pl-[20px] pr-[6px] py-[6px] rounded-full"
+                  className="mt-[20px] font-light bg-white flex flex-row items-center justify-center gap-[10px] pl-[20px] pr-[6px] py-[6px] rounded-full"
               initial="hidden"
               whileHover={{ scale: 1.05, rotate: 5 }}
               whileTap={{ scale: 0.95 }}

@@ -189,13 +189,13 @@ const Projects = () => {
           <div className="flex justify-between mt-4">
             <button
               onClick={handlePrevious}
-              className="mt-[50px] px-4 py-2 bg-[#6A402F] text-black rounded-lg"
+              className="mt-[50px] px-4 py-2 bg-black text-white rounded-lg"
             >
               Previous
             </button>
             <button
               onClick={handleNext}
-              className="mt-[50px] px-4 py-2 bg-[#6A402F] text-black rounded-lg"
+              className="mt-[50px] px-4 py-2 bg-black text-white rounded-lg"
             >
               Next
             </button>
