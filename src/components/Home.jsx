@@ -48,9 +48,9 @@ const Home = () => {
       />
 
       {/* Content */}
-      <div className="flex flex-col justify-center py-[100px] mx-auto px-4 sm:px-0 sm:w-[80%] lg:w-[80%] text-white font-poppins lg:min-h-[100vh]">
+      <div className="flex flex-col justify-center py-[100px] mx-auto px-4 sm:px-0 sm:w-[80%] lg:w-[80%] text-white font-nunito lg:min-h-[100vh]">
         <div className="flex flex-col justify-center items-center py-[100px] text-center md:text-left md:items-start w-full md:w-2/3">
-          <h1 className="font-thin text-[45px] md:text-[60px]">
+          <h1 className="font-bangers font-thin text-[60px] md:text-[70px]">
             <span className="font-medium">Black</span> Youth <br />
             <span className="font-medium">
           <Typewriter
@@ -60,7 +60,7 @@ const Home = () => {
             cursorStyle="_"
             typeSpeed={70}
             deleteSpeed={50}
-            delaySpeed={3000} // Delay between words
+            delaySpeed={2000} // Delay between words
           />
         </span>
           </h1>

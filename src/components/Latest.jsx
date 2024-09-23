@@ -38,9 +38,9 @@ const Latest = () => {
   };
 
   return (
-    <div className="font-poppins mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px]">
-      <h1 className="text-[40px] font-poppins font-light">
-        <span className="font-semibold">Latest</span> News
+    <div className="font-nunito mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px]">
+      <h1 className="text-[60px] font-light font-bangers">
+        Latest News
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[40px]">

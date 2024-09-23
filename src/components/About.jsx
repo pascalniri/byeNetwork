@@ -6,11 +6,11 @@ import mission from "../assets/mission.svg"
 import vision from "../assets/vision.svg"
 const About = () => {
   return (
-    <div className="mx-auto px-4 pt-[60px] font-poppins md:px-0 md:w-[80%] flex flex-col justify-center items-start text-left">
+    <div className="mx-auto px-4 pt-[60px] font-nunito md:px-0 md:w-[80%] flex flex-col justify-center items-start text-left">
       <div className="mb-[50px]">
-        <h1 className="text-[40px] font-light">
+        <h1 className="text-[60px] font-light font-bangers">
           <span className="font-bold">About</span> Black Youth Empowerment
-          Network (BYEN)
+          <br />Network (BYEN)
         </h1>
         <p>
           At the Black Youth Empowerment Network (BYEN), we are committed to

@@ -5,10 +5,10 @@ import mentor from "../assets/mentor.png";
 import community from "../assets/community.jpg";
 const Offers = () => {
   return (
-    <div className="mt-[80px] md:mt-[150px] flex flex-col font-poppins w-full mx-auto px-4 md:px-0 md:w-[80%]">
+    <div className="mt-[80px] md:mt-[150px] flex flex-col font-nunito w-full mx-auto px-4 md:px-0 md:w-[80%]">
       <div className="flex flex-col justify-center text-center md:text-left">
-        <h1 className="text-[35px] font-light text-black">
-          What <span className="font-bold">BYEN</span> Offers:
+        <h1 className="text-[60px] font-light text-black font-bangers">
+          What <span>BYEN</span> Offers:
         </h1>
         <p className="mt-[30px] text-[#474747] md:pr-[60px] w-full md:w-[70%]">
           Black Youth Empowerment Network (BYEN) provides mentorship, leadership

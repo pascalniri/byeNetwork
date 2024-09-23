@@ -2,8 +2,8 @@ import React from "react";
 import founder from "../assets/founder.svg"
 const Founder = () => {
   return (
-    <div className="mx-auto px-4 mt-[60px] font-poppins md:px-0 md:w-[80%]">
-      <h1 className="mb-[50px] font-light text-[40px]">
+    <div className="mx-auto px-4 mt-[100px] font-nunito md:px-0 md:w-[80%]">
+      <h1 className="mb-[50px] font-light text-[60px] font-bangers">
         BYEN <span className="font-bold">Founder</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-[50px] items-center text-center md:text-left ">

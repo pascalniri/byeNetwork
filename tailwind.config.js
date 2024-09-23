@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      poppins:["Poppins", "Sans-serif"]
+      poppins:["Poppins", "Sans-serif"],
+      bangers: ["Bangers", "system-ui"],
+      nunito:["Nunito", "sans-serif"]
     }
   },
   plugins: [],
