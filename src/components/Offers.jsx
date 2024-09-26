@@ -5,12 +5,12 @@ import mentor from "../assets/mentor.png";
 import community from "../assets/community.jpg";
 const Offers = () => {
   return (
-    <div className="mt-[80px] md:mt-[150px] flex flex-col font-nunito w-full mx-auto px-4 md:px-0 md:w-[80%]">
-      <div className="flex flex-col justify-center text-center md:text-left">
-        <h1 className="text-[60px] font-light text-black font-bangers">
-          What <span>BYEN</span> Offers:
+    <div className="mt-[80px] md:mt-[150px] flex flex-col font-outfit font-light w-full mx-auto px-4 md:px-0 md:w-[80%]">
+      <div className="flex flex-col justify-center items-center text-center">
+        <h1 className="font-bold text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+          What BYEN Offers!
         </h1>
-        <p className="mt-[30px] text-[#474747] md:pr-[60px] w-full md:w-[70%]">
+        <p className="mt-[30px] text-[#474747] w-full md:w-[70%]">
           Black Youth Empowerment Network (BYEN) provides mentorship, leadership
           training, and resources to help young Black individuals excel
           personally and professionally. Through educational workshops,

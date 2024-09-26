@@ -2,11 +2,11 @@ import React from "react";
 import founder from "../assets/founder.svg"
 const Founder = () => {
   return (
-    <div className="mx-auto px-4 mt-[100px] font-nunito md:px-0 md:w-[80%]">
-      <h1 className="mb-[50px] font-light text-[60px] font-bangers">
-        BYEN <span className="font-bold">Founder</span>
+    <div className="mx-auto px-4 mt-[100px] font-light md:mt-[150px] flex flex-col justify-center items-center font-outfit md:px-0 md:w-[80%]">
+      <h1 className="font-bold text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+        Our Team
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-[50px] items-center text-center md:text-left ">
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-[50px] items-center text-center md:text-left mt-[50px]">
         <img
           src={founder}
           alt="Jay'Shun"

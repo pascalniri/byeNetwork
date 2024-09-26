@@ -38,12 +38,14 @@ const Latest = () => {
   };
 
   return (
-    <div className="font-nunito mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px]">
-      <h1 className="text-[60px] font-light font-bangers">
+    <div className="font-outfit  font-light mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px]">
+      <div className="flex flex-col justify-center items-center ">
+      <h1 className="font-bold text-[60px] relative  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
         Latest News
       </h1>
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[40px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[100px]">
         {cards.map((card) => (
           <motion.div
             key={card.id}
@@ -60,12 +62,12 @@ const Latest = () => {
                 ease: "easeInOut",
               },
             }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="bg-gradient-to-t from-black to-[#00000087] h-full rounded-lg">
               <div className="absolute bottom-0 left-0 p-4">
                 <p className="text-white text-xl font-bold">{card.name}</p>
-                <p className="text-[#c6c6c6] font-extralight text-[12px]">
+                <p className="text-[#c6c6c6] font-extralight">
                   {card.description.substring(0, 100)}...
                 </p>
             

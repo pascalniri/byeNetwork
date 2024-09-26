@@ -8,8 +8,7 @@ export default {
     extend: {},
     fontFamily:{
       poppins:["Poppins", "Sans-serif"],
-      bangers: ["Bangers", "system-ui"],
-      nunito:["Nunito", "sans-serif"]
+      outfit: ["Outfit", "Sans-serif"],
     }
   },
   plugins: [],
