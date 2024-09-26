@@ -7,11 +7,13 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white font-outfit font-light py-[50px] overflow-hidden">
+    <div className="bg-black text-white font-outfit text-center font-light py-[50px] overflow-hidden">
       <div className="mx-auto px-4 md:w-[80%] flex flex-col justify-center items-center">
+        <div className="mx-auto px-4 md:w-[80%] flex flex-col justify-center items-center">
         <h1 className="font-bold text-[40px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-white">
         Contact Information
         </h1>
+        </div>
         <span className="flex flex-col mt-[60px] text-center justify-center items-center gap-1 cursor-pointer">
           <BiSolidPhoneCall className="text-[30px]" />
           <p className="font-extralight text-[11px]">(478) 352-1080</p>
