@@ -13,7 +13,7 @@ const Home = () => {
         backgroundSize: "cover",
         width:'100%'
       }}
-      className="font-outfit relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[100vh] mx-auto px-4 xl:mx-auto xl:w-[40%]"
+      className="font-outfit relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[100vh] mx-auto px-4 xl:w-[40%]"
     >
       {/* Content */}
       <h1 className="text-white font-thin text-[60px] md:text-[80px]">

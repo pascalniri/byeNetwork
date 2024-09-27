@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div className="font-outfit top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
-      <div className="px-4 mx-auto md:w-[80%] 2xl:w-[40%] backdrop-blur-lg bg-black bg-opacity-60 rounded-2xl">
+      <div className="px-4 mx-auto md:w-[80%] 2xl:w-[50%] backdrop-blur-lg bg-black bg-opacity-60 rounded-2xl">
         <div className=" font-light flex flex-row justify-between items-center py-[10px] text-white ">
             <Link to ="/">
             <img src={byen_logo} alt="logo" className="w-[100px]" />
