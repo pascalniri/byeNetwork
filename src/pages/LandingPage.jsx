@@ -65,9 +65,7 @@ const LandingPage = () => {
       />
       
       {/* Home Section */}
-      <AnimatedSection delay={0}>
         <Home />
-      </AnimatedSection>
 
       {/* Content Sections with Background Image */}
       <div
@@ -76,6 +74,7 @@ const LandingPage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        className="w-full overflow-hidden"
       >
         <AnimatedSection delay={0.4}>
           <About />
