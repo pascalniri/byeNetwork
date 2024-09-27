@@ -55,7 +55,7 @@ const Projects = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full md:w-[80%] mx-auto p-4 mt-[150px] font-poppins">
+      <div className="w-full md:w-[80%] 2xl:w-[40%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit font-light">
         {/* Tab navigation */}
         <div className="flex justify-center items-start mb-10">
           <button
@@ -78,9 +78,9 @@ const Projects = () => {
 
         {/* Tab content */}
         {activeTab === "videos" ? (
-          <div>
+          <div className="flex flex-col justify-center items-center text-center">
             {/* Word content */}
-            <h1 className="text-[28px] md:text-[35px] font-light">
+            <h1 className="text-[30px] md:text-[50px] font-light">
               Empowering<span className="font-bold"> Voices,</span> Inspiring
               <span className="font-bold"> Change</span>
             </h1>

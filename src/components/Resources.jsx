@@ -15,7 +15,7 @@ const Projects = () => {
 
   return (
    <div style={{ backgroundImage: `url(${whole})`, backgroundSize: "cover", backgroundPosition: "center" }} >
-     <div className="w-full md:w-[80%] mx-auto p-4 mt-[150px] font-poppins">
+     <div className="w-full md:w-[80%] 2xl:w-[40%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit text-light">
       {/* Tab navigation */}
       <div className="flex justify-center items-start mb-10">
         <button
@@ -40,8 +40,8 @@ const Projects = () => {
       {activeTab === "videos" ? (
         <div>
           {/* Word content */}
-          <h1 className="text-[28px] md:text-[35px] font-light">
-            Mentorship<span className="font-bold"> Interest</span> Form
+          <h1 className="font-bold text-[40px] md:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+            Mentorship Interest Form
           </h1>
           <p className="mt-[30px] text-[#474747]">
             To become a mentor, we invite individuals aged 21 and above to join
@@ -51,7 +51,7 @@ const Projects = () => {
             ahead.
           </p>
           <motion.button
-            className="mt-[30px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
+            className="mt-[30px] bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
             initial="hidden"
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
@@ -64,7 +64,7 @@ const Projects = () => {
 
           {/* YouTube Video */}
           <div className="mt-[100px]">
-            <h1 className="text-[28px] md:text-[35px] font-light">
+            <h1 className="text-[28px] md:text-[35px]">
               Our<span className="font-bold"> Mentors</span>
               <div className="mt-[50px]">
                 <span className="flex flex-col md:flex-row gap-x-[100px] gap-[10px]">
@@ -98,8 +98,10 @@ const Projects = () => {
         </div>
       ) : (
         <div className="my-[100px]">
+          <h1 className="font-bold text-[40px] md:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+            Our Events
+          </h1>
           <h1 className="text-[28px] md:text-[35px] font-light">
-            Our<span className="font-bold"> Events</span>
             <div className="mt-[50px]">
               <span className="flex flex-col md:flex-row gap-y-[30px] gap-x-[100px]">
                 <img
@@ -108,7 +110,7 @@ const Projects = () => {
                   className="md:w-[600px] md:h-[400px] rounded-2xl shadow-xl"
                 />
                 <p className="text-[13px] font-normal">
-                    <h1 className="mb-[20px] font-semibold text-[20px]">Conscious Choices: Empowering Black Youth Through Mindful Decision-Making</h1>
+                    <h1 className="mb-[20px] font-bold text-[30px]">Conscious Choices: Empowering Black Youth Through Mindful Decision-Making</h1>
                   <span className="text-[#474747]">
                     Hey everyone! We're excited to invite you to a special
                     webinar hosted by the Black Youth Empowerment Network

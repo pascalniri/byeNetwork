@@ -6,7 +6,7 @@ import mission from "../assets/mission.svg";
 import vision from "../assets/vision.svg";
 const About = () => {
   return (
-    <div className="mx-auto px-4 pt-[60px] font-light font-outfit md:px-0 md:w-[80%] flex flex-col justify-center items-start text-center">
+     <div className="mx-auto px-4 pt-[60px] font-light font-outfit md:px-0 md:w-[80%] 2xl:w-[40%] flex flex-col justify-center items-start text-center">
       <div className="mb-[50px]">
         <h1 className="text-[30px]">
           <span className="font-bold text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
@@ -22,7 +22,7 @@ const About = () => {
           fostering personal growth, leadership, and community impact.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] gap-y-[50px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[20px] xl:gap-x-[100px] gap-y-[50px]">
         <div className="bg-gray-500 px-[20px] py-[20px] text-left rounded-[10px] transform transition duration-200 ease-in-out hover:translate-x-1 hover:-translate-y-1 cursor-pointer shadow-lg">
           <img src={mission} alt="Mission" className="w-[120px] mb-8" />{" "}
           <p className="">

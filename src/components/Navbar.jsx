@@ -16,13 +16,13 @@ const Navbar = () => {
   const activeLink = "text-white border-b-[1px] font-bold"
 
   return (
-    <div className=" top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
-      <div className="font-poppins px-4 mx-auto md:w-[80%] backdrop-blur-lg bg-black bg-opacity-60 rounded-2xl">
-        <div className=" font-light flex flex-row justify-between items-center py-[10px] text-white font-poppins">
+    <div className="font-outfit top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
+      <div className="px-4 mx-auto md:w-[80%] 2xl:w-[40%] backdrop-blur-lg bg-black bg-opacity-60 rounded-2xl">
+        <div className=" font-light flex flex-row justify-between items-center py-[10px] text-white ">
             <Link to ="/">
             <img src={byen_logo} alt="logo" className="w-[100px]" />
             </Link>
-          <ul className="font-poppins hidden lg:flex lg:flex-row md:gap-[50px]">
+          <ul className=" hidden lg:flex lg:flex-row md:gap-[50px]">
             <li>
               <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink} >Home</NavLink>
             </li>
@@ -67,7 +67,7 @@ const Navbar = () => {
       </div>
       {showNav && (
         <div className="lg:hidden z-10 fixed h-[400px] mt-[120px] py-[20px] inset-0 backdrop-blur-lg bg-black bg-opacity-60 mx-4 md:mx-auto rounded-2xl md:w-[80%] text-white flex items-center justify-center text-center px-4 ">
-          <ul className="font-poppins flex flex-col gap-7">
+          <ul className=" flex flex-col gap-7">
             <li className="hover:scale-105 transition">
               <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>Home</NavLink>
             </li>

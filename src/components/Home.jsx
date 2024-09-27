@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import grouppic from "../assets/grouppic.jpg";
+import grouppic from "../assets/grouppic.svg";
 
 const Home = () => {
   return (
@@ -11,12 +11,12 @@ const Home = () => {
         backgroundImage: `url(${grouppic})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
+        width:'100%'
       }}
-      className="relative overflow-hidden flex flex-col justify-center items-center min-h-[100vh]"
+      className="font-outfit relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[100vh] xl:mx-auto xl:w-[40%]"
     >
-      <div className="absolute inset-0 bg-black opacity-70"></div>
       {/* Content */}
-      <h1 className="font-bangers font-thin text-[60px] md:text-[70px]">
+      <h1 className="text-white font-thin text-[60px] md:text-[80px]">
         <span className="font-medium">Black</span> Youth <br />
         <span className="font-medium">
           <Typewriter
@@ -43,7 +43,7 @@ const Home = () => {
           className="mt-[80px] font-normal bg-white flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
         >
           <p className="text-black">APPLY NOW</p>
-          <span className="bg-black px-[15px] py-[15px] rounded-full">
+          <span className="bg-black text-white px-[15px] py-[15px] rounded-full">
             <FaArrowRight />
           </span>
         </motion.button>
