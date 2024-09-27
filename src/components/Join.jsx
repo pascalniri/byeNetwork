@@ -5,7 +5,7 @@ import join from "../assets/join.jpg";
 import mentor from "../assets/mentor.png";
 const Join = () => {
   return (
-    <div className="font-outfit font-light text-center flex flex-col justify-center items-center mt-[80px] md:mt-[150px] mx-auto px-4  md:w-[80%] 2xl:w-[40%]">
+    <div className="font-outfit font-light text-center flex flex-col justify-center items-center mt-[80px] md:mt-[150px] mx-auto px-4  md:w-[80%] 2xl:w-[50%]">
       <h1 className="font-bold text-[50px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
         Want To Join The Network?
       </h1>

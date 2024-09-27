@@ -38,7 +38,7 @@ const Latest = () => {
   };
 
   return (
-    <div className="font-outfit  font-light mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px] 2xl:w-[40%]">
+    <div className="font-outfit  font-light mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px] 2xl:w-[50%]">
       <div className="flex flex-col justify-center items-center ">
       <h1 className="font-bold text-[60px] relative  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
         Latest News
