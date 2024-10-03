@@ -7,6 +7,7 @@ import Latest from "../components/Latest";
 import Founder from "../components/Founder";
 import whole from "../assets/whole.svg";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
+import Team from "../components/Team";
 
 // Scale and rotate animation with delay
 const scaleRotateAnimation = (delay = 0) => ({
@@ -90,6 +91,10 @@ const LandingPage = () => {
         </AnimatedSection>
         <AnimatedSection delay={0.9}>
           <Latest />
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.9}>
+          <Team />
         </AnimatedSection>
       </div>
     </>
