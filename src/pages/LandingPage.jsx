@@ -56,7 +56,7 @@ const LandingPage = () => {
           top: 0,
           left: 0,
           height: "10px",
-          backgroundColor: "#6B7280",
+          backgroundColor: "#000000",
           transformOrigin: "0%",
           width: "100%",
           zIndex: 1000,
@@ -67,7 +67,6 @@ const LandingPage = () => {
       {/* Home Section */}
         <Home />
 
-      {/* Content Sections with Background Image */}
       <div
         style={{
           backgroundImage: `url(${whole})`,
@@ -76,21 +75,11 @@ const LandingPage = () => {
         }}
         className="w-full overflow-hidden"
       >
-        <AnimatedSection delay={0.4}>
           <About />
-        </AnimatedSection>
-        <AnimatedSection delay={0.6}>
           <Founder />
-        </AnimatedSection>
-        <AnimatedSection delay={0.7}>
           <Offers />
-        </AnimatedSection>
-        <AnimatedSection delay={0.8}>
           <Join />
-        </AnimatedSection>
-        <AnimatedSection delay={0.9}>
           <Latest />
-        </AnimatedSection>
       </div>
     </>
   );
