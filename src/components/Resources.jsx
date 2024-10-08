@@ -15,7 +15,7 @@ const Projects = () => {
 
   return (
    <div style={{ backgroundImage: `url(${whole})`, backgroundSize: "cover", backgroundPosition: "center" }} >
-     <div className="w-full md:w-[80%] 2xl:w-[50%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit text-light">
+     <div className="w-full md:w-[80%] 2xl:w-[70%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit text-light">
       {/* Tab navigation */}
       <div className="flex justify-center items-start mb-10">
         <button

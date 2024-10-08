@@ -55,7 +55,7 @@ const Projects = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full md:w-[80%] 2xl:w-[50%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit font-light">
+      <div className="w-full md:w-[80%] 2xl:w-[70%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit font-light">
         {/* Tab navigation */}
         <div className="flex justify-center items-start mb-10">
           <button
