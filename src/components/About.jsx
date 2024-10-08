@@ -6,7 +6,7 @@ import mission from "../assets/mission.svg";
 import vision from "../assets/vision.svg";
 const About = () => {
   return (
-     <div className="mx-auto px-4 pt-[60px] font-light font-outfit md:px-0 md:w-[80%] 2xl:w-[50%] flex flex-col justify-center items-start text-center">
+     <div className="mx-auto px-4 pt-[60px] font-light font-outfit md:px-0 md:w-[70%] flex flex-col justify-center items-start text-center">
       <div className="mb-[50px]">
         <h1 className="text-[30px]">
           <span className="font-bold text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
