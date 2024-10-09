@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
+import { Zoom } from "react-awesome-reveal";
 
 const Latest = () => {
   const [selectedCard, setSelectedCard] = useState(null); // State to track selected card
@@ -45,7 +46,8 @@ const Latest = () => {
       </h1>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[100px]">
+      <Zoom>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[100px]">
         {cards.map((card) => (
           <motion.div
             key={card.id}
@@ -87,7 +89,8 @@ const Latest = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+        </div>
+      </Zoom>
 
       {/* Modal for full information */}
       {selectedCard && (

@@ -3,12 +3,13 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import join from "../assets/join.jpg";
 import mentor from "../assets/mentor.png";
+import { Bounce, Fade, Zoom } from "react-awesome-reveal";
 const Join = () => {
   return (
     <div className="font-outfit font-light text-center flex flex-col justify-center items-center mt-[80px] md:mt-[150px] mx-auto px-4  md:w-[80%] 2xl:w-[70%]">
-      <h1 className="font-bold text-[50px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+      <Fade className="font-bold text-[50px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
         Want To Join The Network?
-      </h1>
+      </Fade>
       <p className="mt-[30px] text-[#474747] md:w-[70%]">
         Discover the benefits of being part of our network. Join us to connect,
         collaborate, and grow with like-minded individuals.
@@ -16,8 +17,9 @@ const Join = () => {
 
       <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 gap-[50px]">
         {/* first container of joining */}
-        <div className="bg-gray-100 rounded-[10px] shadow-lg">
-          <img
+        <Bounce triggerOnce className="bg-gray-100 rounded-[10px] shadow-lg">
+         <div>
+         <img
             src={mentor}
             alt="mentor"
             className="rounded-t-[10px] w-full h-[250px]"
@@ -44,10 +46,12 @@ const Join = () => {
               </span>
             </motion.button>
           </div>
-        </div>
+         </div>
+        </Bounce>
 
         {/* second container of joining */}
 
+        <Bounce triggerOnce>
         <div className="bg-gray-100 rounded-[10px] shadow-lg">
           <img
             src={join}
@@ -76,6 +80,7 @@ const Join = () => {
             </motion.button>
           </div>
         </div>
+        </Bounce>
       </div>
     </div>
   );

@@ -1,0 +1,68 @@
+/* Pagination customization */
+.custom-swiper .swiper-pagination-bullet {
+    background-color: #000000;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+  }
+  
+  .custom-swiper .swiper-pagination-bullet-active {
+    background-color: #000000;
+    transform: scale(1.2);
+    
+  }
+  
+  /* Scrollbar customization */
+  .custom-swiper .swiper-scrollbar {
+    background-color: rgba(0, 0, 0, 0.26);
+    height: 8px;
+    border-radius: 10px;
+
+  }
+  
+  .custom-swiper .swiper-scrollbar-drag {
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+
+  /* Customizing the arrows */
+.custom-swiper .swiper-button-prev, .custom-swiper .swiper-button-next {
+    color: #000000; /* Custom color */
+    background-color: rgb(0, 0, 0); /* Custom background */
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+
+  }
+  
+  /* Custom hover effect */
+  .custom-swiper .swiper-button-prev:hover, .custom-swiper .swiper-button-next:hover {
+    background-color: #000000;
+  }
+  
+  /* Positioning */
+  .custom-swiper .swiper-button-prev {
+    left: 0px;
+  }
+  
+  .custom-swiper .swiper-button-next {
+    right: 0px;
+  }
+  
+  /* Custom SVG icons */
+  .custom-swiper .swiper-button-prev::after {
+    content: '';
+    background: url('/left.svg') no-repeat center;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .custom-swiper .swiper-button-next::after {
+    content: '';
+    background: url('/right.svg') no-repeat center;
+    width: 20px;
+    height: 20px;
+  }
+  
