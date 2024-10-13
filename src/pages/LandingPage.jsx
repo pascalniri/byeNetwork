@@ -4,7 +4,6 @@ import About from "../components/About";
 import Offers from "../components/Offers";
 import Join from "../components/Join";
 import Latest from "../components/Latest";
-import Founder from "../components/Founder";
 import whole from "../assets/whole.svg";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
 
@@ -76,7 +75,6 @@ const LandingPage = () => {
         className="w-full overflow-hidden"
       >
           <About />
-          <Founder />
           <Offers />
           <Join />
           <Latest />

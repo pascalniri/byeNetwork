@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Resources from './components/Resources'
 import Footer from './components/Footer'
+import Team from './components/Team'
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
        <Navbar />
    <Routes>
     <Route path='/'  element ={<LandingPage />} />
+    <Route path='/team' element={<Team />} />
     <Route path='/projects' element ={<Projects />} />
     <Route path='/resources' element={<Resources />} />
    </Routes>

@@ -1,15 +1,15 @@
 import React from "react";
-import '../App.css'
+import "../App.css";
 import resources from "../assets/resources.webp";
 import event from "../assets/event.jpg";
 import mentor from "../assets/mentor.png";
 import community from "../assets/community.jpg";
 import "swiper/css";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import { Fade } from "react-awesome-reveal";
 
 const Offers = () => {
@@ -29,55 +29,60 @@ const Offers = () => {
       </div>
 
       <Fade>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1, spaceBetween: 20 },
-          768: { slidesPerView: 2, spaceBetween: 30 },
-          1024: { slidesPerView: 3, spaceBetween: 50 }
-        }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-        className="custom-swiper"
-      >
-        <SwiperSlide
-          className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center"
-        >
-           <img src={resources} alt="Resources" className="w-full h-[250px] object-cover rounded-lg shadow-lg" />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 backdrop-blur-[2px] flex items-center justify-center">
-            <p className="text-white text-[30px] font-medium">Resources</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[50px]">
+        <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
+          <img
+            src={resources}
+            alt="Resources"
+            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
+          />
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
+            <p className="text-white text-[20px] font-medium mb-5 mx-5">Resources <br />
+            <span className="font-extralight text-[14px] line-clamp-none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+              </span></p>
           </div>
-        </SwiperSlide>
-         <SwiperSlide
-          className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center"
-        >
-           <img src={event} alt="Resources" className="w-full h-[250px] object-cover rounded-lg shadow-lg" />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 backdrop-blur-[2px] flex items-center justify-center">
-            <p className="text-white text-[30px] font-medium">Events</p>
+        </div>
+        <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
+          <img
+            src={event}
+            alt="Resources"
+            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
+          />
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
+            <p className="text-white text-[20px] font-medium mb-5 mx-5">Events <br />
+            <span className="font-extralight text-[14px] line-clamp-none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+              </span></p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide
-          className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center"
-        >
-           <img src={mentor} alt="Resources" className="w-full h-[250px] object-cover rounded-lg shadow-lg" />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 backdrop-blur-[2px] flex items-center justify-center">
-            <p className="text-white text-[30px] font-medium">Mentorship</p>
+        </div>
+        <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
+          <img
+            src={mentor}
+            alt="Resources"
+            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
+          />
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
+            <p className="text-white text-[20px] font-medium mb-5 mx-5">Mentorship <br />
+            <span className="font-extralight text-[14px] line-clamp-none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+              </span></p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide
-          className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center"
-        >
-           <img src={community} alt="Resources" className="w-full h-[250px] object-cover rounded-lg shadow-lg" />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 backdrop-blur-[2px] flex items-center justify-center">
-            <p className="text-white text-[30px] font-medium">Community</p>
+        </div>
+        <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
+          <img
+            src={community}
+            alt="Resources"
+            className="w-full h-[250px] object-cover rounded-lg shadow-lg"
+          />
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
+            <p className="text-white text-[20px] font-medium mb-5 mx-5">Community <br />
+            <span className="font-extralight text-[14px] line-clamp-none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+              </span></p>
           </div>
-        </SwiperSlide>
-      </Swiper>
+        </div>
+        </div>
       </Fade>
     </div>
   );
