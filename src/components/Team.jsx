@@ -48,7 +48,7 @@ const Team = () => {
     },
     {
       id: 6,
-      profile: "/",
+      profile: "/Elijah.jpg",
       name: "Elijah Coleman",
       status: "Programs & Events Coordinator",
       bio: "Elijah Coleman serves at the Black Youth Empowerment Network and has been involved with nonprofits since the 6th grade. He previously worked as an Outreach Staffer for 11 months, where he focused on forming and managing partnerships. Passionate about foreign policy and international relations, Elijah enjoys political dramas, documentaries, and music, especially by Beyoncé. He is excited to contribute to BYEN.",
