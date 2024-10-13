@@ -50,7 +50,7 @@ const About = () => {
         </Slide>
       </div>
       <div>
-        <div className="flex flex-col justify-center items-top w-full lg:flex-row gap-y-[20px]">
+        <div className="flex flex-col justify-center items-top w-full lg:flex-row gap-[20px]">
           <Slide
             triggerOnce
             direction="up"
