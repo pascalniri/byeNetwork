@@ -165,7 +165,7 @@ const Team = () => {
               Our Partners
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] mt-[50px]">
               {partners.map((partner) => (
                 <div key={partner.id}>
                   <div className="border shadow-lg  rounded-[15px] bg-gray-100">
