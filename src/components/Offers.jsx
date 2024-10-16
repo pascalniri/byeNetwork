@@ -32,53 +32,53 @@ const Offers = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[50px]">
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
-            src={resources}
+            src="/resources.jpg"
             alt="Resources"
             className="w-full h-[250px] object-cover rounded-lg shadow-lg"
           />
           <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
             <p className="text-white text-[20px] font-medium mb-5 mx-5">Resources <br />
             <span className="font-extralight text-[14px] line-clamp-none">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+            A comprehensive collection of tools, educational materials, and opportunities designed to equip you with the knowledge and skills needed to excel in your leadership, entrepreneurial, and creative pursuits.
               </span></p>
           </div>
         </div>
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
-            src={event}
-            alt="Resources"
+            src="/events.jpg"
+            alt="Events"
             className="w-full h-[250px] object-cover rounded-lg shadow-lg"
           />
           <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
             <p className="text-white text-[20px] font-medium mb-5 mx-5">Events <br />
             <span className="font-extralight text-[14px] line-clamp-none">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+            Immersive events that unite our community, offering powerful opportunities to connect, exchange ideas, and engage in meaningful dialogue through workshops, summits, and networking experiences tailored to inspire leadership and innovation.
               </span></p>
           </div>
         </div>
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
-            src={mentor}
-            alt="Resources"
+            src="collaboration.jpg"
+            alt="Collaboration"
             className="w-full h-[250px] object-cover rounded-lg shadow-lg"
           />
           <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
-            <p className="text-white text-[20px] font-medium mb-5 mx-5">Mentorship <br />
+            <p className="text-white text-[20px] font-medium mb-5 mx-5">Collaboration<br />
             <span className="font-extralight text-[14px] line-clamp-none">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+            Collaborative opportunities with experienced professionals, fostering mutual growth and guidance to help you navigate challenges, unlock new possibilities, and accelerate your journey to success..
               </span></p>
           </div>
         </div>
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
-            src={community}
-            alt="Resources"
+            src="community.jpg"
+            alt="Community"
             className="w-full h-[250px] object-cover rounded-lg shadow-lg"
           />
           <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black to-[#00000000] flex items-end justify-start">
             <p className="text-white text-[20px] font-medium mb-5 mx-5">Community <br />
             <span className="font-extralight text-[14px] line-clamp-none">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ex sunt aperiam perferendis vero fugit provident corporis fuga. Nihil blanditiis a minima aperiam accusantium dicta minus, et id tempora quod.
+            A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.
               </span></p>
           </div>
         </div>
