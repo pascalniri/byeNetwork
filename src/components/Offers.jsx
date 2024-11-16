@@ -14,9 +14,9 @@ import { Fade } from "react-awesome-reveal";
 
 const Offers = () => {
   return (
-    <div className="mt-[80px] md:mt-[150px] flex flex-col font-outfit font-light w-full mx-auto px-4 md:px-0 md:w-[80%] 2xl:w-[70%]">
+    <div className="mt-[80px] md:mt-[150px] w-full flex flex-col font-outfit font-light mx-auto px-4 md:max-w-2xl lg:max-w-6xl">
       <div className="flex flex-col justify-center items-center text-center">
-        <Fade className="font-bold text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+        <Fade className="font-bold text-[25px] sm:text-[30px] md:text-[40px] lg:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
           What BYEN Offers!
         </Fade>
         <p className="mt-[30px] text-[#474747] w-full md:w-[70%]">

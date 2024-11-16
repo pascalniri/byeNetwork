@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Resources from './components/Resources'
 import Footer from './components/Footer'
 import Team from './components/Team'
+import Membership from './components/Membership'
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
        <Navbar />
    <Routes>
     <Route path='/'  element ={<LandingPage />} />
+    <Route path='/membership'  element ={<Membership />} />
     <Route path='/team' element={<Team />} />
     <Route path='/projects' element ={<Projects />} />
     <Route path='/resources' element={<Resources />} />

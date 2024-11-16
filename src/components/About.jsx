@@ -31,13 +31,13 @@ const About = () => {
   ];
 
   return (
-    <div className="mx-auto px-4 pt-[60px] font-light font-outfit md:px-0 md:w-[70%] flex flex-col justify-center items-start text-center">
+    <div className="mx-auto px-4 pt-[60px] font-light font-outfit md:max-w-2xl lg:max-w-6xl flex flex-col justify-center items-start text-center">
       <div className="mb-[50px]">
         <h1 className="text-[30px]">
           <Fade className="font-bold text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
             About
           </Fade>
-          <Fade triggerOnce className="mt-[50px]">
+          <Fade triggerOnce className="mt-[50px] text-[25px]">
             Black Youth Empowerment Network (BYEN)
           </Fade>
         </h1>

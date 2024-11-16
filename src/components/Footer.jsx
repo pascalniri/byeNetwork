@@ -8,9 +8,41 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-black text-white font-outfit text-center font-light py-[50px] overflow-hidden">
-      <div className="mx-auto px-4 md:w-[80%] 2xl:w-[70%] flex flex-col justify-center items-center">
+
+
+<footer class="flex flex-col space-y-10 justify-center m-10">
+
+<nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
+    <a class="hover:text-white" href="/">Home</a>
+    <a class="hover:text-white" href="/membership">Membership</a>
+    <a class="hover:text-white" href="/team">Our Team</a>
+    <a class="hover:text-white" href="/resources">Resources</a>
+    <a class="hover:text-white" href="/projects">Projects</a>
+</nav>
+
+<div class="flex justify-center space-x-5">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/fluent/30/000000/email.png" />
+    </a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+    </a>
+    <a href="https://www.instagram.com/blackyouthempowermentnet/" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
+    </a>
+    <a href="https://messenger.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
+    </a>
+</div>
+<p class="text-center text-gray-700 font-medium">&copy; 2024 BYEN. All rights reservered.</p>
+</footer>
+      
+      {/* <div className="mx-auto px-4 md:w-[80%] 2xl:w-[70%] flex flex-col justify-center items-center">
         <div className="mx-auto px-4 md:w-[80%] flex flex-col justify-center items-center">
-        <h1 className="font-bold text-[40px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-white">
+        <h1 className="font-bold text-[25px] sm:text-[30px] md:text-[40px] lg:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-white">
         Contact Information
         </h1>
         </div>
@@ -52,7 +84,7 @@ const Footer = () => {
             </p>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

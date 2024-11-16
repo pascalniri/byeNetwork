@@ -16,8 +16,8 @@ const Navbar = () => {
   const activeLink = "text-white border-b-[1px] font-bold";
 
   return (
-    <div className="font-outfit top-5 fixed w-full z-10 mx-auto px-4 md:px-0">
-      <div className="px-4 mx-auto md:w-[80%] 2xl:w-[70%] backdrop-blur-lg bg-black bg-opacity-60 rounded-2xl">
+    <div className="font-outfit top-5 fixed w-full z-10 mx-auto px-4">
+      <div className="px-4 mx-auto md:max-w-2xl lg:max-w-6xl backdrop-blur-lg bg-black bg-opacity-60 rounded-2xl">
         <div className=" font-light flex flex-row justify-between items-center py-[10px] text-white ">
           <Link to="/">
             <img src={byen_logo} alt="logo" className="w-[100px]" />
@@ -35,9 +35,7 @@ const Navbar = () => {
             </li>
             <li className="hover:scale-105 transition">
               <NavLink
-                to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
-                target="_blank"
-                rel="noopener noreferrer"
+                to="/membership"
               >
                 Membership
               </NavLink>
@@ -111,9 +109,7 @@ const Navbar = () => {
             </li>
             <li className="hover:scale-105 transition">
               <NavLink
-                to="https://black-youth-empowerment-network.mn.co/landing?space_id=13081273"
-                target="_blank"
-                rel="noopener noreferrer"
+                to="/membership"
               >
                 Membership
               </NavLink>

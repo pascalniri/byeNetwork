@@ -55,7 +55,7 @@ const Projects = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full md:w-[80%] 2xl:w-[70%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit font-light">
+      <div className="w-full md:max-w-2xl lg:max-w-6xl mx-auto px-4 mt-[150px] font-outfit font-light">
         {/* Tab navigation */}
         <div className="flex justify-center items-start mb-10">
           <button
@@ -95,7 +95,7 @@ const Projects = () => {
             {/* YouTube Video */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] mb-[100px]">
               {/* First part of the video */}
-              <div className="shadow-xl rounded-[10px]">
+              <div className="shadow-xl rounded-[10px] bg-white">
                 <iframe
                   className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
                   src="https://www.youtube.com/embed/1kGuNjF55NI"
@@ -119,7 +119,7 @@ const Projects = () => {
               </div>
 
               {/* Second part of the video */}
-              <div className="shadow-xl rounded-[10px]">
+              <div className="shadow-xl rounded-[10px] bg-white">
                 <iframe
                   className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
                   src="https://www.youtube.com/embed/s4n4ZQDOQcA"
@@ -141,7 +141,7 @@ const Projects = () => {
               </div>
 
               {/* Third part of the video */}
-              <div className="shadow-xl rounded-[10px]">
+              <div className="shadow-xl rounded-[10px] bg-white">
                 <iframe
                   className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-[10px]"
                   src="https://www.youtube.com/embed/YpZfC0xPMjQ"

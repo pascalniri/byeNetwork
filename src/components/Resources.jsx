@@ -21,7 +21,7 @@ const Projects = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full md:w-[80%] 2xl:w-[70%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit text-light">
+      <div className="md:max-w-2xl lg:max-w-6xl mx-auto p-4 mt-[150px] font-outfit text-light">
         {/* Tab navigation */}
         <div className="flex justify-center items-start mb-10">
           <button
@@ -46,7 +46,7 @@ const Projects = () => {
         {activeTab === "videos" ? (
           <div>
             {/* Word content */}
-            <h1 className="font-bold text-[40px] md:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+            <h1 className="font-bold text-[25px] sm:text-[30px] md:text-[40px] lg:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
               Mentorship Interest Form
             </h1>
             <p className="mt-[30px] text-[#474747]">
@@ -56,17 +56,17 @@ const Projects = () => {
               helping them navigate the challenges and opportunities that lie
               ahead.
             </p>
-            <motion.button
+            {/* <motion.button
               className="mt-[30px] mb-[50px] bg-black flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
               initial="hidden"
               whileHover={{ scale: 1.05, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <p className="text-white">CLICK TO APPLY</p>
+              <p className="text-white">Click to apply</p>
               <span className="text-black bg-white px-[15px] py-[15px] rounded-full">
                 <FaArrowRight />
               </span>
-            </motion.button>
+            </motion.button> */}
           </div>
         ) : (
           <div className="my-[100px]">
@@ -75,11 +75,11 @@ const Projects = () => {
             </h1>
             <h1 className="text-[28px] md:text-[35px] font-light">
               <div className="mt-[50px]">
-                <span className="flex flex-col md:flex-row gap-y-[30px] gap-x-[100px]">
+                <span className="flex flex-col lg:flex-row gap-y-[30px] gap-x-[100px]">
                   <img
                     src={events}
                     alt="Keshawn Brown"
-                    className="md:w-[600px] md:h-[400px] rounded-2xl shadow-xl"
+                    className="w-full h-auto rounded-2xl shadow-xl"
                   />
                   <p className="text-[13px] font-normal">
                     <h1 className="mb-[20px] font-bold text-[30px]">

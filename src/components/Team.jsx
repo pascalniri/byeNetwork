@@ -99,13 +99,28 @@ const Team = () => {
       image: "/Riley.png",
       alt: "Rileys Way Foundation",
       name: "Focused Minds Education Group",
-      desc: "Riley’s Way invests in and supports the next generation of kind leaders. We provide young people with the programs, support and inclusive community they need to thrive as changemakers. Riley’s Way is committed to supporting these young leaders to build a better world that values kindness, empathy, connection and the voices of all youth.",
+      desc: "Riley's Way invests in and supports the next generation of kind leaders. We provide young people with the programs, support and inclusive community they need to thrive as changemakers. Riley’s Way is committed to supporting these young leaders to build a better world that values kindness, empathy, connection and the voices of all youth.",
     },
   ];
 
   const [activeTab, setActiveTab] = useState("videos"); // State to track active tab
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
+
+  // FUNCTION FOR MAKING THE TEXT SHORT
+
+  const [readMore, setReadMore] = useState({});
+
+  const toggleReadMore = (id) => {
+    setReadMore((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
+
+  const truncateText = (text, length) => {
+    return text.length > length ? text.substring(0, length) + "..." : text;
+  };
 
   return (
     <div
@@ -115,7 +130,7 @@ const Team = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full md:w-[80%] 2xl:w-[70%] xl:px-0 mx-auto p-4 mt-[150px] font-outfit text-light">
+      <div className="w-full md:max-w-2xl lg:max-w-6xl xl:px-0 mx-auto p-4 mt-[150px] font-outfit text-light">
         {/* Tab navigation */}
         <div className="flex justify-center items-start mb-10">
           <button
@@ -155,8 +170,16 @@ const Team = () => {
                     <h1 className="font-bold text-[20px]">{member.name}</h1>
                     <p className="text-gray-800">{member.status}</p>
                     <p className="mt-5 text-[14px] text-gray-600">
-                      {member.bio}
+                      {readMore[member.id]
+                        ? member.bio
+                        : truncateText(member.bio, 150)}
                     </p>
+                    <button
+                      className="text-black mt-2 underline"
+                      onClick={() => toggleReadMore(member.id)}
+                    >
+                      {readMore[member.id] ? "Read Less" : "Read More"}
+                    </button>
                   </div>
                 </div>
               ))}
@@ -177,8 +200,16 @@ const Team = () => {
                     <h1 className="font-bold text-[20px]">{supporter.name}</h1>
                     <p className="text-gray-800">{supporter.status}</p>
                     <p className="mt-5 text-[14px] text-gray-600">
-                      {supporter.bio}
+                      {readMore[supporter.id]
+                        ? supporter.bio
+                        : truncateText(supporter.bio, 150)}
                     </p>
+                    <button
+                      className="text-black mt-2 underline"
+                      onClick={() => toggleReadMore(supporter.id)}
+                    >
+                      {readMore[supporter.id] ? "Read Less" : "Read More"}
+                    </button>
                   </div>
                 </div>
               ))}

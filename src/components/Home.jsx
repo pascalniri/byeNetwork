@@ -32,7 +32,7 @@ const Home = () => {
       </h1>
 
       <a
-        href="https://form.jotform.com/240665208958062"
+        href="https://forms.gle/ixTMNSwMieidpv7T7"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -42,7 +42,7 @@ const Home = () => {
           whileTap={{ scale: 0.95 }}
           className="mt-[80px] font-normal bg-white flex flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[10px] rounded-full"
         >
-          <p className="text-black">APPLY NOW</p>
+          <p className="text-black">Apply Now</p>
           <span className="bg-black text-white px-[15px] py-[15px] rounded-full">
             <FaArrowRight />
           </span>

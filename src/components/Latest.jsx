@@ -39,9 +39,9 @@ const Latest = () => {
   };
 
   return (
-    <div className="font-outfit  font-light mx-auto px-4 md:w-[80%] mt-[100px] pb-[60px] md:pb-[150px] 2xl:w-[70%]">
+    <div className="font-outfit  font-light mx-auto px-4 md:max-w-2xl lg:max-w-6xl mt-[100px] pb-[60px] md:pb-[150px] ">
       <div className="flex flex-col justify-center items-center ">
-      <h1 className="font-bold text-[60px] relative  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+      <h1 className="font-bold text-[30px] md:text-[40px] lg:text-[60px] relative  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
         Latest News
       </h1>
       </div>
@@ -80,7 +80,7 @@ const Latest = () => {
               whileHover={{ scale: 1.05, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <p className="text-black">SEE MORE</p>
+              <p className="text-black text-[14px]">See more</p>
               <span className="bg-black px-[8px] py-[8px] rounded-full">
                 <FaArrowRight className="text-white" />
               </span>
@@ -106,7 +106,7 @@ const Latest = () => {
               whileHover={{ scale: 1.05, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <p className="text-white">CLOSE</p>
+              <p className="text-white text-[14px]">Close</p>
               <span className="bg-white px-[10px] py-[10px] rounded-full">
                 <FaArrowRight />
               </span>
