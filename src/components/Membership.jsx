@@ -162,8 +162,8 @@ const Membership = () => {
 
       <div class="bg-[#000000] py-10 mt-[3rem] rounded-xl shadow-md">
         <div class="max-w-3xl mx-auto px-6">
-          <h2 class="text-2xl font-bold text-gray-400 mb-4">How to Apply</h2>
-          <p class="text-lg text-gray-400 mb-6">
+          <h2 class="text-2xl font-bold text-gray-200 mb-4">How to Apply</h2>
+          <p class="text-lg text-gray-200 mb-6">
             Application Deadline:{" "}
             <span class="font-semibold text-gray-300">December 15</span>
           </p>

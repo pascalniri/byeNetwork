@@ -98,7 +98,7 @@ const Team = () => {
       id: 3,
       image: "/Riley.png",
       alt: "Rileys Way Foundation",
-      name: "Focused Minds Education Group",
+      name: "Riley's Way Foundation",
       desc: "Riley's Way invests in and supports the next generation of kind leaders. We provide young people with the programs, support and inclusive community they need to thrive as changemakers. Riley’s Way is committed to supporting these young leaders to build a better world that values kindness, empathy, connection and the voices of all youth.",
     },
   ];

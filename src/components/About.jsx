@@ -56,7 +56,7 @@ const About = () => {
             direction="up"
             className="p-2 shadow-lg w-full h-full rounded-[10px] transform transition duration-200 ease-in-out hover:translate-x-1 hover:-translate-y-1 cursor-pointer"
           >
-            <div className="flex flex-col justify-center text-center items-center border-2 border-black px-[20px] py-[20px]  rounded-[10px]">
+            <div className="flex flex-col justify-center text-center items-center border-2 border-black px-[20px] py-[20px]  rounded-[10px] bg-white">
               <img src={mission} alt="Mission" className="w-[120px] mb-8" />{" "}
               <p className="">
                 Our mission is to create a supportive, collaborative, and
@@ -77,7 +77,7 @@ const About = () => {
             direction="up"
             className="p-2 shadow-lg w-full h-full rounded-[10px] transform transition duration-200 ease-in-out hover:translate-x-1 hover:-translate-y-1 cursor-pointer"
           >
-            <div className="flex flex-col justify-center text-center items-center border-2  border-black p-2 px-[20px] py-[20px]  rounded-[10px]">
+            <div className="flex flex-col justify-center text-center items-center border-2  border-black p-2 px-[20px] py-[20px]  rounded-[10px] bg-white">
               <img src={vision} alt="Mission" className="w-[120px] mb-8" />{" "}
               <p className="">
                 With our core values of excellence, collaboration, and
