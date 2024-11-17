@@ -13,13 +13,13 @@ const ContactUs = () => {
           href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 font-medium underline hover:text-blue-800"
+          className="text-blue-600 font-medium text-[12px] sm:text-[14px] md:text-[18px] underline hover:text-blue-800"
         >
           blackyouthempowermentnetwork@gmail.com
         </a>.
       </p>
       <p className="text-lg text-gray-500 text-center">
-        We’re here to support you every step of the way on your journey with BYEN.
+        We're here to support you every step of the way on your journey with BYEN.
       </p>
       <div className="mt-8 flex justify-center">
 

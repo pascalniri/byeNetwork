@@ -49,13 +49,13 @@ const Footer = () => {
           >
             <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
           </a>
-          <a
+          {/* <a
             href="https://www.facebook.com/profile.php?id=61554206687351"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
-          </a>
+          </a> */}
           <a
             href="https://twitter.com"
             target="_blank"

@@ -167,7 +167,7 @@ const Membership = () => {
             Application Deadline:{" "}
             <span class="font-semibold text-gray-300">December 15</span>
           </p>
-          <ol class="list-decimal list-inside text-gray-600 space-y-3 mb-6">
+          <ol class="list-decimal list-inside text-gray-200 space-y-3 mb-6">
             <li class="text-lg">
               <span class="font-semibold">Step 1:</span> Choose your membership
               level
