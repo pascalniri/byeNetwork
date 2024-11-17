@@ -47,7 +47,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <p className="text-black">SHOP</p>
+            <p className="text-black">Shop</p>
             <span className="bg-black px-[10px] py-[10px] rounded-full">
               <FaArrowRight />
             </span>
