@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
-import { Zoom } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const Latest = () => {
   const [selectedCard, setSelectedCard] = useState(null); // State to track selected card
@@ -41,56 +41,49 @@ const Latest = () => {
   return (
     <div className="font-outfit  font-light mx-auto px-4 md:max-w-2xl lg:max-w-6xl mt-[100px] pb-[60px] md:pb-[150px] ">
       <div className="flex flex-col justify-center items-center ">
-      <h1 className="font-bold text-[30px] md:text-[40px] lg:text-[60px] relative  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
-        Latest News
-      </h1>
+        <h1 className="font-bold text-[30px] md:text-[40px] lg:text-[60px] relative  after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
+          Latest News
+        </h1>
       </div>
 
-      <Zoom>
+      <div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[100px]">
-        {cards.map((card) => (
-          <motion.div
-            key={card.id}
-            className="relative rounded-lg shadow-lg group w-full h-[250px] bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${card.image})`,
-            }}
-            animate={{ y: ["0%", "-10%"] }}
-            transition={{
-              y: {
-                repeat: Infinity,
-                repeatType: "reverse",
-                duration: 2,
-                ease: "easeInOut",
-              },
-            }}
-            whileHover={{ scale: 1.02 }}
-          >
-            <div className="bg-gradient-to-t from-black to-[#00000087] h-full rounded-lg">
-              <div className="absolute bottom-0 left-0 p-4">
-                <p className="text-white text-xl font-bold">{card.name}</p>
-                <p className="text-[#c6c6c6] font-extralight">
-                  {card.description.substring(0, 100)}...
-                </p>
-            
-                <motion.button
-                  onClick={() => handleReadMore(card)}
-                  className="mt-[20px] font-light bg-white flex flex-row items-center justify-center gap-[10px] pl-[20px] pr-[6px] py-[6px] rounded-full"
-              initial="hidden"
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
+          {cards.map((card) => (
+            <Slide triggerOnce direction="up"
+              key={card.id}
+              className="relative rounded-lg shadow-lg group w-full h-[250px] bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${card.image})`,
+              }}
+              
+             
+              whileHover={{ scale: 1.02 }}
             >
-              <p className="text-black text-[14px]">See more</p>
-              <span className="bg-black px-[8px] py-[8px] rounded-full">
-                <FaArrowRight className="text-white" />
-              </span>
-            </motion.button>
+              <div className="bg-gradient-to-t from-black to-[#00000087] h-full rounded-lg">
+                <div className="absolute bottom-0 left-0 p-4">
+                  <p className="text-white text-xl font-bold">{card.name}</p>
+                  <p className="text-[#c6c6c6] font-extralight">
+                    {card.description.substring(0, 100)}...
+                  </p>
+
+                  <motion.button
+                    onClick={() => handleReadMore(card)}
+                    className="mt-[20px] font-light bg-white flex flex-row items-center justify-center gap-[10px] pl-[20px] pr-[6px] py-[6px] rounded-full"
+                    initial="hidden"
+                    whileHover={{ scale: 1.05, rotate: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <p className="text-black text-[14px]">See more</p>
+                    <span className="bg-black px-[8px] py-[8px] rounded-full">
+                      <FaArrowRight className="text-white" />
+                    </span>
+                  </motion.button>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </Slide>
+          ))}
         </div>
-      </Zoom>
+      </div>
 
       {/* Modal for full information */}
       {selectedCard && (

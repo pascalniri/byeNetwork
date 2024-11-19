@@ -3,7 +3,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import join from "../assets/join.jpg";
 import mentor from "../assets/mentor.png";
-import { Bounce, Fade, Zoom } from "react-awesome-reveal";
+import { Bounce, Fade, Slide, Zoom } from "react-awesome-reveal";
 const Join = () => {
   return (
     <div className="font-outfit font-light text-center flex flex-col justify-center items-center mt-[80px] md:mt-[150px] mx-auto px-4  md:max-w-2xl lg:max-w-6xl">
@@ -16,7 +16,7 @@ const Join = () => {
 
       <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 gap-[50px]">
         {/* first container of joining */}
-        <Bounce triggerOnce className="bg-gray-100 rounded-[10px] shadow-lg">
+        <Slide triggerOnce direction="up" className="bg-gray-100 rounded-[10px] shadow-lg">
           <div>
             <img
               src="/become.jpg"
@@ -33,6 +33,7 @@ const Join = () => {
                 generation of leaders, fostering growth and collaboration as we
                 work together to create meaningful change in our communities.
               </p>
+              <a href="/resources">
               <motion.button
                 className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[20px] pr-[5px] py-[5px] rounded-full"
                 initial="hidden"
@@ -44,13 +45,14 @@ const Join = () => {
                   <FaArrowRight />
                 </span>
               </motion.button>
+              </a>
             </div>
           </div>
-        </Bounce>
+        </Slide>
 
         {/* second container of joining */}
 
-        <Bounce triggerOnce>
+        <Slide triggerOnce direction="up" >
           <div className="bg-gray-100 rounded-[10px] shadow-lg">
             <img
               src="/join.jpg"
@@ -60,12 +62,13 @@ const Join = () => {
 
             <div className="px-[10px] py-[20px] text-left">
               <h1 className="font-semibold text-[20px]">
-                Want to join the network?
+                Want to become a member?
               </h1>
               <p className="text-[13px] text-[#474747]">
                 Inspire and guide our youth by becoming a mentor. Click below
                 for more details on how you can make a positive impact.
               </p>
+              <a href="/membership">
               <motion.button
                 className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[20px] pr-[5px] py-[5px] rounded-full"
                 initial="hidden"
@@ -77,9 +80,10 @@ const Join = () => {
                   <FaArrowRight />
                 </span>
               </motion.button>
+              </a>
             </div>
           </div>
-        </Bounce>
+        </Slide>
       </div>
     </div>
   );

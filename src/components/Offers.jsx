@@ -10,7 +10,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Offers = () => {
   return (
@@ -19,17 +19,18 @@ const Offers = () => {
         <Fade className="font-bold text-[25px] sm:text-[30px] md:text-[40px] lg:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
           What BYEN Offers!
         </Fade>
-        <p className="mt-[30px] text-[#474747] w-full md:w-[70%]">
+        <Slide triggerOnce direction="up" className="mt-[30px] text-[#474747] w-full md:w-[70%]">
           Black Youth Empowerment Network (BYEN) provides mentorship, leadership
           training, and resources to help young Black individuals excel
           personally and professionally. Through educational workshops,
           community projects, and networking opportunities, BYEN fosters growth,
           confidence, and empowerment for the next generation of leaders.
-        </p>
+        </Slide>
       </div>
 
       <Fade>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[50px]">
+        <Slide triggerOnce direction="up">
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
             src="/resources.jpg"
@@ -43,6 +44,9 @@ const Offers = () => {
               </span></p>
           </div>
         </div>
+        </Slide>
+
+        <Slide triggerOnce direction="up">
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
             src="/events.jpg"
@@ -56,6 +60,8 @@ const Offers = () => {
               </span></p>
           </div>
         </div>
+        </Slide>
+        <Slide triggerOnce direction="up">
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
             src="collaboration.jpg"
@@ -69,6 +75,8 @@ const Offers = () => {
               </span></p>
           </div>
         </div>
+        </Slide> 
+        <Slide triggerOnce direction="up">
         <div className="relative rounded-lg shadow-lg w-full h-[250px] bg-cover bg-center">
           <img
             src="community.jpg"
@@ -82,6 +90,7 @@ const Offers = () => {
               </span></p>
           </div>
         </div>
+        </Slide>
         </div>
       </Fade>
     </div>
