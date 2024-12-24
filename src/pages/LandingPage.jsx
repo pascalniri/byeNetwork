@@ -6,17 +6,17 @@ import Join from "../components/Join";
 import Latest from "../components/Latest";
 import whole from "../assets/whole.svg";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
-import ContactUs from "@/components/ContactUs";
+import ContactUs from "../components/ContactUs";
 
 // Scale and rotate animation with delay
 const scaleRotateAnimation = (delay = 0) => ({
-  initial: { scale: 0.8, rotate: -15, opacity: 0 },  // Start small and rotated
-  animate: { scale: 1, rotate: 0, opacity: 1 },      // Full size and upright
+  initial: { scale: 0.8, rotate: -15, opacity: 0 }, // Start small and rotated
+  animate: { scale: 1, rotate: 0, opacity: 1 }, // Full size and upright
   transition: {
-    duration: 0.8,                                   // Smooth transition
-    ease: "easeInOut",                               // Easing for polished animation
-    delay: delay                                     // Delay for staggering
-  }
+    duration: 0.8, // Smooth transition
+    ease: "easeInOut", // Easing for polished animation
+    delay: delay, // Delay for staggering
+  },
 });
 
 const LandingPage = () => {
@@ -38,9 +38,13 @@ const LandingPage = () => {
       <motion.div
         ref={ref}
         initial={scaleRotateAnimation(delay).initial}
-        animate={inView ? scaleRotateAnimation(delay).animate : scaleRotateAnimation(delay).initial}
+        animate={
+          inView
+            ? scaleRotateAnimation(delay).animate
+            : scaleRotateAnimation(delay).initial
+        }
         transition={scaleRotateAnimation(delay).transition}
-        style={{ marginBottom: "2rem" }}  // Spacing between sections
+        style={{ marginBottom: "2rem" }} // Spacing between sections
       >
         {children}
       </motion.div>
@@ -56,30 +60,23 @@ const LandingPage = () => {
           top: 0,
           left: 0,
           height: "10px",
-          backgroundColor: "#000000",
+          backgroundColor: "#9e6548",
           transformOrigin: "0%",
           width: "100%",
           zIndex: 1000,
           scaleX,
         }}
       />
-      
-      {/* Home Section */}
-        <Home />
 
-      <div
-        style={{
-          backgroundImage: `url(${whole})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="w-full overflow-hidden"
-      >
-          <About />
-          <Offers />
-          <Join />
-          <Latest />
-          <ContactUs />
+      {/* Home Section */}
+      <Home />
+
+      <div>
+        <About />
+        <Offers />
+        <Join />
+        <Latest />
+        <ContactUs />
       </div>
     </>
   );

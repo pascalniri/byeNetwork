@@ -1,45 +1,43 @@
-import React from 'react';
-import { motion } from "framer-motion";
-import { FaArrowRight } from 'react-icons/fa6';
-
+import React from "react";
+import { BiSolidConversation } from "react-icons/bi";
 const ContactUs = () => {
   return (
-   <div className='mx-auto px-4 font-outfit'>
-     <div className="max-w-4xl  mx-auto py-10 px-6 bg-black rounded-lg shadow-md my-[8rem]">
-      <h2 className="text-3xl font-bold text-white mb-6 text-center">Contact Us</h2>
-      <p className="text-lg text-gray-500 text-center mb-6">
-        Have any questions? Feel free to reach out to us at{' '}
+    <div className="font-poppins flex flex-col justify-center text-center my-[8rem]">
+      <h1 className="font-teko md:text-[70px] text-[45px] font-medium">
+        REACH OUT <span className="text-[#9e6548]">TO US!</span>
+      </h1>
+      <p className="text-[15px] text-[#6C6A6A] md:w-[60%] mx-auto mb-[5rem]">
+        Whether you have a query, a suggestion, or just want to say hello, we'd love to hear from you. Let's connect and start a conversation today!
+      </p>
+      <div
+        style={{
+          backgroundImage: `url("/contact-pic.svg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "100%",
+          width: "100%",
+        }}
+        className="mb-[10rem] flex flex-col justify-center items-center text-center py-[3rem] px-4 md:px-[5rem] lg:px-[10rem]"
+      >
+        <h1 className="font-teko md:text-[70px] text-white text-[45px] font-medium w-[90%]">
+          LET'S CONNECT AND START A CONVERSATION TODAY!
+        </h1>
+        <p className="text-[15px] text-[#d7d7d7] md:w-[80%]">
+          We're here to support you every step of the way on your journey with
+          BYEN.
+        </p>
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
           target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 font-medium text-[12px] sm:text-[14px] md:text-[18px] underline hover:text-blue-800"
         >
-          blackyouthempowermentnetwork@gmail.com
-        </a>.
-      </p>
-      <p className="text-lg text-gray-500 text-center">
-        We're here to support you every step of the way on your journey with BYEN.
-      </p>
-      <div className="mt-8 flex justify-center">
-
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com" target="_blanck">
-            <motion.button
-              className="font-light flex bg-white flex-row items-center justify-center gap-[20px] pl-[30px] pr-[6px] py-[6px] rounded-full"
-              initial="hidden"
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <p className="text-black text-[14px]">Contact via Gmail</p>
-              <span className="bg-black px-[10px] py-[10px] rounded-full">
-                <FaArrowRight className="text-white" />
-              </span>
-            </motion.button>
-          </a>
-        
+          <button className="font-teko flex  items-center gap-2 mt-[3rem] text-[22px] text-white px-[30px] py-[8px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+            <p>Contact via e-mail</p>
+            <BiSolidConversation />
+          </button>
+        </a>
       </div>
     </div>
-   </div>
   );
 };
 

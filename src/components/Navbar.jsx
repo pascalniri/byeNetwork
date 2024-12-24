@@ -1,102 +1,268 @@
 import React, { useState } from "react";
-import { FaBarsStaggered, FaArrowRight } from "react-icons/fa6";
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom"; // Import useLocation
-import byen_logo from "../assets/byen_logo.png";
-import { FaTimes } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
-  const [showNav, setShowNav] = useState(false);
-  const { pathname } = useLocation(); // Get the current path
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDropdownOpen1, setDropdownOpen1] = useState(false);
+  const [isDropdownOpen2, setDropdownOpen2] = useState(false);
+  const [isDropdownOpen3, setDropdownOpen3] = useState(false);
 
-  const toggleMenu = () => {
-    setShowNav((prev) => !prev);
+
+  const toggleDropdown1 = () => {
+    setDropdownOpen1((prev) => !prev);
+    if (!isDropdownOpen1) {
+      setDropdownOpen2(false);
+      setDropdownOpen3(false);
+    }
   };
 
-  // Helper function to check if the link is active
-  const isActive = (href) => pathname === href;
+  const toggleDropdown2 = () => {
+    setDropdownOpen2((prev) => !prev);
+    if (!isDropdownOpen2) {
+      setDropdownOpen1(false);
+      setDropdownOpen3(false);
+    }
+    };
+    const toggleDropdown3 = () => {
+      setDropdownOpen3((prev) => !prev);
+      if (!isDropdownOpen3) {
+        setDropdownOpen1(false);
+        setDropdownOpen2(false);
+      }};
 
   return (
-    <div className="font-outfit top-5 fixed w-full z-10 mx-auto px-4">
-      <div className="px-4 mx-auto md:max-w-2xl lg:max-w-6xl backdrop-blur-lg bg-black bg-opacity-60 rounded-2xl">
-        <div className="font-light flex flex-row justify-between items-center py-[10px] text-white">
-          <a href="/">
-            <img src={byen_logo} alt="logo" className="w-[100px]" />
-          </a>
-          <ul className="hidden lg:flex lg:flex-row md:gap-[50px]">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/membership", label: "Membership" },
-              { href: "/team", label: "Our Team" },
-              { href: "/resources", label: "Resources" },
-              { href: "/projects", label: "Projects" },
-            ].map((link) => (
-              <li
-                key={link.href}
-                className={`hover:scale-105 transition ${
-                  isActive(link.href) ? "text-white underline font-semibold" : ""
-                }`}
-              >
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
-          <motion.button
-            className="hidden lg:flex font-light bg-white flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
-            initial="hidden"
-            whileHover={{ scale: 1.05, rotate: 5 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <p className="text-black">Shop</p>
-            <span className="bg-black px-[10px] py-[10px] rounded-full">
-              <FaArrowRight />
-            </span>
-          </motion.button>
+    <nav className="font-teko text-[22px] bg-white bg-opacity-20 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-4 flex items-center justify-between">
+        {/* Logo */}
+        <a href="/">
+          <img src="/logo.svg" alt="logo" className="w-[80px]" />
+        </a>
 
-          {/* Small devices bar for toggling the links */}
-          <button className="flex lg:hidden" onClick={toggleMenu}>
-            {showNav ? (
-              <FaTimes className="text-[25px] cursor-pointer" />
-            ) : (
-              <FaBarsStaggered className="text-[25px] cursor-pointer" />
-            )}
-          </button>
-        </div>
-      </div>
-      {showNav && (
-        <div className="lg:hidden z-10 fixed h-[400px] mt-[120px] py-[20px] inset-0 backdrop-blur-lg bg-black bg-opacity-60 mx-4 md:mx-auto rounded-2xl md:w-[80%] text-white flex items-center justify-center text-center px-4">
-          <ul className="flex flex-col gap-7">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/membership", label: "Membership" },
-              { href: "/team", label: "Our Team" },
-              { href: "/resources", label: "Resources" },
-              { href: "/projects", label: "Projects" },
-            ].map((link) => (
-              <li
-                key={link.href}
-                className={`hover:scale-105 transition ${
-                  isActive(link.href) ? "text-white underline font-semibold" : ""
-                }`}
-              >
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
-            <motion.button
-              className="font-light flex bg-white flex-row items-center justify-center gap-[20px] pl-[30px] pr-[10px] py-[8px] rounded-full"
-              initial="hidden"
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
+        {/* Links for Desktop */}
+        <div className="hidden lg:flex items-center space-x-8">
+          <a href="/" className="text-black hover:text-gray-900 transition">
+            Home
+          </a>
+          <a href="/about" className="text-black hover:text-gray-900 transition">
+            About
+          </a>
+          <a href="/membership" className="text-black hover:text-gray-900 transition">
+            Membership
+          </a>
+
+          {/* Dropdown Link 1 */}
+          <div className="relative">
+            <button
+              onClick={toggleDropdown1}
+              className="flex items-center space-x-1 cursor-pointer text-black hover:text-gray-900"
             >
-              <p className="text-black">Shop</p>
-              <span className="bg-black px-[10px] py-[10px] rounded-full">
-                <FaArrowRight />
-              </span>
-            </motion.button>
-          </ul>
+              <span>Resources</span>
+              <FiChevronDown />
+            </button>
+            {isDropdownOpen1 && (
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg animate-fadeIn">
+                <a
+                  href="/events"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Events
+                </a>
+                <a
+                  href="/mentorship"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Mentorship
+                </a>
+          
+              </div>
+            )}
+          </div>
+
+          {/* Dropdown Link 2 */}
+          <div className="relative">
+            <button
+              onClick={toggleDropdown2}
+              className="flex items-center space-x-1 cursor-pointer text-black hover:text-gray-900"
+            >
+              <span>Our Team</span>
+              <FiChevronDown />
+            </button>
+            {isDropdownOpen2 && (
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg animate-fadeIn">
+                <a
+                  href="/leadership"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Leadership
+                </a>
+                <a
+                  href="/partners"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Partners
+                </a>
+          
+              </div>
+            )}
+          </div>
+
+          {/* Dropdown Link 3 */}
+          <div className="relative">
+            <button
+              onClick={toggleDropdown3}
+              className="flex items-center space-x-1 cursor-pointer text-black hover:text-gray-900"
+            >
+              <span>Projects</span>
+              <FiChevronDown />
+            </button>
+            {isDropdownOpen3 && (
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg animate-fadeIn">
+                <a
+                  href="/foundation"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Foundation
+                </a>
+                <a
+                  href="/gallery"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Gallery
+                </a>
+          
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Donate Button */}
+        <div className="hidden lg:block">
+          <a
+            href="/donate"
+            className="bg-[#985B3C] flex justify-center text-white px-[30px] py-[8px] hover:bg-[#9e6548] duration-200"
+          >
+            Donate
+          </a>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden text-black focus:outline-none"
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <HiX className="w-6 h-6" /> : <HiMenuAlt3 className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white pb-5 shadow-md">
+          <a
+            href="/"
+            className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
+          >
+            About
+          </a>
+          <a
+            href="/membership"
+            className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
+          >
+            Membership
+          </a>
+          <div>
+            <button
+              onClick={toggleDropdown1}
+              className="flex justify-between items-center w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
+            >
+              <span>Resources</span>
+              <FiChevronDown />
+            </button>
+            {isDropdownOpen1 && (
+              <div className="pl-4">
+                <a
+                  href="/events"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Events
+                </a>
+                <a
+                  href="/mentorship"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Mentorship
+                </a>
+            
+              </div>
+            )}
+          </div>
+          <div>
+            <button
+              onClick={toggleDropdown2}
+              className="flex justify-between items-center w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
+            >
+              <span>Our Team</span>
+              <FiChevronDown />
+            </button>
+            {isDropdownOpen2 && (
+              <div className="pl-4">
+                <a
+                  href="/leadership"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Leadership
+                </a>
+                <a
+                  href="/partners"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Partners
+                </a>
+            
+              </div>
+            )}
+          </div>
+          <div>
+            <button
+              onClick={toggleDropdown3}
+              className="flex justify-between items-center w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
+            >
+              <span>Projects</span>
+              <FiChevronDown />
+            </button>
+            {isDropdownOpen3 && (
+              <div className="pl-4">
+                <a
+                  href="/foundation"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Foundation
+                </a>
+                <a
+                  href="/gallery"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  Gallery
+                </a>
+            
+              </div>
+            )}
+          </div>
+          <a
+            href="/donate"
+            className="bg-[#985B3C] w-[100px] flex justify-center text-white px-4 py-[8px] hover:bg-[#9e6548] duration-200 mt-2 mx-4"
+          >
+            Donate
+          </a>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 

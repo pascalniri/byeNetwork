@@ -1,73 +1,151 @@
 import React from "react";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { FaFacebook, FaYoutube } from "react-icons/fa6";
-import { FiInstagram } from "react-icons/fi";
-import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { RiInstagramFill } from "react-icons/ri";
+import { BsTwitterX } from "react-icons/bs";
+import { FaYoutube } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
+import { BsFacebook } from "react-icons/bs";
+import { IoLocationOutline } from "react-icons/io5";
+import { MdOutlineMail } from "react-icons/md";
+import { LuPhoneCall } from "react-icons/lu";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white font-outfit text-center font-light py-[50px] overflow-hidden">
-      <footer class="flex flex-col space-y-10 justify-center m-10">
-        <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
-          <a class="hover:text-white" href="/">
-            Home
-          </a>
-          <a class="hover:text-white" href="/membership">
-            Membership
-          </a>
-          <a class="hover:text-white" href="/team">
-            Our Team
-          </a>
-          <a class="hover:text-white" href="/resources">
-            Resources
-          </a>
-          <a class="hover:text-white" href="/projects">
-            Projects
-          </a>
-        </nav>
-
-        <div class="flex justify-center space-x-5">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="https://img.icons8.com/fluent/30/000000/email.png" />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/black-youth-empowerment-network/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
-          </a>
-          <a
-            href="https://www.instagram.com/blackyouthempowermentnet/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
-          </a>
-          {/* <a
-            href="https://www.facebook.com/profile.php?id=61554206687351"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
-          </a> */}
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
-          </a>
+    <div className="font-poppins bg-black w-full pt-[4rem] mx-auto max-w-screen-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 md:px-[5rem] lg:px-[6rem] mx-auto">
+        <div>
+          <img src="/logo.svg" alt="logo" />
+          <p className="text-[13px] text-[#8f8f8f] mt-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            impedit, quos porro vel iure dolorem veniam cum, reprehenderit
+            pariatur incidunt iusto fugit dolore anim
+          </p>
+          <span className="flex flex-row gap-3 mt-10">
+            <a
+              href="https://www.instagram.com/blackyouthempowermentnet/"
+              target="_blank"
+            >
+              <RiInstagramFill className="text-[#9e6548] text-[30px] hover:text-white duration-200" />
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <BsTwitterX className="text-[#9e6548] text-[28px] hover:text-white duration-200" />
+            </a>
+            <a
+              href="https://www.youtube.com/@BlackYouthEmpowermentNetwork"
+              target="_blank"
+            >
+              <FaYoutube className="text-[#9e6548] text-[30px] hover:text-white duration-200" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/black-youth-empowerment-network/"
+              target="_blank"
+            >
+              <SiLinkedin className="text-[#9e6548] text-[28px] hover:text-white duration-200" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61554206687351"
+            target="_blank">
+              <BsFacebook className="text-[#9e6548] text-[29px] hover:text-white duration-200" />
+            </a>
+          </span>
         </div>
-        <p class="text-center text-gray-700 font-medium">
-          &copy; 2024 BYEN. All rights reservered.
-        </p>
-      </footer>
+
+        <div>
+          <h2 className="font-teko text-[22px] text-white">Quick Links</h2>
+          <ul className="flex flex-col gap-1 mt-3">
+            <li>
+              <a
+                href="#"
+                className="text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/membership"
+                className="text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                Membership
+              </a>
+            </li>
+            <li>
+              <a
+                href="/partners"
+                className="text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                Our Partners
+              </a>
+            </li>
+            <li>
+              <a
+                href="/mentorship"
+                className="text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                Mentorship
+              </a>
+            </li>
+            <li>
+              <a
+                href="/events"
+                className="text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                Events
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="font-teko text-[22px] text-white">Get In Touch</h2>
+          <ul className="flex flex-col gap-3 mt-3">
+            <li className="flex flex-row items-center gap-3">
+              <MdOutlineMail className="text-[#9e6548] text-[30px]" />
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
+                target="_blank"
+                className="text-[10px] md:text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                blackyouthempowermentnetwork@gmail.com
+              </a>
+            </li>
+            <li className="flex flex-row items-center gap-3">
+              <IoLocationOutline className="text-[#9e6548] text-[30px]" />
+              <a
+                href="#"
+                className="text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                location, street 20 Av
+              </a>
+            </li>
+            <li className="flex flex-row items-center gap-3">
+              <LuPhoneCall className="text-[#9e6548] text-[28px]" />
+              <a
+                href="tel:+250787358142"
+                target="_blank"
+                className="text-[13px] text-[#8f8f8f] hover:text-[#9e6548] duration-200"
+              >
+                +1 000 000 0000
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="px-4 md:px-[5rem] lg:px-[6rem] mx-auto mt-[3rem] bg-[#9e6548] text-[13px] py-[1.4rem] text-white flex flex-col-reverse justify-center items-center gap-y-5 md:flex-row  md:justify-between">
+        <p>© 2025 BYEN. All rights reservered.</p>
+        <span className="flex gap-10">
+          <a
+            href="#"
+            className="text-[13px] underline hover:text-black duration-200"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="#"
+            className="text-[13px] underline hover:text-black duration-200"
+          >
+            Terms & Conditions
+          </a>
+        </span>
+      </div>
     </div>
   );
 };

@@ -1,89 +1,77 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa6";
-import join from "../assets/join.jpg";
-import mentor from "../assets/mentor.png";
-import { Bounce, Fade, Slide, Zoom } from "react-awesome-reveal";
+import { IoArrowForwardOutline } from "react-icons/io5";
+
 const Join = () => {
+  const joins = [
+    {
+      title: "WANT TO BECOME A MENTOR?",
+      description:
+        "Share your knowledge and experience to inspire the next generation of leaders, fostering growth and collaboration as we work together to create meaningful change in our communities.",
+      link: "#",
+    },
+    {
+      title: "WANT TO BECOME A MEMBER?",
+      description:
+        "Inspire and guide our youth by becoming a mentor. Click below for more details on how you can make a positive impact.",
+      link: "#",
+    },
+  ];
   return (
-    <div className="font-outfit font-light text-center flex flex-col justify-center items-center mt-[80px] md:mt-[150px] mx-auto px-4  md:max-w-2xl lg:max-w-6xl">
-      <Fade className="font-bold text-[25px] sm:text-[30px] md:text-[40px] lg:text-[60px] relative inline-block after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-1/2 after:border-b-2 after:border-black">
-        Want To Join The Network?
-      </Fade>
-      <p className="mt-[30px] text-[#474747] md:w-[70%]">
-      Connect, collaborate, and lead with us as we empower each other to achieve our goals and create lasting impact in our communities.
+    <div className="font-poppins flex flex-col justify-center items-center pt-[4rem]  text-center max-w-screen-2xl mx-auto lg:mt-[5rem] mt-[5rem]">
+      <h1 className="font-teko md:text-[70px] text-[45px] font-medium">
+        WANT TO JOIN <span className="text-[#9e6548]">THE NETWORK?</span>
+      </h1>
+      <p className="text-[15px] text-[#6C6A6A] md:w-[80%] lg:mb-[15rem] mb-[5rem]">
+        Connect, collaborate, and lead with us as we empower each other to
+        achieve our goals and create lasting impact in our communities.
       </p>
 
-      <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 gap-[50px]">
-        {/* first container of joining */}
-        <Slide triggerOnce direction="up" className="bg-gray-100 rounded-[10px] shadow-lg">
-          <div>
-            <img
-              src="/become.jpg"
-              alt="mentor"
-              className="rounded-t-[10px] w-full h-auto"
-            />
-
-            <div className="px-[10px] py-[20px] text-left">
-              <h1 className="font-semibold text-[20px]">
-                Want to become a mentor?
-              </h1>
-              <p className="text-[13px] text-[#474747]">
-                Share your knowledge and experience to inspire the next
-                generation of leaders, fostering growth and collaboration as we
-                work together to create meaningful change in our communities.
+      <div className="relative flex justify-center">
+        <img src="/join 1.svg" alt="" className="hidden lg:flex" />
+        <div className="hidden absolute px-4 md:px-[5rem] lg:px-[10rem] -top-[8rem] lg:grid grid-cols-1 lg:grid-cols-2 gap-5 justify-items-center">
+          {joins.map((join, index) => (
+            <div className="bg-white border-b-[10px] border-[#9e6548] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
+              <h2 className="font-teko text-[28px] font-semibold text-[#9e6548]">
+                {join.title}
+              </h2>
+              <p className="text-[15px] text-[#6C6A6A]">
+               {join.description}
               </p>
-              <a href="/resources">
-              <motion.button
-                className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[20px] pr-[5px] py-[5px] rounded-full"
-                initial="hidden"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <p className="text-white text-[14px]">Click here</p>
-                <span className="bg-white text-black px-[10px] py-[10px] rounded-full">
-                  <FaArrowRight />
-                </span>
-              </motion.button>
-              </a>
+              <button className="font-teko border flex  items-center gap-2 mt-[2rem] text-[22px] text-white px-[30px] py-[8px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+                <p>Just Click</p>
+                <IoArrowForwardOutline />
+              </button>
             </div>
+          ))}
+        </div>
+
+        <div
+          style={{
+            backgroundImage: `url("/join 1.svg")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "100%",
+            padding: "8rem 0px",
+          }}
+        >
+          <div className='lg:hidden px-4 md:px-[5rem] lg:px-[10rem] grid grid-cols-1 md:grid-cols-2 gap-5 justify-items-center'>
+            {joins.map((join, index) => (
+                <div className="bg-white border-b-[10px] border-[#9e6548] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
+                <h2 className="font-teko text-[28px] font-semibold text-[#9e6548]">
+                  {join.title}
+                </h2>
+                <p className="text-[15px] text-[#6C6A6A]">
+                  {join.description}
+                </p>
+                <button className="font-teko border flex  items-center gap-2 mt-[2rem] text-[22px] text-white px-[30px] py-[8px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+                  <p>Just Click</p>
+                  <IoArrowForwardOutline />
+                </button>
+              </div>
+            ))}
           </div>
-        </Slide>
-
-        {/* second container of joining */}
-
-        <Slide triggerOnce direction="up" >
-          <div className="bg-gray-100 rounded-[10px] shadow-lg">
-            <img
-              src="/join.jpg"
-              alt="Join"
-              className="rounded-t-[10px] w-full h-auto"
-            />
-
-            <div className="px-[10px] py-[20px] text-left">
-              <h1 className="font-semibold text-[20px]">
-                Want to become a member?
-              </h1>
-              <p className="text-[13px] text-[#474747]">
-                Inspire and guide our youth by becoming a mentor. Click below
-                for more details on how you can make a positive impact.
-              </p>
-              <a href="/membership">
-              <motion.button
-                className="mt-[20px] font-light bg-black flex flex-row items-center justify-center gap-[20px] pl-[20px] pr-[5px] py-[5px] rounded-full"
-                initial="hidden"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <p className="text-white text-[14px]">Click here</p>
-                <span className="bg-white text-black px-[10px] py-[10px] rounded-full">
-                  <FaArrowRight />
-                </span>
-              </motion.button>
-              </a>
-            </div>
-          </div>
-        </Slide>
+        </div>
       </div>
     </div>
   );
