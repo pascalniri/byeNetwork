@@ -175,7 +175,7 @@ const SlidingCards = () => {
             <p className="text-white text-sm mt-2">{director.title}</p>
           </div>
           <div className="hidden group-hover:flex flex-col justify-center items-center text-center h-full w-full p-6 bg-[#9e6548] bg-opacity-90">
-            <h3 className="text-xl text-[#ffffff]  md:text-3xl font-medium">
+            <h3 className="text-xl text-[#ffffff]  md:text-xl font-medium">
               {director.name}
             </h3>
             <p className="text-white text-sm mt-1">{director.title}</p>

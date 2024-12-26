@@ -26,7 +26,7 @@ const ContactUs = () => {
           href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
           target="_blank"
         >
-          <button className="font-teko flex  items-center gap-2 mt-[3rem] text-[22px] text-white px-[30px] py-[8px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+          <button className=" flex  items-center gap-2 mt-[3rem] text-[13px] text-white px-[30px] py-[10px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
             <p>Contact via e-mail</p>
             <BiSolidConversation />
           </button>
