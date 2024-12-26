@@ -42,10 +42,10 @@ const Offers = () => {
   ];
   return (
     <div className='font-poppins bg-[#FAFAFA] flex flex-col justify-center items-center py-[4rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[13rem] mt-[5rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full'>
-      <h1 className="font-teko md:text-[70px] text-[45px] font-medium">
+      <h1 className=" md:text-[50px] text-[30px] font-medium">
         WHAT BYEN <span className="text-[#9e6548]">OFFERS</span>
       </h1>
-      <p className="text-[15px] text-[#6C6A6A] md:w-[80%]">
+      <p className="text-[13px] text-[#6C6A6A] md:w-[80%]">
         Black Youth Empowerment Network (BYEN) provides mentorship, leadership
         training, and resources to help young Black individuals excel personally
         and professionally. Through educational workshops, community projects,
@@ -69,7 +69,7 @@ const Offers = () => {
             <p className="w-full text-[13px] text-[#6C6A6A] mt-1 group-hover:text-gray-200 group-hover:-translate-y-2 duration-700">
               {offer.description}
             </p>
-            <button className="hidden items-center gap-2  font-teko text-[20px] group-hover:flex mt-5 text-[#985B3C] bg-white md:px-[30px] px-4 py-[8px] duration-200 hover:bg-[#f1f1f1]">
+            <button className="hidden items-center gap-2   text-[14px] group-hover:flex mt-5 text-[#985B3C] bg-white md:px-[30px] px-4 py-[10px] duration-200 hover:bg-[#f1f1f1]">
               <p>Learn More</p>
               <IoArrowForwardOutline />
             </button>

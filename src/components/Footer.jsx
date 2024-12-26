@@ -49,7 +49,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="font-teko text-[22px] text-white">Quick Links</h2>
+          <h2 className="
+           text-[20px] text-white">Quick Links</h2>
           <ul className="flex flex-col gap-1 mt-3">
             <li>
               <a
@@ -95,7 +96,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="font-teko text-[22px] text-white">Get In Touch</h2>
+          <h2 className="
+           text-[20px] text-white">Get In Touch</h2>
           <ul className="flex flex-col gap-3 mt-3">
             <li className="flex flex-row items-center gap-3">
               <MdOutlineMail className="text-[#9e6548] text-[30px]" />

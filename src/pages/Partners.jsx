@@ -30,12 +30,12 @@ const Partners = () => {
   return (
     <div className="font-poppins">
       <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full">
-        <h1 className="font-teko flex flex-row items-center gap-2 md:text-[70px] text-[#9e6548] text-[45px] font-medium">
+        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#9e6548] text-[30px] font-medium">
           <MdOutlineHorizontalRule />
           <p>OUR PARTNERS</p>
           <MdOutlineHorizontalRule />
         </h1>
-        <p className="text-[15px] text-[#6C6A6A] md:w-[80%] mx-auto">
+        <p className="text-[13px] mt-3 text-[#6C6A6A] md:w-[80%] mx-auto">
           Our success is built on strong collaborations with our trusted
           partners. Together, we work towards shared goals, driving impact and
           innovation. These partnerships empower us to expand our reach, create
@@ -53,12 +53,12 @@ const Partners = () => {
              className="w-full rounded-[9px]"
            />
            <div className="flex flex-col items-start px-3 mb-3">
-             <h2 className="font-teko text-[30px] mt-3">{partner.title}</h2>
-             <p className="text-[13px] text-[#6C6A6A]">
+             <h2 className=" text-[20px] mt-3">{partner.title}</h2>
+             <p className="text-[13px] mt-3 text-[#6C6A6A]">
                {partner.description}
              </p>
              <a href={partner.link} target="_blank">
-             <button className="font-teko text-[22px] text-white mt-[2rem]  bg-[#985B3C] md:px-[30px] px-4 py-[8px] hover:bg-[#9e6548] duration-200">
+             <button className=" text-[13px] text-white mt-[2rem]  bg-[#985B3C] md:px-[30px] px-4 py-[10px] hover:bg-[#9e6548] duration-200">
                Visit Them
              </button>
              </a>

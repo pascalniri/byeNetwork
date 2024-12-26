@@ -45,12 +45,12 @@ const Gallery = () => {
   return (
     <div className="font-poppins">
       <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full">
-        <h1 className="font-teko flex flex-row items-center gap-2 md:text-[70px] text-[#9e6548] text-[45px] font-medium">
+        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#9e6548] text-[30px] font-medium">
           <MdOutlineHorizontalRule />
           <p>GALLERY</p>
           <MdOutlineHorizontalRule />
         </h1>
-        <p className="text-[15px] text-[#6C6A6A] md:w-[80%] mx-auto">
+        <p className="text-[13px] mt-3 text-[#6C6A6A] md:w-[80%] mx-auto">
           Step into our gallery and relive the moments that define our journey.
           From inspiring events to impactful collaborations, explore the visuals
           that capture the essence of our mission and the vibrant community

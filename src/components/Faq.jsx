@@ -28,8 +28,8 @@ const Faq = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center md:mt-[10rem] mt-[5rem]">
-      <h1 className="font-teko flex flex-row text-center items-center gap-2 md:text-[70px] text-black text-[45px] font-medium">
+    <div className="font-poppins w-full flex flex-col justify-center items-center md:mt-[10rem] mt-[5rem]">
+      <h1 className=" flex flex-row text-center items-center gap-2 md:text-[50px] text-black text-[30px] font-medium">
         FREQUENTLY ASKED QUESTIONS
       </h1>
 

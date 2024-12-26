@@ -32,7 +32,7 @@ const Navbar = () => {
       }};
 
   return (
-    <nav className="font-teko text-[22px] bg-white bg-opacity-20 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+    <nav className="font-poppins  text-[14px] bg-white bg-opacity-20 backdrop-blur-sm shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="/">
@@ -44,9 +44,9 @@ const Navbar = () => {
           <a href="/" className="text-black hover:text-gray-900 transition">
             Home
           </a>
-          <a href="/about" className="text-black hover:text-gray-900 transition">
+          {/* <a href="/about" className="text-black hover:text-gray-900 transition">
             About
-          </a>
+          </a> */}
           <a href="/membership" className="text-black hover:text-gray-900 transition">
             Membership
           </a>
@@ -164,12 +164,12 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a
+          {/* <a
             href="/about"
             className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
           >
             About
-          </a>
+          </a> */}
           <a
             href="/membership"
             className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"

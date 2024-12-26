@@ -25,10 +25,10 @@ const Latest = () => {
     },
   ];
   return (
-    <div className="bg-[#F1F1E9] font-poppins mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[10rem]">
+    <div className="font-poppins mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[10rem]">
       <div className="lg:w-[60%]">
-        <h1 className="w-[80%] font-teko md:text-[70px] text-[45px] font-medium">
-          DISCOVER THE LATEST STORIES, NEWS, AND UPDATES{" "}
+        <h1 className="w-[80%] md:text-[50px] text-[30px] font-medium">
+          DISCOVER THE LATEST NEWS, AND UPDATES{" "}
           <span className="text-[#9e6548]">FROM OUR WORLD</span>
         </h1>
         <p className="text-[15px] text-[#6C6A6A] md:w-[80%]">
@@ -38,7 +38,7 @@ const Latest = () => {
           news, expert tips, or in-depth stories, this is your hub for staying
           connected with all the happenings.
         </p>
-        <button className="font-teko text-[22px] text-white mt-[3rem]  bg-[#985B3C] md:px-[30px] px-4 py-[8px] hover:bg-[#9e6548] duration-200">
+        <button className="text-[14px] text-white mt-[3rem]  bg-[#985B3C] md:px-[30px] px-4 py-[10px] hover:bg-[#9e6548] duration-200">
           View All Trends
         </button>
       </div>
@@ -52,11 +52,11 @@ const Latest = () => {
              className="w-full rounded-[9px]"
            />
            <div className="flex flex-col items-start px-3 mb-3">
-             <h2 className="font-teko text-[30px] mt-3">{trend.title}</h2>
+             <h2 className="text-[24px] mt-3">{trend.title}</h2>
              <p className="text-[13px] text-[#6C6A6A]">
                {trend.description}
              </p>
-             <button className="font-teko text-[22px] text-white mt-[2rem]  bg-[#985B3C] md:px-[30px] px-4 py-[8px] hover:bg-[#9e6548] duration-200">
+             <button className="text-[14px] text-white mt-[2rem]  bg-[#985B3C] md:px-[30px] px-4 py-[8px] hover:bg-[#9e6548] duration-200">
                Learn More
              </button>
            </div>

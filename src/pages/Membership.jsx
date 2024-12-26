@@ -57,12 +57,12 @@ const Membership = () => {
   return (
     <div className="font-poppins">
       <div className='bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full'>
-        <h1 className="font-teko flex flex-row items-center gap-2 md:text-[70px] text-[#9e6548] text-[45px] font-medium">
+        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#9e6548] text-[30px] font-medium">
           <MdOutlineHorizontalRule />
           <p>MEMBERSHIP</p>
           <MdOutlineHorizontalRule />
         </h1>
-        <p className="text-[15px] text-[#6C6A6A] md:w-[80%] mx-auto">
+        <p className="text-[13px] mt-3 text-[#6C6A6A] md:w-[80%] mx-auto">
           The Black Youth Empowerment Network (BYEN) is more than an
           organization—it's a coalition of young Black leaders, creators, and
           change-makers dedicated to uplifting and transforming communities.
@@ -72,10 +72,10 @@ const Membership = () => {
       </div>
 
       <div className="max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
-        <h1 className="font-teko flex flex-row items-center gap-2 md:text-[70px] text-[#9e6548] text-[45px] font-medium">
+        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#9e6548] text-[30px] font-medium">
           <p>Why join BYEN</p>
         </h1>
-        <p className="text-[15px] text-[#6C6A6A] mx-auto mb-[5rem]">
+        <p className="text-[13px] text-[#6C6A6A] mx-auto mb-[5rem]">
           Becoming a member means you'll have access to:
         </p>
 
@@ -96,10 +96,10 @@ const Membership = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
-        <h1 className="font-teko flex flex-row items-center gap-2 md:text-[70px] text-black text-[45px] font-medium">
+        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-black text-[30px] font-medium">
             Membership <span className="text-[#9e6548]">Tiers</span>
         </h1>
-        <p className="text-[15px] text-[#6C6A6A] mx-auto mb-[5rem]">
+        <p className="text-[13px] mt-3 text-[#6C6A6A] mx-auto mb-[5rem]">
           Take the first step towards unlocking amazing possibilities—join us
           today for free!
         </p>
@@ -113,7 +113,7 @@ const Membership = () => {
               <div className="bg-[#9e6548] w-[60px] h-[60px] rounded-full flex items-center justify-center text-[25px]">
                 {membership.number}
               </div>
-              <p className="font-teko md:text-[30px] text-[22px] font-medium">
+              <p className=" md:text-[24px] text-[20px] font-medium">
                 {membership.title}
               </p>
             </div>

@@ -150,10 +150,10 @@ const SlidingCards = () => {
 
   return (
     <div className="font-poppins  mt-5 max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem]">
-      <h1 className="w-[80%] font-teko md:text-[70px] text-[45px] font-medium">
+      <h1 className="w-[80%]  md:text-[50px] text-[30px] font-medium">
           DIRECTORS
         </h1>
-        <p className="text-[15px] text-[#6C6A6A] md:w-[70%]">
+        <p className="text-[13px] mt-3 text-[#6C6A6A] md:w-[70%]">
         The Directors are the visionaries and strategic leaders behind our mission. They guide the overall direction of the organization, make key decisions, and ensure that we stay focused on our goals. With a wealth of experience and a commitment to excellence, our Directors play a crucial role in shaping the future of our initiatives.
         </p>
       <div className=" py-[5rem] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 justify-items-center">
@@ -169,13 +169,13 @@ const SlidingCards = () => {
           }}
         >
           <div className="absolute bottom-0 bg-gradient bg-gradient-to-b from-[#9e654800] to-[#000000] w-full h-full flex flex-col justify-end items-center text-center p-6 group-hover:hidden">
-            <h3 className="text-xl text-[#9e6548] font-teko md:text-3xl font-medium">
+            <h3 className="text-xl text-[#9e6548]  md:text-xl font-medium">
               {director.name}
             </h3>
             <p className="text-white text-sm mt-2">{director.title}</p>
           </div>
           <div className="hidden group-hover:flex flex-col justify-center items-center text-center h-full w-full p-6 bg-[#9e6548] bg-opacity-90">
-            <h3 className="text-xl text-[#ffffff] font-teko md:text-3xl font-medium">
+            <h3 className="text-xl text-[#ffffff]  md:text-3xl font-medium">
               {director.name}
             </h3>
             <p className="text-white text-sm mt-1">{director.title}</p>
@@ -214,7 +214,7 @@ const SlidingCards = () => {
       ))}
     </div>
 
-    <h1 className="w-[80%] font-teko md:text-[70px] text-[45px] font-medium mt-[5rem]">
+    <h1 className="w-[80%]  md:text-[50px] text-[30px] font-medium mt-[5rem]">
           SUPPORTING TEAM
         </h1>
         <p className="text-[15px] text-[#6C6A6A] md:w-[70%]">
@@ -233,13 +233,13 @@ const SlidingCards = () => {
           }}
         >
           <div className="absolute bottom-0 bg-gradient bg-gradient-to-b from-[#9e654800] to-[#000000] w-full h-full flex flex-col justify-end items-center text-center p-6 group-hover:hidden">
-            <h3 className="text-xl text-[#9e6548] font-teko md:text-3xl font-medium">
+            <h3 className="text-xl text-[#9e6548]  md:text-xl font-medium">
               {supporter.name}
             </h3>
             <p className="text-white text-sm mt-2">{supporter.title}</p>
           </div>
           <div className="hidden group-hover:flex flex-col justify-center items-center text-center h-full w-full p-6 bg-[#9e6548] bg-opacity-90">
-            <h3 className="text-xl text-[#ffffff] font-teko md:text-3xl font-medium">
+            <h3 className="text-xl text-[#ffffff]  md:text-xl font-medium">
               {supporter.name}
             </h3>
             <p className="text-white text-sm mt-1">{supporter.title}</p>

@@ -18,10 +18,10 @@ const Join = () => {
   ];
   return (
     <div className="font-poppins flex flex-col justify-center items-center pt-[4rem]  text-center max-w-screen-2xl mx-auto lg:mt-[5rem] mt-[5rem]">
-      <h1 className="font-teko md:text-[70px] text-[45px] font-medium">
+      <h1 className=" md:text-[50px] text-[30px] font-medium">
         WANT TO JOIN <span className="text-[#9e6548]">THE NETWORK?</span>
       </h1>
-      <p className="text-[15px] text-[#6C6A6A] md:w-[80%] lg:mb-[15rem] mb-[5rem]">
+      <p className="text-[13px] text-[#6C6A6A] md:w-[50%] lg:mb-[15rem] mb-[5rem]">
         Connect, collaborate, and lead with us as we empower each other to
         achieve our goals and create lasting impact in our communities.
       </p>
@@ -31,13 +31,13 @@ const Join = () => {
         <div className="hidden absolute px-4 md:px-[5rem] lg:px-[10rem] -top-[8rem] lg:grid grid-cols-1 lg:grid-cols-2 gap-5 justify-items-center">
           {joins.map((join, index) => (
             <div className="bg-white border-b-[10px] border-[#9e6548] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
-              <h2 className="font-teko text-[28px] font-semibold text-[#9e6548]">
+              <h2 className=" text-[20px] font-semibold text-[#9e6548]">
                 {join.title}
               </h2>
-              <p className="text-[15px] text-[#6C6A6A]">
+              <p className="text-[13px] mt-3 text-[#6C6A6A]">
                {join.description}
               </p>
-              <button className="font-teko border flex  items-center gap-2 mt-[2rem] text-[22px] text-white px-[30px] py-[8px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+              <button className=" border flex  items-center gap-2 mt-[2rem] text-[13px] text-white px-[30px] py-[10px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
                 <p>Just Click</p>
                 <IoArrowForwardOutline />
               </button>
@@ -58,13 +58,13 @@ const Join = () => {
           <div className='lg:hidden px-4 md:px-[5rem] lg:px-[10rem] grid grid-cols-1 md:grid-cols-2 gap-5 justify-items-center'>
             {joins.map((join, index) => (
                 <div className="bg-white border-b-[10px] border-[#9e6548] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
-                <h2 className="font-teko text-[28px] font-semibold text-[#9e6548]">
+                <h2 className=" text-[28px] font-semibold text-[#9e6548]">
                   {join.title}
                 </h2>
                 <p className="text-[15px] text-[#6C6A6A]">
                   {join.description}
                 </p>
-                <button className="font-teko border flex  items-center gap-2 mt-[2rem] text-[22px] text-white px-[30px] py-[8px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+                <button className=" border flex  items-center gap-2 mt-[2rem] text-[13px] text-white px-[30px] py-[10px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
                   <p>Just Click</p>
                   <IoArrowForwardOutline />
                 </button>
