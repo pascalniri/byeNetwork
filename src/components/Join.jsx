@@ -17,11 +17,11 @@ const Join = () => {
     },
   ];
   return (
-    <div className="font-poppins flex flex-col justify-center items-center pt-[4rem]  text-center max-w-screen-2xl mx-auto lg:mt-[5rem] mt-[5rem]">
-      <h1 className=" md:text-[50px] text-[30px] font-medium">
-        WANT TO JOIN <span className="text-[#9e6548]">THE NETWORK?</span>
+    <div className="font-montserrat flex flex-col justify-center items-center pt-[4rem]  text-center max-w-screen-2xl mx-auto lg:mt-[5rem] mt-[5rem]">
+      <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
+        WANT TO JOIN <span className="text-[#693e2d]">THE NETWORK?</span>
       </h1>
-      <p className="text-[13px] text-[#6C6A6A] md:w-[50%] lg:mb-[15rem] mb-[5rem]">
+      <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] lg:mb-[15rem] mb-[5rem]">
         Connect, collaborate, and lead with us as we empower each other to
         achieve our goals and create lasting impact in our communities.
       </p>
@@ -30,14 +30,14 @@ const Join = () => {
         <img src="/join 1.svg" alt="" className="hidden lg:flex" />
         <div className="hidden absolute px-4 md:px-[5rem] lg:px-[10rem] -top-[8rem] lg:grid grid-cols-1 lg:grid-cols-2 gap-5 justify-items-center">
           {joins.map((join, index) => (
-            <div className="bg-white border-b-[10px] border-[#9e6548] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
-              <h2 className=" text-[20px] font-semibold text-[#9e6548]">
+            <div className="bg-white rounded-lg border-b-[10px] border-[#693e2d] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
+              <h2 className=" text-[24px] font-semibold text-[#693e2d]">
                 {join.title}
               </h2>
-              <p className="text-[13px] mt-3 text-[#6C6A6A]">
-               {join.description}
+              <p className="text-[14px] leading-[20px] mt-3 text-[#6C6A6A]">
+                {join.description}
               </p>
-              <button className=" border flex  items-center gap-2 mt-[2rem] text-[13px] text-white px-[30px] py-[10px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+              <button className="flex flex-row mt-4 text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200">
                 <p>Just Click</p>
                 <IoArrowForwardOutline />
               </button>
@@ -55,16 +55,14 @@ const Join = () => {
             padding: "8rem 0px",
           }}
         >
-          <div className='lg:hidden px-4 md:px-[5rem] lg:px-[10rem] grid grid-cols-1 md:grid-cols-2 gap-5 justify-items-center'>
+          <div className="lg:hidden px-4 md:px-[5rem] lg:px-[10rem] grid grid-cols-1 md:grid-cols-2 gap-5 justify-items-center">
             {joins.map((join, index) => (
-                <div className="bg-white border-b-[10px] border-[#9e6548] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
-                <h2 className=" text-[28px] font-semibold text-[#9e6548]">
+              <div className="bg-white border-b-[10px] border-[#693e2d] shadow-2xl px-[2rem] py-[3rem] flex flex-col items-start text-left justify-center">
+                <h2 className=" md:text-[28px] text-[20px] font-semibold text-[#693e2d]">
                   {join.title}
                 </h2>
-                <p className="text-[15px] text-[#6C6A6A]">
-                  {join.description}
-                </p>
-                <button className=" border flex  items-center gap-2 mt-[2rem] text-[13px] text-white px-[30px] py-[10px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+                <p className="text-[15px] text-[#6C6A6A]">{join.description}</p>
+                <button className="flex flex-row mt-4 text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200">
                   <p>Just Click</p>
                   <IoArrowForwardOutline />
                 </button>

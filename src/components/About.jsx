@@ -3,20 +3,20 @@ import { IoArrowForwardOutline } from "react-icons/io5";
 
 const About = () => {
   return (
-    <div className="font-poppins flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[30rem] mt-[10rem]">
+    <div className="font-montserrat flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[8rem] mt-[3rem]">
       <div className="w-full">
         <img src="/about-pic.svg" alt="" />
       </div>
       <div className="w-full">
-        <h1 className=" md:text-[50px] text-[30px] font-medium">
-          WELCOME <span className="text-[#9e6548]">TO BYEN</span>
+        <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
+          WELCOME <span className="text-[#693e2d]">TO BYEN</span>
         </h1>
-        <h2 className="font-medium text-[14px] md:w-[90%] mt-4">
+        <h2 className="font-medium text-[20px] leading-[28px] mt-4">
           At the Black Youth Empowerment Network (BYEN), we are committed to
           uplifting and inspiring the next generation of young Black leaders,
           entrepreneurs, and creatives.
         </h2>
-        <p className="text-[13px] mt-5 text-[#6C6A6A] md:w-[80%]">
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A]">
           Founded with a vision rooted in empowerment and opportunity, BYEN
           serves as a catalyst for change, fostering personal growth,
           leadership, and community impact.
@@ -28,17 +28,17 @@ const About = () => {
             <img
               src="/Shun 1.svg"
               alt=""
-              className="h-[80px] w-[80px] rounded-full border-[3px] border-[#9e6548]"
+              className="h-[70px] w-[70px] rounded-full border-[3px] border-[#9e6548]"
             />
             <span className="flex flex-col gap-y-1">
-              <h1 className="font-semibold text-[17px]">Jay'Shun Mathews</h1>
-              <p className="text-[#6C6A6A] text-[12px]">
+              <h1 className="font-medium text-[24px]">Jay'Shun Mathews</h1>
+              <p className="text-[#6C6A6A] text-[16px]">
                 Founder & Executive Director
               </p>
             </span>
           </div>
 
-          <button className=" border flex  items-center gap-2 text-[14px] text-white px-[30px] py-[10px] duration-300 bg-[#985B3C] hover:bg-[#9e6548]">
+          <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200">
             <p>Read More</p>
             <IoArrowForwardOutline />
           </button>
