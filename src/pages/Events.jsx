@@ -17,18 +17,18 @@ const Events = () => {
   ];
 
   const toggleReadMore = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+    setExpandedIndex(expandedIndex === index ? null : index);3
   };
 
   return (
-    <div className="font-poppins">
+    <div className="font-montserrat">
       <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full">
-        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#9e6548] text-[30px] font-medium">
+        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
           <MdOutlineHorizontalRule />
           <p>EVENTS</p>
           <MdOutlineHorizontalRule />
         </h1>
-        <p className="text-[13px] mt-3 text-[#6C6A6A] md:w-[80%] mx-auto">
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
           Join us for an unforgettable experience! Explore our upcoming events
           designed to inspire, connect, and empower. Don’t miss the chance to be
           part of something special—check out the details below and reserve your
@@ -48,21 +48,21 @@ const Events = () => {
               className="h-full w-full object-cover"
             />
             <div className="p-5">
-              <h2 className="text-[15px]  font-semibold text-[#9e6548] mb-2">
+              <h2 className="font-medium text-[20px] leading-[28px] text-[#693e2d] mb-2">
                 {event.title}
               </h2>
               <div className="flex justify-between">
               <p className="text-[14px] mb-4">{event.date}</p>
               <p className="text-[14px] mb-4">{event.time}</p>
               </div>
-              <p className="text-[13px] text-gray-600">
+              <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A]">
                 {expandedIndex === index
                   ? event.description
                   : `${event.description.slice(0, 100)}...`}
               </p>
               <button
                 onClick={() => toggleReadMore(index)}
-                className="text-[#9e6548] text-[14px] mt-2 font-medium hover:underline focus:outline-none transition-colors"
+                className="text-[#693e2d] text-[14px] mt-2 font-medium hover:underline focus:outline-none transition-colors"
               >
                 {expandedIndex === index ? "Show Less" : "Read More"}
               </button>

@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="font-montserrat bg-black w-full pt-[4rem] mx-auto max-w-screen-2xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 md:px-[5rem] lg:px-[6rem] mx-auto">
         <div>
-          <img src="/logo.svg" alt="logo" />
+          <img src="/logo.jpg" alt="logo" className="w-[100px]" />
           <p className="text-[15px] leading-[20px] text-[#8f8f8f] mt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
             impedit, quos porro vel iure dolorem veniam cum, reprehenderit

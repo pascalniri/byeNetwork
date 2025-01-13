@@ -149,11 +149,11 @@ const SlidingCards = () => {
   ];
 
   return (
-    <div className="font-poppins  mt-5 max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem]">
-      <h1 className="w-[80%]  md:text-[50px] text-[30px] font-medium">
+    <div className="font-montserrat  mt-5 max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem]">
+      <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
           DIRECTORS
         </h1>
-        <p className="text-[13px] mt-3 text-[#6C6A6A] md:w-[70%]">
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%]">
         The Directors are the visionaries and strategic leaders behind our mission. They guide the overall direction of the organization, make key decisions, and ensure that we stay focused on our goals. With a wealth of experience and a commitment to excellence, our Directors play a crucial role in shaping the future of our initiatives.
         </p>
       <div className=" py-[5rem] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 justify-items-center">
@@ -169,12 +169,12 @@ const SlidingCards = () => {
           }}
         >
           <div className="absolute bottom-0 bg-gradient bg-gradient-to-b from-[#9e654800] to-[#000000] w-full h-full flex flex-col justify-end items-center text-center p-6 group-hover:hidden">
-            <h3 className="text-xl text-[#9e6548]  md:text-xl font-medium">
+            <h3 className="text-xl text-[#985b3c]  md:text-xl font-medium">
               {director.name}
             </h3>
-            <p className="text-white text-sm mt-2">{director.title}</p>
+            <p className="text-[15px] leading-[20px] mt-4 text-white">{director.title}</p>
           </div>
-          <div className="hidden group-hover:flex flex-col justify-center items-center text-center h-full w-full p-6 bg-[#9e6548] bg-opacity-90">
+          <div className="hidden group-hover:flex flex-col justify-center items-center text-center h-full w-full p-6 bg-[#985b3c] bg-opacity-90">
             <h3 className="text-xl text-[#ffffff]  md:text-xl font-medium">
               {director.name}
             </h3>
@@ -214,10 +214,10 @@ const SlidingCards = () => {
       ))}
     </div>
 
-    <h1 className="w-[80%]  md:text-[50px] text-[30px] font-medium mt-[5rem]">
+    <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
           SUPPORTING TEAM
         </h1>
-        <p className="text-[15px] text-[#6C6A6A] md:w-[70%]">
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%]">
         Our Supporting Team is the backbone of our organization, providing essential assistance and ensuring smooth operations across all departments. With a diverse set of skills and a passion for the cause, they work tirelessly behind the scenes to support our Directors and ensure the success of every project and initiative.
         </p>
       <div className=" py-[5rem] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 justify-items-center">

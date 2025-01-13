@@ -32,11 +32,11 @@ const Navbar = () => {
       }};
 
   return (
-    <nav className="font-poppins  text-[14px] bg-white bg-opacity-20 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+    <nav className="font-montserrat  text-[14px] bg-white bg-opacity-20 backdrop-blur-sm shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="/">
-          <img src="/logo.svg" alt="logo" className="w-[80px]" />
+          <img src="/logo.jpg" alt="logo" className="w-[80px]" />
         </a>
 
         {/* Links for Desktop */}
@@ -138,9 +138,9 @@ const Navbar = () => {
 
         {/* Donate Button */}
         <div className="hidden lg:block">
-          <a
-            href="/donate"
-            className="bg-[#985B3C] flex justify-center text-white px-[30px] py-[8px] hover:bg-[#9e6548] duration-200"
+        <a
+            href="/"
+            className="bg-[#693e2d] rounded-full w-[100px] flex justify-center text-white px-4 py-[8px] hover:bg-[#985b3c] duration-200 mx-4"
           >
             Donate
           </a>
@@ -168,7 +168,7 @@ const Navbar = () => {
             href="/about"
             className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-900"
           >
-            About
+            About 
           </a> */}
           <a
             href="/membership"
@@ -255,8 +255,8 @@ const Navbar = () => {
             )}
           </div>
           <a
-            href="/donate"
-            className="bg-[#985B3C] w-[100px] flex justify-center text-white px-4 py-[8px] hover:bg-[#9e6548] duration-200 mt-2 mx-4"
+            href="/"
+            className="bg-[#693e2d] rounded-full w-[100px] flex justify-center text-white px-4 py-[8px] hover:bg-[#985b3c] duration-200 mt-2 mx-4"
           >
             Donate
           </a>
