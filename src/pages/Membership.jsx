@@ -55,14 +55,14 @@ const Membership = () => {
     },
   ];
   return (
-    <div className="font-poppins">
+    <div className="font-montserrat">
       <div className='bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full'>
-        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#9e6548] text-[30px] font-medium">
+        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
           <MdOutlineHorizontalRule />
           <p>MEMBERSHIP</p>
           <MdOutlineHorizontalRule />
         </h1>
-        <p className="text-[13px] mt-3 text-[#6C6A6A] md:w-[80%] mx-auto">
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
           The Black Youth Empowerment Network (BYEN) is more than an
           organization—it's a coalition of young Black leaders, creators, and
           change-makers dedicated to uplifting and transforming communities.
@@ -72,10 +72,10 @@ const Membership = () => {
       </div>
 
       <div className="max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
-        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-[#9e6548] text-[30px] font-medium">
-          <p>Why join BYEN</p>
+        <h1 className="text-[30px] leading-[35px] text-[#693e2d] font-semibold">
+          <p>Why join BYEN?</p>
         </h1>
-        <p className="text-[13px] text-[#6C6A6A] mx-auto mb-[5rem]">
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] mb-[5rem]">
           Becoming a member means you'll have access to:
         </p>
 
@@ -83,10 +83,10 @@ const Membership = () => {
           {whyUs.map((us) => (
             <div
               key={us.id}
-              className="flex flex-col justify-center items-center text-center bg-white border-t-[6px] border-[#9e6548] px-3 py-10 shadow-lg"
+              className="flex flex-col justify-center items-center text-center bg-white border-t-[6px] border-[#693e2d] px-3 py-10 shadow-lg"
             >
-              <p className="text-[5rem] text-[#9e6548] ">{us.icon}</p>
-              <h1 className="mt-[4rem] font-medium">{us.h2}</h1>
+              <p className="text-[5rem] text-[#693e2d] ">{us.icon}</p>
+              <h1 className="text-[15px] leading-[20px]">{us.h2}</h1>
               <p className="text-[13px] text-[#6C6A6A] md:w-[80%] mx-auto mt-2">
                 {us.p}
               </p>
@@ -96,8 +96,8 @@ const Membership = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
-        <h1 className=" flex flex-row items-center gap-2 md:text-[50px] text-black text-[30px] font-medium">
-            Membership <span className="text-[#9e6548]">Tiers</span>
+        <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
+            Membership <span className="text-[#693e2d]">Tiers</span>
         </h1>
         <p className="text-[13px] mt-3 text-[#6C6A6A] mx-auto mb-[5rem]">
           Take the first step towards unlocking amazing possibilities—join us
@@ -108,12 +108,12 @@ const Membership = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {memberships.map((membership, index)=> (
-            <div key={index} className="bg-[#9e65483c] md:px-10 px-4 py-5 rounded-2xl ">
-            <div className="w-full bg-[#9e654884] flex flex-row items-center justify-start gap-5 p-3 rounded-full">
-              <div className="bg-[#9e6548] w-[60px] h-[60px] rounded-full flex items-center justify-center text-[25px]">
+            <div key={index} className="bg-[#693e2d3c] md:px-10 px-4 py-5 rounded-2xl ">
+            <div className="w-full bg-[#693e2d84] flex flex-row items-center justify-start gap-5 p-3 rounded-full">
+              <div className="bg-[#693e2d] w-[60px] h-[60px] rounded-full flex items-center justify-center text-[25px]">
                 {membership.number}
               </div>
-              <p className=" md:text-[24px] text-[20px] font-medium">
+              <p className="text-[20px] leading-[28px] font-medium">
                 {membership.title}
               </p>
             </div>

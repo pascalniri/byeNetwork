@@ -29,7 +29,7 @@ const Faq = () => {
 
   return (
     <div className="font-poppins w-full flex flex-col justify-center items-center md:mt-[10rem] mt-[5rem]">
-      <h1 className=" flex flex-row text-center items-center gap-2 md:text-[50px] text-black text-[30px] font-medium">
+      <h1 className="text-center mb-10 lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
         FREQUENTLY ASKED QUESTIONS
       </h1>
 
@@ -42,7 +42,7 @@ const Faq = () => {
             <h1 className="font-semibold">{faq.question}</h1>
             <div
               onClick={() => toggleAnswer(index)}
-              className="bg-[#9e6548] text-[20px] p-2 flex items-center justify-center rounded-full text-white cursor-pointer"
+              className="bg-[#693e2d] text-[20px] p-2 flex items-center justify-center rounded-full text-white cursor-pointer"
             >
               {activeIndex === index ? <PiMinusBold /> : <PiPlusBold />}
             </div>
@@ -52,7 +52,7 @@ const Faq = () => {
               activeIndex === index ? "max-h-[200px] ease-in" : "max-h-0"
             }`}
           >
-            <p className="text-[13px] text-[#6C6A6A] mt-3">
+            <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A]">
               {faq.answer}
             </p>
           </div>
