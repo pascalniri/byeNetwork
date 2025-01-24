@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
@@ -7,7 +7,25 @@ const Navbar = () => {
   const [isDropdownOpen1, setDropdownOpen1] = useState(false);
   const [isDropdownOpen2, setDropdownOpen2] = useState(false);
   const [isDropdownOpen3, setDropdownOpen3] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false); // Scrolling down
+      } else {
+        setIsVisible(true); // Scrolling up
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   const toggleDropdown1 = () => {
     setDropdownOpen1((prev) => !prev);
@@ -23,16 +41,19 @@ const Navbar = () => {
       setDropdownOpen1(false);
       setDropdownOpen3(false);
     }
-    };
-    const toggleDropdown3 = () => {
-      setDropdownOpen3((prev) => !prev);
-      if (!isDropdownOpen3) {
-        setDropdownOpen1(false);
-        setDropdownOpen2(false);
-      }};
+  };
+  const toggleDropdown3 = () => {
+    setDropdownOpen3((prev) => !prev);
+    if (!isDropdownOpen3) {
+      setDropdownOpen1(false);
+      setDropdownOpen2(false);
+    }
+  };
 
   return (
-    <nav className="font-montserrat  text-[14px] bg-white bg-opacity-20 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+    <nav className={`font-montserrat text-[14px] bg-white shadow-lg fixed w-full top-0 z-50 transition-transform duration-300 ${
+      isVisible ? "translate-y-0" : "-translate-y-full"
+    }`}>
       <div className="container mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="/">
@@ -47,7 +68,10 @@ const Navbar = () => {
           {/* <a href="/about" className="text-black hover:text-gray-900 transition">
             About
           </a> */}
-          <a href="/membership" className="text-black hover:text-gray-900 transition">
+          <a
+            href="/membership"
+            className="text-black hover:text-gray-900 transition"
+          >
             Membership
           </a>
 
@@ -74,7 +98,6 @@ const Navbar = () => {
                 >
                   Mentorship
                 </a>
-          
               </div>
             )}
           </div>
@@ -102,7 +125,6 @@ const Navbar = () => {
                 >
                   Partners
                 </a>
-          
               </div>
             )}
           </div>
@@ -130,7 +152,6 @@ const Navbar = () => {
                 >
                   Gallery
                 </a>
-          
               </div>
             )}
           </div>
@@ -138,11 +159,11 @@ const Navbar = () => {
 
         {/* Donate Button */}
         <div className="hidden lg:block">
-        <a
+          <a
             href="/"
-            className="bg-[#693e2d] rounded-full w-[100px] flex justify-center text-white px-4 py-[8px] hover:bg-[#985b3c] duration-200 mx-4"
+            className="bg-[#693e2d] rounded-full w-[100px] flex justify-center text-white py-4 px-20 hover:bg-[#985b3c] duration-200 mx-4"
           >
-            Donate
+            DONATE
           </a>
         </div>
 
@@ -151,7 +172,11 @@ const Navbar = () => {
           className="lg:hidden text-black focus:outline-none"
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <HiX className="w-6 h-6" /> : <HiMenuAlt3 className="w-6 h-6" />}
+          {isMobileMenuOpen ? (
+            <HiX className="w-6 h-6" />
+          ) : (
+            <HiMenuAlt3 className="w-6 h-6" />
+          )}
         </button>
       </div>
 
@@ -198,7 +223,6 @@ const Navbar = () => {
                 >
                   Mentorship
                 </a>
-            
               </div>
             )}
           </div>
@@ -224,7 +248,6 @@ const Navbar = () => {
                 >
                   Partners
                 </a>
-            
               </div>
             )}
           </div>
@@ -250,15 +273,14 @@ const Navbar = () => {
                 >
                   Gallery
                 </a>
-            
               </div>
             )}
           </div>
           <a
             href="/"
-            className="bg-[#693e2d] rounded-full w-[100px] flex justify-center text-white px-4 py-[8px] hover:bg-[#985b3c] duration-200 mt-2 mx-4"
+            className="bg-[#693e2d] rounded-full w-[100px] flex justify-center text-white py-4 px-20 hover:bg-[#985b3c] duration-200 mt-2 mx-4"
           >
-            Donate
+            DONATE
           </a>
         </div>
       )}

@@ -38,8 +38,8 @@ const Latest = () => {
           news, expert tips, or in-depth stories, this is your hub for staying
           connected with all the happenings.
         </p>
-        <button className="bg-[#693e2d] text-[15px] mt-4 text-white rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200">
-          View all trends
+        <button className="bg-[#693e2d] text-[15px] mt-6 text-white rounded-full py-4 px-12 hover:bg-[#985b3c] duration-200">
+          VIEW ALL TRENDS
         </button>
       </div>
 
@@ -50,8 +50,8 @@ const Latest = () => {
             <div className="flex flex-col items-start px-3 mb-3">
               <h2 className="text-[25px] font-medium mt-3">{trend.title}</h2>
               <p className="text-[15px] leading-[20px] mt-2 text-[#6C6A6A]">{trend.description}</p>
-              <button className="bg-[#693e2d] text-[15px] mt-5 text-white rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200">
-                Learn More
+              <button className="bg-[#693e2d] text-[15px] mt-5 text-white rounded-full py-4 px-12 hover:bg-[#985b3c] duration-200">
+                LEARN MORE
               </button>
             </div>
           </div>

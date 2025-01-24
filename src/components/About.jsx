@@ -38,8 +38,8 @@ const About = () => {
             </span>
           </div>
 
-          <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200">
-            <p>Read More</p>
+          <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-4 px-10 hover:bg-[#985b3c] duration-200">
+            <p>READ MORE</p>
             <IoArrowForwardOutline /> 
           </button>
         </div>

@@ -69,8 +69,8 @@ const Offers = () => {
             <p className="w-full text-[15px] leading-[20px] text-[#6C6A6A] mt-1 group-hover:text-gray-200 group-hover:-translate-y-2 duration-700">
               {offer.description}
             </p>
-            <button className="hidden items-center gap-2 rounded-full   text-[14px] group-hover:flex mt-5 text-[#693e2d] bg-white md:px-[30px] px-4 py-[10px] duration-200 hover:bg-[#ae8772] hover:text-white">
-              <p>Learn More</p>
+            <button className="hidden items-center gap-2 rounded-full font-medium  text-[14px] group-hover:flex mt-5 text-[#693e2d] bg-white md:px-[30px] py-4 px-20 duration-200 hover:bg-[#ae8772] hover:text-white">
+              <p>LEARN MORE</p>
               <IoArrowForwardOutline />
             </button>
           </div>

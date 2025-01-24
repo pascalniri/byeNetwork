@@ -56,8 +56,8 @@ const Partners = () => {
                 {partner.description}
               </p>
               <a href={partner.link} target="_blank">
-                <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200 mt-4">
-                  <p>Visit Them</p>
+                <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-4 px-12 hover:bg-[#985b3c] duration-200 mt-4">
+                  <p>VISIT THEM</p>
                   <IoArrowForwardOutline />
                 </button>
               </a>
