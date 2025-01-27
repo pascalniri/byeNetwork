@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="/">
-          <img src="/logo.jpg" alt="logo" className="w-[80px]" />
+          <img src="/logoo.svg" alt="logo" className="w-[140px]" />
         </a>
 
         {/* Links for Desktop */}

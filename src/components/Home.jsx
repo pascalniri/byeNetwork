@@ -9,9 +9,7 @@ const Home = () => {
             BLACK YOUTH EMPOWERMENT NETWORK
           </h1>
           <p className="text-[15px] leading-[20px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation
+          The Black Youth Empowerment Network (BYEN) is a youth-led organization dedicated to uplifting and empowering Black youth through leadership development, entrepreneurship, and creative expression. BYEN provides a platform for collaboration, community building, and personal growth, fostering opportunities for young leaders to make a meaningful impact in their communities and beyond.
           </p>
           <div className="flex flex-row flex-wrap text-[15px] md:gap-3 gap-2 mt-[3rem]">
             <button className=" bg-[#693e2d] rounded-full py-5 px-10 hover:bg-[#985b3c] duration-200">

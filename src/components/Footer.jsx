@@ -15,9 +15,7 @@ const Footer = () => {
         <div>
           <img src="/logo.jpg" alt="logo" className="w-[100px]" />
           <p className="text-[15px] leading-[20px] text-[#8f8f8f] mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            impedit, quos porro vel iure dolorem veniam cum, reprehenderit
-            pariatur incidunt iusto fugit dolore anim
+          The Black Youth Empowerment Network (BYEN) is a youth-led organization dedicated to uplifting and empowering Black youth through leadership development, entrepreneurship, and creative expression. BYEN provides a platform for collaboration, community building, and personal growth, fostering opportunities for young leaders to make a meaningful impact in their communities and beyond.
           </p>
           <span className="flex flex-row gap-3 mt-10">
             <a
