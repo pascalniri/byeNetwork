@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="font-montserrat flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[8rem] mt-[3rem]">
       <div className="w-full">
-        <img src="/about-pic.svg" alt="" />
+        <img src="/aboutImg.jpg" alt="" />
       </div>
       <div className="w-full">
         <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
