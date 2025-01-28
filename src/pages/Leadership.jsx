@@ -149,7 +149,7 @@ const SlidingCards = () => {
   ];
 
   return (
-    <div className="font-montserrat  mt-5 max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem]">
+    <div className="font-montserrat  mt-[10rem] max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem]">
       <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
           DIRECTORS
         </h1>
