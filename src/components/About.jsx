@@ -1,9 +1,11 @@
 import React from "react";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import Advert from "./Advert";
 
 const About = () => {
   return (
     <div className="font-montserrat flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[8rem] mt-[3rem]">
+      <Advert />
       <div className="md:w-[70%] w-full">
         <img src="/aboutImg.jpg" alt="" className="rounded-[20px]" />
       </div>

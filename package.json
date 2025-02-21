@@ -14,7 +14,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.3.0",
-    "framer-motion": "^11.5.4",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.451.0",
     "react": "^18.3.1",
     "react-awesome-reveal": "^4.2.14",
