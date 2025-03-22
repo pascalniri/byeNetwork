@@ -37,10 +37,12 @@ const Join = () => {
               <p className="text-[14px] leading-[20px] mt-3 text-[#6C6A6A]">
                 {join.description}
               </p>
+              <a href={join.link}>
               <button className="flex flex-row mt-4 text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-4 px-12 hover:bg-[#985b3c] duration-200">
                 <p>JUST CLICK</p>
                 <IoArrowForwardOutline />
               </button>
+              </a>
             </div>
           ))}
         </div>
