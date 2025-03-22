@@ -31,20 +31,20 @@ const Offers = () => {
         "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
         link:"/"
     },
-    {
-      icon: "/resource.svg",
-      title: "Community",
-      description:
-        "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
-        link:"/"
-    },
-    {
-      icon: "/resource.svg",
-      title: "Community",
-      description:
-        "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
-        link:"/"
-    },
+    // {
+    //   icon: "/resource.svg",
+    //   title: "Community",
+    //   description:
+    //     "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
+    //     link:"/"
+    // },
+    // {
+    //   icon: "/resource.svg",
+    //   title: "Community",
+    //   description:
+    //     "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
+    //     link:"/"
+    // },
   ];
   return (
     <div className='font-montserrat bg-[#FAFAFA] flex flex-col justify-center items-center py-[4rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[13rem] mt-[5rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full'>
