@@ -7,13 +7,13 @@ const Join = () => {
       title: "WANT TO BECOME A MENTOR?",
       description:
         "Share your knowledge and experience to inspire the next generation of leaders, fostering growth and collaboration as we work together to create meaningful change in our communities.",
-      link: "#",
+      link: "/mentorship",
     },
     {
       title: "WANT TO BECOME A MEMBER?",
       description:
         "Inspire and guide our youth by becoming a mentor. Click below for more details on how you can make a positive impact.",
-      link: "#",
+      link: "/membership",
     },
   ];
   return (
@@ -62,10 +62,12 @@ const Join = () => {
                   {join.title}
                 </h2>
                 <p className="text-[15px] text-[#6C6A6A]">{join.description}</p>
+                <a href={join.link}>
                 <button className="flex flex-row mt-4 text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-3 px-6 hover:bg-[#985b3c] duration-200">
                   <p>Just Click</p>
                   <IoArrowForwardOutline />
                 </button>
+                </a>
               </div>
             ))}
           </div>

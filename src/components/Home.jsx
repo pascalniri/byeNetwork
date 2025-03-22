@@ -15,9 +15,11 @@ const Home = () => {
               The Black Youth Empowerment Network (BYEN) is a youth-led organization dedicated to uplifting and empowering Black youth through leadership development, entrepreneurship, and creative expression. BYEN provides a platform for collaboration, community building, and personal growth, fostering opportunities for young leaders to make a meaningful impact in their communities and beyond.
             </p>
             <div className="flex flex-row flex-wrap text-[15px] md:gap-3 gap-2 mt-[3rem]">
+              <a href="/membership">
               <button className="bg-[#693e2d] rounded-full py-5 px-10 hover:bg-[#985b3c] duration-200">
                 BECOME MEMBER
               </button>
+              </a>
               <button className="text-[#693e2d] bg-white px-10 py-5 rounded-full duration-200 hover:bg-[#ae8772] hover:text-white">
                 DONATE US
               </button>

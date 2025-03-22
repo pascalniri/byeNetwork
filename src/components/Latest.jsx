@@ -3,25 +3,28 @@ import React from "react";
 const Latest = () => {
   const trends = [
     {
+      id:1,
       image: "/latest jabari.svg",
       title: "Jabari Morrison",
       description:
         "An innovative leader, spearheaded the establishment of the Shiloh Student Athlete Association at Shiloh High School in Snellville, Georgia. In his capacity as founder, he orchestrated and moderated a thought-provoking panel discussion addressing the intricate balance between athletic pursuits and academic excellence.",
-      link: "#",
+      link: "https://www.instagram.com/p/C5O10BjuhT4/?img_index=2",
     },
     {
+      id:2,
       image: "/latest ammon.svg",
       title: "Ikarion Ammon",
       description:
         "An Ambassador for the Black Youth Empowerment Network, has made significant strides with the recent launch of his visionary clothing line, '5 Digit.' Demonstrating unwavering dedication to his academic journey, he has chosen to embark on a path of higher education at Kennesaw State University, where he will focus his studies on Environmental Engineering.",
-      link: "#",
+      link: "https://www.instagram.com/p/C5O10BjuhT4/?img_index=3",
     },
     {
+      id:3,
       image: "/latest coger.svg",
       title: "A'TEV Coger",
       description:
         "An accomplished athlete with a bold vision, has committed to joining Peru State's esteemed football program. Alongside his athletic endeavors, he is poised to unveil his cutting-edge clothing brand, 'Only Fear Fear,' showcasing his entrepreneurial spirit and drive for success.",
-      link: "#",
+      link: "https://www.instagram.com/p/C5O10BjuhT4/?img_index=4",
     },
   ];
   return (
@@ -38,21 +41,25 @@ const Latest = () => {
           news, expert tips, or in-depth stories, this is your hub for staying
           connected with all the happenings.
         </p>
+        <a href="https://www.instagram.com/wearebyen/" target="_blank" >
         <button className="bg-[#693e2d] text-[15px] mt-6 text-white rounded-full py-4 px-12 hover:bg-[#985b3c] duration-200">
           VIEW ALL TRENDS
         </button>
+        </a>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-[8rem]">
         {trends.map((trend, index) => (
-          <div className="bg-[#F0F0F0] shadow-xl rounded-[10px] p-2">
+          <div key={index.id} className="bg-[#F0F0F0] shadow-xl rounded-[10px] p-2">
             <img src={trend.image} alt="" className="w-full rounded-[9px]" />
             <div className="flex flex-col items-start px-3 mb-3">
               <h2 className="text-[25px] font-medium mt-3">{trend.title}</h2>
               <p className="text-[15px] leading-[20px] mt-2 text-[#6C6A6A]">{trend.description}</p>
+              <a href={trend.link} target="_blank">
               <button className="bg-[#693e2d] text-[15px] mt-5 text-white rounded-full py-4 px-12 hover:bg-[#985b3c] duration-200">
                 LEARN MORE
               </button>
+              </a>
             </div>
           </div>
         ))}

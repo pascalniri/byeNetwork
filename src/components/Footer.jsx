@@ -19,14 +19,14 @@ const Footer = () => {
           </p>
           <span className="flex flex-row gap-3 mt-10">
             <a
-              href="https://www.instagram.com/blackyouthempowermentnet/"
+              href="https://www.instagram.com/wearebyen/"
               target="_blank"
             >
               <RiInstagramFill className="text-[#693e2d] text-[30px] hover:text-white duration-200" />
             </a>
-            <a href="https://twitter.com" target="_blank">
+            {/* <a href="https://twitter.com" target="_blank">
               <BsTwitterX className="text-[#693e2d] text-[28px] hover:text-white duration-200" />
-            </a>
+            </a> */}
             <a
               href="https://www.youtube.com/@BlackYouthEmpowermentNetwork"
               target="_blank"
@@ -102,7 +102,7 @@ const Footer = () => {
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
                 target="_blank"
-                className="text-[10px] md:text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
+                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
               >
                 blackyouthempowermentnetwork@gmail.com
               </a>
@@ -113,17 +113,17 @@ const Footer = () => {
                 href="#"
                 className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
               >
-                location, street 20 Av
+                USA
               </a>
             </li>
             <li className="flex flex-row items-center gap-3">
               <LuPhoneCall className="text-[#693e2d] text-[28px]" />
               <a
-                href="tel:+250787358142"
+                href="tel:+1 (478) 283-3665"
                 target="_blank"
                 className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
               >
-                +1 000 000 0000
+                +1 (478) 283-3665
               </a>
             </li>
           </ul>

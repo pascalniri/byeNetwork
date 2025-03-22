@@ -8,36 +8,42 @@ const Offers = () => {
       title: "Resources",
       description:
         "A comprehensive collection of tools, educational materials, and opportunities designed to equip you with the knowledge and skills needed to excel in your leadership, entrepreneurial, and creative pursuits.",
+        link:"/"
     },
     {
       icon: "/resource.svg",
       title: "Events",
       description:
         "Immersive events that unite our community, offering powerful opportunities to connect, exchange ideas, and engage in meaningful dialogue through workshops, summits, and networking experiences tailored to inspire leadership and innovation.",
+        link:"/events"
     },
     {
       icon: "/resource.svg",
       title: "Collaboration",
       description:
         "Collaborative opportunities with experienced professionals, fostering mutual growth and guidance to help you navigate challenges, unlock new possibilities, and accelerate your journey to success.",
+        link:"/"
     },
     {
       icon: "/resource.svg",
       title: "Community",
       description:
         "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
+        link:"/"
     },
     {
       icon: "/resource.svg",
       title: "Community",
       description:
         "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
+        link:"/"
     },
     {
       icon: "/resource.svg",
       title: "Community",
       description:
         "A vibrant community of young Black leaders and changemakers, where collaboration, support, and shared experiences create a foundation for personal growth and collective empowerment.",
+        link:"/"
     },
   ];
   return (
@@ -69,10 +75,12 @@ const Offers = () => {
             <p className="w-full text-[15px] leading-[20px] text-[#6C6A6A] mt-1 group-hover:text-gray-200 group-hover:-translate-y-2 duration-700">
               {offer.description}
             </p>
+            <a href={offer.link}>
             <button className="hidden items-center gap-2 rounded-full font-medium  text-[14px] group-hover:flex mt-5 text-[#693e2d] bg-white md:px-[30px] py-4 px-20 duration-200 hover:bg-[#ae8772] hover:text-white">
               <p>LEARN MORE</p>
               <IoArrowForwardOutline />
             </button>
+            </a>
           </div>
         ))}
       </div>
