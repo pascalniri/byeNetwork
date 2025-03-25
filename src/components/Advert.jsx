@@ -7,11 +7,11 @@ const Advert = () => {
   const [showAdvert, setShowAdvert] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
-    if (location.pathname === "/") {
-      setShowAdvert(true);
-    }
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   if (location.pathname === "/") {
+  //     setShowAdvert(true);
+  //   }
+  // }, [location.pathname]);
 
   const handleClose = () => {
     setShowAdvert(false);

@@ -1,8 +1,9 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { BiSolidConversation } from "react-icons/bi";
 const ContactUs = () => {
   return (
-    <div className="font-montserrat flex flex-col justify-center text-center mt-[5rem]">
+    <Fade triggerOnce={false} className="font-montserrat flex flex-col justify-center text-center mt-[5rem]">
    
       <div
         // style={{
@@ -32,7 +33,7 @@ const ContactUs = () => {
           </button>
         </a>
       </div>
-    </div>
+    </Fade>
   );
 };
 

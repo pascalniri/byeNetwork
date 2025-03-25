@@ -1,15 +1,59 @@
 import React from "react";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import Advert from "./Advert";
-
+import { motion } from "framer-motion";
 const About = () => {
+
+  const item1 = {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1
+      }
+    }
+  };
+  const item2 = {
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1
+      }
+    }
+  };
+
+  const item3 = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1
+      }
+    }
+  };
   return (
     <div className="font-montserrat flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[8rem] mt-[3rem]">
       <Advert />
-      <div className="md:w-[70%] w-full">
+      <motion.div
+      variants={item1}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{  amount: 0.2 }}
+        className="md:w-[70%] w-full"
+      >
         <img src="/aboutImg.jpg" alt="" className="rounded-[20px]" />
-      </div>
+      </motion.div>
       <div className="w-full">
+        <motion.div
+        variants={item2}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{  amount: 0.2 }}
+        >
         <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
           WELCOME <span className="text-[#693e2d]">TO BYEN</span>
         </h1>
@@ -23,8 +67,14 @@ const About = () => {
           serves as a catalyst for change, fostering personal growth,
           leadership, and community impact.
         </p>
+        </motion.div>
 
-        <div className="flex flex-col md:flex-row md:items-center items-start gap-y-10 gap-x-10 mt-[4rem]">
+        <motion.div
+        variants={item3}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{  amount: 0.2 }}
+        className="flex flex-col md:flex-row md:items-center items-start gap-y-10 gap-x-10 mt-[4rem]">
           <div className="flex flex-row items-center gap-3">
             <img
               src="/Shun 1.svg"
@@ -43,7 +93,7 @@ const About = () => {
             <p>READ MORE</p>
             <IoArrowForwardOutline />
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
