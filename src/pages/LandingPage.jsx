@@ -2,9 +2,7 @@ import React from "react";
 import Home from "../components/Home";
 import About from "../components/About";
 import Offers from "../components/Offers";
-import Join from "../components/Join";
 import Latest from "../components/Latest";
-import whole from "../assets/whole.svg";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
 import ContactUs from "../components/ContactUs";
 
@@ -74,7 +72,6 @@ const LandingPage = () => {
       <div>
         <About />
         <Offers />
-        <Join />
         <Latest />
         <ContactUs />
       </div>

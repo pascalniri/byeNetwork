@@ -51,10 +51,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="font-montserrat text-[14px] bg-white shadow-lg fixed w-full top-0 z-50 transition-transform duration-300">
-      <div className="w-full bg-[#693e2d] text-white text-center p-2 font-semibold z-50">
-        🎉 B.O.L.D Stipend Program. <a href="https://forms.gle/vuAj8SNDk5fzWkETA" target="_blank" className="underline">Click to apply</a> 🎉
-      </div>
+    <nav className="font-montserrat text-[14px] bg-white/80 backdrop-blur-[3px] border-b border-gray-100 fixed w-full top-0 z-50 transition-transform duration-300">
+  
       <div className="container mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-4 flex items-center justify-between w-full">
         {/* Logo */}
         <a href="/">

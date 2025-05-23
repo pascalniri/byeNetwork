@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Leadership from "./pages/Leadership";
+import LeaderDetail from "./pages/LeaderDetail";
 import Membership from "./pages/Membership";
 import Partners from "./pages/Partners";
 import Events from "./pages/Events";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/leadership" element={<Leadership />} />
+        <Route path="/leadership/:id" element={<LeaderDetail />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/events" element={<Events />} />
         <Route path="/mentorship" element={<Mentorship />} />

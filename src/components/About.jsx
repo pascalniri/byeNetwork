@@ -35,46 +35,75 @@ const About = () => {
       }
     }
   };
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+        delay: 0.3,
+      },
+    },
+  };
   return (
     <div className="font-montserrat flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[8rem] mt-[3rem]">
       <Advert />
       <motion.div
-      variants={item1}
+        variants={item1}
         initial="hidden"
         whileInView="visible"
-        viewport={{  amount: 0.2 }}
+        viewport={{ amount: 0.2 }}
         className="md:w-[70%] w-full"
       >
         <img src="/aboutImg.jpg" alt="" className="rounded-[20px]" />
       </motion.div>
       <div className="w-full">
         <motion.div
-        variants={item2}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{  amount: 0.2 }}
+          variants={item2}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2 }}
         >
-        <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
-          WELCOME <span className="text-[#693e2d]">TO BYEN</span>
-        </h1>
-        <h2 className="font-medium text-[20px] leading-[28px] mt-4">
-          At the Black Youth Empowerment Network (BYEN), we are committed to
-          uplifting and inspiring the next generation of young Black leaders,
-          entrepreneurs, and creatives.
-        </h2>
-        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A]">
-          Founded with a vision rooted in empowerment and opportunity, BYEN
-          serves as a catalyst for change, fostering personal growth,
-          leadership, and community impact.
-        </p>
+          <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
+            WELCOME <span className="text-[#693e2d]">TO BYEN</span>
+          </h1>
+          <h2 className="font-medium text-[20px] leading-[28px] mt-4">
+            At the Black Youth Empowerment Network (BYEN), we are committed to
+            uplifting and inspiring the next generation of young Black leaders,
+            entrepreneurs, and creatives.
+          </h2>
+          <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A]">
+            Founded with a vision rooted in empowerment and opportunity, BYEN
+            serves as a catalyst for change, fostering personal growth,
+            leadership, and community impact.
+          </p>
         </motion.div>
 
         <motion.div
-        variants={item3}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{  amount: 0.2 }}
-        className="flex flex-col md:flex-row md:items-center items-start gap-y-10 gap-x-10 mt-[4rem]">
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2 }}
+          className="mt-6 p-5 rounded-lg border-l-4  border-[#693e2d]"
+        >
+          <h3 className="text-[20px] font-semibold text-[#985b3c] mb-2">Our Mission</h3>
+          <p className="text-[15px] leading-[22px] text-[#6C6A6A]">
+            To empower Black youth through collaboration, leadership development, and opportunities for personal and professional growth.
+          </p>
+
+          <h3 className="text-[20px] font-semibold text-[#985b3c] mt-4 mb-2">Our Vision</h3>
+          <p className="text-[15px] leading-[22px] text-[#6C6A6A]">
+            To cultivate a network of confident, empowered Black leaders who are shaping their communities and making a global impact.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={item3}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2 }}
+          className="flex flex-col md:flex-row md:items-center items-start gap-y-10 gap-x-10 mt-[4rem]">
           <div className="flex flex-row items-center gap-3">
             <img
               src="/Shun 1.svg"
@@ -89,10 +118,10 @@ const About = () => {
             </span>
           </div>
 
-          <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-4 px-10 hover:bg-[#985b3c] duration-200">
+          {/* <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-4 px-10 hover:bg-[#985b3c] duration-200">
             <p>READ MORE</p>
             <IoArrowForwardOutline />
-          </button>
+          </button> */}
         </motion.div>
       </div>
     </div>

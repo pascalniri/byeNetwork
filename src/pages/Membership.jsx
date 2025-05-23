@@ -3,6 +3,7 @@ import { MdOutlineHorizontalRule } from "react-icons/md";
 import { GiLevelEndFlag } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi";
 import { GiReceiveMoney } from "react-icons/gi";
+import { FaGlobe, FaUniversity, FaCalendarAlt } from "react-icons/fa";
 import Faq from "@/components/Faq";
 
 const Membership = () => {
@@ -30,30 +31,6 @@ const Membership = () => {
     },
   ];
 
-  const memberships = [
-    {
-      number: "1",
-      title: "General Member",
-      subTitle1: "Description",
-      p1: "For those who want to connect, grow, and make a difference in their communities as part of BYEN.",
-      subTitle2: "Benefits",
-      p2: "Access to BYEN events, networking opportunities, and basic member resources.",
-      subTitle3: "Availability",
-      p3: "Open to all eligible applicants.",
-
-    },
-    {
-      number: "2",
-      title: "Executive Member",
-      subTitle1: "Description",
-      p1: "Our Executive Membership is designed for those ready to take a leading role within BYEN, engage in high-level training, and contribute to core BYEN initiatives.",
-      subTitle2: "Benefits",
-      p2: "Includes all General Member benefits, plus access to exclusive leadership training, executive-only events, and opportunities to shape BYEN's future. Executive Members receive special recognition within the organization.",
-      subTitle3: "Limited Spots",
-      p3: "Only 25 spots are available for Executive Members, making this a unique opportunity for those dedicated to making an impact.",
-
-    },
-  ];
   return (
     <div className="font-montserrat">
       <div className='bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full mt-[7rem]'>
@@ -96,50 +73,160 @@ const Membership = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
-        <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
-            Membership <span className="text-[#693e2d]">Tiers</span>
+        <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px] text-center">
+          Membership <span className="text-[#693e2d]">Overview</span>
         </h1>
-        <p className="text-[13px] mt-3 text-[#6C6A6A] mx-auto mb-[5rem]">
-          Take the first step towards unlocking amazing possibilities—join us
-          today for free!
+        <p className="text-[15px] leading-[22px] mt-5 text-[#6C6A6A] md:w-[80%] mx-auto text-center">
+          The Black Youth Empowerment Network (BYEN) offers two levels of membership designed to engage, develop, and uplift Black youth across the nation: National Membership and Chapter Membership. While both pathways offer access to BYEN's mission and resources, each serves a different purpose in the growth and engagement of our members.
         </p>
 
-        {/* MEMBERSHIP TIERS CARDS */}
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          {memberships.map((membership, index)=> (
-            <div key={index} className="bg-[#693e2d3c] md:px-10 px-4 py-5 rounded-2xl ">
-            <div className="w-full bg-[#693e2d84] flex flex-row items-center justify-start gap-5 p-3 rounded-full">
-              <div className="bg-[#693e2d] w-[60px] h-[60px] rounded-full flex items-center justify-center text-[25px]">
-                {membership.number}
+        {/* MEMBERSHIP TYPES */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 w-full">
+          {/* National Membership */}
+          <div className="bg-white shadow-lg rounded-xl overflow-hidden border-t-4 border-[#693e2d] hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-[#693e2d] bg-opacity-10 p-6 flex items-center">
+              <div className="bg-[#693e2d] p-4 rounded-full mr-4">
+                <FaGlobe className="text-white text-2xl" />
               </div>
-              <p className="text-[20px] leading-[28px] font-medium">
-                {membership.title}
+              <h2 className="text-[24px] font-semibold text-[#693e2d]">National Membership</h2>
+            </div>
+            <div className="p-6">
+              <div className="mb-4 pb-3 border-b border-gray-200">
+                <p className="text-[14px] font-medium text-gray-500">Open to Black youth across the country. Rolling admissions every semester.</p>
+              </div>
+              
+              <h3 className="text-[18px] font-semibold mb-2">Overview:</h3>
+              <p className="text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
+                National Membership provides access to BYEN's broader network, virtual programming, and collaborative opportunities. It is designed for individuals who want to stay connected with BYEN's national movement, receive resources, and engage in meaningful projects—regardless of their physical location or school affiliation.
+              </p>
+              
+              <h3 className="text-[18px] font-semibold mb-2">Membership Benefits:</h3>
+              <ul className="list-disc pl-5 text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
+                <li>Access to virtual events, leadership trainings, and workshops</li>
+                <li>Invitations to national campaigns, advocacy initiatives, and service projects</li>
+                <li>Networking opportunities with members from across the country</li>
+                <li>Monthly newsletters featuring updates, resources, and member spotlights</li>
+                <li>Consideration for national features, interviews, and media opportunities</li>
+                <li>First access to certain fellowships, internships, and application cycles</li>
+              </ul>
+              
+              <h3 className="text-[18px] font-semibold mb-2">Ideal for:</h3>
+              <p className="text-[15px] leading-[22px] text-[#6C6A6A]">
+                Students, creatives, and young leaders who want to stay engaged with BYEN, expand their network, and participate in programming remotely.
               </p>
             </div>
-
-            <div className="flex flex-col justify-start items-start md:px-10 px-5">
-              <div className="flex flex-col mt-5">
-                <h2 className="font-medium">{membership.subTitle1}</h2>
-                <p className="text-[13px] text-[#6C6A6A] mx-auto">
-                  {membership.p1}
-                </p>
+          </div>
+          
+          {/* Chapter Membership */}
+          <div className="bg-white shadow-lg rounded-xl overflow-hidden border-t-4 border-[#693e2d] hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-[#693e2d] bg-opacity-10 p-6 flex items-center">
+              <div className="bg-[#693e2d] p-4 rounded-full mr-4">
+                <FaUniversity className="text-white text-2xl" />
               </div>
-              <div className="flex flex-col mt-5">
-                <h2 className="font-medium">{membership.subTitle2}</h2>
-                <p className="text-[13px] text-[#6C6A6A] mx-auto">
-                {membership.p2}
-                </p>
+              <h2 className="text-[24px] font-semibold text-[#693e2d]">Chapter Membership</h2>
+            </div>
+            <div className="p-6">
+              <div className="mb-4 pb-3 border-b border-gray-200">
+                <p className="text-[14px] font-medium text-gray-500">Selective membership. Limited to 25 students per chapter, per academic class.</p>
               </div>
-              <div className="flex flex-col  mt-5">
-                <h2 className="font-medium">{membership.subTitle3}</h2>
-                <p className="text-[13px] text-[#6C6A6A] mx-auto">
-                {membership.p3}
-                </p>
-              </div>
+              
+              <h3 className="text-[18px] font-semibold mb-2">Overview:</h3>
+              <p className="text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
+                Chapter Membership offers a high-impact, in-person experience through local BYEN chapters established at select campuses and communities. It allows members to lead on the ground, plan events, participate in community service, and work collaboratively with other student leaders.
+              </p>
+              
+              <h3 className="text-[18px] font-semibold mb-2">Membership Benefits:</h3>
+              <ul className="list-disc pl-5 text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
+                <li>Participation in in-person meetings, workshops, and leadership retreats</li>
+                <li>Opportunities to organize and lead chapter-specific initiatives and events</li>
+                <li>Deeper mentorship from chapter advisors and national leadership</li>
+                <li>Access to exclusive funding opportunities, stipends, and leadership roles</li>
+                <li>Priority consideration for travel, conferences, and special programming</li>
+                <li>A close-knit, supportive peer environment rooted in local impact</li>
+              </ul>
+              
+              <h3 className="text-[18px] font-semibold mb-2">Current Chapters:</h3>
+              <ul className="list-disc pl-5 text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
+                <li>Morehouse College</li>
+                <li>University of Georgia</li>
+                <li>(More campuses launching soon)</li>
+              </ul>
+              
+              <h3 className="text-[18px] font-semibold mb-2">Ideal for:</h3>
+              <p className="text-[15px] leading-[22px] text-[#6C6A6A]">
+                Students who are ready to lead in-person, engage in chapter-based collaboration, and actively bring BYEN's mission to life within their campus and surrounding community.
+              </p>
             </div>
           </div>
-          ))}
+        </div>
+        
+        {/* Comparison Table */}
+        <div className="mt-16 w-full">
+          <h2 className="text-[28px] font-bold text-center mb-8">Choosing Your <span className="text-[#693e2d]">Path</span></h2>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-[#693e2d]">
+                  <th className="p-4 text-left text-white"></th>
+                  <th className="p-4 text-center text-white font-semibold">National Membership</th>
+                  <th className="p-4 text-center text-white font-semibold">Chapter Membership</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="p-4 font-medium">Location</td>
+                  <td className="p-4 text-center">Open to all U.S. youth</td>
+                  <td className="p-4 text-center">Campus/community-based (select locations only)</td>
+                </tr>
+                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="p-4 font-medium">Commitment Level</td>
+                  <td className="p-4 text-center">Flexible and virtual</td>
+                  <td className="p-4 text-center">High engagement and in-person</td>
+                </tr>
+                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="p-4 font-medium">Community</td>
+                  <td className="p-4 text-center">Large, national network</td>
+                  <td className="p-4 text-center">Intimate, local cohort (25 members/class)</td>
+                </tr>
+                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="p-4 font-medium">Leadership</td>
+                  <td className="p-4 text-center">National project opportunities</td>
+                  <td className="p-4 text-center">Chapter leadership roles and planning</td>
+                </tr>
+                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="p-4 font-medium">Programming</td>
+                  <td className="p-4 text-center">Online workshops, events, and service opportunities</td>
+                  <td className="p-4 text-center">In-person events, service projects, and peer sessions</td>
+                </tr>
+                <tr className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="p-4 font-medium">Eligibility</td>
+                  <td className="p-4 text-center">Open to all Black youth</td>
+                  <td className="p-4 text-center">Requires application and selection process</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        {/* Application Timeline */}
+        <div className="mt-16 w-full bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]">
+          <div className="flex items-center mb-6">
+            <FaCalendarAlt className="text-[#693e2d] text-3xl mr-4" />
+            <h2 className="text-[24px] font-bold">Application Timeline</h2>
+          </div>
+          
+          <div className="space-y-4">
+            <p className="text-[16px] leading-[24px]"><span className="font-semibold text-[#693e2d]">July 15, 2025:</span> National Membership Application Opens</p>
+            <p className="text-[16px] leading-[24px]"><span className="font-semibold text-[#693e2d]">July 31, 2025:</span> Early Decision Deadline</p>
+            <p className="text-[16px] leading-[24px]"><span className="font-semibold text-[#693e2d]">August 15, 2025:</span> Regular Decision Deadline</p>
+          </div>
+          
+          <div className="mt-8">
+            <a href="#" className="inline-block bg-[#693e2d] text-white py-3 px-8 rounded-full hover:bg-[#985b3c] transition-colors duration-300 shadow-md">
+              Apply Now
+            </a>
+          </div>
         </div>
 
         <Faq />
