@@ -210,7 +210,7 @@ const Membership = () => {
         </div>
         
         {/* Application Timeline */}
-        <div className="mt-16 w-full bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]">
+        {/* <div className="mt-16 w-full bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]">
           <div className="flex items-center mb-6">
             <FaCalendarAlt className="text-[#693e2d] text-3xl mr-4" />
             <h2 className="text-[24px] font-bold">Application Timeline</h2>
@@ -227,7 +227,7 @@ const Membership = () => {
               Apply Now
             </a>
           </div>
-        </div>
+        </div> */}
 
         <Faq />
       </div>
