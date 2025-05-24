@@ -254,8 +254,8 @@ const Leadership = () => {
           
           {/* Team Members Grid */}
           <div className="mb-8">
-            {/* Display National Directors section if in Marketing & Branding department */}
-            {activeRole === 'marketing' ? (
+            {/* Display National Directors section if in Marketing & Branding or Programming & Events department */}
+            {activeRole === 'marketing' || activeRole === 'programming' ? (
               <>
                 {/* National Directors Section */}
                 <h3 className="text-xl font-semibold mb-6">National Directors</h3>
@@ -267,7 +267,17 @@ const Leadership = () => {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
                   >
                     {getCurrentTeam()
-                      .filter(person => person.status === 'director')
+                      .filter(person => {
+                        // For Marketing & Branding, show only directors
+                        if (activeRole === 'marketing') {
+                          return person.status === 'director';
+                        }
+                        // For Programming & Events, show Cameron Barnes as director
+                        else if (activeRole === 'programming') {
+                          return person.id === 'cameron-barnes';
+                        }
+                        return person.status === 'director';
+                      })
                       .map((person, index) => (
                         <Link key={index} to={`/leadership/${person.id}`}>
                           <motion.div 
@@ -301,7 +311,17 @@ const Leadership = () => {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                   >
                     {getCurrentTeam()
-                      .filter(person => person.status === 'supportTeam')
+                      .filter(person => {
+                        // For Marketing & Branding, show only support team members
+                        if (activeRole === 'marketing') {
+                          return person.status === 'supportTeam';
+                        }
+                        // For Programming & Events, show all except Cameron Barnes as support team
+                        else if (activeRole === 'programming') {
+                          return person.id !== 'cameron-barnes';
+                        }
+                        return person.status === 'supportTeam';
+                      })
                       .map((person, index) => (
                         <Link key={index} to={`/leadership/${person.id}`}>
                           <motion.div 
