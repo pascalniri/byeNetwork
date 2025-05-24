@@ -55,37 +55,7 @@ const leaders = [
         gallery: [
           "/james.jpg",
         ]
-      },
-      {
-        id: "cameron-barnes",
-        image: "/cameron.png",
-        name: "Cameron Barnes",
-        title: "National Co-Director of Programming & Events",
-        status:"director",
-        department: "Executive Leadership",
-        longBio:
-          "Cam Barnes is a dedicated sophomore at Morehouse College, where he is pursuing a major in Business Finance and a minor in Data Science and Analytics. With a passion for leadership and service, Cam currently serves as the Director of Planning and Events on the National Board of the Black Youth Empowerment Network (BYEN). In this role, he plays a key part in organizing impactful initiatives and events that support the organization's mission of uplifting and empowering Black youth across the country. Through his involvement with BYEN, Cam has not only contributed meaningfully to the community but has also experienced profound personal growth. The organization has served as a source of motivation and inspiration, pushing him to strive for excellence in all areas of his life. His work with BYEN reflects his commitment to creating positive change and becoming a better version of himself through service, strategy, and meaningful connection.",
-
-        empowermentQuote: "Empowering Black youth means not only to be an inspiration but to be a role model to the next generations. To not only be a path for someone, but a light to help them on that path. The ability to guide and guide well is a great privilege bestowed upon me, and hopefully others feel the same.",
-        achievements: [
-          "Established BYEN's strategic planning framework",
-          "Led development of chapter expansion model",
-          "Coordinated multiple leadership development workshops",
-          "Created partnerships with community organizations"
-        ],
-        education: "Morehouse College, Major in Business Finance and a Minor in Data Science and Analytics",
-        socialMedia: {
-          ig: "#",
-          x: "#",
-          linkedIn: "#",
-          facebook: "#",
-          email: "#"
-        },
-        gallery: [
-          "/cameron.png",
-        ]
-      },
-     
+      }, 
      
       {
         id: "tyler-gunter",
@@ -118,7 +88,7 @@ const leaders = [
       {
         id: "elijah",
         image: "/Elijah2.png",
-        name: "Elijah",
+        name: "Elijah Hopkins",
         title: "National Associate Director of Strategic Fundraising",
         status:"director",
         department: "Finance & Development",
@@ -260,6 +230,35 @@ const leaders = [
         },
         gallery: [
           "/morgan.png",
+        ]
+      },
+      {
+        id: "cameron-barnes",
+        image: "/cameron.png",
+        name: "Cameron Barnes",
+        title: "National Co-Director of Programming & Events",
+        status:"supportTeam",
+        department: "Programming & Events",
+        longBio:
+          "Cam Barnes is a dedicated sophomore at Morehouse College, where he is pursuing a major in Business Finance and a minor in Data Science and Analytics. With a passion for leadership and service, Cam currently serves as the Director of Planning and Events on the National Board of the Black Youth Empowerment Network (BYEN). In this role, he plays a key part in organizing impactful initiatives and events that support the organization's mission of uplifting and empowering Black youth across the country. Through his involvement with BYEN, Cam has not only contributed meaningfully to the community but has also experienced profound personal growth. The organization has served as a source of motivation and inspiration, pushing him to strive for excellence in all areas of his life. His work with BYEN reflects his commitment to creating positive change and becoming a better version of himself through service, strategy, and meaningful connection.",
+
+        empowermentQuote: "Empowering Black youth means not only to be an inspiration but to be a role model to the next generations. To not only be a path for someone, but a light to help them on that path. The ability to guide and guide well is a great privilege bestowed upon me, and hopefully others feel the same.",
+        achievements: [
+          "Established BYEN's strategic planning framework",
+          "Led development of chapter expansion model",
+          "Coordinated multiple leadership development workshops",
+          "Created partnerships with community organizations"
+        ],
+        education: "Morehouse College, Major in Business Finance and a Minor in Data Science and Analytics",
+        socialMedia: {
+          ig: "#",
+          x: "#",
+          linkedIn: "#",
+          facebook: "#",
+          email: "#"
+        },
+        gallery: [
+          "/cameron.png",
         ]
       },
       {
