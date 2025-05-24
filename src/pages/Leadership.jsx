@@ -254,51 +254,125 @@ const Leadership = () => {
           
           {/* Team Members Grid */}
           <div className="mb-8">
-            {getCurrentTeam().some(leader => leader.status === 'director') ? (
-              <h3 className="text-xl font-semibold mb-6">National Directors</h3>
+            {/* Display National Directors section if in Marketing & Branding department */}
+            {activeRole === 'marketing' ? (
+              <>
+                {/* National Directors Section */}
+                <h3 className="text-xl font-semibold mb-6">National Directors</h3>
+                <AnimatePresence>
+                  <motion.div 
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate="visible"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
+                  >
+                    {getCurrentTeam()
+                      .filter(person => person.status === 'director')
+                      .map((person, index) => (
+                        <Link key={index} to={`/leadership/${person.id}`}>
+                          <motion.div 
+                            whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
+                            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                          >
+                            <div className="h-[240px] overflow-hidden">
+                              <img 
+                                src={person.image} 
+                                alt={person.name}
+                                className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
+                              />
+                            </div>
+                            <div className="p-4">
+                              <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
+                              <p className="text-sm text-gray-600">{person.title}</p>
+                            </div>
+                          </motion.div>
+                        </Link>
+                      ))}
+                  </motion.div>
+                </AnimatePresence>
+                
+                {/* Support Team Section */}
+                <h3 className="text-xl font-semibold mb-6">Support Team</h3>
+                <AnimatePresence>
+                  <motion.div 
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate="visible"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                  >
+                    {getCurrentTeam()
+                      .filter(person => person.status === 'supportTeam')
+                      .map((person, index) => (
+                        <Link key={index} to={`/leadership/${person.id}`}>
+                          <motion.div 
+                            whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
+                            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                          >
+                            <div className="h-[240px] overflow-hidden">
+                              <img 
+                                src={person.image} 
+                                alt={person.name}
+                                className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
+                              />
+                            </div>
+                            <div className="p-4">
+                              <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
+                              <p className="text-sm text-gray-600">{person.title}</p>
+                            </div>
+                          </motion.div>
+                        </Link>
+                      ))}
+                  </motion.div>
+                </AnimatePresence>
+              </>
             ) : (
-              <h3 className="text-xl font-semibold mb-6">Support Team</h3>
+              // Default display for other departments
+              <>
+                <h3 className="text-xl font-semibold mb-6">
+                  {getCurrentTeam().some(leader => leader.status === 'director') ? 'National Directors' : 'Support Team'}
+                </h3>
+                
+                <AnimatePresence>
+                  {getCurrentTeam().length > 0 ? (
+                    <motion.div 
+                      variants={staggerContainer}
+                      initial="hidden"
+                      animate="visible"
+                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
+                      {getCurrentTeam().map((person, index) => (
+                        <Link key={index} to={`/leadership/${person.id}`}>
+                          <motion.div 
+                            whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
+                            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                          >
+                            <div className="h-[240px] overflow-hidden">
+                              <img 
+                                src={person.image} 
+                                alt={person.name}
+                                className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
+                              />
+                            </div>
+                            <div className="p-4">
+                              <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
+                              <p className="text-sm text-gray-600">{person.title}</p>
+                            </div>
+                          </motion.div>
+                        </Link>
+                      ))}
+                    </motion.div>
+                  ) : (
+                    <motion.div 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="text-center py-12 bg-gray-50 rounded-xl"
+                    >
+                      <p className="text-gray-500">Leadership information coming soon.</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </>
             )}
-            
-            <AnimatePresence>
-              {getCurrentTeam().length > 0 ? (
-                <motion.div 
-                  variants={staggerContainer}
-                  initial="hidden"
-                  animate="visible"
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                >
-                  {getCurrentTeam().map((person, index) => (
-                    <Link key={index} to={`/leadership/${person.id}`}>
-                      <motion.div 
-                        whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
-                        className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-                      >
-                        <div className="h-[240px] overflow-hidden">
-                          <img 
-                            src={person.image} 
-                            alt={person.name}
-                            className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
-                          />
-                        </div>
-                        <div className="p-4">
-                          <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
-                          <p className="text-sm text-gray-600">{person.title}</p>
-                        </div>
-                      </motion.div>
-                    </Link>
-                  ))}
-                </motion.div>
-              ) : (
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-center py-12 bg-gray-50 rounded-xl"
-                >
-                  <p className="text-gray-500">Leadership information coming soon.</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </div>
           
           {/* Selected Person Details */}
