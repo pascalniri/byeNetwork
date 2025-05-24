@@ -5,6 +5,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { motion } from "framer-motion";
+import leaders from "../api/data";
 
 const LeaderDetail = () => {
   const { id } = useParams();
@@ -13,6 +14,9 @@ const LeaderDetail = () => {
 
   // Fetch leader data based on ID
   useEffect(() => {
+    // Scroll to the top of the page when component mounts
+    window.scrollTo(0, 0);
+    
     // Simulate fetching data
     const fetchLeader = () => {
       setLoading(true);
@@ -20,7 +24,7 @@ const LeaderDetail = () => {
       // In a real app, this would be an API call
       // For now, we'll use the mock data
       setTimeout(() => {
-        const foundLeader = mockLeaders.find(l => l.id === id);
+        const foundLeader = leaders.find(l => l.id === id);
         setLeader(foundLeader || null);
         setLoading(false);
       }, 500);
@@ -29,124 +33,7 @@ const LeaderDetail = () => {
     fetchLeader();
   }, [id]);
 
-  // Mock data - in a real application, this would come from an API
-  const mockLeaders = [
-    {
-      id: "jayshun-mathews",
-      image: "/Shun.jpg",
-      name: "Jay'Shun Mathews",
-      title: "Founder & Executive Director",
-      department: "Executive Leadership",
-      longBio:
-        "Jay'Shun's vision for the Black Youth Empowerment Network (BYEN) stems from his own struggles with racial disparities, academic setbacks, and lack of community support. Growing up, he faced limited opportunities and environments that weren't designed for his success. Despite this, he realized the importance of a supportive network and resources. This led him to create BYEN—a space where young Black leaders, entrepreneurs, and creatives can find the guidance and support he lacked. BYEN is a movement focused on leadership, entrepreneurship, and creative expression, committed to ensuring the next generation doesn't face these challenges alone.",
-      empowermentQuote: "To me, empowering Black youth means equipping them with the tools, support, and belief they need to lead without limits. It means making sure we are not just speaking about potential — we are investing in it. Empowerment is about access, visibility, and community — giving young Black leaders the space to rise, the resources to grow, and the network to thrive. Here at BYEN, we don't just talk about it — we do it.",
-      achievements: [
-        "Founded BYEN in 2023, establishing chapters at multiple universities",
-        "Featured on Atlanta News First to discuss youth advocacy",
-        "Led partnership development with Students Demand Action",
-        "Organized Gun Violence Awareness Day at Morehouse College"
-      ],
-      education: "Morehouse College, Business Administration",
-      socialMedia: {
-        ig: "#",
-        x: "#",
-        linkedIn: "#",
-        facebook: "#",
-        email: "#"
-      },
-      gallery: [
-        "/Shun.jpg",
-        
-      ]
-    },
-    {
-      id: "james-brazzell",
-      image: "/james.jpg",
-      name: "James Brazzell",
-      title: "Deputy Executive Director",
-      department: "Executive Leadership",
-      longBio:
-        "James Brazzell is a freshman at Morehouse College majoring in Business Administration with a concentration in Management. As the Deputy Executive Director of the Black Youth Empowerment Network (BYEN), he plays a key role in shaping national strategy, overseeing programming, and building partnerships that advance the organization's mission. James is passionate about empowering youth through leadership, service, and generational impact. He is dedicated to creating platforms that amplify young Black voices and expand access to real opportunities. Drawing inspiration from his family's legacy in entrepreneurship and construction, James aspires to become a real estate developer and business owner, focused on building strong communities and the leaders who will sustain them.",
-      empowermentQuote: "To me, empowering Black youth means equipping them with the tools, support, and belief they need to lead without limits. It means making sure we are not just speaking about potential — we are investing in it. Empowerment is about access, visibility, and community — giving young Black leaders the space to rise, the resources to grow, and the network to thrive. Here at BYEN, we don't just talk about it — we do it.",
-      achievements: [
-        "Established BYEN's strategic planning framework",
-        "Led development of chapter expansion model",
-        "Coordinated multiple leadership development workshops",
-        "Created partnerships with community organizations"
-      ],
-      education: "Morehouse College, Business Administration (Management)",
-      socialMedia: {
-        ig: "#",
-        x: "#",
-        linkedIn: "#",
-        facebook: "#",
-        email: "#"
-      },
-      gallery: [
-        "/james.jpg",
-      ]
-    },
-    {
-      id: "tyler-gunter",
-      image: "/Tyler.jpg",
-      name: "Tyler Gunter",
-      title: "Director of Finance & Fundraising",
-      department: "Finance & Development",
-      longBio:
-        "Tyler Gunter serves as the Director of Finance & Fundraising at the Black Youth Empowerment Network. Originally from Delaware, he brings over six years of experience in finance and leadership from his involvement with Business Professionals of America and as the highest-ranking Black member of the High School Democrats of America. A competitive swimmer for nearly a decade, Tyler's diverse experiences shape his authentic and resilient leadership style. As a young Black leader, he is dedicated to inspiring others to embrace their true selves and ensuring that Black youth receive the financial support and guidance needed to lead confidently.",
-      empowermentQuote: "Empowering Black youth means creating pathways to financial literacy and economic opportunity. It's about ensuring that young leaders have both the knowledge and resources to build sustainable futures for themselves and their communities.",
-      achievements: [
-        "Developed BYEN's financial management system",
-        "Created sustainable fundraising strategy",
-        "Launched financial literacy workshop series",
-        "Secured multiple partnership grants"
-      ],
-      education: "Finance and Leadership Studies",
-      socialMedia: {
-        ig: "#",
-        x: "#",
-        linkedIn: "#",
-        facebook: "#",
-        email: "#"
-      },
-      gallery: [
-        "/Tyler.jpg"
-      ]
-    },
-    {
-      id: "christian-francis",
-      image: "/christian.png",
-      name: "Christian Francis",
-      title: "National Director of Marketing & Branding",
-      department: "Marketing & Branding",
-      longBio:
-        "Christian Francis is a dynamic student leader and marketer originally from New York City, now based in Georgia. With a deep passion for storytelling and its power to drive social impact, Christian uses creativity as a tool for transformation. Currently serving as the Director of Creative Design and Marketing for the Black Youth Empowerment Network (BYEN), Christian is committed to producing bold, purpose-driven content that resonates with and mobilizes young people across the country. Through innovative design and strategic messaging, Christian aims to elevate the voices of Black youth and amplify the mission of BYEN to create lasting change.",
-      empowermentQuote: "To Christian, empowering Black youth means more than just offering support—it means actively building the tools, cultivating the confidence, and protecting the space for young Black leaders to define their own paths. It's about ensuring that Black youth not only have access to opportunities but are also trusted to lead, create, and thrive on their own terms. Empowerment, in this sense, is about ownership, agency, and freedom—it's about affirming the brilliance and potential that already exists within Black communities and giving it the space to flourish unapologetically.",
-      achievements: [
-        "Redesigned BYEN's brand identity and visual language",
-        "Developed comprehensive social media strategy",
-        "Created marketing materials for chapter expansion",
-        "Led digital campaign increasing engagement by 200%"
-      ],
-      education: "Marketing and Creative Design",
-      socialMedia: {
-        ig: "#",
-        x: "#",
-        linkedIn: "#",
-        facebook: "#",
-        email: "#"
-      },
-      supportTeam: [
-        {
-          name: "Montreal Gatson",
-          title: "Graphic Designer"
-        }
-      ],
-      gallery: [
-        "/christian.png"
-      ]
-    }
-  ];
+
 
   // Animation variants
   const fadeIn = {
@@ -223,15 +110,17 @@ const LeaderDetail = () => {
           </motion.section>
 
           {/* Empowerment Quote */}
-          <motion.section 
-            variants={fadeIn}
-            initial="hidden"
-            animate="visible"
-            className="bg-[#693e2d] bg-opacity-10 rounded-xl p-6 md:p-8 border-l-4 border-[#693e2d]"
-          >
-            <h2 className="text-xl font-bold text-[#693e2d] mb-4">What does empowering Black youth mean to you?</h2>
-            <p className="text-[16px] italic text-gray-700">{leader.empowermentQuote}</p>
-          </motion.section>
+          {leader.status === "director" && (
+            <motion.section 
+              variants={fadeIn}
+              initial="hidden"
+              animate="visible"
+              className="bg-[#693e2d] bg-opacity-10 rounded-xl p-6 md:p-8 border-l-4 border-[#693e2d]"
+            >
+              <h2 className="text-xl font-bold text-[#693e2d] mb-4">What does empowering Black youth mean to you?</h2>
+              <p className="text-[16px] italic text-gray-700">{leader.empowermentQuote}</p>
+            </motion.section>
+          )}
 
           {/* Achievements */}
           <motion.section 

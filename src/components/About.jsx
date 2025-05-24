@@ -98,31 +98,6 @@ const About = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          variants={item3}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.2 }}
-          className="flex flex-col md:flex-row md:items-center items-start gap-y-10 gap-x-10 mt-[4rem]">
-          <div className="flex flex-row items-center gap-3">
-            <img
-              src="/Shun 1.svg"
-              alt=""
-              className="h-[70px] w-[70px] rounded-full border-[3px] border-[#9e6548]"
-            />
-            <span className="flex flex-col gap-y-1">
-              <h1 className="font-medium text-[24px]">Jay'Shun Mathews</h1>
-              <p className="text-[#6C6A6A] text-[16px]">
-                Founder & Executive Director
-              </p>
-            </span>
-          </div>
-
-          {/* <button className="flex flex-row text-[14px] items-center text-white gap-2 bg-[#693e2d] rounded-full py-4 px-10 hover:bg-[#985b3c] duration-200">
-            <p>READ MORE</p>
-            <IoArrowForwardOutline />
-          </button> */}
-        </motion.div>
       </div>
     </div>
   );
