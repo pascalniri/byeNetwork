@@ -4,19 +4,72 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isDropdownOpen1, setDropdownOpen1] = useState(false);
-  const [isDropdownOpen2, setDropdownOpen2] = useState(false);
-  const [isDropdownOpen3, setDropdownOpen3] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState({});
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Navigation data structure
+  const navigationItems = [
+    {
+      id: 'home',
+      label: 'Home',
+      href: '/',
+      type: 'link'
+    },
+    {
+      id: 'aboutus',
+      label: 'About Us',
+      type: 'dropdown',
+      items: [
+        { label: 'History & Background', href: '#' },
+        { label: 'Leadership Team', href: '#' },
+        { label: 'Partners', href: '#' },
+        { label: 'Board of Advisors', href: '#' },
+       
+      ]
+    },
+    {
+      id: 'resources',
+      label: 'Programs & Initiatives',
+      type: 'dropdown',
+      items: [
+        { label: 'Foundation', href: '/foundation' },
+        { label: 'Boots on the Ground: Civic Engagement Campaign', href: '/gallery' },
+        { label: 'B.O.L.D Accelator', href: '/gallery' },
+        { label: 'BYEN National Internship', href: '/gallery' }
+      ]
+    },
+    {
+      id: 'events',
+      label: 'Events',
+      type: 'link',
+      href: '/events'
+    },
+    {
+      id: 'getinvolved',
+      label: 'Get Involved',
+      type: 'dropdown',
+      items: [
+        { label: 'Membership', href: '/membership' },
+        { label: 'Start a Chapter', href: '/startachapter' },
+        { label: 'Become a Donor or Sponsor', href: '/donororsponsor' }
+      ]
+    },
+    {
+      id: 'newsandblog',
+      label: 'News & Blog',
+      type: 'link',
+      href: '/newsandblog'
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 150) {
-        setIsVisible(false); // Scrolling down
+        setIsVisible(false);
       } else {
-        setIsVisible(true); // Scrolling up
+        setIsVisible(true);
       }
       setLastScrollY(currentScrollY);
     };
@@ -27,22 +80,86 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
-  // Close mobile menu when clicking outside or on links
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
-  // Hover handlers for desktop dropdowns
-  const openDropdown1 = () => setDropdownOpen1(true);
-  const openDropdown2 = () => setDropdownOpen2(true);
-  const openDropdown3 = () => setDropdownOpen3(true);
-  
-  const closeDropdown1 = () => setDropdownOpen1(false);
-  const closeDropdown2 = () => setDropdownOpen2(false);
-  const closeDropdown3 = () => setDropdownOpen3(false);
-  
-  // Click handlers for mobile dropdowns
-  const toggleDropdown1 = () => setDropdownOpen1(!isDropdownOpen1);
-  const toggleDropdown2 = () => setDropdownOpen2(!isDropdownOpen2);
-  const toggleDropdown3 = () => setDropdownOpen3(!isDropdownOpen3);
+  // Mobile dropdown handlers (only needed for mobile)
+  const toggleDropdown = (id) => setOpenDropdowns(prev => ({ ...prev, [id]: !prev[id] }));
+
+  // Desktop Navigation Link Component
+  const DesktopNavLink = ({ item }) => {
+    if (item.type === 'link') {
+      return (
+        <a href={item.href} className="relative text-black hover:text-[#693e2d] py-6 transition-colors duration-300 group font-medium">
+          {item.label}
+          <span className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-[#693e2d] to-[#985b3c] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+        </a>
+      );
+    }
+
+    if (item.type === 'dropdown') {
+      return (
+        <div className="relative group">
+          <button className="flex items-center space-x-1 cursor-pointer text-black hover:text-[#693e2d] py-6 transition-colors duration-300 relative font-medium">
+            <span>{item.label}</span>
+            <FiChevronDown className="transition-transform duration-300 group-hover:rotate-180 w-4 h-4" />
+            <span className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-[#693e2d] to-[#985b3c] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
+          </button>
+          <div className="absolute left-0 mt-1 w-52 bg-white shadow-xl rounded-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+            <div className="py-2 bg-gradient-to-br from-gray-50 to-white rounded-xl">
+              {item.items.map((subItem, index) => (
+                <a 
+                  key={index}
+                  href={subItem.href} 
+                  className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#693e2d]/15 hover:to-[#985b3c]/15 hover:text-[#693e2d] transition-all duration-200 font-medium rounded-lg mx-2"
+                >
+                  {subItem.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+  };
+
+  // Mobile Navigation Link Component
+  const MobileNavLink = ({ item }) => {
+    if (item.type === 'link') {
+      return (
+        <a href={item.href} onClick={closeMobileMenu} className="block py-3 sm:py-4 text-base sm:text-lg font-semibold text-black hover:text-[#693e2d] border-b border-gray-200 transition-colors duration-200">
+          {item.label}
+        </a>
+      );
+    }
+
+    if (item.type === 'dropdown') {
+      return (
+        <div className="border-b border-gray-200 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-lg mb-1">
+          <button
+            onClick={() => toggleDropdown(item.id)}
+            className="flex justify-between items-center w-full py-3 sm:py-4 px-2 text-base sm:text-lg font-semibold text-black hover:text-[#693e2d] transition-colors duration-200 rounded-lg"
+          >
+            <span>{item.label}</span>
+            <FiChevronDown className={`transform transition-transform duration-300 w-4 h-4 sm:w-5 sm:h-5 ${openDropdowns[item.id] ? 'rotate-180' : ''}`} />
+          </button>
+          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openDropdowns[item.id] ? 'max-h-32 pb-2' : 'max-h-0'}`}>
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-lg mx-2 p-1">
+              {item.items.map((subItem, index) => (
+                <a 
+                  key={index}
+                  href={subItem.href} 
+                  onClick={closeMobileMenu} 
+                  className="block py-2 sm:py-3 pl-4 text-sm sm:text-base text-gray-600 hover:bg-gradient-to-r hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] font-medium transition-colors duration-200 rounded-lg"
+                >
+                  {subItem.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+  };
 
   return (
     <>
@@ -55,72 +172,9 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <a href="/" className="relative text-black hover:text-[#693e2d] py-6 transition-colors duration-300 group font-medium">
-              Home
-              <span className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-[#693e2d] to-[#985b3c] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
-            </a>
-            
-            <a href="/membership" className="relative text-black hover:text-[#693e2d] py-6 transition-colors duration-300 group font-medium">
-              Membership
-              <span className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-[#693e2d] to-[#985b3c] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
-            </a>
-
-            {/* Resources Dropdown */}
-            <div className="relative group" onMouseEnter={openDropdown1} onMouseLeave={closeDropdown1}>
-              <button className="flex items-center space-x-1 cursor-pointer text-black hover:text-[#693e2d] py-6 transition-colors duration-300 relative font-medium">
-                <span>Resources</span>
-                <FiChevronDown className="transition-transform duration-300 group-hover:rotate-180 w-4 h-4" />
-                <span className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-[#693e2d] to-[#985b3c] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
-              </button>
-              <div className="absolute left-0 mt-1 w-52 bg-white shadow-xl rounded-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
-                <div className="py-2 bg-gradient-to-br from-gray-50 to-white rounded-xl">
-                  <a href="/events" className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#693e2d]/15 hover:to-[#985b3c]/15 hover:text-[#693e2d] transition-all duration-200 font-medium rounded-lg mx-2">
-                    Events
-                  </a>
-                  <a href="/mentorship" className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#693e2d]/15 hover:to-[#985b3c]/15 hover:text-[#693e2d] transition-all duration-200 font-medium rounded-lg mx-2">
-                    Mentorship
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Our Team Dropdown */}
-            <div className="relative group" onMouseEnter={openDropdown2} onMouseLeave={closeDropdown2}>
-              <button className="flex items-center space-x-1 cursor-pointer text-black hover:text-[#693e2d] py-6 transition-colors duration-300 relative font-medium">
-                <span>Our Team</span>
-                <FiChevronDown className="transition-transform duration-300 group-hover:rotate-180 w-4 h-4" />
-                <span className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-[#693e2d] to-[#985b3c] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
-              </button>
-              <div className="absolute left-0 mt-1 w-52 bg-white shadow-xl rounded-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
-                <div className="py-2 bg-gradient-to-br from-gray-50 to-white rounded-xl">
-                  <a href="/leadership" className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#693e2d]/15 hover:to-[#985b3c]/15 hover:text-[#693e2d] transition-all duration-200 font-medium rounded-lg mx-2">
-                    Leadership
-                  </a>
-                  <a href="/partners" className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#693e2d]/15 hover:to-[#985b3c]/15 hover:text-[#693e2d] transition-all duration-200 font-medium rounded-lg mx-2">
-                    Partners
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Projects Dropdown */}
-            <div className="relative group" onMouseEnter={openDropdown3} onMouseLeave={closeDropdown3}>
-              <button className="flex items-center space-x-1 cursor-pointer text-black hover:text-[#693e2d] py-6 transition-colors duration-300 relative font-medium">
-                <span>Projects</span>
-                <FiChevronDown className="transition-transform duration-300 group-hover:rotate-180 w-4 h-4" />
-                <span className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-[#693e2d] to-[#985b3c] transition-all duration-300 ease-out group-hover:w-full rounded-full"></span>
-              </button>
-              <div className="absolute left-0 mt-1 w-52 bg-white shadow-xl rounded-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
-                <div className="py-2 bg-gradient-to-br from-gray-50 to-white rounded-xl">
-                  <a href="/foundation" className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#693e2d]/15 hover:to-[#985b3c]/15 hover:text-[#693e2d] transition-all duration-200 font-medium rounded-lg mx-2">
-                    Foundation
-                  </a>
-                  <a href="/gallery" className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#693e2d]/15 hover:to-[#985b3c]/15 hover:text-[#693e2d] transition-all duration-200 font-medium rounded-lg mx-2">
-                    Gallery
-                  </a>
-                </div>
-              </div>
-            </div>
+            {navigationItems.map((item) => (
+              <DesktopNavLink key={item.id} item={item} />
+            ))}
           </div>
 
           {/* Desktop Donate Button */}
@@ -164,75 +218,10 @@ const Navbar = () => {
             <HiX className="w-5 h-5" />
           </button>
           
-          <a href="/" onClick={closeMobileMenu} className="block py-3 sm:py-4 text-base sm:text-lg font-semibold text-black hover:text-[#693e2d] border-b border-gray-200 transition-colors duration-200">
-            Home
-          </a>
-          <a href="/membership" onClick={closeMobileMenu} className="block py-3 sm:py-4 text-base sm:text-lg font-semibold text-black hover:text-[#693e2d] border-b border-gray-200 transition-colors duration-200">
-            Membership
-          </a>
-          
-          {/* Resources Dropdown */}
-          <div className="border-b border-gray-200 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-lg mb-1">
-            <button
-              onClick={toggleDropdown1}
-              className="flex justify-between items-center w-full py-3 sm:py-4 px-2 text-base sm:text-lg font-semibold text-black hover:text-[#693e2d] transition-colors duration-200 rounded-lg"
-            >
-              <span>Resources</span>
-              <FiChevronDown className={`transform transition-transform duration-300 w-4 h-4 sm:w-5 sm:h-5 ${isDropdownOpen1 ? 'rotate-180' : ''}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen1 ? 'max-h-32 pb-2' : 'max-h-0'}`}>
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-lg mx-2 p-1">
-                <a href="/events" onClick={closeMobileMenu} className="block py-2 sm:py-3 pl-4 text-sm sm:text-base text-gray-600 hover:bg-gradient-to-r hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] font-medium transition-colors duration-200 rounded-lg">
-                  Events
-                </a>
-                <a href="/mentorship" onClick={closeMobileMenu} className="block py-2 sm:py-3 pl-4 text-sm sm:text-base text-gray-600 hover:bg-gradient-to-r hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] font-medium transition-colors duration-200 rounded-lg">
-                  Mentorship
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Our Team Dropdown */}
-          <div className="border-b border-gray-200 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-lg mb-1">
-            <button
-              onClick={toggleDropdown2}
-              className="flex justify-between items-center w-full py-3 sm:py-4 px-2 text-base sm:text-lg font-semibold text-black hover:text-[#693e2d] transition-colors duration-200 rounded-lg"
-            >
-              <span>Our Team</span>
-              <FiChevronDown className={`transform transition-transform duration-300 w-4 h-4 sm:w-5 sm:h-5 ${isDropdownOpen2 ? 'rotate-180' : ''}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen2 ? 'max-h-32 pb-2' : 'max-h-0'}`}>
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-lg mx-2 p-1">
-                <a href="/leadership" onClick={closeMobileMenu} className="block py-2 sm:py-3 pl-4 text-sm sm:text-base text-gray-600 hover:bg-gradient-to-r hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] font-medium transition-colors duration-200 rounded-lg">
-                  Leadership
-                </a>
-                <a href="/partners" onClick={closeMobileMenu} className="block py-2 sm:py-3 pl-4 text-sm sm:text-base text-gray-600 hover:bg-gradient-to-r hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] font-medium transition-colors duration-200 rounded-lg">
-                  Partners
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Projects Dropdown */}
-          <div className="border-b border-gray-200 bg-gradient-to-r from-gray-50/50 to-white/50 rounded-lg mb-1">
-            <button
-              onClick={toggleDropdown3}
-              className="flex justify-between items-center w-full py-3 sm:py-4 px-2 text-base sm:text-lg font-semibold text-black hover:text-[#693e2d] transition-colors duration-200 rounded-lg"
-            >
-              <span>Projects</span>
-              <FiChevronDown className={`transform transition-transform duration-300 w-4 h-4 sm:w-5 sm:h-5 ${isDropdownOpen3 ? 'rotate-180' : ''}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isDropdownOpen3 ? 'max-h-32 pb-2' : 'max-h-0'}`}>
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-lg mx-2 p-1">
-                <a href="/foundation" onClick={closeMobileMenu} className="block py-2 sm:py-3 pl-4 text-sm sm:text-base text-gray-600 hover:bg-gradient-to-r hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] font-medium transition-colors duration-200 rounded-lg">
-                  Foundation
-                </a>
-                <a href="/gallery" onClick={closeMobileMenu} className="block py-2 sm:py-3 pl-4 text-sm sm:text-base text-gray-600 hover:bg-gradient-to-r hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] font-medium transition-colors duration-200 rounded-lg">
-                  Gallery
-                </a>
-              </div>
-            </div>
-          </div>
+          {/* Mobile Navigation Items */}
+          {navigationItems.map((item) => (
+            <MobileNavLink key={item.id} item={item} />
+          ))}
 
           {/* Mobile Donate Button */}
           <div className="mt-6 sm:mt-8">
