@@ -76,12 +76,14 @@ const Home = () => {
               className="flex flex-row flex-wrap text-[15px] md:gap-3 gap-2 mt-[2rem]"
             >
               <a href="/membership">
-                <button className="bg-[#693e2d] rounded-full py-5 px-10 hover:bg-[#985b3c] duration-200 shadow-lg">
-                  BECOME MEMBER
+                <button className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-5 px-10 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group">
+                  <span className="relative z-10">BECOME MEMBER</span>
+                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
                 </button>
               </a>
-              <button className="text-[#693e2d] bg-white px-10 py-5 rounded-full duration-200 hover:bg-[#ae8772] hover:text-white shadow-lg">
-                DONATE NOW
+              <button className="relative text-[#693e2d] bg-white px-10 py-5 rounded-full hover:bg-gradient-to-r hover:from-[#ae8772] hover:to-[#985b3c] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group">
+                <span className="relative z-10">DONATE NOW</span>
+                <div className="absolute inset-0 bg-[#693e2d]/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
               </button>
             </motion.div>
           </div>

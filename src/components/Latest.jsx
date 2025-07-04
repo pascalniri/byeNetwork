@@ -78,8 +78,9 @@ const Latest = () => {
                 {item.description}
               </p>
               <a href={item.link} target="_blank" rel="noopener noreferrer" className="mt-5 self-start">
-                <button className="bg-[#693e2d] text-[15px] text-white rounded-full py-3 px-8 hover:bg-[#985b3c] transition-colors duration-300 shadow-md">
-                  LEARN MORE
+                <button className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group">
+                  <span className="relative z-10">LEARN MORE</span>
+                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
                 </button>
               </a>
             </div>
@@ -89,8 +90,9 @@ const Latest = () => {
       
       <div className="flex justify-center mt-8">
         <a href="https://www.instagram.com/wearebyen/" target="_blank" rel="noopener noreferrer">
-          <button className="bg-white border-2 border-[#693e2d] text-[15px] text-[#693e2d] font-medium rounded-full py-3 px-8 hover:bg-[#693e2d] hover:text-white transition-colors duration-300">
-            VIEW MORE
+          <button className="relative text-[#693e2d] bg-white border-2 border-[#693e2d] rounded-full py-3 px-8 hover:bg-gradient-to-r hover:from-[#693e2d] hover:to-[#985b3c] hover:text-white hover:border-transparent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group">
+            <span className="relative z-10">VIEW MORE</span>
+            <div className="absolute inset-0 bg-[#693e2d]/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
           </button>
         </a>
       </div>

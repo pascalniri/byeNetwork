@@ -1,6 +1,8 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { BiSolidConversation } from "react-icons/bi";
+import { FaPhoneAlt } from "react-icons/fa";
+
 const ContactUs = () => {
   return (
     <Fade triggerOnce={false} className="font-montserrat flex flex-col justify-center text-center mt-[5rem]">
@@ -27,9 +29,12 @@ const ContactUs = () => {
           href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
           target="_blank"
         >
-          <button className="text-white flex text-[15px] items-center gap-2 mt-[3rem] bg-[#693e2d] rounded-full py-4 px-12 hover:bg-[#985b3c] duration-200">
-            <p>CONTACT VIA E-MAIL</p>
-            <BiSolidConversation />
+          <button className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-4 px-12 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group flex items-center gap-2 mt-[3rem]">
+            <span className="relative z-10 flex items-center gap-2">
+              CONTACT VIA E-MAIL
+              <BiSolidConversation />
+            </span>
+            <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
           </button>
         </a>
       </div>

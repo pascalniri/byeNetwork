@@ -38,7 +38,7 @@ const Foundation = () => {
           Our foundation is built on a commitment to making a lasting impact.
           Through innovation, collaboration, and compassion, we strive to
           empower communities, drive positive change, and create opportunities
-          for a brighter future. Together, we’re building a legacy of hope and
+          for a brighter future. Together, we're building a legacy of hope and
           progress.
         </p>
       </div>
@@ -77,11 +77,10 @@ const Foundation = () => {
                 <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A]">
                   {foundation.description}
                 </p>
-                {/* <a href={foundation.link} target="_blank">
-                <button className=" text-[22px] text-white mt-[2rem]  bg-[#985B3C] md:px-[30px] px-4 py-[8px] hover:bg-[#693e2d] duration-200">
-                  Full Size
+                <button className="relative text-white bg-gradient-to-r from-[#985B3C] to-[#693e2d] rounded-full mt-[2rem] py-[15px] px-[30px] hover:from-[#693e2d] hover:to-[#985B3C] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group">
+                  <span className="relative z-10 text-[15px] uppercase">Learn More</span>
+                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
                 </button>
-              </a> */}
               </div>
             </div>
           ))}
