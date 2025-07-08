@@ -47,7 +47,7 @@ const About = () => {
     },
   };
   return (
-    <div className="font-montserrat flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[8rem] mt-[3rem]">
+    <div className="font-montserrat flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:my-[8rem] mt-[3rem]">
       <Advert />
       <motion.div
         variants={item1}
@@ -69,14 +69,10 @@ const About = () => {
             WELCOME <span className="text-[#693e2d]">TO BYEN</span>
           </h1>
           <h2 className="font-medium text-[20px] leading-[28px] mt-4">
-            At the Black Youth Empowerment Network (BYEN), we are committed to
-            uplifting and inspiring the next generation of young Black leaders,
-            entrepreneurs, and creatives.
+          The Black Youth Empowerment Network (BYEN) is a youth-led organization dedicated to uplifting and empowering Black youth through leadership development, entrepreneurship, and creative expression.
           </h2>
           <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A]">
-            Founded with a vision rooted in empowerment and opportunity, BYEN
-            serves as a catalyst for change, fostering personal growth,
-            leadership, and community impact.
+          BYEN provides a platform for collaboration, community building, and personal growth, fostering opportunities for young leaders to make a meaningful impact in their communities and beyond.
           </p>
         </motion.div>
 

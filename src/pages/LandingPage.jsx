@@ -5,7 +5,7 @@ import Offers from "../components/Offers";
 import Latest from "../components/Latest";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
 import ContactUs from "../components/ContactUs";
-
+import Stats from "../components/Stats";
 // Scale and rotate animation with delay
 const scaleRotateAnimation = (delay = 0) => ({
   initial: { scale: 0.8, rotate: -15, opacity: 0 }, // Start small and rotated
@@ -71,6 +71,7 @@ const LandingPage = () => {
 
       <div>
         <About />
+        <Stats />
         <Offers />
         <Latest />
         <ContactUs />

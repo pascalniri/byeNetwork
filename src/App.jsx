@@ -13,7 +13,9 @@ import Mentorship from "./pages/Mentorship";
 import AllAbout from "./pages/AllAbout";
 import Foundation from "./pages/Foundation";
 import Gallery from "./pages/Gallery";
+import HistoryAndBackground from "./pages/HistoryAndBackground";
 import { initGA, trackPageView } from "./analytics";
+import BoldAccelerator from "./pages/BoldAccelerator";
 
 function TrackPageViews() {
   const location = useLocation();
@@ -46,6 +48,8 @@ function App() {
         <Route path="/about" element={<AllAbout />} />
         <Route path="/foundation" element={<Foundation />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/history-and-background" element={<HistoryAndBackground />} />
+        <Route path="/bold-accelerator" element={<BoldAccelerator />} />
       </Routes>
       <Footer />
     </BrowserRouter>

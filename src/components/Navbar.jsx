@@ -21,7 +21,7 @@ const Navbar = () => {
       label: 'About Us',
       type: 'dropdown',
       items: [
-        { label: 'History & Background', href: '#' },
+        { label: 'History & Background', href: '/history-and-background' },
         { label: 'Leadership Team', href: '#' },
         { label: 'Partners', href: '#' },
         { label: 'Board of Advisors', href: '#' },
@@ -35,7 +35,7 @@ const Navbar = () => {
       items: [
         { label: 'Foundation', href: '/foundation' },
         { label: 'Boots on the Ground: Civic Engagement Campaign', href: '/gallery' },
-        { label: 'B.O.L.D Accelator', href: '/gallery' },
+        { label: 'B.O.L.D Accelator', href: '/bold-accelerator' },
         { label: 'BYEN National Internship', href: '/gallery' }
       ]
     },
