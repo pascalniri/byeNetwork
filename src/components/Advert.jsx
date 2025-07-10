@@ -51,14 +51,12 @@ const Advert = () => {
               leadership-related expenses, such as attending conferences,
               launching initiatives, or running for student government.
               </p>
-              <a href="https://forms.gle/vuAj8SNDk5fzWkETA" target="_blank">
-                <button className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-4 px-10 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group flex items-center gap-2 mt-3 md:mt-10">
-                  <span className="relative z-10 flex items-center gap-2">
-                    APPLY NOW
-                    <FaArrowRight />
-                  </span>
-                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-                </button>
+              <a href="https://forms.gle/vuAj8SNDk5fzWkETA" target="_blank" rel="noopener noreferrer" className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-3 md:mt-10">
+                <span className="relative z-10 flex items-center gap-2">
+                  APPLY NOW
+                  <FaArrowRight />
+                </span>
+                <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
               </a>
               </span>
             </div>

@@ -91,15 +91,13 @@ const Home = () => {
               viewport={{ amount: 0.2 }}
               className="flex flex-row flex-wrap text-[15px] md:gap-3 gap-2 mt-[2rem]"
             >
-              <a href="/membership">
-                <button className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-5 px-10 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group">
-                  <span className="relative z-10">BECOME MEMBER</span>
-                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-                </button>
+              <a href="/membership" className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group">
+                <span className="relative z-10">BECOME MEMBER</span>
+                <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
               </a>
-              <a href="https://givebutter.com/4zAepQ" target="_blank" className="relative text-[#693e2d] bg-white px-10 py-5 rounded-full hover:bg-gradient-to-r hover:from-[#ae8772] hover:to-[#985b3c] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group">
+              <a href="https://givebutter.com/4zAepQ" target="_blank" rel="noopener noreferrer" className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group">
                 <span className="relative z-10">DONATE NOW</span>
-                <div className="absolute inset-0 bg-[#693e2d]/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
+                <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
               </a>
             </motion.div>
           </div>

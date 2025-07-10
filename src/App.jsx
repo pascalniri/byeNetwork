@@ -16,6 +16,8 @@ import Gallery from "./pages/Gallery";
 import HistoryAndBackground from "./pages/HistoryAndBackground";
 import { initGA, trackPageView } from "./analytics";
 import BoldAccelerator from "./pages/BoldAccelerator";
+import StartChapter from "./pages/StartChapter";
+import Donors from "./pages/Donors";
 
 function TrackPageViews() {
   const location = useLocation();
@@ -50,6 +52,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/history-and-background" element={<HistoryAndBackground />} />
         <Route path="/bold-accelerator" element={<BoldAccelerator />} />
+        <Route path="/start-chapter" element={<StartChapter />} />
+        <Route path="/donors-and-sponsors" element={<Donors />} />
       </Routes>
       <Footer />
     </BrowserRouter>

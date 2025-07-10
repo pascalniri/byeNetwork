@@ -22,8 +22,8 @@ const Navbar = () => {
       type: 'dropdown',
       items: [
         { label: 'History & Background', href: '/history-and-background' },
-        { label: 'Leadership Team', href: '#' },
-        { label: 'Partners', href: '#' },
+        { label: 'Leadership Team', href: '/leadership' },
+        { label: 'Partners', href: '/partners' },
         { label: 'Board of Advisors', href: '#' },
        
       ]
@@ -51,8 +51,8 @@ const Navbar = () => {
       type: 'dropdown',
       items: [
         { label: 'Membership', href: '/membership' },
-        { label: 'Start a Chapter', href: '/startachapter' },
-        { label: 'Become a Donor or Sponsor', href: '/donororsponsor' }
+        { label: 'Start a Chapter', href: '/start-chapter' },
+        { label: 'Become a Donor or Sponsor', href: '/donors-and-sponsors' }
       ]
     },
     {
@@ -179,7 +179,7 @@ const Navbar = () => {
 
           {/* Desktop Donate Button */}
           <div className="hidden lg:block">
-            <a href="/" className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold text-sm xl:text-base overflow-hidden group">
+            <a href="https://givebutter.com/4zAepQ" target="_blank" rel="noopener noreferrer" className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm xl:text-base overflow-hidden group">
               <span className="relative z-10">DONATE</span>
               <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
             </a>
@@ -225,7 +225,7 @@ const Navbar = () => {
 
           {/* Mobile Donate Button */}
           <div className="mt-6 sm:mt-8">
-            <a href="/" onClick={closeMobileMenu} className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full w-full flex justify-center py-3 sm:py-4 px-6 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold text-base sm:text-lg overflow-hidden group">
+            <a href="https://givebutter.com/4zAepQ" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu} className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full w-full flex justify-center py-3 sm:py-4 px-6 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-base sm:text-lg overflow-hidden group">
               <span className="relative z-10">DONATE</span>
               <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
             </a>

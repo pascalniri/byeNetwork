@@ -28,14 +28,14 @@ const ContactUs = () => {
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
           target="_blank"
+          rel="noopener noreferrer"
+          className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-8"
         >
-          <button className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-4 px-12 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group flex items-center gap-2 mt-[3rem]">
-            <span className="relative z-10 flex items-center gap-2">
-              CONTACT VIA E-MAIL
-              <BiSolidConversation />
-            </span>
-            <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-          </button>
+          <span className="relative z-10 flex items-center gap-2">
+            CONTACT VIA E-MAIL
+            <BiSolidConversation />
+          </span>
+          <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
         </a>
       </div>
     </Fade>
