@@ -3,9 +3,20 @@ import { MdOutlineHorizontalRule } from 'react-icons/md';
 
 export default function BoldAccelerator() {
   return (
+
+    <div>
+    <div className="bg-[#FAFAFA] font-montserrat flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
+              <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
+                <MdOutlineHorizontalRule />
+                <p>B.O.L.D. ACCELERATOR</p>
+                <MdOutlineHorizontalRule />
+              </h1>
+              <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
+              Empowering the next generation of Black youth leaders through hands-on training and community impact              </p>
+            </div>
     <div className="font-montserrat max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <motion.div 
+      {/* <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -13,7 +24,9 @@ export default function BoldAccelerator() {
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">B.O.L.D. Accelerator</h1>
         <p className="mb-6 text-[15px] leading-[20px] mt-4 text-white">Empowering the next generation of Black youth leaders through hands-on training and community impact</p>
-      </motion.div>
+      </motion.div> */}
+
+      
 
       {/* Content Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 my-12">
@@ -119,6 +132,7 @@ export default function BoldAccelerator() {
           </div>
         </motion.div>
       </div>
+    </div>
     </div>
   );
 }

@@ -56,7 +56,9 @@ const Partners = () => {
                 {partner.description}
               </p>
               <a href={partner.link} target="_blank">
-                <button className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-4 px-12 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold overflow-hidden group flex items-center gap-2 mt-4">
+                <button
+          className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-8"
+          >
                   <span className="relative z-10 flex items-center gap-2">
                     VISIT THEM
                     <IoArrowForwardOutline />

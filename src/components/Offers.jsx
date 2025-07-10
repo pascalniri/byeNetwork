@@ -56,24 +56,24 @@ const Offers = () => {
       },
     },
   };
-  
+
   return (
     <motion.div
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.2 }}
-      className='font-montserrat bg-[#FAFAFA] flex flex-col justify-center items-center py-[5rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] lg:mt-[10rem] mt-[5rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full'
+      className='font-montserrat bg-[#FAFAFA] flex flex-col justify-center items-center py-[10rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full'
     >
       <h1 className="lg:text-[45px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
         BYEN <span className="text-[#693e2d]">CORE VALUES</span>
       </h1>
       <p className="text-[15px] leading-[22px] mt-6 text-[#6C6A6A] md:w-[80%]">
-        The Black Youth Empowerment Network is guided by four foundational values that inform every aspect of our work: 
-        Empowerment, Collaboration, Leadership, and Impact. These values are deeply embedded into the structure of our programs, 
+        The Black Youth Empowerment Network is guided by four foundational values that inform every aspect of our work:
+        Empowerment, Collaboration, Leadership, and Impact. These values are deeply embedded into the structure of our programs,
         partnerships, and initiatives, serving as the framework through which we cultivate meaningful experiences and measurable change.
       </p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-[3rem] w-full">
         {coreValues.map((value, index) => (
           <motion.div
@@ -90,7 +90,7 @@ const Offers = () => {
             <p className="w-full text-[15px] leading-[22px] text-[#6C6A6A] group-hover:text-gray-200 transition-colors duration-300">
               {value.description}
             </p>
-           
+
           </motion.div>
         ))}
       </div>

@@ -51,8 +51,9 @@ const LandingPage = () => {
 
   return (
     <>
+
       {/* Scroll Progress Bar */}
-      <motion.div
+      {/* <motion.div
         style={{
           position: "fixed",
           top: 0,
@@ -64,12 +65,13 @@ const LandingPage = () => {
           zIndex: 1000,
           scaleX,
         }}
-      />
+      /> */}
 
       {/* Home Section */}
       <Home />
 
       <div>
+
         <About />
         <Stats />
         <Offers />

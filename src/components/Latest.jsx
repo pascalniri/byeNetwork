@@ -45,7 +45,7 @@ const Latest = () => {
   };
 
   return (
-    <div className="font-montserrat mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
+    <div className="font-montserrat bg-white mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
       <Fade>
         <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
           LATEST <span className="text-[#693e2d]">NEWS</span>

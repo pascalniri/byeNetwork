@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <Fade triggerOnce={false} className="font-montserrat flex flex-col justify-center text-center mt-[5rem]">
+    <Fade triggerOnce={false} className="font-montserrat flex flex-col justify-center text-center">
    
       <div
         // style={{
@@ -16,7 +16,7 @@ const ContactUs = () => {
         //   height: "100%",
         //   width: "100%",
         // }}
-        className="flex flex-col justify-center items-center text-center mb-[10rem] px-4 md:px-[5rem] lg:px-[10rem]"
+        className="flex bg-white flex-col justify-center items-center text-center py-[10rem] px-4 md:px-[5rem] lg:px-[10rem]"
       >
         <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[26px] leading-[35px]">
           LET'S CONNECT AND START <span className="text-[#985B3C]">A CONVERSATION TODAY!</span>
