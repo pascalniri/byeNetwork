@@ -138,7 +138,7 @@ export default function HistoryAndBackground() {
           </div>
         </div>
 
-        <Section title="Boots on the Ground">
+        {/* <Section title="Boots on the Ground">
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="md:flex">
               <div className="md:flex-1 p-6 md:p-8">
@@ -160,7 +160,7 @@ export default function HistoryAndBackground() {
               </div>
             </div>
           </div>
-        </Section>
+        </Section> */}
       </div>
     </div>
   );
