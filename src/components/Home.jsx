@@ -73,10 +73,10 @@ const Home = () => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-screen w-full">
+    <div className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-x-hidden">
       {/* Background with parallax effect */}
       <motion.div
-        className="fixed inset-0 w-full h-full z-[-2]"
+        className="fixed inset-0 w-full h-full z-[-2] pointer-events-none select-none"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
@@ -84,13 +84,14 @@ const Home = () => {
         <img
           src="/hero-bg.svg"
           alt="Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover max-w-none"
+          draggable={false}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
       </motion.div>
 
       {/* Decorative elements - Only show on larger screens */}
-      <div className="hidden md:block absolute inset-0 overflow-hidden">
+      <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none select-none">
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
@@ -100,8 +101,8 @@ const Home = () => {
               height: `${Math.random() * 20 + 10}vw`,
               maxWidth: '400px',
               maxHeight: '400px',
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 90}%`, // avoid overflow
+              top: `${Math.random() * 90}%`, // avoid overflow
               filter: 'blur(40px)',
               willChange: 'transform'
             }}
@@ -121,27 +122,27 @@ const Home = () => {
 
       {/* Main content */}
       <motion.div
-        className="font-montserrat min-h-screen w-full flex flex-col justify-center items-center px-4 py-16 sm:py-20 relative z-10 overflow-hidden"
+        className="font-montserrat min-h-screen w-full flex flex-col justify-center items-center px-2 sm:px-4 py-16 sm:py-20 relative z-10 overflow-x-hidden"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.div
-          className="max-w-4xl w-full text-center space-y-6 sm:space-y-8 px-2 sm:px-4"
+          className="max-w-2xl w-full text-center space-y-6 sm:space-y-8 px-2 sm:px-4 mx-auto"
           variants={item}
         >
           {/* Animated Text */}
-          <div className="relative h-32 sm:h-40 md:h-48 flex items-center justify-center">
+          <div className="relative min-h-[4rem] sm:min-h-[5rem] md:min-h-[6rem] flex items-center justify-center w-full">
             <AnimatedText
               texts={["BLACK YOUTH EMPOWERMENT NETWORK", "WELCOME TO BYEN"]}
               delay={4000}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-tight tracking-tight text-white drop-shadow-lg px-2 sm:px-4"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-tight tracking-tight text-white drop-shadow-lg px-2 sm:px-4 break-words"
             />
           </div>
 
           {/* Subtitle */}
           <motion.p
-            className="text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto px-2 sm:px-4"
+            className="text-base sm:text-lg md:text-xl text-white max-w-xl mx-auto px-2 sm:px-4"
             variants={item}
           >
             Empowering the next generation through education, mentorship, and community building.
@@ -154,7 +155,7 @@ const Home = () => {
           >
             <motion.a
               href="/membership"
-              className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-8"
+              className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-2 sm:mt-8 text-base sm:text-lg"
               variants={buttonItem}
             >
               <span className="relative z-10 flex items-center">
@@ -170,7 +171,7 @@ const Home = () => {
               href="https://givebutter.com/4zAepQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-8"
+              className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-2 sm:mt-8 text-base sm:text-lg"
               variants={buttonItem}
             >
               <span className="relative z-10 flex items-center">
@@ -197,6 +198,7 @@ const Home = () => {
               repeatDelay: 0.5,
               ease: 'easeInOut'
             }}
+            style={{ pointerEvents: 'none' }}
           >
             <span className="text-white text-xs sm:text-sm mb-1 sm:mb-2">Scroll Down</span>
             <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-white/50 to-transparent"></div>
