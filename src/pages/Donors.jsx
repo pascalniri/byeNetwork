@@ -3,9 +3,22 @@ import { MdOutlineHorizontalRule, MdOutlineEmail } from 'react-icons/md';
 
 export default function Donors() {
     return (
+        <div className="font-montserrat">
+            {/* Hero Section */}
+            <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full my-[7rem]">
+                <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
+                    <MdOutlineHorizontalRule />
+                    <p className='uppercase'>Become a Donor or Sponsor</p>
+                    <MdOutlineHorizontalRule />
+                  
+                </h1>
+                <p className='text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto'>
+                    Fuel the Movement. Invest in the Future of Black Youth.
+                </p>
+            </div>
         <div className="font-montserrat max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Hero Section */}
-            <motion.div 
+            {/* <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -15,7 +28,7 @@ export default function Donors() {
                 <p className="mb-6 text-[15px] leading-[20px] mt-4 text-white max-w-3xl mx-auto">
                     Fuel the Movement. Invest in the Future of Black Youth.
                 </p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Main Content */}
             <div className="max-w-4xl mx-auto space-y-12">
@@ -281,6 +294,7 @@ export default function Donors() {
                     </div>
                 </motion.div>
             </div>
+        </div>
         </div>
     );
 }

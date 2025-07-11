@@ -1,6 +1,5 @@
 import React from "react";
 import { RiInstagramFill } from "react-icons/ri";
-import { BsTwitterX } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
 import { BsFacebook } from "react-icons/bs";
@@ -8,145 +7,131 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 
+const footerLinks = [
+  {
+    label: "About",
+    links: [
+      { label: "History & Background", href: "/history-and-background" },
+      { label: "Leadership Team", href: "/leadership" },
+      { label: "Partners", href: "/partners" },
+      { label: "Board of Advisors", href: "#" },
+    ],
+  },
+  {
+    label: "Programs",
+    links: [
+      { label: "Foundation", href: "/foundation" },
+      { label: "Boots on the Ground", href: "/boots-on-the-ground" },
+      { label: "B.O.L.D Accelerator", href: "/bold-accelerator" },
+      { label: "National Internship", href: "/BYEN-national-internship" },
+    ],
+  },
+  {
+    label: "Get Involved",
+    links: [
+      { label: "Membership", href: "/membership" },
+      { label: "Start a Chapter", href: "/start-chapter" },
+      { label: "Donors & Sponsors", href: "/donors-and-sponsors" },
+      { label: "Events", href: "/events" },
+      { label: "News & Blog", href: "/news-and-blog" },
+    ],
+  },
+];
+
 const Footer = () => {
   return (
-    <div className="font-montserrat bg-black w-full pt-[4rem] mx-auto max-w-screen-2xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 md:px-[5rem] lg:px-[6rem] mx-auto">
-        <div>
-          <img src="/logo.jpg" alt="logo" className="w-[100px]" />
-          <p className="text-[15px] leading-[20px] text-[#8f8f8f] mt-5">
-          The Black Youth Empowerment Network (BYEN) is a youth-led organization dedicated to uplifting and empowering Black youth through leadership development, entrepreneurship, and creative expression. BYEN provides a platform for collaboration, community building, and personal growth, fostering opportunities for young leaders to make a meaningful impact in their communities and beyond.
+    <footer className="font-montserrat bg-[#181818] border-t border-[#222] w-full pt-12 pb-6 px-4 md:px-0">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-12 md:gap-0">
+        {/* Left: Logo & Description */}
+        <div className="flex-1 min-w-[220px] flex flex-col gap-4 md:pr-8">
+          <a href="/" className="inline-block mb-2">
+            <img src="/logoo.svg" alt="BYEN Logo" className="w-14 h-14 object-contain" />
+          </a>
+          <p className="text-[#bdbdbd] text-[15px] leading-[22px] max-w-xs">
+            The Black Youth Empowerment Network (BYEN) is a youth-led organization dedicated to uplifting and empowering Black youth through leadership, entrepreneurship, and creative expression.
           </p>
-          <span className="flex flex-row gap-3 mt-10">
-            <a
-              href="https://www.instagram.com/wearebyen/"
-              target="_blank"
-            >
-              <RiInstagramFill className="text-[#693e2d] text-[30px] hover:text-white duration-200" />
+          <div className="flex flex-row gap-4 mt-2">
+            <a href="https://www.instagram.com/wearebyen/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <RiInstagramFill className="text-[#bdbdbd] text-[24px] hover:text-[#fff] transition-colors duration-200" />
             </a>
-            {/* <a href="https://twitter.com" target="_blank">
-              <BsTwitterX className="text-[#693e2d] text-[28px] hover:text-white duration-200" />
-            </a> */}
-            <a
-              href="https://www.youtube.com/@BlackYouthEmpowermentNetwork"
-              target="_blank"
-            >
-              <FaYoutube className="text-[#693e2d] text-[30px] hover:text-white duration-200" />
+            <a href="https://www.youtube.com/@BlackYouthEmpowermentNetwork" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <FaYoutube className="text-[#bdbdbd] text-[24px] hover:text-[#fff] transition-colors duration-200" />
             </a>
-            <a
-              href="https://www.linkedin.com/company/black-youth-empowerment-network/"
-              target="_blank"
-            >
-              <SiLinkedin className="text-[#693e2d] text-[28px] hover:text-white duration-200" />
+            <a href="https://www.linkedin.com/company/black-youth-empowerment-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <SiLinkedin className="text-[#bdbdbd] text-[22px] hover:text-[#fff] transition-colors duration-200" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61554206687351"
-            target="_blank">
-              <BsFacebook className="text-[#693e2d] text-[29px] hover:text-white duration-200" />
+            <a href="https://www.facebook.com/profile.php?id=61554206687351" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <BsFacebook className="text-[#bdbdbd] text-[22px] hover:text-[#fff] transition-colors duration-200" />
             </a>
-          </span>
+          </div>
         </div>
 
-        <div>
-          <h2 className="
-           text-[24px] text-white">Quick Links</h2>
-          <ul className="flex flex-col gap-1 mt-3">
-            <li>
-              <a
-                href="#"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="/membership"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
-              >
-                Membership
-              </a>
-            </li>
-            <li>
-              <a
-                href="/partners"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
-              >
-                Our Partners
-              </a>
-            </li>
-            <li>
-              <a
-                href="/mentorship"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
-              >
-                Mentorship
-              </a>
-            </li>
-            <li>
-              <a
-                href="/events"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
-              >
-                Events
-              </a>
-            </li>
-          </ul>
+        {/* Center: Links */}
+        <div className="flex-[2] flex flex-col sm:flex-row gap-8 md:gap-16 justify-center">
+          {footerLinks.map((section, idx) => (
+            <div key={idx}>
+              <h3 className="text-white text-[16px] font-semibold mb-3 tracking-wide">{section.label}</h3>
+              <ul className="flex flex-col gap-2">
+                {section.links.map((link, i) => (
+                  <li key={i}>
+                    <a
+                      href={link.href}
+                      className="text-[#bdbdbd] text-[15px] hover:text-[#fff] transition-colors duration-200"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div>
-          <h2 className="
-           text-[20px] text-white">Get In Touch</h2>
-          <ul className="flex flex-col gap-3 mt-3">
-            <li className="flex flex-row items-center gap-3">
-              <MdOutlineMail className="text-[#693e2d] text-[30px]" />
+        {/* Right: Contact & Donate */}
+        <div className="flex-1 min-w-[220px] flex flex-col gap-4 md:pl-8 mt-4 md:mt-0">
+          <h3 className="text-white text-[16px] font-semibold mb-3 tracking-wide">Contact</h3>
+          <ul className="flex flex-col gap-2">
+            <li className="flex items-center gap-2 text-[#bdbdbd] text-[15px]">
+              <MdOutlineMail className="text-[#985b3c] text-[20px]" />
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
-                target="_blank"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
+                href="mailto:blackyouthempowermentnetwork@gmail.com"
+                className="hover:text-[#fff] transition-colors duration-200"
               >
                 blackyouthempowermentnetwork@gmail.com
               </a>
             </li>
-            <li className="flex flex-row items-center gap-3">
-              <IoLocationOutline className="text-[#693e2d] text-[30px]" />
-              <a
-                href="#"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
-              >
-                USA
-              </a>
+            <li className="flex items-center gap-2 text-[#bdbdbd] text-[15px]">
+              <IoLocationOutline className="text-[#985b3c] text-[20px]" />
+              <span>USA</span>
             </li>
-            <li className="flex flex-row items-center gap-3">
-              <LuPhoneCall className="text-[#693e2d] text-[28px]" />
+            <li className="flex items-center gap-2 text-[#bdbdbd] text-[15px]">
+              <LuPhoneCall className="text-[#985b3c] text-[18px]" />
               <a
                 href="tel:+1 (478) 283-3665"
-                target="_blank"
-                className="text-[15px] text-[#8f8f8f] hover:text-[#693e2d] duration-200"
+                className="hover:text-[#fff] transition-colors duration-200"
               >
                 +1 (478) 283-3665
               </a>
             </li>
           </ul>
+          <a
+            href="https://givebutter.com/4zAepQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block text-white bg-[#693e2d] hover:bg-[#985b3c] rounded-full py-2 px-6 font-semibold text-[15px] shadow-md transition-all duration-200 text-center"
+          >
+            Donate
+          </a>
         </div>
       </div>
-      <div className="px-4 md:px-[5rem] lg:px-[6rem] mx-auto mt-[3rem] bg-[#693e2d] text-[15px] py-[1.4rem] text-white flex flex-col-reverse justify-center items-center gap-y-5 md:flex-row  md:justify-between">
-        <p>© 2025 BYEN. All rights reservered.</p>
-        <span className="flex gap-10">
-          <a
-            href="#"
-            className="text-[15px] underline hover:text-black duration-200"
-          >
-            Privacy Policy
-          </a>
-          <a
-            href="#"
-            className="text-[15px] underline hover:text-black duration-200"
-          >
-            Terms & Conditions
-          </a>
-        </span>
+      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-[#222] flex flex-col md:flex-row justify-between items-center gap-4 text-[#bdbdbd] text-[14px]">
+        <p>© 2025 BYEN. All rights reserved.</p>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-white underline transition-colors duration-200">Privacy Policy</a>
+          <a href="#" className="hover:text-white underline transition-colors duration-200">Terms & Conditions</a>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

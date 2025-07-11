@@ -18,6 +18,9 @@ import { initGA, trackPageView } from "./analytics";
 import BoldAccelerator from "./pages/BoldAccelerator";
 import StartChapter from "./pages/StartChapter";
 import Donors from "./pages/Donors";
+import Internship from "./pages/Internship";
+import CivicEngagement from "./pages/CivicEngagement";
+import NewsAndBlog from "./pages/NewsAndBlog";
 
 function TrackPageViews() {
   const location = useLocation();
@@ -54,6 +57,9 @@ function App() {
         <Route path="/bold-accelerator" element={<BoldAccelerator />} />
         <Route path="/start-chapter" element={<StartChapter />} />
         <Route path="/donors-and-sponsors" element={<Donors />} />
+        <Route path="/BYEN-national-internship" element={<Internship />} />
+        <Route path="/boots-on-the-ground" element={<CivicEngagement />} />
+        <Route path="/news-and-blog" element={<NewsAndBlog />} />
       </Routes>
       <Footer />
     </BrowserRouter>

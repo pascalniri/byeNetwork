@@ -34,9 +34,9 @@ const Navbar = () => {
       type: 'dropdown',
       items: [
         { label: 'Foundation', href: '/foundation' },
-        { label: 'Boots on the Ground: Civic Engagement Campaign', href: '/gallery' },
+        { label: 'Boots on the Ground: Civic Engagement Campaign', href: '/boots-on-the-ground' },
         { label: 'B.O.L.D Accelator', href: '/bold-accelerator' },
-        { label: 'BYEN National Internship', href: '/gallery' }
+        { label: 'BYEN National Internship', href: '/BYEN-national-internship' }
       ]
     },
     {
@@ -59,9 +59,9 @@ const Navbar = () => {
       id: 'newsandblog',
       label: 'News & Blog',
       type: 'link',
-      href: '/newsandblog'
+      href: '/news-and-blog'
     }
-  ];
+  ];  
 
   useEffect(() => {
     const handleScroll = () => {
