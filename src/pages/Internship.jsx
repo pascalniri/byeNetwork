@@ -27,12 +27,12 @@ export default function Internship() {
                 >
                     <h2 className="text-2xl font-bold text-[#693e2d] mb-6">About the Internship</h2>
                     <p className="text-[#6C6A6A] leading-relaxed text-[15px] mb-6">
-                        Spearheaded by 
+                        Spearheaded by
                         <a href="/leadership/james-brazzell" className="text-[#693e2d] font-semibold hover:underline flex items-center gap-2">
-                        <span className="flex items-center gap-2 my-5">
-                        <img src="/james.jpg" alt="James Brazzell" className="inline-block w-10 h-10  rounded-full object-cover border-2 border-[#693e2d] mr-2" />
-                        James Brazzell
-                        </span> 
+                            <span className="flex items-center gap-2 my-5">
+                                <img src="/james.jpg" alt="James Brazzell" className="inline-block w-10 h-10  rounded-full object-cover border-2 border-[#693e2d] mr-2" />
+                                James Brazzell
+                            </span>
                         </a>
                         BYEN's Deputy Executive Director, the internship gives participants the opportunity to work closely with BYEN's national team. Interns contribute to real projects in areas like civic engagement, outreach, storytelling, and creative strategy, while gaining exposure to leadership development, youth organizing, and community-based impact.
                     </p>
@@ -66,7 +66,25 @@ export default function Internship() {
                     <p className="text-[#6C6A6A] text-[15px] mb-2">Deputy Executive Director</p>
                     <p className="text-[#6C6A6A] text-[14px] italic">“Empowering Black youth means equipping them with the tools, support, and belief they need to lead without limits.”</p>
                 </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="bg-gradient-to-br from-[#f9f5f3] to-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d] w-full"
+                >
+                    <h3 className="text-xl font-semibold text-[#693e2d] mb-4">Stay Tuned</h3>
+                    <p className="text-[#6C6A6A] mb-10 text-[15px]">
+                        Stay tuned for application details and upcoming announcements
+                    </p>
+                    <a href="mailto:info@wearebyen.org" target="_blank" className="relative bottom-2 text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-5 px-10 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-regular overflow-hidden group">
+                        <span className="relative z-10">EMAIL US TO LEARN MORE</span>
+                        <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
+                    </a>
+                </motion.div>
             </div>
+
+
         </div>
     );
 }

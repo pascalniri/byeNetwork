@@ -63,6 +63,22 @@ export default function CivicEngagement() {
           <p className="text-[#6C6A6A] text-[15px] mb-2">Community Advocacy Strategist</p>
           <p className="text-[#6C6A6A] text-[14px] italic">“Empowering communities through intentional engagement, education, and strategic action.”</p>
         </motion.div>
+
+        <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="bg-gradient-to-br from-[#f9f5f3] to-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d] w-full"
+                >
+                    <h3 className="text-xl font-semibold text-[#693e2d] mb-4">Stay Tuned</h3>
+                    <p className="text-[#6C6A6A] mb-10 text-[15px]">
+                        Stay tuned for application details and upcoming announcements
+                    </p>
+                    <a href="mailto:info@wearebyen.org" target="_blank" className="relative bottom-2 text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-5 px-10 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-regular overflow-hidden group">
+                        <span className="relative z-10">EMAIL US TO LEARN MORE</span>
+                        <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
+                    </a>
+                </motion.div>
       </div>
     </div>
   );

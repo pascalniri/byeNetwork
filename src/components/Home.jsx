@@ -35,6 +35,88 @@ const AnimatedText = ({ texts, delay = 3000, className }) => {
   );
 };
 
+const BackgroundSlideshow = () => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  
+  // Array of background images - you can replace these with your actual image URLs
+  const backgroundImages = [
+    "/community.jpg",
+    "/aboutImg.jpg",
+    "/6.jpg",
+    "/2.jpg",
+
+   
+  ];
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
+  return (
+    <div className="absolute inset-0 w-full h-full z-[-2] pointer-events-none select-none overflow-hidden">
+      {backgroundImages.map((image, index) => (
+        <motion.div
+          key={index}
+          className="absolute inset-0 w-full h-full"
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ 
+            opacity: index === currentSlide ? 1 : 0,
+            scale: index === currentSlide ? 1 : 1.1,
+            filter: index === currentSlide ? "blur(0px)" : "blur(2px)"
+          }}
+          transition={{ 
+            duration: 1.5, 
+            ease: [0.43, 0.13, 0.23, 0.96],
+            delay: index === currentSlide ? 0 : 0.2
+          }}
+        >
+          <img
+            src={image}
+            alt={`Background ${index + 1}`}
+            className="w-full h-full object-cover"
+            draggable={false}
+          />
+        </motion.div>
+      ))}
+      
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+      
+      {/* Additional animated overlay for extra visual interest */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"
+        animate={{
+          opacity: [0.3, 0.1, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      
+      {/* Slideshow indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        {backgroundImages.map((_, index) => (
+          <motion.div
+            key={index}
+            className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
+              index === currentSlide ? 'bg-white' : 'bg-white/40'
+            }`}
+            whileHover={{ scale: 1.2 }}
+            onClick={() => setCurrentSlide(index)}
+            style={{ pointerEvents: 'auto' }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Home = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,21 +156,8 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-x-hidden">
-      {/* Background with parallax effect */}
-      <motion.div
-        className="fixed inset-0 w-full h-full z-[-2] pointer-events-none select-none"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
-      >
-        <img
-          src="/hero-bg.svg"
-          alt="Background"
-          className="w-full h-full object-cover max-w-none"
-          draggable={false}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-      </motion.div>
+      {/* Background slideshow */}
+      <BackgroundSlideshow />
 
       {/* Decorative elements - Only show on larger screens */}
       <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none select-none">
@@ -184,25 +253,7 @@ const Home = () => {
             </motion.a>
           </motion.div>
 
-          {/* Scroll indicator - Hidden on mobile */}
-          <motion.div
-            className="hidden sm:flex absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex-col items-center mt-8 sm:mt-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{
-              opacity: [0, 1, 1, 0],
-              y: [20, 0, -10, -20]
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              repeatDelay: 0.5,
-              ease: 'easeInOut'
-            }}
-            style={{ pointerEvents: 'none' }}
-          >
-            <span className="text-white text-xs sm:text-sm mb-1 sm:mb-2">Scroll Down</span>
-            <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-white/50 to-transparent"></div>
-          </motion.div>
+         
         </motion.div>
       </motion.div>
     </div>

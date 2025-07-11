@@ -138,29 +138,7 @@ export default function HistoryAndBackground() {
           </div>
         </div>
 
-        {/* <Section title="Boots on the Ground">
-          <div className="bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="md:flex">
-              <div className="md:flex-1 p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-[#693e2d] mb-4">Our National Civic Engagement Campaign</h3>
-                <p className="mb-4 text-[15px] leading-[20px] text-[#6C6A6A]">
-                  Boots on the Ground is BYEN's national civic engagement campaign that mobilizes Black youth to take action in their communities through direct service, grassroots organizing, and voter education. This initiative empowers our members to be visible, vocal, and grounded in the issues that impact their everyday lives.
-                </p>
-                <p className="mb-6 text-[15px] leading-[20px] text-[#6C6A6A]">
-                  Led by Theron White and Tobias Brown, Boots on the Ground is about showing up with purpose and building real change from the ground up. Whether it’s canvassing, facilitating town halls, leading mutual aid efforts, or supporting advocacy work, our members are the frontline of youth-led transformation.
-                  Stay tuned for more information and upcoming opportunities to get involved.
-                </p>
-                <div className="flex items-center justify-center p-4 bg-[#f9f5f3] rounded-xl shadow-lg text-[#693D2E]">
-
-                  <p className="text-[15px] leading-[20px]">Stay tuned for more information and upcoming opportunities to get involved.</p>
-                </div>
-              </div>
-              <div className="md:flex-1 bg-gray-100 min-h-[300px] flex items-center justify-center">
-                <span className="text-gray-400">[Campaign Image]</span>
-              </div>
-            </div>
-          </div>
-        </Section> */}
+   
       </div>
     </div>
   );

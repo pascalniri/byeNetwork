@@ -125,6 +125,24 @@ const Events = () => {
       </div>
 
       <div className="max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
+         {/* Jan-May 2025 Events */}
+         <div className="mb-16">
+          <h2 className="text-[28px] font-bold mb-8 text-center border-b-2 border-[#693e2d] pb-2 inline-block">
+            Jan-May 2025
+          </h2>
+          
+          <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {eventsJanMay2025.map((event, index) => (
+              <EventCard key={index} event={event} index={index} />
+            ))}
+          </motion.div>
+        </div>
         {/* 2024 Events */}
         <div className="mb-16">
           <h2 className="text-[28px] font-bold mb-8 text-center border-b-2 border-[#693e2d] pb-2 inline-block">
@@ -144,24 +162,7 @@ const Events = () => {
           </motion.div>
         </div>
 
-        {/* Jan-May 2025 Events */}
-        <div className="mb-16">
-          <h2 className="text-[28px] font-bold mb-8 text-center border-b-2 border-[#693e2d] pb-2 inline-block">
-            Jan-May 2025
-          </h2>
-          
-          <motion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          >
-            {eventsJanMay2025.map((event, index) => (
-              <EventCard key={index} event={event} index={index} />
-            ))}
-          </motion.div>
-        </div>
+       
       </div>
     </div>
   );

@@ -167,7 +167,7 @@ const Navbar = () => {
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-center justify-between w-full h-14 sm:h-16 md:h-18 lg:h-20">
           {/* Logo */}
           <a href="/" className="flex-shrink-0 transition-transform duration-200 hover:scale-105">
-            <img src="/logoo.svg" alt="logo" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14" />
+            <img src="/logoo.svg" alt="logo" className="w-[100px] h-[100px]" />
           </a>
 
           {/* Desktop Navigation */}

@@ -94,10 +94,10 @@ const Footer = () => {
             <li className="flex items-center gap-2 text-[#bdbdbd] text-[15px]">
               <MdOutlineMail className="text-[#985b3c] text-[20px]" />
               <a
-                href="mailto:blackyouthempowermentnetwork@gmail.com"
+                href="mailto:info@wearebyen.org"
                 className="hover:text-[#fff] transition-colors duration-200"
               >
-                blackyouthempowermentnetwork@gmail.com
+                info@wearebyen.org
               </a>
             </li>
             <li className="flex items-center gap-2 text-[#bdbdbd] text-[15px]">
@@ -118,7 +118,7 @@ const Footer = () => {
             href="https://givebutter.com/4zAepQ"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block text-white bg-[#693e2d] hover:bg-[#985b3c] rounded-full py-2 px-6 font-semibold text-[15px] shadow-md transition-all duration-200 text-center"
+            className="mt-4 inline-block text-white bg-[#693e2d] hover:bg-[#985b3c] rounded-full py-4 px-6 font-semibold text-[15px] shadow-md transition-all duration-200 text-center"
           >
             Donate
           </a>

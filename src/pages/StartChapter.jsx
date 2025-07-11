@@ -14,20 +14,10 @@ export default function StartChapter() {
                 <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
                 Bring BYEN to Your Community                </p>
             </div>
-        <div className="font-montserrat max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Hero Section */}
-            {/* <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gradient-to-r from-[#693e2d] to-[#985b3c] text-white py-16 px-6 rounded-2xl my-[7rem] text-center"
-            >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Start a Chapter</h1>
-                <p className="mb-6 text-[15px] leading-[20px] mt-4 text-white">Bring BYEN to Your Community</p>
-            </motion.div> */}
+        <div className="font-montserrat max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-[5rem]">
 
             {/* Main Content */}
-            <div className="max-w-4xl mx-auto space-y-12">
+            <div className=" mx-auto space-y-12">
                 {/* Introduction */}
                 <motion.div 
                     initial={{ opacity: 0, x: -20 }}

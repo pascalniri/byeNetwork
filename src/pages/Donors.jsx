@@ -17,21 +17,10 @@ export default function Donors() {
                 </p>
             </div>
         <div className="font-montserrat max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Hero Section */}
-            {/* <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gradient-to-r from-[#693e2d] to-[#985b3c] text-white py-16 px-6 rounded-2xl my-[7rem] text-center"
-            >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Become a Donor or Sponsor</h1>
-                <p className="mb-6 text-[15px] leading-[20px] mt-4 text-white max-w-3xl mx-auto">
-                    Fuel the Movement. Invest in the Future of Black Youth.
-                </p>
-            </motion.div> */}
+     
 
             {/* Main Content */}
-            <div className="max-w-4xl mx-auto space-y-12">
+            <div className="mx-auto space-y-12 my-[5rem]">
                 {/* Introduction */}
                 <motion.div 
                     initial={{ opacity: 0, x: -20 }}
@@ -117,12 +106,12 @@ export default function Donors() {
                     
                     <div className="space-y-8">
                         {/* Donation Option */}
-                        <div className="bg-white p-6 rounded-lg shadow-md">
+                        <div className="bg-white p-6 rounded-lg shadow-md py-[30px]">
                             <h3 className="text-xl font-semibold text-[#693e2d] mb-3">Make a Donation</h3>
                             <p className="text-[#6C6A6A] text-[15px] mb-4">
                                 Support our work with a one-time or monthly contribution. Every gift fuels our programs and expands our impact.
                             </p>
-                            <a href="https://givebutter.com/4zAepQ" target="_blank" rel="noopener noreferrer" className="relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group">
+                            <a href="https://givebutter.com/4zAepQ" target="_blank" rel="noopener noreferrer" className="relative top-1 text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group">
                                 <span className="relative z-10">DONATE NOW</span>
                                 <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
                             </a>
@@ -282,7 +271,7 @@ export default function Donors() {
                                 Become a Partner
                             </a>
                             <a 
-                                href="mailto:partners@wearebyen.org" 
+                                href="mailto:info@wearebyen.org" 
                                 className="relative text-white border-2 border-white px-6 py-3 xl:py-4 xl:px-8 rounded-full hover:bg-white hover:text-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group text-center"
                             >
                                 Email Us

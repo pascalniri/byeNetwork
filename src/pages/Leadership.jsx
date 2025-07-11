@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BsFacebook, BsTwitterX } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
-import { MdMarkEmailUnread, MdKeyboardArrowRight } from "react-icons/md";
+import { MdMarkEmailUnread, MdKeyboardArrowRight, MdOutlineHorizontalRule } from "react-icons/md";
 import { FaUsers, FaCalendarAlt, FaCogs, FaChartLine, FaUniversity, FaBullhorn, FaUserTie, FaPaintBrush, FaStar } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import leaders from "../api/data";
@@ -173,16 +173,21 @@ const Leadership = () => {
 
  
   return (
-    <div className="font-montserrat mt-[11rem] max-w-screen-2xl w-[90%] mx-auto pb-20">
-      <div className="text-center mb-12 px-4 md:px-[5rem] lg:px-[6rem]">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Our <span className="text-[#693e2d]">Leadership</span>
-        </h1>
-        <p className="text-[15px] leading-[22px] text-[#6C6A6A] max-w-3xl mx-auto">
-          Meet the dedicated team of leaders who guide the Black Youth Empowerment Network's mission and vision. 
-          Our leadership team is committed to creating opportunities, fostering growth, and empowering the next generation of Black leaders.
-        </p>
-      </div>
+    <div className="font-montserrat">
+       <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
+              <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
+                <MdOutlineHorizontalRule />
+                <p>OUR LEADERSHIP</p>
+                <MdOutlineHorizontalRule />
+              </h1>
+              <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
+              Meet the dedicated team of leaders who guide the Black Youth Empowerment Network's mission and vision. 
+              Our leadership team is committed to creating opportunities, fostering growth, and empowering the next generation of Black leaders.
+              </p>
+            </div>
+
+            <div className="font-montserrat mt-[5rem] max-w-screen-2xl w-[90%] mx-auto pb-20">
+
       
       {/* Futuristic Layout with Left-side Menu */}
       <div className="flex flex-col lg:flex-row">
@@ -485,6 +490,8 @@ const Leadership = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 
