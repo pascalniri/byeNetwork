@@ -57,6 +57,7 @@ export default function Stats() {
   return (
     <div className="py-16 bg-gray-50 font-montserrat">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-[#693e2d] mb-8 text-center">Since Fall 2025</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <StatItem 

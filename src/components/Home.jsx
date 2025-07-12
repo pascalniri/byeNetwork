@@ -45,6 +45,7 @@ const BackgroundSlideshow = () => {
     "/BYEN3.jpeg",
     "/BYEN4.jpeg",
     "/BYEN5.jpeg",
+    "/BYEN6.jpeg",
 
    
   ];

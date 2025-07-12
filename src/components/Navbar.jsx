@@ -163,11 +163,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`font-montserrat text-sm sm:text-[14px] bg-white/95 backdrop-blur-[10px] border-b border-gray-200/60 fixed w-full top-0 z-[100] transition-all duration-300 ease-in-out shadow-lg ${!isVisible ? '-translate-y-full' : 'translate-y-0'}`}>
+      <nav className={`font-montserrat py-[1rem] text-sm sm:text-[14px] bg-white/95 backdrop-blur-[10px] border-b border-gray-200/60 fixed w-full top-0 z-[100] transition-all duration-300 ease-in-out shadow-lg ${!isVisible ? '-translate-y-full' : 'translate-y-0'}`}>
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-center justify-between w-full h-14 sm:h-16 md:h-18 lg:h-20">
           {/* Logo */}
           <a href="/" className="flex-shrink-0 transition-transform duration-200 hover:scale-105">
-            <img src="/logoo.svg" alt="logo" className="w-[100px] h-[100px]" />
+            <img src="/logoo.svg" alt="logo" className="w-[150px] h-[150px]" />
           </a>
 
           {/* Desktop Navigation */}

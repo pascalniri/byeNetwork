@@ -18,28 +18,12 @@ const Events = () => {
   // Jan-May 2025 Events
   const eventsJanMay2025 = [
     {
-      image: "/hot-coco-run.png",
-      title: "Hot Coco Run",
-      date: "2025-01-31",
-      time: "9:00 am - 12:00 pm (EDT)",
+      image: "/feed-homeless.jpg",
+      title: "Feed The Homeless",
+      date: "2025-04-27",
+      time: "11:00 am - 2:00 pm (EDT)",
       description:
-        "Miles Darby, BYEN Morehouse Chapter President, saw an opportunity to give back and took the lead in organizing a day of service for Hot Today's annual Hot Chocolate Run. Our members stepped up, preparing race packages, assisting with merchandise, and ensuring a welcoming experience for all.",
-    },
-    {
-      image: "/financial-literacy.png",
-      title: "Financial Literacy 101 Ft. Luvswallet",
-      date: "2025-02-06",
-      time: "6:00 pm - 8:00 pm (EDT)",
-      description:
-        "Black Youth Empowerment Network is thrilled to present Financial Literacy 101, featuring insights and actionable advice from the expert LuvsWallet. Whether you're a budgeting beginner or looking to grow your wealth, this event is tailored to equip you with the tools and knowledge to make smart money moves.",
-    },
-    {
-      image: "/advocacy-day.gif",
-      title: "Georgia Advocacy Day W/ Students Demand Action",
-      date: "2025-02-18",
-      time: "10:00 am - 3:00 pm (EDT)",
-      description:
-        "Through our partnership with Students Demand Action, members of the Black Youth Empowerment Network took bold steps to advocate for stronger gun safety laws, using their voices and stories to push for change in communities that are too often overlooked.",
+        "The Black Youth Empowerment Network partnered with Destined for Greatness to provide meals and support to individuals experiencing homelessness across Atlanta.",
     },
     {
       image: "/gun-violence-awareness.jpg",
@@ -50,13 +34,33 @@ const Events = () => {
         "The Black Youth Empowerment Network hosted a powerful event at Morehouse College to raise awareness about gun violence and its impact on communities across Atlanta.",
     },
     {
-      image: "/feed-homeless.jpg",
-      title: "Feed The Homeless",
-      date: "2025-04-27",
-      time: "11:00 am - 2:00 pm (EDT)",
+      image: "/advocacy-day.gif",
+      title: "Georgia Advocacy Day W/ Students Demand Action",
+      date: "2025-02-18",
+      time: "10:00 am - 3:00 pm (EDT)",
       description:
-        "The Black Youth Empowerment Network partnered with Destined for Greatness to provide meals and support to individuals experiencing homelessness across Atlanta.",
+        "Through our partnership with Students Demand Action, members of the Black Youth Empowerment Network took bold steps to advocate for stronger gun safety laws, using their voices and stories to push for change in communities that are too often overlooked.",
     },
+    {
+      image: "/financial-literacy.png",
+      title: "Financial Literacy 101 Ft. Luvswallet",
+      date: "2025-02-06",
+      time: "6:00 pm - 8:00 pm (EDT)",
+      description:
+        "Black Youth Empowerment Network is thrilled to present Financial Literacy 101, featuring insights and actionable advice from the expert LuvsWallet. Whether you're a budgeting beginner or looking to grow your wealth, this event is tailored to equip you with the tools and knowledge to make smart money moves.",
+    },
+    {
+      image: "/hot-coco-run.png",
+      title: "Hot Coco Run",
+      date: "2025-01-31",
+      time: "9:00 am - 12:00 pm (EDT)",
+      description:
+        "Miles Darby, BYEN Morehouse Chapter President, saw an opportunity to give back and took the lead in organizing a day of service for Hot Today's annual Hot Chocolate Run. Our members stepped up, preparing race packages, assisting with merchandise, and ensuring a welcoming experience for all.",
+    },
+   
+  
+ 
+ 
   ];
 
   const fadeIn = {

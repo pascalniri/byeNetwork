@@ -20,21 +20,8 @@ export default function Donors() {
      
 
             {/* Main Content */}
-            <div className="mx-auto space-y-12 my-[5rem]">
-                {/* Introduction */}
-                <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-white p-8 rounded-xl shadow-lg"
-                >
-                    <p className="text-[#6C6A6A] leading-relaxed text-[15px] mb-6">
-                        The Black Youth Empowerment Network (BYEN) is a youth-led movement redefining what leadership looks like. We center Black youth, build power from the ground up, and create a future where opportunity is not determined by zip code, income, or identity.
-                    </p>
-                    <p className="text-[#6C6A6A] leading-relaxed text-[15px]">
-                        BYEN is one of the few national organizations led entirely by Black youth, for Black youth. With over 200 members across 25 states and growing, our chapters on campuses and in communities provide the foundation for connection, leadership, and meaningful action.
-                    </p>
-                </motion.div>
+            <div className="mx-auto space-y-[5rem] my-[5rem]">
+       
 
                 {/* What Your Support Makes Possible */}
                 <motion.div 
@@ -43,16 +30,10 @@ export default function Donors() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="bg-gradient-to-br from-[#f9f5f3] to-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]"
                 >
-                    <h2 className="text-2xl font-bold text-[#693e2d] mb-6 flex items-center">
-                        <MdOutlineHorizontalRule className="mr-2" />
-                        What Your Support Makes Possible
+                    <h2 className="text-xl font-bold text-[#693e2d] mb-6 flex items-center">
+                        BYEN is one of the few national organizations led entirely by Black youth, for Black youth. With over 200 members across 25 states and growing, our chapters on campuses and in communities provide the foundation for connection, leadership, and meaningful action.
                     </h2>
-                    <p className="text-[#6C6A6A] mb-6 leading-relaxed text-[15px]">
-                        We are not waiting for tomorrow's leaders. We are investing in them today.
-                    </p>
-                    <p className="text-[#6C6A6A] mb-6 leading-relaxed text-[15px]">
-                        Our members are organizing rallies, launching community projects, leading peer wellness programs, and building movements of their own. Your support helps them lead with confidence and impact.
-                    </p>
+               
                     <p className="text-[#6C6A6A] mb-4 font-medium">Through your donation, you help us:</p>
                     <ul className="space-y-3 mb-6">
                         {[
@@ -67,17 +48,9 @@ export default function Donors() {
                             </li>
                         ))}
                     </ul>
-                </motion.div>
 
-                {/* What We Offer */}
-                <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="bg-white p-8 rounded-xl shadow-lg"
-                >
-                    <h2 className="text-2xl font-bold text-[#693e2d] mb-6 flex items-center">
-                        <MdOutlineHorizontalRule className="mr-2" />
+                    <data value="">
+                    <h2 className="text-xl mt-10 font-bold text-[#693e2d] mb-6 flex items-center">
                         What We Offer
                     </h2>
                     <ul className="space-y-3">
@@ -93,18 +66,19 @@ export default function Donors() {
                             </li>
                         ))}
                     </ul>
+                    </data>
                 </motion.div>
+
 
                 {/* Ways to Give */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
-                    className="bg-gradient-to-br from-[#f9f5f3] to-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]"
                 >
                     <h2 className="text-2xl font-bold text-[#693e2d] mb-8 text-center">Ways to Give</h2>
                     
-                    <div className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {/* Donation Option */}
                         <div className="bg-white p-6 rounded-lg shadow-md py-[30px]">
                             <h3 className="text-xl font-semibold text-[#693e2d] mb-3">Make a Donation</h3>
@@ -168,30 +142,25 @@ export default function Donors() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
-                    className="bg-gradient-to-r from-[#693e2d] to-[#985b3c] text-white p-8 rounded-2xl my-12"
+                    className="bg-white text-[#693e2d] p-8 rounded-2xl my-12"
                 >
                     <h2 className="text-3xl font-bold mb-6 text-center">Become a Partner</h2>
-                    <p className="text-white/90 text-center max-w-3xl mx-auto mb-8 leading-relaxed">
+                    <p className="text-[#6C6A6A] text-center max-w-3xl mx-auto mb-8 leading-relaxed">
                         Let's Build Together
                     </p>
-                    
-                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl mb-8">
-                        <p className="mb-6 leading-relaxed">
-                            The Black Youth Empowerment Network (BYEN) believes in the power of collaboration. We know that real change happens when communities, institutions, and youth come together with a shared purpose. Whether you're a school, nonprofit, foundation, or community-based group, we welcome partnerships that align with our mission to uplift, equip, and mobilize Black youth across the country.
-                        </p>
-                    </div>
+                   
 
-                    <div className="grid md:grid-cols-2 gap-8 mb-12">
+                    <div className="grid md:grid-cols-2 gap-8 mb-12 shadow-lg">
                         <div className="bg-white/5 p-6 rounded-xl">
                             <h3 className="text-xl font-bold mb-4 flex items-center">
                                 <MdOutlineHorizontalRule className="mr-2 text-2xl" />
                                 Why Partner With BYEN?
                             </h3>
-                            <p className="mb-4">
+                            <p className="mb-4 text-[#6C6A6A]">
                                 BYEN is a national, youth-led organization committed to leadership development, community service, and advocacy.
                             </p>
-                            <p className="font-medium mb-3">We work with partners who:</p>
-                            <ul className="space-y-2">
+                            <p className="font-medium mb-3 text-[#6C6A6A]">We work with partners who:</p>
+                            <ul className="space-y-2 text-[#6C6A6A] text-[15px]">
                                 {[
                                     'Believe in youth-led change',
                                     'Serve or support Black youth ages 13 to 25',
@@ -199,7 +168,7 @@ export default function Donors() {
                                     'Want to co-create programs, campaigns, or events with lasting impact'
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start">
-                                        <span className="text-amber-300 mr-2">•</span>
+                                        <span className="text-[#6C6A6A] mr-2">•</span>
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -211,7 +180,7 @@ export default function Donors() {
                                 <MdOutlineHorizontalRule className="mr-2 text-2xl" />
                                 Our Impact at a Glance
                             </h3>
-                            <ul className="space-y-2">
+                            <ul className="space-y-2 text-[#6C6A6A] text-[15px]">
                                 {[
                                     '200+ Black youth engaged nationally since Spring 2025',
                                     'Active presence in 25 states and growing',
@@ -220,7 +189,7 @@ export default function Donors() {
                                     'Partnerships with HBCUs, schools, and youth-led groups'
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start">
-                                        <span className="text-amber-300 mr-2">•</span>
+                                        <span className="text-[#6C6A6A] mr-2">•</span>
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -228,7 +197,7 @@ export default function Donors() {
                         </div>
                     </div>
 
-                    <div className="bg-white/10 p-8 rounded-xl">
+                    <div className="bg-white/10 p-8 rounded-xl shadow-lg">
                         <h3 className="text-2xl font-bold mb-6 text-center">Ways to Partner</h3>
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
@@ -251,13 +220,13 @@ export default function Donors() {
                             ].map((item, index) => (
                                 <div key={index} className="bg-white/5 p-6 rounded-lg">
                                     <h4 className="text-lg font-semibold mb-2">{item.title}</h4>
-                                    <p className="text-white/90 text-sm">{item.description}</p>
+                                    <p className="text-[#6C6A6A] text-[15px]">{item.description}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    <div className="mt-12 text-center">
+                    <div className="mt-12 text-center text-[15px] p-[30px] shadow-lg">
                         <p className="text-lg mb-6">
                             If you're ready to partner with a national movement that centers youth leadership, local impact, and cultural power — we want to hear from you.
                         </p>
@@ -272,13 +241,13 @@ export default function Donors() {
                             </a>
                             <a 
                                 href="mailto:info@wearebyen.org" 
-                                className="relative text-white border-2 border-white px-6 py-3 xl:py-4 xl:px-8 rounded-full hover:bg-white hover:text-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group text-center"
+                                className="relative text-[#693e2d] border-2 border-[#693e2d] px-6 py-3 xl:py-4 xl:px-8 rounded-full hover:bg-[#693e2d] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group text-center"
                             >
                                 Email Us
                             </a>
                         </div>
-                        <p className="mt-4 text-sm text-white/80">
-                            Or email us at <a href="mailto:partners@wearebyen.org" className="underline hover:text-white">partners@wearebyen.org</a>
+                        <p className="mt-4 text-[15px] text-[#6C6A6A]">
+                            Or email us at <a href="mailto:partners@wearebyen.org" className="underline hover:text-[#693e2d]">partners@wearebyen.org</a>
                         </p>
                     </div>
                 </motion.div>
