@@ -32,6 +32,7 @@ const footerLinks = [
       { label: "Membership", href: "/membership" },
       { label: "Start a Chapter", href: "/start-chapter" },
       { label: "Donors & Sponsors", href: "/donors-and-sponsors" },
+      { label: "Become a Partner", href: "/become-partner" },
       { label: "Events", href: "/events" },
       { label: "News & Blog", href: "/news-and-blog" },
     ],

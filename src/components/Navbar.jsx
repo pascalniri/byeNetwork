@@ -52,7 +52,8 @@ const Navbar = () => {
       items: [
         { label: 'Membership', href: '/membership' },
         { label: 'Start a Chapter', href: '/start-chapter' },
-        { label: 'Become a Donor or Sponsor', href: '/donors-and-sponsors' }
+        { label: 'Become a Donor or Sponsor', href: '/donors-and-sponsors' },
+        { label: 'Become a Partner', href: '/become-partner' }
       ]
     },
     {
