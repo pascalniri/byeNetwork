@@ -45,8 +45,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-12 md:gap-0">
         {/* Left: Logo & Description */}
         <div className="flex-1 min-w-[220px] flex flex-col gap-4 md:pr-8">
-          <a href="/" className="inline-block mb-2">
-            <img src="/logoo.svg" alt="BYEN Logo" className="w-14 h-14 object-contain" />
+        <a href="/" className="w-[150px] h-[150px] flex items-center justify-center">
+            <img src="/BLACK YOUTH.png" alt="logo" className="w-full h-full object-contain" />
           </a>
           <p className="text-[#bdbdbd] text-[15px] leading-[22px] max-w-xs">
             The Black Youth Empowerment Network (BYEN) is a youth-led organization dedicated to uplifting and empowering Black youth through leadership, entrepreneurship, and creative expression.
