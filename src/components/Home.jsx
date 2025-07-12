@@ -40,10 +40,11 @@ const BackgroundSlideshow = () => {
   
   // Array of background images - you can replace these with your actual image URLs
   const backgroundImages = [
-    "/community.jpg",
-    "/aboutImg.jpg",
-    "/6.jpg",
-    "/2.jpg",
+    "/BYEN1.jpeg",
+    "/BYEN2.jpeg",
+    "/BYEN3.jpeg",
+    "/BYEN4.jpeg",
+    "/BYEN5.jpeg",
 
    
   ];
