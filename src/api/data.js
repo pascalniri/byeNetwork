@@ -186,18 +186,19 @@ const leaders = [
           "Matthew Roland is a Morehouse College student double majoring in Mathematics and Applied Physics, while also pursuing a B.S. in Mechanical Engineering through the Dual Degree Engineering Program. He plans to earn a Master’s in Electrical Engineering and a Ph.D. in Mechanical Engineering. Matthew is currently conducting semiconductor research through the Purdue STARS program, gaining hands-on experience in advanced technology. He holds leadership roles in both the National Society of Black Engineers and the Morehouse Sophomore Class Student Government Association. His long-term goal is to launch an inclusive, performance-driven automotive company that blends innovation with cultural identity. With a passion for engineering, motorsports, and entrepreneurship, Matthew is committed to building a future rooted in impact and excellence.",
   
         achievements: [
-          "Established BYEN's strategic planning framework",
-          "Led development of chapter expansion model",
-          "Coordinated multiple leadership development workshops",
-          "Created partnerships with community organizations"
+          "Full-ride transfer to Purdue for BS, MS, and PhD in Engineering",
+          "Double major in a rigorous curriculum with 83.5 credits as a sophomore",
+          "NSBE Best Freshman Award",
+          "Purdue University Semiconductor Research participant",
+          "Howard Thurman Honors Program scholar"
         ],
-        education: "Morehouse College, Mathematics and Applied Physics",
+        education: "Rising Junior at Morehouse College, (Double Major in Applied Physics and Mathematics and in the Dual degree program to major in mechanical engineering)",
         socialMedia: {
           ig: "#",
           x: "#",
           linkedIn: "#",
           facebook: "#",
-          email: "#"
+          email: "mjroland4@gmail.com"
         },
         gallery: [
           "/matthew.png"
@@ -236,7 +237,7 @@ const leaders = [
         id: "cameron-barnes",
         image: "/cameron.png",
         name: "Cameron Barnes",
-        title: "National Co-Director of Programming & Events",
+        title: "Director of programming and events",
         status:"supportTeam",
         department: "Programming & Events",
         longBio:
@@ -244,18 +245,19 @@ const leaders = [
 
         empowermentQuote: "Empowering Black youth means not only to be an inspiration but to be a role model to the next generations. To not only be a path for someone, but a light to help them on that path. The ability to guide and guide well is a great privilege bestowed upon me, and hopefully others feel the same.",
         achievements: [
-          "Established BYEN's strategic planning framework",
-          "Led development of chapter expansion model",
-          "Coordinated multiple leadership development workshops",
-          "Created partnerships with community organizations"
+          "Morehouse Honor Roll '24-25",
+          "Morehouse Deans list '24-25",
+          "Morehouse top ranking student '24-25",
+          "Top or outstanding math student award '24",
+
         ],
-        education: "Morehouse College, Major in Business Finance and a Minor in Data Science and Analytics",
+        education: "Sophomore at Morehouse, Business Finance (Minor in Data Science and Analytics)",
         socialMedia: {
-          ig: "#",
-          x: "#",
-          linkedIn: "#",
+          ig: "https://www.instagram.com/cameron8.17/profilecard/?igsh=MmUyeGl1ODQydThp",
+          x: "https://x.com/cameronbarnes84?s=21&t=_zB1V8-zRLHT__lK1y6b0g",
+          linkedIn: "https://www.linkedin.com/in/victor-cam-barnes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           facebook: "#",
-          email: "#"
+          email: "victor.barnes@morehouse.edu"
         },
         gallery: [
           "/cameron.png",
@@ -272,18 +274,18 @@ const leaders = [
           "Theron White serves as the Community Advocacy Strategist for the Black Youth Empowerment Network (BYEN), where he is dedicated to empowering communities through intentional engagement, education, and strategic action. In this role, Theron focuses on amplifying the voices of those most affected by systemic inequities and building grassroots power to influence meaningful change. As a Political Science major at Morehouse College, he is deepening his understanding of policy, law, and social justice. Theron brings both academic knowledge and lived experience to his work, combining theory with real-world perspective. His efforts include organizing community forums, building relationships with local leaders, and designing advocacy campaigns that respond to the real and immediate needs of marginalized communities.",
   
         achievements: [
-          "Established BYEN's strategic planning framework",
-          "Led development of chapter expansion model",
-          "Coordinated multiple leadership development workshops",
-          "Created partnerships with community organizations"
+          "Class of 1979 Endowed Scholarship",
+          "The Rodney Thaxton Justice Scholarship Award",
+          "Top Ranking Morehouse Scholar",
+          "Deans list student"
         ],
-        education: "Morehouse College, Political Science",
+        education: "Rising Junior at Morehouse College, (Political Science)",
         socialMedia: {
-          ig: "#",
+          ig: "https://www.instagram.com/theronlw?igsh=Y3dicjExZ2szanRx&utm_source=qr",
           x: "#",
-          linkedIn: "#",
+          linkedIn: "https://www.linkedin.com/in/theron-white-70a16b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           facebook: "#",
-          email: "#"
+          email: "theronl.white@gmail.com"
         },
         gallery: [
           "/theron.png"
@@ -305,13 +307,11 @@ const leaders = [
           "Coordinated multiple leadership development workshops",
           "Created partnerships with community organizations"
         ],
-        education: "Morehouse College, Sophomore Biology Major",
+        education: "Sophomore at Morehouse College, (Biology major)",
         socialMedia: {
-          ig: "#",
-          x: "#",
-          linkedIn: "#",
-          facebook: "#",
-          email: "#"
+          ig: "https://www.instagram.com/official.jf_/profilecard/?igsh=YzR3eWYxaW55enln",
+          linkedIn: "https://www.linkedin.com/in/jalen-fortson-a11bb6332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          email: "Jalenfortson31@gmail.com"
         },
         gallery: [
           "/jalen.png"
