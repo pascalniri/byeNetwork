@@ -111,13 +111,13 @@ export default function Advert() {
                                 variants={itemVariants}
                                 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-100 to-amber-200 bg-clip-text text-transparent"
                             >
-                                Partner With BYEN
+                                Apply to Become a Member
                             </motion.h2>
                             <motion.p 
                                 variants={itemVariants}
                                 className="text-amber-100/90 leading-relaxed text-lg"
                             >
-                                Join our exclusive network of partners and unlock new growth opportunities for your business.
+
                             </motion.p>
                         </div>
                         
@@ -126,7 +126,7 @@ export default function Advert() {
                             className="pt-2"
                         >
                             <motion.a
-                                href="https://form.jotform.com/251690471333152"
+                                href="https://form.jotform.com/251785009779067"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ 
@@ -136,7 +136,7 @@ export default function Advert() {
                                 whileTap={{ scale: 0.98 }}
                                 className="inline-block w-full text-center bg-gradient-to-r from-amber-400 to-amber-500 text-[#3a241a] hover:text-[#2a1a12] font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-amber-500/30"
                             >
-                                BECOME A PARTNER
+                                Apply Now!
                             </motion.a>
                         </motion.div>
                         
@@ -154,7 +154,7 @@ export default function Advert() {
                                 ))}
                             </div>
                             <p className="text-sm text-amber-100/70">
-                                <span className="font-medium">Be a partner</span> and unlock new growth opportunities for your business.
+                                <span className="font-medium">Be a member</span> and unlock new opportunities for your future.
                             </p>
                         </motion.div>
                     </div>

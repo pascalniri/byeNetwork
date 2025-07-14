@@ -5,6 +5,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { GiReceiveMoney } from "react-icons/gi";
 import { FaGlobe, FaUniversity, FaCalendarAlt } from "react-icons/fa";
 import Faq from "@/components/Faq";
+import { motion } from "framer-motion";
 
 const Membership = () => {
   const whyUs = [
@@ -31,6 +32,19 @@ const Membership = () => {
     },
   ];
 
+  const buttonItem = {
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10
+      }
+    }
+  };
+
   return (
     <div className="font-montserrat">
       <div className='bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url("/transparent.svg")] bg-no-repeat h-full w-full mt-[7rem]'>
@@ -48,7 +62,51 @@ const Membership = () => {
         </p>
       </div>
 
-      <div className="max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
+      <div className="flex flex-col justify-center items-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="bg-white p-8 rounded-xl shadow-lg text-center mb-16"
+        >
+          <h2 className="text-2xl font-bold text-[#693e2d] mb-6">Ready to Join?</h2>
+          <p className="text-[#6C6A6A] mb-8 max-w-2xl mx-auto leading-relaxed text-[15px]">
+            Join BYEN and become part of a network that values empowerment, collaboration, and positive impact.
+          </p>
+          <motion.a
+                href="https://form.jotform.com/251785009779067"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] mb-10 rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-2 sm:mt-8 text-base sm:text-lg"
+                variants={buttonItem}
+              >
+                <span className="relative z-10 flex items-center justify-center w-full">
+                  BECOME A MEMBER
+                  <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+                <span className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+              </motion.a>
+
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-r">
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center">
+              <div className="flex-shrink-0 mb-2 sm:mb-0 sm:mr-3">
+                <svg className="h-5 w-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                </svg>
+              </div>
+            
+              <p className="text-sm text-amber-800 text-center sm:text-left">
+                <span className="font-semibold">Important Dates:</span> Application opens July 15th.
+              </p>
+            </div>
+          </div>
+
+
+        </motion.div>
         <h1 className="text-[30px] leading-[35px] text-[#693e2d] font-semibold">
           <p>Why join BYEN?</p>
         </h1>
@@ -94,12 +152,12 @@ const Membership = () => {
               <div className="mb-4 pb-3 border-b border-gray-200">
                 <p className="text-[14px] font-medium text-gray-500">Open to Black youth across the country. Rolling admissions every semester.</p>
               </div>
-              
+
               <h3 className="text-[18px] font-semibold mb-2">Overview:</h3>
               <p className="text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
                 National Membership provides access to BYEN's broader network, virtual programming, and collaborative opportunities. It is designed for individuals who want to stay connected with BYEN's national movement, receive resources, and engage in meaningful projects—regardless of their physical location or school affiliation.
               </p>
-              
+
               <h3 className="text-[18px] font-semibold mb-2">Membership Benefits:</h3>
               <ul className="list-disc pl-5 text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
                 <li>Access to virtual events, leadership trainings, and workshops</li>
@@ -109,14 +167,31 @@ const Membership = () => {
                 <li>Consideration for national features, interviews, and media opportunities</li>
                 <li>First access to certain fellowships, internships, and application cycles</li>
               </ul>
-              
+
               <h3 className="text-[18px] font-semibold mb-2">Ideal for:</h3>
               <p className="text-[15px] leading-[22px] text-[#6C6A6A]">
                 Students, creatives, and young leaders who want to stay engaged with BYEN, expand their network, and participate in programming remotely.
               </p>
+
+              <motion.a
+                href="https://form.jotform.com/251785009779067"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-2 sm:mt-8 text-base sm:text-lg"
+                variants={buttonItem}
+              >
+                <span className="relative z-10 flex items-center justify-center w-full">
+                  BECOME A MEMBER
+                  <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+                <span className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+              </motion.a>
             </div>
+
           </div>
-          
+
           {/* Chapter Membership */}
           <div className="bg-white shadow-lg rounded-xl overflow-hidden border-t-4 border-[#693e2d] hover:shadow-xl transition-shadow duration-300">
             <div className="bg-[#693e2d] bg-opacity-10 p-6 flex items-center">
@@ -129,12 +204,12 @@ const Membership = () => {
               <div className="mb-4 pb-3 border-b border-gray-200">
                 <p className="text-[14px] font-medium text-gray-500">Selective membership. Limited to 25 students per chapter, per academic class.</p>
               </div>
-              
+
               <h3 className="text-[18px] font-semibold mb-2">Overview:</h3>
               <p className="text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
                 Chapter Membership offers a high-impact, in-person experience through local BYEN chapters established at select campuses and communities. It allows members to lead on the ground, plan events, participate in community service, and work collaboratively with other student leaders.
               </p>
-              
+
               <h3 className="text-[18px] font-semibold mb-2">Membership Benefits:</h3>
               <ul className="list-disc pl-5 text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
                 <li>Participation in in-person meetings, workshops, and leadership retreats</li>
@@ -144,14 +219,14 @@ const Membership = () => {
                 <li>Priority consideration for travel, conferences, and special programming</li>
                 <li>A close-knit, supportive peer environment rooted in local impact</li>
               </ul>
-              
+
               <h3 className="text-[18px] font-semibold mb-2">Current Chapters:</h3>
               <ul className="list-disc pl-5 text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
                 <li>Morehouse College</li>
                 <li>University of Georgia</li>
                 <li>(More campuses launching soon)</li>
               </ul>
-              
+
               <h3 className="text-[18px] font-semibold mb-2">Ideal for:</h3>
               <p className="text-[15px] leading-[22px] text-[#6C6A6A]">
                 Students who are ready to lead in-person, engage in chapter-based collaboration, and actively bring BYEN's mission to life within their campus and surrounding community.
@@ -159,11 +234,11 @@ const Membership = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Comparison Table */}
         <div className="mt-16 w-full">
           <h2 className="text-[28px] font-bold text-center mb-8">Choosing Your <span className="text-[#693e2d]">Path</span></h2>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -208,7 +283,7 @@ const Membership = () => {
             </table>
           </div>
         </div>
-        
+
         {/* Application Timeline */}
         {/* <div className="mt-16 w-full bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]">
           <div className="flex items-center mb-6">
