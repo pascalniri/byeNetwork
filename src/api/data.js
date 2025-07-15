@@ -18,11 +18,11 @@ const leaders = [
     ],
     education: "Morehouse College, Business Administration",
     socialMedia: {
-      ig: "#",
-      x: "#",
-      linkedIn: "#",
-      facebook: "#",
-      email: "#"
+      ig: "https://www.instagram.com/j4yshun/",
+      x: "None",
+      linkedIn: "None",
+      facebook: "None",
+      email: "None"
     },
     gallery: [
       "/Shun.jpg",
@@ -70,11 +70,11 @@ const leaders = [
     ],
     education: "Finance and Leadership Studies",
     socialMedia: {
-      ig: "#",
-      x: "#",
-      linkedIn: "#",
-      facebook: "#",
-      email: "#"
+      ig: "None",
+      x: "None",
+      linkedIn: "None",
+      facebook: "None",
+      email: "None"
     },
     gallery: [
       "/Tyler.jpg"
@@ -128,11 +128,11 @@ const leaders = [
     ],
     education: "Marketing and Creative Design",
     socialMedia: {
-      ig: "#",
-      x: "#",
-      linkedIn: "#",
-      facebook: "#",
-      email: "#"
+      ig: "None",
+      x: "None",
+      linkedIn: "None",
+      facebook: "None",
+      email: "None"
     },
     supportTeam: [
       {
@@ -162,11 +162,11 @@ const leaders = [
     ],
     education: "Political Science Major",
     socialMedia: {
-      ig: "#",
-      x: "#",
-      linkedIn: "#",
-      facebook: "#",
-      email: "#"
+      ig: "None",
+      x: "None",
+      linkedIn: "None",
+      facebook: "None",
+      email: "None"
     },
     gallery: [
       "/montreal.png"
@@ -220,11 +220,11 @@ const leaders = [
     ],
     education: "Spelman College, Sociology with a Minor in Management and Organization on the Pre-law Track",
     socialMedia: {
-      ig: "#",
-      x: "#",
-      linkedIn: "#",
-      facebook: "#",
-      email: "#"
+      ig: "None",
+      x: "None",
+      linkedIn: "None",
+      facebook: "None",
+      email: "None"
     },
     gallery: [
       "/morgan.png",
@@ -251,7 +251,7 @@ const leaders = [
       ig: "https://www.instagram.com/cameron8.17/profilecard/?igsh=MmUyeGl1ODQydThp",
       x: "https://x.com/cameronbarnes84?s=21&t=_zB1V8-zRLHT__lK1y6b0g",
       linkedIn: "https://www.linkedin.com/in/victor-cam-barnes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      facebook: "None",
       email: "Victor.barnes@morehouse.edu"
     },
     gallery: [
@@ -267,19 +267,21 @@ const leaders = [
     status: "director",
     department: "Programming & Events",
     longBio: "Chelsea Mendes is a graduating senior at Spelman College majoring in Political Science on the pre-law track, maintaining a 3.7 GPA. Passionate about using law and policy to shape a more equitable entertainment industry, Chelsea envisions a future where Black artists and creatives are both protected and empowered through legal literacy and ownership. Driven by this purpose, Chelsea founded Before You Get Signed, an educational platform designed to equip emerging entertainers with foundational knowledge around intellectual property, brand protection, and legal rights. She recently hosted the platform’s inaugural Playing by the Rules Intellectual Property Symposium, which made history as the first event of its kind on a collegiate campus. The symposium positioned Spelman College as a pioneer in hosting conversations around sports, law, and entertainment—bringing together industry experts to explore the intersections of creativity, ownership, and justice. She has interned with organizations including the Georgia Legislative Black Caucus, the NAACP, and OMBI Law Group, and currently contributes to the newsletter team at a law firm founded by Kimberly Haynes. These experiences have sharpened her interest in soft IP law and her commitment to advocating for underserved creators.",
+    empowermentQuote: "TTo me, empowering Black youth means affirming their value in every space they enter and equipping them with the tools, confidence, and opportunities to lead. It’s about creating ecosystems that recognize and nurture Black brilliance while breaking down the systemic barriers that often attempt to contain it. Empowerment isn't just about giving voice; it’s about amplifying that voice through mentorship, access, and meaningful community. It’s ensuring that Black youth know they not only belong—they are essential to shaping the future.",
+
     achievements: [
-      "Morehouse Honor Roll ‘24-25",
-      "Morehouse Deans list ‘24-25",
-      "Morehouse top ranking student ‘24-25",
-      "Top or outstanding math student award ‘24"
+      "Founded Before You Get Signed, an educational platform for emerging entertainers.",
+      "Hosted the inaugural Playing by the Rules Intellectual Property Symposium at Spelman College.",
+      "Interned with the Georgia Legislative Black Caucus, NAACP, and OMBI Law Group.",
+      "Newsletter team member at a law firm founded by Kimberly Haynes."
     ],
-    education: "Morehouse, Sophomore, Business Finance (Minor in data science and analytics)",
+    education: "Graduating senior at Spelman College",
     socialMedia: {
-      ig: "https://www.instagram.com/cameron8.17/profilecard/?igsh=MmUyeGl1ODQydThp",
-      x: "https://x.com/cameronbarnes84?s=21&t=_zB1V8-zRLHT__lK1y6b0g",
-      linkedIn: "https://www.linkedin.com/in/victor-cam-barnes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
-      email: "Victor.barnes@morehouse.edu"
+      ig: "None",
+      x: "None",
+      linkedIn: "None",
+      facebook: "None",
+      email: "None"
     },
     gallery: [
       "/gallery/chelsea.jpeg",
@@ -304,9 +306,9 @@ const leaders = [
     education: "Morehouse College, Rising Junior, Political Science",
     socialMedia: {
       ig: "https://www.instagram.com/theronlw?igsh=Y3dicjExZ2szanRx&utm_source=qr",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/theron-white-70a16b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      facebook: "None",
       email: "theronl.white@gmail.com"
     },
     gallery: [
@@ -329,9 +331,9 @@ const leaders = [
     education: "Morehouse College, Sophomore, Biology",
     socialMedia: {
       ig: "https://www.instagram.com/official.jf_/profilecard/?igsh=YzR3eWYxaW55enln",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/jalen-fortson-a11bb6332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      facebook: "None",
       email: "Jalenfortson31@gmail.com"
     },
     gallery: [
@@ -414,7 +416,7 @@ const leaders = [
     education: "Morehouse College, Senior, Business Admin",
     socialMedia: {
       ig: "https://www.instagram.com/https.von?igsh=YnlidDFicnVkb202&utm_source=qr",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/del2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       facebook: "https://www.facebook.com/share/1G6An4EjrY/?mibextid=wwXIfr",
       email: "freshfor01@gmail.com"
@@ -442,9 +444,9 @@ const leaders = [
     education: "Spelman College, (Incoming) Freshman, Sociology (Pre-Med/Pre-Nursing)",
     socialMedia: {
       ig: "https://www.instagram.com/beautifulblackscholar_/",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/rai-elle-ingram-219367339/",
-      facebook: "N/A",
+      facebook: "None",
       email: "raibrown6@gmail.com / raielleingram@spelman.edu"
     },
     gallery: [
@@ -469,9 +471,9 @@ const leaders = [
     education: "Morehouse college, Sophomore, Business administration",
     socialMedia: {
       ig: "https://www.instagram.com/travismp101?igsh=dzZqbGYycTg3em5i&utm_source=qr",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/travis-parrish-jr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      facebook: "None",
       email: "travis101p@gmail.com"
     },
     gallery: [
@@ -498,9 +500,9 @@ const leaders = [
     education: "Dillard University, Senior, Accounting",
     socialMedia: {
       ig: "https://www.instagram.com/mistrrwestwood?igsh=MXRrZGdrdW5ydDJsbg%3D%3D&utm_source=qr",
-      x: "n/a",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/jason-adams-",
-      facebook: "n/a",
+      facebook: "None",
       email: "jason.adams@dillard.edu"
     },
     gallery: [
@@ -526,7 +528,7 @@ const leaders = [
     education: "Spelman College, Junior, Sociology, Pre Law",
     socialMedia: {
       ig: "Itssgenie_p",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/genesisprice?trk=contact-info",
       facebook: "https://www.facebook.com/share/1FPt881dRG/?mibextid=wwXIfr",
       email: "genesis.price02@gmail.com"
@@ -554,8 +556,8 @@ const leaders = [
     socialMedia: {
       ig: "https://www.instagram.com/rev.zo?igsh=MTJsYmxocHc5dm82dQ%3D%3D&utm_source=qr",
       x: "https://x.com/martin_azola?s=21",
-      linkedIn: "https://www.linkedin.com/in/azola-martin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      linkedIn: "https://www.linkedin.com/iNonezola-martin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      facebook: "None",
       email: "azolamartin1@gmail.com"
     },
     gallery: [
@@ -580,9 +582,9 @@ const leaders = [
     education: "Spelman College, Junior, Theatre and Performance",
     socialMedia: {
       ig: "https://www.instagram.com/solanaescoffery?igsh=c3MzOWFmbjNobG9o&utm_source=qr",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/solana-escoffery?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      facebook: "None",
       email: "solanaescoffery@spelman.edu"
     },
     gallery: [
@@ -604,9 +606,9 @@ const leaders = [
     education: "Graduate of Morehouse College C/O 25, Political Science Pre Law",
     socialMedia: {
       ig: "https://www.instagram.com/tobiasbrown._?igsh=YmJsNWs3NmluY2N4&utm_source=qr",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/tobiasmbrown?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      facebook: "None",
       email: "tobiasmbrown@hotmail.com"
     },
     gallery: [
@@ -631,9 +633,9 @@ const leaders = [
     education: "Spelman College, Sophomore, Computer Science & Computer Engineering",
     socialMedia: {
       ig: "https://www.instagram.com/tylarsparks?igsh=MWVxMGd0bTVudXlvaw%3D%3D&utm_source=qr",
-      x: "N/A",
+      x: "None",
       linkedIn: "https://www.linkedin.com/in/tylarsparks?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "N/A",
+      facebook: "None",
       email: "tylarsparks06@gmail.com"
     },
     gallery: [
@@ -659,9 +661,9 @@ const leaders = [
   //   education: "Spelman College, College Freshman, Sociology (Pre-Med)",
   //   socialMedia: {
   //     ig: "https://www.instagram.com/beautifulblackscholar_/",
-  //     x: "N/A",
+  //     x: "None",
   //     linkedIn: "www.linkedin.com/in/rai-elle-ingram-219367339",
-  //     facebook: "N/A",
+  //     facebook: "None",
   //     email: "Raielleingram@spelman.edu"
   //   },
   //   gallery: [
@@ -686,9 +688,9 @@ const leaders = [
   //   education: "Dillard University, Senior Year, Accounting",
   //   socialMedia: {
   //     ig: "https://www.instagram.com/mistrrwestwood",
-  //     x: "n/a",
+  //     x: "None",
   //     linkedIn: "https://www.linkedin.com/in/jason-adams-",
-  //     facebook: "n/a",
+  //     facebook: "None",
   //     email: "jasonadams0203@gmail.com"
   //   },
   //   gallery: [
