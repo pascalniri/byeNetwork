@@ -259,8 +259,8 @@ const Leadership = () => {
           
           {/* Team Members Grid */}
           <div className="mb-8">
-            {/* Display National Directors section if in Marketing & Branding or Programming & Events department */}
-            {activeRole === 'marketing' || activeRole === 'programming' ? (
+            {/* Display National Directors and Support Team for Executive, Marketing & Branding, or Programming & Events department */}
+            {['marketing', 'programming', 'executive'].includes(activeRole) ? (
               <>
                 {/* National Directors Section */}
                 <h3 className="text-xl font-semibold mb-6">National Directors</h3>
@@ -272,17 +272,7 @@ const Leadership = () => {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
                   >
                     {getCurrentTeam()
-                      .filter(person => {
-                        // For Marketing & Branding, show only directors
-                        if (activeRole === 'marketing') {
-                          return person.status === 'director';
-                        }
-                        // For Programming & Events, show Cameron Barnes as director
-                        else if (activeRole === 'programming') {
-                          return person.id === 'cameron-barnes';
-                        }
-                        return person.status === 'director';
-                      })
+                      .filter(person => person.status === 'director')
                       .map((person, index) => (
                         <Link key={index} to={`/leadership/${person.id}`}>
                           <motion.div 
@@ -305,7 +295,6 @@ const Leadership = () => {
                       ))}
                   </motion.div>
                 </AnimatePresence>
-                
                 {/* Support Team Section */}
                 <h3 className="text-xl font-semibold mb-6">Support Team</h3>
                 <AnimatePresence>
@@ -316,17 +305,7 @@ const Leadership = () => {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                   >
                     {getCurrentTeam()
-                      .filter(person => {
-                        // For Marketing & Branding, show only support team members
-                        if (activeRole === 'marketing') {
-                          return person.status === 'supportTeam';
-                        }
-                        // For Programming & Events, show all except Cameron Barnes as support team
-                        else if (activeRole === 'programming') {
-                          return person.id !== 'cameron-barnes';
-                        }
-                        return person.status === 'supportTeam';
-                      })
+                      .filter(person => person.status === 'supportTeam')
                       .map((person, index) => (
                         <Link key={index} to={`/leadership/${person.id}`}>
                           <motion.div 
@@ -356,7 +335,6 @@ const Leadership = () => {
                 <h3 className="text-xl font-semibold mb-6">
                   {getCurrentTeam().some(leader => leader.status === 'director') ? 'National Directors' : 'Support Team'}
                 </h3>
-                
                 <AnimatePresence>
                   {getCurrentTeam().length > 0 ? (
                     <motion.div 

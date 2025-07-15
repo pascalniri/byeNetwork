@@ -179,7 +179,7 @@ const leaders = [
     name: "Matthew Roland",
     title: "Graphic Designer",
     status: "supportTeam",
-    department: "Media & Marketing",
+    department: "Marketing & Branding",
     longBio: "Matthew Roland is a rising junior at Morehouse College, double majoring in Applied Physics and Mathematics, and pursuing mechanical engineering. As a Graphic Designer for BYEN, he brings a passion for engineering, research, and creative design to support the organization's mission.",
     empowermentQuote: "",
     achievements: [
@@ -236,7 +236,7 @@ const leaders = [
     image: "/cameron.png",
     name: "Cameron Barnes",
     title: "Director of programming and events",
-    status: "supportTeam",
+    status: "director",
     department: "Programming & Events",
     longBio: "Cameron Barnes is a sophomore at Morehouse College majoring in Business Finance with a minor in Data Science and Analytics. As Director of Programming and Events, he is committed to organizing impactful initiatives that empower Black youth and foster academic and personal excellence.",
     empowermentQuote: "",
@@ -256,6 +256,33 @@ const leaders = [
     },
     gallery: [
       "/cameron.png",
+    ]
+  },
+  // chelsea mendes (updated)
+  {
+    id: "chelsea-mendes",
+    image: "/gallery/chelsea.jpeg",
+    name: "Chelsea Mendes",
+    title: "Director of programming and events",
+    status: "director",
+    department: "Programming & Events",
+    longBio: "Chelsea Mendes is a graduating senior at Spelman College majoring in Political Science on the pre-law track, maintaining a 3.7 GPA. Passionate about using law and policy to shape a more equitable entertainment industry, Chelsea envisions a future where Black artists and creatives are both protected and empowered through legal literacy and ownership. Driven by this purpose, Chelsea founded Before You Get Signed, an educational platform designed to equip emerging entertainers with foundational knowledge around intellectual property, brand protection, and legal rights. She recently hosted the platform’s inaugural Playing by the Rules Intellectual Property Symposium, which made history as the first event of its kind on a collegiate campus. The symposium positioned Spelman College as a pioneer in hosting conversations around sports, law, and entertainment—bringing together industry experts to explore the intersections of creativity, ownership, and justice. She has interned with organizations including the Georgia Legislative Black Caucus, the NAACP, and OMBI Law Group, and currently contributes to the newsletter team at a law firm founded by Kimberly Haynes. These experiences have sharpened her interest in soft IP law and her commitment to advocating for underserved creators.",
+    achievements: [
+      "Morehouse Honor Roll ‘24-25",
+      "Morehouse Deans list ‘24-25",
+      "Morehouse top ranking student ‘24-25",
+      "Top or outstanding math student award ‘24"
+    ],
+    education: "Morehouse, Sophomore, Business Finance (Minor in data science and analytics)",
+    socialMedia: {
+      ig: "https://www.instagram.com/cameron8.17/profilecard/?igsh=MmUyeGl1ODQydThp",
+      x: "https://x.com/cameronbarnes84?s=21&t=_zB1V8-zRLHT__lK1y6b0g",
+      linkedIn: "https://www.linkedin.com/in/victor-cam-barnes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      facebook: "N/A",
+      email: "Victor.barnes@morehouse.edu"
+    },
+    gallery: [
+      "/gallery/chelsea.jpeg",
     ]
   },
   // Theron White (updated)
@@ -429,7 +456,7 @@ const leaders = [
     image: "/gallery/P1250750 - Travis Parrish.jpeg",
     name: "Travis Parrish",
     title: "Interim National director of operations",
-    status: "supportTeam",
+    status: "director",
     department: "Operations",
     longBio: "Travis Parrish is a sophomore Business Administration major at Morehouse College. As Interim National Director of Operations for BYEN, he is dedicated to organizational leadership and supporting the growth and success of Black youth.",
     empowermentQuote: "",
