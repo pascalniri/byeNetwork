@@ -83,18 +83,19 @@ const Leadership = () => {
       icon: <FaCalendarAlt className="text-2xl" />,
       description: "Plans and executes all BYEN events, workshops, and initiatives to fulfill our mission and engage our community."
     },
-    {
-      id: "operations",
-      name: "Operations",
-      icon: <FaCogs className="text-2xl" />,
-      description: "Manages the day-to-day functioning of the organization, ensuring all systems and processes run smoothly."
-    },
+
  
     {
       id: "chapters",
       name: "Chapter Development",
       icon: <FaUniversity className="text-2xl" />,
       description: "Supports the establishment and growth of BYEN chapters across different campuses and communities."
+    },
+    {
+      id: "strategic",
+      name: "Strategic Initiatives",
+      icon: <FaCogs className="text-2xl" />,
+      description: "Develops and implements strategic policies and initiatives to advance BYEN's mission and impact in communities."
     },
 
   ];
@@ -174,64 +175,67 @@ const Leadership = () => {
  
   return (
     <div className="font-montserrat">
-       <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
-              <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
-                <MdOutlineHorizontalRule />
-                <p>OUR LEADERSHIP</p>
-                <MdOutlineHorizontalRule />
-              </h1>
-              <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-              Meet the dedicated team of leaders who guide the Black Youth Empowerment Network's mission and vision. 
-              Our leadership team is committed to creating opportunities, fostering growth, and empowering the next generation of Black leaders.
-              </p>
-            </div>
+      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
+        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
+          <MdOutlineHorizontalRule />
+          <p>OUR LEADERSHIP</p>
+          <MdOutlineHorizontalRule />
+        </h1>
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
+          Meet the dedicated team of leaders who guide the Black Youth Empowerment Network's mission and vision. 
+          Our leadership team is committed to creating opportunities, fostering growth, and empowering the next generation of Black leaders.
+        </p>
+      </div>
 
-            <div className="font-montserrat mt-[5rem] max-w-screen-2xl w-[90%] mx-auto pb-20">
+      <div className="font-montserrat mt-[5rem] max-w-screen-2xl w-[90%] mx-auto pb-20">
 
       
-      {/* Futuristic Layout with Left-side Menu */}
-      <div className="flex flex-col lg:flex-row">
-        {/* Left Side Menu */}
-        <div className="lg:w-1/4 bg-gradient-to-b from-[#693e2d] to-[#985b3c] text-white p-6 rounded-l-xl lg:min-h-[600px]">
-          <div className="sticky top-24">
-            <h2 className="text-2xl font-bold mb-8 flex items-center">
-              <FaStar className="mr-2" /> Leadership Team
-            </h2>
-            
-            <div className="space-y-4">
-                       
-              {/* Department Directors Menu Items */}
-              {departments.map((dept) => (
-                <motion.div
-                  key={dept.id}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  whileHover="hover"
-                  variants={menuItemVariants}
+      {/* Tab-style Menu Layout */}
+      <div className="flex flex-col">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-[#693e2d] flex items-center justify-center">
+            <FaStar className="mr-2" /> Leadership Team
+          </h2>
+          <p className="text-gray-600 mt-2">Select a department to view our leadership team</p>
+        </div>
+        
+        {/* Tab Navigation */}
+        <div className="border-b border-gray-200 mb-8">
+          <div className="flex flex-wrap justify-center gap-1">
+            {departments.map((dept) => (
+              <motion.div
+                key={dept.id}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                whileHover="hover"
+                variants={menuItemVariants}
+              >
+                <button 
+                  onClick={() => handleRoleChange(dept.id)}
+                  className={`flex items-center px-4 py-3 text-sm lg:text-base font-medium whitespace-nowrap transition-all duration-300 border-b-2 ${
+                    activeRole === dept.id 
+                      ? 'border-[#693e2d] text-[#693e2d]' 
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
                 >
-                  <button 
-                    onClick={() => handleRoleChange(dept.id)}
-                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-all ${activeRole === dept.id ? 'bg-white bg-opacity-20 shadow-lg' : 'hover:bg-white hover:bg-opacity-10'}`}
-                  >
-                    <div className="flex items-center">
+                  <div className="flex items-center">
+                    <span className={`mr-2 transition-colors duration-300 ${
+                      activeRole === dept.id ? 'text-[#693e2d]' : 'text-gray-400'
+                    }`}>
                       {dept.icon}
-                      <span className="ml-3 font-medium">{dept.name}</span>
-                    </div>
-                    <MdKeyboardArrowRight className={`transition-transform ${activeRole === dept.id ? 'rotate-90' : ''}`} />
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-            
-            <div className="mt-12 p-4 bg-white bg-opacity-10 rounded-lg">
-              <p className="text-sm">Our leadership team is dedicated to empowering Black youth through mentorship, resources, and opportunities.</p>
-            </div>
+                    </span>
+                    <span>{dept.name}</span>
+                  </div>
+                </button>
+              </motion.div>
+            ))}
           </div>
         </div>
         
-        {/* Right Side Content */}
-        <div className="lg:w-3/4 bg-white rounded-r-xl shadow-xl p-6 lg:p-8">
+        {/* Main Content */}
+        <div className="bg-white rounded-xl shadow-xl p-6 lg:p-8">
           {/* Current Role Description */}
           <div className="mb-8 border-b border-gray-200 pb-6">
             <AnimatePresence mode="wait">
@@ -467,9 +471,8 @@ const Leadership = () => {
           </AnimatePresence>
         </div>
       </div>
+      </div>
     </div>
-    </div>
-    
   );
 };
 

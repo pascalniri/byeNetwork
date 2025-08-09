@@ -33,10 +33,10 @@ const Navbar = () => {
       label: 'Programs & Initiatives',
       type: 'dropdown',
       items: [
-        { label: 'Foundation', href: '/foundation' },
-        { label: 'Boots on the Ground: Civic Engagement Campaign', href: '/boots-on-the-ground' },
+        { label: 'BYEN On The Ground: Civic Engagement Campaign', href: '/boots-on-the-ground' },
         { label: 'B.O.L.D Accelator', href: '/bold-accelerator' },
-        { label: 'BYEN National Internship', href: '/BYEN-national-internship' }
+        { label: 'BYEN National Internship', href: '/BYEN-national-internship' },
+        { label: 'BYEN Access', href: '/byen-access' }
       ]
     },
     {
@@ -59,8 +59,11 @@ const Navbar = () => {
     {
       id: 'newsandblog',
       label: 'News & Blog',
-      type: 'link',
-      href: '/news-and-blog'
+      type: 'dropdown',
+      items: [
+        { label: 'BYEN Voices & Media', href: '/news-and-blog' },
+        { label: 'Foundation', href: '/foundation' }
+      ]
     }
   ];  
 

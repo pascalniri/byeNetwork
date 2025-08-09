@@ -22,6 +22,7 @@ import Internship from "./pages/Internship";
 import CivicEngagement from "./pages/CivicEngagement";
 import NewsAndBlog from "./pages/NewsAndBlog";
 import WaysToPartner from "./pages/WaysToPartner";
+import BYENAccess from "./pages/BYENAccess";
 function TrackPageViews() {
   const location = useLocation();
 
@@ -61,6 +62,7 @@ function App() {
         <Route path="/boots-on-the-ground" element={<CivicEngagement />} />
         <Route path="/news-and-blog" element={<NewsAndBlog />} />
         <Route path="/become-partner" element={<WaysToPartner />} />
+        <Route path="/byen-access" element={<BYENAccess />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -38,7 +38,11 @@ const leaders = [
     department: "Executive Leadership",
     longBio: "James Brazzell is a sophomore at Morehouse College majoring in Business Administration. As Deputy Executive Director of BYEN, he is dedicated to empowering youth through leadership and service, and is committed to building strong communities and expanding opportunities for young Black leaders.",
     empowermentQuote: "",
-    achievements: [],
+    achievements: [
+      "Expanded BYEN Nationally: Helped grow the Black Youth Empowerment Network from a concept into a national nonprofit that now engages over 300 students across the country",
+      "Built Partnerships: As the Director of Partnerships & External Affairs for BYEN, established meaningful collaborations with organizations and professionals to provide mentorship and opportunities for Black youth",
+      "Real-World Business Experience: Works alongside his father at ABG Construction Consulting, gaining hands-on experience in project management, operations, and client relations"
+    ],
     education: "Morehouse College, Sophomore, Business Administration",
     socialMedia: {
       ig: "https://www.instagram.com/jamessbrazzelll/",
@@ -110,40 +114,40 @@ const leaders = [
     ]
   },
   // Christian Francis (no spreadsheet update, keep as is)
-  {
-    id: "christian-francis",
-    image: "/christian.png",
-    name: "Christian Francis",
-    title: "National Director of Marketing & Branding",
-    status: "director",
-    department: "Marketing & Branding",
-    longBio:
-      "Christian Francis is a dynamic student leader and marketer originally from New York City, now based in Georgia. With a deep passion for storytelling and its power to drive social impact, Christian uses creativity as a tool for transformation. Currently serving as the Director of Creative Design and Marketing for the Black Youth Empowerment Network (BYEN), Christian is committed to producing bold, purpose-driven content that resonates with and mobilizes young people across the country. Through innovative design and strategic messaging, Christian aims to elevate the voices of Black youth and amplify the mission of BYEN to create lasting change.",
-    empowermentQuote: "To Christian, empowering Black youth means more than just offering support—it means actively building the tools, cultivating the confidence, and protecting the space for young Black leaders to define their own paths. It's about ensuring that Black youth not only have access to opportunities but are also trusted to lead, create, and thrive on their own terms. Empowerment, in this sense, is about ownership, agency, and freedom—it's about affirming the brilliance and potential that already exists within Black communities and giving it the space to flourish unapologetically.",
-    achievements: [
-      "Redesigned BYEN's brand identity and visual language",
-      "Developed comprehensive social media strategy",
-      "Created marketing materials for chapter expansion",
-      "Led digital campaign increasing engagement by 200%"
-    ],
-    education: "Marketing and Creative Design",
-    socialMedia: {
-      ig: "None",
-      x: "None",
-      linkedIn: "None",
-      facebook: "None",
-      email: "None"
-    },
-    supportTeam: [
-      {
-        name: "Montreal Gatson",
-        title: "Graphic Designer"
-      }
-    ],
-    gallery: [
-      "/christian.png"
-    ]
-  },
+  // {
+  //   id: "christian-francis",
+  //   image: "/christian.png",
+  //   name: "Christian Francis",
+  //   title: "National Director of Marketing & Branding",
+  //   status: "director",
+  //   department: "Marketing & Branding",
+  //   longBio:
+  //     "Christian Francis is a dynamic student leader and marketer originally from New York City, now based in Georgia. With a deep passion for storytelling and its power to drive social impact, Christian uses creativity as a tool for transformation. Currently serving as the Director of Creative Design and Marketing for the Black Youth Empowerment Network (BYEN), Christian is committed to producing bold, purpose-driven content that resonates with and mobilizes young people across the country. Through innovative design and strategic messaging, Christian aims to elevate the voices of Black youth and amplify the mission of BYEN to create lasting change.",
+  //   empowermentQuote: "To Christian, empowering Black youth means more than just offering support—it means actively building the tools, cultivating the confidence, and protecting the space for young Black leaders to define their own paths. It's about ensuring that Black youth not only have access to opportunities but are also trusted to lead, create, and thrive on their own terms. Empowerment, in this sense, is about ownership, agency, and freedom—it's about affirming the brilliance and potential that already exists within Black communities and giving it the space to flourish unapologetically.",
+  //   achievements: [
+  //     "Redesigned BYEN's brand identity and visual language",
+  //     "Developed comprehensive social media strategy",
+  //     "Created marketing materials for chapter expansion",
+  //     "Led digital campaign increasing engagement by 200%"
+  //   ],
+  //   education: "Marketing and Creative Design",
+  //   socialMedia: {
+  //     ig: "None",
+  //     x: "None",
+  //     linkedIn: "None",
+  //     facebook: "None",
+  //     email: "None"
+  //   },
+  //   supportTeam: [
+  //     {
+  //       name: "Montreal Gatson",
+  //       title: "Graphic Designer"
+  //     }
+  //   ],
+  //   gallery: [
+  //     "/christian.png"
+  //   ]
+  // },
   // Montreal Gatson (no spreadsheet update, keep as is)
   {
     id: "montreal-gatson",
@@ -408,10 +412,10 @@ const leaders = [
     longBio: "De'Von Lewis is a senior Business Administration major at Morehouse College. As Public Relations Specialist for BYEN, he is committed to community engagement, mentorship, and empowering others through leadership and service.",
     empowermentQuote: "",
     achievements: [
-      "People and Community Manger @ SSMCD",
+      "People and Community Manager at SSMCD",
       "C100 Mentorship Chair",
-      "Traveling the world free",
-      "Giving my life to christ "
+      "International travel and cultural engagement",
+      "Faith-based leadership and community service"
     ],
     education: "Morehouse College, Senior, Business Admin",
     socialMedia: {
@@ -457,9 +461,9 @@ const leaders = [
     id: "travis-parrish",
     image: "/gallery/P1250750 - Travis Parrish.jpeg",
     name: "Travis Parrish",
-    title: "Interim National Director of Operations",
+    title: "Manager",
     status: "director",
-    department: "Operations",
+    department: "Executive Leadership",
     longBio: "Travis Parrish is a sophomore Business Administration major at Morehouse College. As Interim National Director of Operations for BYEN, he is dedicated to organizational leadership and supporting the growth and success of Black youth.",
     empowermentQuote: "",
     achievements: [
@@ -537,33 +541,33 @@ const leaders = [
       "/gallery/IMG_3010 - Genesis Price.jpeg",
     ]
   },
-  {
-    id: "azola-martin",
-    image: "/gallery/IMG_1178 - Azola Martin.jpeg",
-    name: "Azola Martin",
-    title: "Public Relations Specialist",
-    status: "supportTeam",
-    department: "Executive Leadership",
-    longBio: "Azola Martin is a senior Communication Studies major at Morehouse College. As Public Relations Specialist for BYEN, he is dedicated to storytelling, creative leadership, and amplifying Black voices through media and community engagement.",
-    empowermentQuote: "",
-    achievements: [
-      "Founded Zola Productions — Empowering Black Creatives through Storytelling",
-      "Led Morehouse Rugby as Captain and Expanded the Program’s Reach",
-      "International Impact Work in Rwanda and Germany",
-      "Overcame Mental Health Challenges and USMC Basic Training"
-    ],
-    education: "Morehouse College, Senior, Communication Studies",
-    socialMedia: {
-      ig: "https://www.instagram.com/rev.zo?igsh=MTJsYmxocHc5dm82dQ%3D%3D&utm_source=qr",
-      x: "https://x.com/martin_azola?s=21",
-      linkedIn: "https://www.linkedin.com/iNonezola-martin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "None",
-      email: "azolamartin1@gmail.com"
-    },
-    gallery: [
-      "/gallery/IMG_1178 - Azola Martin.jpeg"
-    ]
-  },
+  // {
+  //   id: "azola-martin",
+  //   image: "/gallery/IMG_1178 - Azola Martin.jpeg",
+  //   name: "Azola Martin",
+  //   title: "Public Relations Specialist",
+  //   status: "supportTeam",
+  //   department: "Executive Leadership",
+  //   longBio: "Azola Martin is a senior Communication Studies major at Morehouse College. As Public Relations Specialist for BYEN, he is dedicated to storytelling, creative leadership, and amplifying Black voices through media and community engagement.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "Founded Zola Productions — Empowering Black Creatives through Storytelling",
+  //     "Led Morehouse Rugby as Captain and Expanded the Program’s Reach",
+  //     "International Impact Work in Rwanda and Germany",
+  //     "Overcame Mental Health Challenges and USMC Basic Training"
+  //   ],
+  //   education: "Morehouse College, Senior, Communication Studies",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/rev.zo?igsh=MTJsYmxocHc5dm82dQ%3D%3D&utm_source=qr",
+  //     x: "https://x.com/martin_azola?s=21",
+  //     linkedIn: "https://www.linkedin.com/iNonezola-martin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  //     facebook: "None",
+  //     email: "azolamartin1@gmail.com"
+  //   },
+  //   gallery: [
+  //     "/gallery/IMG_1178 - Azola Martin.jpeg"
+  //   ]
+  // },
   {
     id: "solana-escoffery",
     image: "/gallery/60DCE5C3-76AA-4B40-8C90-5DDC7A4F7CA6 - Solana Escoffery.jpeg",
@@ -598,18 +602,22 @@ const leaders = [
     title: "Community Advocacy Strategist",
     status: "supportTeam",
     department: "Programming & Events",
-    longBio: "Tobias Brown is a graduate of Morehouse College (C/O 25) with a background in Political Science Pre-Law. As Community Advocacy Strategist for BYEN, he is committed to social justice, advocacy, and supporting the next generation of leaders.",
+    longBio: "Tobias Brown is a graduate of Morehouse College (C/O 25) with a background in Political Science Pre-Law. As Community Advocacy Strategist for BYEN, he is committed to social justice, advocacy, and supporting the next generation of leaders through policy work and community engagement.",
     empowermentQuote: "",
     achievements: [
-      "Ome of"
+      "Featured in National Documentary 'Thriving: Black Men in Higher Education' by Roadtrip Nation",
+      "Senior Policy Advisor to GA State Rep. LC Myles, Jr., shaping legislative strategy and advancing policy priorities",
+      "Fellowship Coordinator at Men4Choice, leading advocacy for reproductive justice and organizing statewide community conversations",
+      "Congressional Campaign Manager for Carlos Moore's campaign for Congress (GA-13), overseeing field, events, and outreach",
+      "Researcher & Conference Speaker - researched Black male teens' social media use for career exploration and presented at JFF Horizons Conference"
     ],
     education: "Graduate of Morehouse College C/O 25, Political Science Pre Law",
     socialMedia: {
-      ig: "https://www.instagram.com/tobiasbrown._?igsh=YmJsNWs3NmluY2N4&utm_source=qr",
+      ig: "https://www.instagram.com/tobiasbrown._",
       x: "None",
-      linkedIn: "https://www.linkedin.com/in/tobiasmbrown?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      linkedIn: "http://linkedin.com/in/tobiasmbrown",
       facebook: "None",
-      email: "tobiasmbrown@hotmail.com"
+      email: "tobiasmbrown06@gmail.com"
     },
     gallery: [
       "/gallery/IMG_7828 - Tobias Brown.jpeg"
@@ -697,6 +705,221 @@ const leaders = [
   //     "/default.jpg"
   //   ]
   // },
+  // New Leadership Team Members - August 2025
+  {
+    id: "chloe-dasher",
+    image: "/gallery/chloe-dasher.jpg", // Placeholder - will need actual image
+    name: "Chloe Dasher",
+    title: "Member Relations Resource Specialist",
+    status: "supportTeam",
+    department: "Member Relations",
+    longBio: "Chloe Dasher is a sophomore at Spelman College majoring in Elementary Education. As Member Relations Resource Specialist for BYEN, she brings her passion for community service and academic excellence to support member engagement and development.",
+    empowermentQuote: "",
+    achievements: [
+      "Obtained Associate of Arts Degree from St. John's River State College before high school graduation",
+      "Qualified for the Dean's List both semesters of first year at Spelman",
+      "Received the Florida Police Athletic League Girl of the Year Award for outstanding leadership and community service",
+      "Inducted into the National Council of Negro Women Spelman College Section"
+    ],
+    education: "Spelman College, Sophomore, Elementary Education",
+    socialMedia: {
+      ig: "https://www.instagram.com/_c.janel?igsh=MTV4NmY4aHJlejM5cg%3D%3D&utm_source=qr",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/chloedasher",
+      facebook: "https://www.facebook.com/share/1BCiKLBHPj/?mibextid=wwXIfr",
+      email: "chloedasher1@gmail.com"
+    },
+    gallery: [
+      "/gallery/chloe-dasher.jpg"
+    ]
+  },
+  {
+    id: "jibri-wright",
+    image: "/gallery/jibri-wright.jpg", // Placeholder - will need actual image
+    name: "Jibri Wright",
+    title: "Community Service Lead",
+    status: "supportTeam",
+    department: "Programming & Events",
+    longBio: "Jibri Wright is a junior at Morehouse College majoring in Business Finance. As Community Service Lead for BYEN, he brings his entrepreneurial spirit and commitment to community service to lead impactful programming and events.",
+    empowermentQuote: "",
+    achievements: [
+      "Recognized by Morehouse College for leading strategic partnership between Morehouse Motors and top automotive brands, including Mercedes-Benz and Porsche",
+      "Founder of Elohim's Vision, a mentorship and leadership development program empowering young Black men through faith, discipline, and resilience",
+      "Selected as a Project Destined Intern, gaining hands-on experience in commercial real estate, financial modeling, and asset management",
+      "President of non profit student ambassador program for 'From My Hands 2 Yours', a nonprofit food pantry combating food insecurity through weekly service drives and community outreach"
+    ],
+    education: "Morehouse College, Junior, Business Finance",
+    socialMedia: {
+      ig: "https://www.instagram.com/say.jibri",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/jibri-wright26",
+      facebook: "N/A",
+      email: "jibriwright50@gmail.com"
+    },
+    gallery: [
+      "/gallery/jibri-wright.jpg"
+    ]
+  },
+  {
+    id: "maya-evans",
+    image: "/gallery/maya-evans.jpg", // Placeholder - will need actual image
+    name: "Maya Evans",
+    title: "National Communications Manager and Editor-In-Chief of BYEN Voices",
+    status: "director",
+    department: "Marketing & Branding",
+    longBio: "Maya Evans is a sophomore at Spelman College majoring in Art History with minors in Curatorial Studies and Economics. As National Communications Manager and Editor-In-Chief of BYEN Voices, she leads the organization's storytelling platform and communications strategy.",
+    empowermentQuote: "",
+    achievements: [
+      "2025-26 WISDOM (Women in Spiritual Discernment of Ministry) Scholar and Chapel Assistant Program Co-Lead at Spelman College",
+      "52 Walker/David Zwirner Sales and Operations Summer 2025 Intern",
+      "The Spelman College Blueprint's (the official publication of the College) Communications Specialist",
+      "Founder of 'College Navigator: Peer-to-Peer Guidance' Summer Program"
+    ],
+    education: "Spelman College, Sophomore, Art History major with minors in Curatorial Studies and Economics",
+    socialMedia: {
+      ig: "https://www.instagram.com/mayaevanns?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      x: "N/A",
+      linkedIn: "www.linkedin.com/in/maya-evans-46b7762a8",
+      facebook: "N/A",
+      email: "mevans2444@gmail.com"
+    },
+    gallery: [
+      "/gallery/maya-evans.jpg"
+    ]
+  },
+  {
+    id: "jabari-morrison",
+    image: "/gallery/jabari-morrison.jpg", // Placeholder - will need actual image
+    name: "Jabari Morrison",
+    title: "Marketing Lead",
+    status: "supportTeam",
+    department: "Marketing & Branding",
+    longBio: "Jabari Morrison is a freshman at University of West Georgia majoring in Mass Communications. As Marketing Lead for BYEN, he brings his creative vision and storytelling expertise to enhance the organization's brand presence and marketing initiatives.",
+    empowermentQuote: "",
+    achievements: [
+      "Gwinnett County CTAE SOTY Runner Up 2025",
+      "Founded ShotbyJabari Productions to curate captivating stories through the lens"
+    ],
+    education: "University of West Georgia, Freshman, Mass Communications",
+    socialMedia: {
+      ig: "https://www.instagram.com/_jabarimorrison?igsh=Zmw5ejg4aDE5ZjZr&utm_source=qr",
+      x: "None",
+      linkedIn: "https://www.linkedin.com/in/jabari-morrison-2a3bb92b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      facebook: "None",
+      email: "jabarimorrison4@gmail.com"
+    },
+    gallery: [
+      "/gallery/jabari-morrison.jpg"
+    ]
+  },
+  {
+    id: "joseph-collins",
+    image: "/gallery/joseph-collins.jpg", // Placeholder - will need actual image
+    name: "Joseph Collins",
+    title: "Brand Strategist",
+    status: "supportTeam",
+    department: "Marketing & Branding",
+    longBio: "Joseph Collins is a freshman at University of West Georgia majoring in Computing. As Brand Strategist for BYEN, he combines his technical skills with creative vision to develop strategic branding initiatives and creative solutions.",
+    empowermentQuote: "",
+    achievements: [
+      "Founder of JOCO Entertainment and JOKEI Creative Studio",
+      "Singer-Songwriter and Creative Director",
+      "Brand Strategist of BYEN"
+    ],
+    education: "University of West Georgia, Freshman, Computing",
+    socialMedia: {
+      ig: "https://www.instagram.com/unaveragejoeofficial?igsh=MTJrbnlkOGVmMGt3ag%3D%3D&utm_source=qr",
+      x: "N/A",
+      linkedIn: "www.linkedin.com/in/joseph-collins-ii",
+      facebook: "N/A",
+      email: "jdcollins3854@gmail.com"
+    },
+    gallery: [
+      "/gallery/joseph-collins.jpg"
+    ]
+  },
+  {
+    id: "khalil-jackson",
+    image: "/gallery/khalil-jackson.jpg", // Placeholder - will need actual image
+    name: "Khalil Jackson",
+    title: "Director of Strategic Initiatives and Policy",
+    status: "director",
+    department: "Strategic Initiatives",
+    longBio: "Khalil Jackson is a first-year graduate student at Emory University, having graduated from Clark Atlanta University in 2025 with a degree in Political Science. As Director of Strategic Initiatives and Policy for BYEN, he brings extensive experience in public policy, community development, and leadership.",
+    empowermentQuote: "",
+    achievements: [
+      "Assistant District Director for the Georgia District of Alpha Phi Alpha Fraternity, Inc.",
+      "Karen Askew Fellow at the Partnership for Southern Equity",
+      "Chief of Staff at the Georgia House of Representatives",
+      "Princeton University Fellow at the Public Policy International Affairs Junior Summer Institute",
+      "Community Development Researcher at Local Initiatives Support Corporation Atlanta"
+    ],
+    education: "Clark Atlanta University ('25), Emory University - First year graduate student, Political Science",
+    socialMedia: {
+      ig: "https://www.instagram.com/jackson.khalil?igsh=MWh5dmczZWoybzkwcA%3D%3D&utm_source=qr",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/khalil-jackson-248881225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      facebook: "N/A",
+      email: "khaliljack36@gmail.com"
+    },
+    gallery: [
+      "/gallery/khalil-jackson.jpg"
+    ]
+  },
+  {
+    id: "eloy-jayden-perez-mayol",
+    image: "/gallery/eloy-jayden-perez-mayol.jpg", // Placeholder - will need actual image
+    name: "Eloy Jayden Perez 'Mayol",
+    title: "Creative Media Specialist",
+    status: "supportTeam",
+    department: "Marketing & Branding",
+    longBio: "Eloy Jayden Perez 'Mayol is a talented creative professional who specializes in film and music production. As Creative Media Specialist for BYEN, he brings his award-winning filmmaking skills and musical talents to support the organization's creative initiatives and media production.",
+    empowermentQuote: "Helping with BYEN's start up will always be such a meaningful achievement and experience for me. I thrive and love everything I do in regards to film and music.",
+    achievements: [
+      "Won 1st place in state for his film 'Science Unfair'",
+      "Attended GMEA's All State Choir program as a bass 1 for 2 years",
+      "Contributed to BYEN's startup and early development",
+      "Expertise in film production with family involvement in creative projects"
+    ],
+    education: "Film and Music Production",
+    socialMedia: {
+      ig: "https://www.instagram.com/wagjayy?igsh=MXA0Z2JvZGRqdncxOQ%3D%3D&utm_source=qr",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/jayden-perez-mayol-b11b9b30b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      facebook: "N/A",
+      email: "watch.omega.studios@gmail.com"
+    },
+    gallery: [
+      "/gallery/eloy-jayden-perez-mayol.jpg"
+    ]
+  },
+  {
+    id: "oceane-galamo",
+    image: "/gallery/oceane-galamo.jpg", // Placeholder - will need actual image
+    name: "Oceane Galamo",
+    title: "Community Outreach Specialist",
+    status: "supportTeam",
+    department: "Member Relations",
+    longBio: "Oceane Galamo is a dedicated student leader at Howard University with a strong commitment to educational equity and community service. As Community Outreach Specialist for BYEN, she brings her experience in advocacy and community organizing to expand the network's impact and reach.",
+    empowermentQuote: "",
+    achievements: [
+      "Vice President of the Petey Greene Program at Howard University, supporting educational access for incarcerated individuals",
+      "Co-founded The Crowned Path, an initiative promoting HBCU awareness for Black students in Montgomery County, Maryland",
+      "Interned with advocacy organizations including the NAACP and Brothers in Law",
+      "Regular volunteer at local food banks combating food insecurity"
+    ],
+    education: "Howard University",
+    socialMedia: {
+      ig: "https://www.instagram.com/oceanegalamo?igsh=MWd3M3ZnbHE5dDZ1Zw%3D%3D&utm_source=qr",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/oceane-galamo05?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      facebook: "N/A",
+      email: "galamooceane@gmail.com"
+    },
+    gallery: [
+      "/gallery/oceane-galamo.jpg"
+    ]
+  }
 ]
 
 export default leaders

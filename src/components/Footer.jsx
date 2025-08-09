@@ -20,10 +20,10 @@ const footerLinks = [
   {
     label: "Programs",
     links: [
-      { label: "Foundation", href: "/foundation" },
-      { label: "Boots on the Ground", href: "/boots-on-the-ground" },
+      { label: "BYEN On The Ground", href: "/boots-on-the-ground" },
       { label: "B.O.L.D Accelerator", href: "/bold-accelerator" },
       { label: "National Internship", href: "/BYEN-national-internship" },
+      { label: "BYEN Access", href: "/byen-access" },
     ],
   },
   {
@@ -35,6 +35,7 @@ const footerLinks = [
       { label: "Become a Partner", href: "/become-partner" },
       { label: "Events", href: "/events" },
       { label: "News & Blog", href: "/news-and-blog" },
+      { label: "Foundation", href: "/foundation" },
     ],
   },
 ];

@@ -8,11 +8,11 @@ export default function CivicEngagement() {
       <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
         <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
           <MdOutlineHorizontalRule />
-          <p className='uppercase'>Boots on the Ground</p>
+          <p className='uppercase'>BYEN on the Ground</p>
           <MdOutlineHorizontalRule />
         </h1>
         <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-          Boots on the Ground is BYEN’s national civic engagement campaign that mobilizes Black youth to take action in their communities through direct service, grassroots organizing, and voter education. This initiative empowers our members to be visible, vocal, and grounded in the issues that impact their everyday lives.
+          BYEN on the Ground is BYEN’s national civic engagement campaign that mobilizes Black youth to take action in their communities through direct service, grassroots organizing, and voter education. This initiative empowers our members to be visible, vocal, and grounded in the issues that impact their everyday lives.
         </p>
       </div>
 
