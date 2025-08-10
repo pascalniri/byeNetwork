@@ -35,8 +35,8 @@ const NewsAndBlog = () => {
       color: 'from-blue-500 to-blue-600',
       posts: [
         {
-          title: "Rising Leader: Sarah's Journey from Student to Advocate",
-          excerpt: "Discover how BYEN member Sarah Johnson transformed her passion for education into community action...",
+          title: "Member Spotlights Coming Soon",
+          excerpt: "Stay tuned for inspiring stories from our BYEN members...",
           date: "Coming Soon",
           readTime: "5 min read"
         }
@@ -50,8 +50,8 @@ const NewsAndBlog = () => {
       color: 'from-green-500 to-green-600',
       posts: [
         {
-          title: "Community Food Drive Reaches 500 Families",
-          excerpt: "How BYEN members organized a grassroots initiative to address food insecurity in their neighborhood...",
+          title: "Impact Stories Coming Soon",
+          excerpt: "Discover how BYEN members are making a difference...",
           date: "Coming Soon",
           readTime: "4 min read"
         }
@@ -65,8 +65,8 @@ const NewsAndBlog = () => {
       color: 'from-purple-500 to-purple-600',
       posts: [
         {
-          title: "The Future of Black Youth Leadership in Tech",
-          excerpt: "An in-depth analysis of opportunities and barriers in the technology sector...",
+          title: "Perspectives & Deep Dives Coming Soon",
+          excerpt: "In-depth analysis and thought-provoking content...",
           date: "Coming Soon",
           readTime: "8 min read"
         }

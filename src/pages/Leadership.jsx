@@ -86,16 +86,10 @@ const Leadership = () => {
 
  
     {
-      id: "chapters",
+      id: "chapter",
       name: "Chapter Development",
       icon: <FaUniversity className="text-2xl" />,
       description: "Supports the establishment and growth of BYEN chapters across different campuses and communities."
-    },
-    {
-      id: "strategic",
-      name: "Strategic Initiatives",
-      icon: <FaCogs className="text-2xl" />,
-      description: "Develops and implements strategic policies and initiatives to advance BYEN's mission and impact in communities."
     },
 
   ];

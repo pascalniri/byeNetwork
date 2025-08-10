@@ -33,7 +33,7 @@ const leaders = [
     id: "james-brazzell",
     image: "/james.jpg",
     name: "James Brazzell",
-    title: "Deputy Executive Director",
+    title: "Co-Founder, Deputy Executive Director",
     status: "director",
     department: "Executive Leadership",
     longBio: "James Brazzell is a sophomore at Morehouse College majoring in Business Administration. As Deputy Executive Director of BYEN, he is dedicated to empowering youth through leadership and service, and is committed to building strong communities and expanding opportunities for young Black leaders.",
@@ -840,11 +840,11 @@ const leaders = [
   },
   {
     id: "khalil-jackson",
-    image: "/gallery/khalil-jackson.jpg", // Placeholder - will need actual image
+    image: "/gallery/Khalil Jackson.jpg",
     name: "Khalil Jackson",
-    title: "Director of Strategic Initiatives and Policy",
+    title: "National Director of Strategic Initiatives and Policy",
     status: "director",
-    department: "Strategic Initiatives",
+    department: "Executive Leadership",
     longBio: "Khalil Jackson is a first-year graduate student at Emory University, having graduated from Clark Atlanta University in 2025 with a degree in Political Science. As Director of Strategic Initiatives and Policy for BYEN, he brings extensive experience in public policy, community development, and leadership.",
     empowermentQuote: "",
     achievements: [
