@@ -187,12 +187,12 @@ const Leadership = () => {
       {/* Tab-style Menu Layout */}
       <div className="flex flex-col">
         {/* Header */}
-        <div className="text-center mb-8">
+        {/* <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-[#693e2d] flex items-center justify-center">
             <FaStar className="mr-2" /> Leadership Team
           </h2>
           <p className="text-gray-600 mt-2">Select a department to view our leadership team</p>
-        </div>
+        </div> */}
         
         {/* Tab Navigation */}
         <div className="border-b border-gray-200 mb-8">

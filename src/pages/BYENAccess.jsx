@@ -13,6 +13,7 @@ import {
   FiStar,
   FiAward
 } from "react-icons/fi";
+import { MdOutlineHorizontalRule } from "react-icons/md";
 
 const BYENAccess = () => {
   const features = [
@@ -76,23 +77,19 @@ const BYENAccess = () => {
   };
 
   return (
-    <div className="font-montserrat bg-white mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
+    <div className="font-montserrat">
       {/* Hero Section */}
-      <Fade>
-        <div className="text-center mb-16">
-          <h1 className="lg:text-[48px] lg:leading-[48px] font-bold text-[32px] leading-[36px] mb-6">
-            BYEN <span className="text-[#693e2d]">ACCESS</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-            A dedicated resource hub created to connect Black youth with the tools, knowledge, and opportunities they need to grow, lead, and thrive.
-          </p>
-          <div className="bg-gradient-to-br from-[#693e2d]/5 to-[#985b3c]/5 rounded-2xl p-6 max-w-2xl mx-auto border border-[#693e2d]/10">
-            <p className="text-lg text-gray-700 font-medium">
-              Spearheaded by <span className="text-[#693e2d] font-semibold">Olivia Gray</span>, our National Associate Director of Career and Academic Success
-            </p>
-          </div>
-        </div>
-      </Fade>
+      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
+        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
+          <MdOutlineHorizontalRule />
+          <p>BYEN ACCESS</p>
+          <MdOutlineHorizontalRule />
+        </h1>
+        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
+        A dedicated resource hub created to connect Black youth with the tools, knowledge, and opportunities they need to grow, lead, and thrive.</p>
+      </div>
+    <div className="font-montserrat bg-white mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
+  
 
       {/* Olivia Gray Profile Section */}
       <Fade>
@@ -247,6 +244,7 @@ const BYENAccess = () => {
           </motion.div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { FiArrowRight, FiCalendar, FiUser, FiTag, FiX } from "react-icons/fi";
 const NewsAndBlog = () => {
   const [activeTab, setActiveTab] = useState('voices');
   const [selectedStory, setSelectedStory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const news = [
     {
@@ -27,51 +28,6 @@ const NewsAndBlog = () => {
   ];
 
   const byenVoicesSections = [
-    {
-      id: 'member-spotlights',
-      title: 'Member Spotlights',
-      description: 'Regular interview-style features highlighting BYEN members (outside of the leadership team). These stories explore their personal journeys, motivations, goals, and how BYEN supports their growth and leadership.',
-      icon: <FiUser className="w-6 h-6" />,
-      color: 'from-blue-500 to-blue-600',
-      posts: [
-        {
-          title: "Member Spotlights Coming Soon",
-          excerpt: "Stay tuned for inspiring stories from our BYEN members...",
-          date: "Coming Soon",
-          readTime: "5 min read"
-        }
-      ]
-    },
-    {
-      id: 'impact-stories',
-      title: 'Impact Stories',
-      description: 'Showcases BYEN\'s work in communities through the efforts of members addressing important issues and uplifting those who are often overlooked or underserved.',
-      icon: <FiArrowRight className="w-6 h-6" />,
-      color: 'from-green-500 to-green-600',
-      posts: [
-        {
-          title: "Impact Stories Coming Soon",
-          excerpt: "Discover how BYEN members are making a difference...",
-          date: "Coming Soon",
-          readTime: "4 min read"
-        }
-      ]
-    },
-    {
-      id: 'perspectives-deep-dives',
-      title: 'Perspectives x Deep Dives',
-      description: 'Opinion pieces, essays, and in-depth articles that examine challenges and opportunities facing Black youth. These writings emphasize the importance of equal opportunity, social justice, and community engagement.',
-      icon: <FiTag className="w-6 h-6" />,
-      color: 'from-purple-500 to-purple-600',
-      posts: [
-        {
-          title: "Perspectives & Deep Dives Coming Soon",
-          excerpt: "In-depth analysis and thought-provoking content...",
-          date: "Coming Soon",
-          readTime: "8 min read"
-        }
-      ]
-    },
     {
       id: 'leadership-in-action',
       title: 'BYEN Leadership in Action',
@@ -136,6 +92,51 @@ This interview is more than just a conversation; it's a journey through the lead
 **JM:** We weren't friends before BYEN, but we became friends through it. Friends running something together tends to have its challenges and debates, but our honest conversations have only challenged each other to be better. James is a Co-Founder because he's truly a founder of this current version of BYEN. He's my brother, and he's always by my side. Recently, he was joking about being a Co-Founder, and I just could not tell him I was planning to announce it. I'm so excited for him to officially get the recognition he deserves.
 
 *This interview was conducted and written by Maya Evans, National Communications Manager and Editor-In-Chief of BYEN Voices.*`
+        }
+      ]
+    },
+    {
+      id: 'member-spotlights',
+      title: 'Member Spotlights',
+      description: 'Regular interview-style features highlighting BYEN members (outside of the leadership team). These stories explore their personal journeys, motivations, goals, and how BYEN supports their growth and leadership.',
+      icon: <FiUser className="w-6 h-6" />,
+      color: 'from-[#693e2d] to-[#985b3c]',
+      posts: [
+        {
+          title: "Member Spotlights Coming Soon",
+          excerpt: "Stay tuned for inspiring stories from our BYEN members...",
+          date: "Coming Soon",
+          readTime: "5 min read"
+        }
+      ]
+    },
+    {
+      id: 'impact-stories',
+      title: 'Impact Stories',
+      description: 'Showcases BYEN\'s work in communities through the efforts of members addressing important issues and uplifting those who are often overlooked or underserved.',
+      icon: <FiArrowRight className="w-6 h-6" />,
+      color: 'from-[#693e2d] to-[#985b3c]',
+      posts: [
+        {
+          title: "Impact Stories Coming Soon",
+          excerpt: "Discover how BYEN members are making a difference...",
+          date: "Coming Soon",
+          readTime: "4 min read"
+        }
+      ]
+    },
+    {
+      id: 'perspectives-deep-dives',
+      title: 'Perspectives x Deep Dives',
+      description: 'Opinion pieces, essays, and in-depth articles that examine challenges and opportunities facing Black youth. These writings emphasize the importance of equal opportunity, social justice, and community engagement.',
+      icon: <FiTag className="w-6 h-6" />,
+      color: 'from-[#693e2d] to-[#985b3c]',
+      posts: [
+        {
+          title: "Perspectives & Deep Dives Coming Soon",
+          excerpt: "In-depth analysis and thought-provoking content...",
+          date: "Coming Soon",
+          readTime: "8 min read"
         }
       ]
     }
@@ -216,78 +217,119 @@ This interview is more than just a conversation; it's a journey through the lead
             </div>
           </Fade>
 
-          {/* Blog Sections Grid */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }} 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
-          >
-            {byenVoicesSections.map((section, index) => (
-              <motion.div
-                variants={item}
+          {/* Category Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button
+              onClick={() => setActiveCategory('all')}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeCategory === 'all'
+                  ? 'bg-[#693e2d] text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              All Categories
+            </button>
+            {byenVoicesSections.map((section) => (
+              <button
                 key={section.id}
-                className="bg-white shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+                onClick={() => setActiveCategory(section.id)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
+                  activeCategory === section.id
+                    ? 'bg-[#693e2d] text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
               >
-                {/* Section Header */}
-                <div className={`bg-gradient-to-r ${section.color} p-6 text-white`}>
-                  <div className="flex items-center mb-3">
-                    {section.icon}
-                    <h3 className="text-xl font-bold ml-3">{section.title}</h3>
-                  </div>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    {section.description}
-                  </p>
-                </div>
+                {section.icon}
+                {section.title}
+              </button>
+            ))}
+          </div>
 
-                {/* Section Content */}
-                <div className="p-6">
-                  {section.posts.map((post, postIndex) => (
-                    <div 
-                      key={postIndex} 
-                      className={`border-b border-gray-100 last:border-b-0 pb-4 last:pb-0 mb-4 last:mb-0 ${post.fullStory ? 'cursor-pointer hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200' : ''}`}
-                      onClick={() => post.fullStory && setSelectedStory(post)}
-                    >
-                      <div className="flex items-start justify-between mb-2">
-                        <h4 className={`font-semibold text-gray-800 transition-colors duration-300 flex-1 ${post.fullStory ? 'hover:text-[#693e2d]' : ''}`}>
-                          {post.title}
-                        </h4>
-                        {post.featured && (
-                          <span className="bg-gradient-to-r from-[#693e2d] to-[#985b3c] text-white text-xs px-2 py-1 rounded-full ml-2">
-                            Featured
-                          </span>
+          {/* Blog Content Grid */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          >
+            {byenVoicesSections
+              .filter(section => activeCategory === 'all' || activeCategory === section.id)
+              .flatMap(section => 
+                section.posts.map((post, postIndex) => (
+                  <div
+                    key={`${section.id}-${postIndex}`}
+                    className={`${post.fullStory ? 'cursor-pointer hover:shadow-lg transition-all duration-300' : ''}`}
+                    onClick={() => post.fullStory && setSelectedStory(post)}
+                  >
+                    <div className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                      {/* Blog Image */}
+                      <div className="h-48 bg-gradient-to-br from-[#693e2d]/10 to-[#985b3c]/10 flex items-center justify-center">
+                        {post.featured ? (
+                          <div className="text-center">
+                            <div className="w-16 h-16 bg-gradient-to-br from-[#693e2d] to-[#985b3c] rounded-full flex items-center justify-center mx-auto mb-3">
+                              <FiCalendar className="w-8 h-8 text-white" />
+                            </div>
+                            <span className="text-[#693e2d] font-semibold text-sm">Featured Story</span>
+                          </div>
+                        ) : (
+                          <div className="text-center">
+                            <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                              <FiUser className="w-8 h-8 text-gray-400" />
+                            </div>
+                            <span className="text-gray-500 font-medium text-sm">Coming Soon</span>
+                          </div>
                         )}
                       </div>
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between text-xs text-gray-500">
-                        <span className="flex items-center">
-                          <FiCalendar className="w-3 h-3 mr-1" />
-                          {post.date}
-                        </span>
-                        <div className="flex items-center gap-2">
-                          <span>{post.readTime}</span>
-                          {post.fullStory && (
-                            <span className="text-[#693e2d] font-medium hover:underline">
-                              Read Full Story →
+                      
+                      {/* Blog Content */}
+                      <div className="p-6">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-xs text-gray-500 uppercase tracking-wide font-medium">
+                            {section.title}
+                          </span>
+                          {post.featured && (
+                            <span className="bg-gradient-to-r from-[#693e2d] to-[#985b3c] text-white text-xs px-3 py-1 rounded-full font-medium">
+                              Featured
                             </span>
                           )}
                         </div>
+                        
+                        <h4 className={`font-bold text-xl text-gray-900 mb-3 leading-tight ${post.fullStory ? 'hover:text-[#693e2d] transition-colors duration-300' : ''}`}>
+                          {post.title}
+                        </h4>
+                        
+                        <p className="text-gray-600 text-base leading-relaxed mb-4 line-clamp-3">
+                          {post.excerpt}
+                        </p>
+                        
+                        {/* Blog Metadata */}
+                        <div className="flex items-center justify-between text-sm text-gray-500 border-t border-gray-100 pt-4">
+                          <div className="flex items-center space-x-4">
+                            <span className="flex items-center">
+                              <FiCalendar className="w-4 h-4 mr-2" />
+                              {post.date}
+                            </span>
+                            <span className="flex items-center">
+                              <FiUser className="w-4 h-4 mr-2" />
+                              {post.featured ? 'Maya Evans' : 'BYEN Team'}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="text-gray-400">{post.readTime}</span>
+                            {post.fullStory && (
+                              <span className="text-[#693e2d] font-semibold hover:underline flex items-center group">
+                                Read Full Story
+                                <FiArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" />
+                              </span>
+                            )}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  ))}
-                  
-                  {/* Coming Soon Button */}
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <button className="w-full text-center py-3 px-4 bg-gradient-to-r from-gray-100 to-gray-50 text-gray-600 rounded-lg hover:from-[#693e2d]/10 hover:to-[#985b3c]/10 hover:text-[#693e2d] transition-all duration-300 font-medium">
-                      More Stories Coming Soon
-                    </button>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                ))
+              )}
           </motion.div>
         </div>
       )}
