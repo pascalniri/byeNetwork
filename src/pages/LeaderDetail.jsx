@@ -187,9 +187,9 @@ const LeaderDetail = () => {
               <a href={leader.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
                 <BsFacebook size={18} />
               </a>
-              <a href={leader.socialMedia.email} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
-                <MdMarkEmailUnread size={20} />
-              </a>
+                              <a href={`mailto:${leader.socialMedia.email}`} className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
+                  <MdMarkEmailUnread size={20} />
+                </a>
             </div>
           </motion.section>
 

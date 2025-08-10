@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import { FiArrowRight, FiCalendar, FiUser, FiTag, FiX } from "react-icons/fi";
+import { MdOutlineHorizontalRule } from "react-icons/md";
 
 const NewsAndBlog = () => {
   const [activeTab, setActiveTab] = useState('voices');
@@ -165,19 +166,20 @@ This interview is more than just a conversation; it's a journey through the lead
   };
 
   return (
+    <div className="font-montserrat">
+      {/* Hero Section */}
+      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
+      <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
+          <MdOutlineHorizontalRule />
+          <p className='uppercase'>NEWS & BLOG</p>
+          <MdOutlineHorizontalRule />
+      </h1>
+      <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
+      Stay updated with the latest from BYEN and explore our youth-led storytelling platform
+      </p>
+  </div>
     <div className="font-montserrat bg-white mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
-      {/* Header Section */}
-      <Fade>
-        <div className="text-center mb-12">
-          <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px] mb-4">
-            NEWS & <span className="text-[#693e2d]">BLOG</span>
-        </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Stay updated with the latest from BYEN and explore our youth-led storytelling platform
-          </p>
-        </div>
-      </Fade>
-
+     
       {/* Navigation Tabs */}
       <div className="flex flex-col sm:flex-row justify-center mb-12 bg-gray-50 p-2 rounded-xl max-w-md mx-auto">
         <button
@@ -468,6 +470,7 @@ This interview is more than just a conversation; it's a journey through the lead
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };

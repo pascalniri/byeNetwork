@@ -194,7 +194,7 @@ const Leadership = () => {
           <a href={leader.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
             <BsFacebook size={20} />
           </a>
-          <a href={leader.socialMedia.email} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
+          <a href={`mailto:${leader.socialMedia.email}`} className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
             <MdMarkEmailUnread size={22} />
           </a>
         </div>

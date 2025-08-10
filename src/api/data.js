@@ -22,7 +22,7 @@ const leaders = [
       x: "None",
       linkedIn: "None",
       facebook: "None",
-      email: "None"
+      email: "blackyouthempowermentnetwork@gmail.com"
     },
     gallery: [
       "/Shun.jpg",
@@ -49,10 +49,11 @@ const leaders = [
       x: "..",
       linkedIn: "https://www.linkedin.com/in/james-brazzell-973b69323/",
       facebook: "https://www.facebook.com/profile.php?id=100086747806240",
-      email: "jamesbrazzell02@gmail.com"
+      email: "blackyouthempowermentnetwork@gmail.com"
     },
     gallery: [
       "/james.jpg",
+      "/IMG_7588 - Black Youth Empowerment Network.jpeg"
     ]
   },
   // Tyler Gunter (no spreadsheet update, keep as is)
@@ -404,7 +405,7 @@ const leaders = [
   },
   {
     id: "devon-lewis",
-    image: "/gallery/IMG_0978 - De'Von Lewis.jpeg",
+    image: "/Headshot - De'Von Lewis.jpg",
     name: "De'Von Lewis",
     title: "Public Relations Specialist",
     status: "supportTeam",
@@ -426,6 +427,7 @@ const leaders = [
       email: "freshfor01@gmail.com"
     },
     gallery: [
+      "/Headshot - De'Von Lewis.jpg",
       "/gallery/IMG_0978 - De'Von Lewis.jpeg",
       "/gallery/IMG_0007 - De'Von Lewis.jpeg"
     ]
@@ -708,7 +710,7 @@ const leaders = [
   // New Leadership Team Members - August 2025
   {
     id: "chloe-dasher",
-    image: "/gallery/chloe-dasher.jpg", // Placeholder - will need actual image
+    image: "/IMG_7941 - Chloe Dasher.JPG",
     name: "Chloe Dasher",
     title: "Member Relations Resource Specialist",
     status: "supportTeam",
@@ -730,12 +732,12 @@ const leaders = [
       email: "chloedasher1@gmail.com"
     },
     gallery: [
-      "/gallery/chloe-dasher.jpg"
+      "/IMG_7941 - Chloe Dasher.JPG"
     ]
   },
   {
     id: "jibri-wright",
-    image: "/gallery/jibri-wright.jpg", // Placeholder - will need actual image
+    image: "/IMG_0386 - Jibri Wright.jpeg",
     name: "Jibri Wright",
     title: "Community Service Lead",
     status: "supportTeam",
@@ -757,12 +759,12 @@ const leaders = [
       email: "jibriwright50@gmail.com"
     },
     gallery: [
-      "/gallery/jibri-wright.jpg"
+      "/IMG_0386 - Jibri Wright.jpeg"
     ]
   },
   {
     id: "maya-evans",
-    image: "/gallery/maya-evans.jpg", // Placeholder - will need actual image
+    image: "/IMG_3304 - Maya Evans.JPG",
     name: "Maya Evans",
     title: "National Communications Manager and Editor-In-Chief of BYEN Voices",
     status: "director",
@@ -784,12 +786,12 @@ const leaders = [
       email: "mevans2444@gmail.com"
     },
     gallery: [
-      "/gallery/maya-evans.jpg"
+      "/IMG_3304 - Maya Evans.JPG"
     ]
   },
   {
     id: "jabari-morrison",
-    image: "/gallery/jabari-morrison.jpg", // Placeholder - will need actual image
+    image: "/Jabari.jpg",
     name: "Jabari Morrison",
     title: "Marketing Lead",
     status: "supportTeam",
@@ -809,12 +811,14 @@ const leaders = [
       email: "jabarimorrison4@gmail.com"
     },
     gallery: [
-      "/gallery/jabari-morrison.jpg"
+      "/IMG_1500 - Jabari Morrison.jpeg",
+      "/IMG_2320 - Jabari Morrison.jpeg",
+      "/IMG_8228_Original - Jabari Morrison.jpeg"
     ]
   },
   {
     id: "joseph-collins",
-    image: "/gallery/joseph-collins.jpg", // Placeholder - will need actual image
+    image: "/IMG_3774 - Joseph Collins.jpeg",
     name: "Joseph Collins",
     title: "Brand Strategist",
     status: "supportTeam",
@@ -835,12 +839,12 @@ const leaders = [
       email: "jdcollins3854@gmail.com"
     },
     gallery: [
-      "/gallery/joseph-collins.jpg"
+      "/IMG_3774 - Joseph Collins.jpeg"
     ]
   },
   {
     id: "khalil-jackson",
-    image: "/gallery/Khalil Jackson.jpg",
+    image: "/DSC00276 - Khalil Jackson.jpeg",
     name: "Khalil Jackson",
     title: "National Director of Strategic Initiatives and Policy",
     status: "director",
@@ -863,12 +867,14 @@ const leaders = [
       email: "khaliljack36@gmail.com"
     },
     gallery: [
-      "/gallery/khalil-jackson.jpg"
+      "/IMG_8811 - Khalil Jackson.jpeg",
+      "/DSC00276 - Khalil Jackson.jpeg",
+      "/DSC06653 - Khalil Jackson.jpeg"
     ]
   },
   {
     id: "eloy-jayden-perez-mayol",
-    image: "/gallery/eloy-jayden-perez-mayol.jpg", // Placeholder - will need actual image
+    image: "/Jayden.jpeg",
     name: "Eloy Jayden Perez 'Mayol",
     title: "Creative Media Specialist",
     status: "supportTeam",
@@ -890,12 +896,12 @@ const leaders = [
       email: "watch.omega.studios@gmail.com"
     },
     gallery: [
-      "/gallery/eloy-jayden-perez-mayol.jpg"
+      "/Jayden.jpeg"
     ]
   },
   {
     id: "oceane-galamo",
-    image: "/gallery/oceane-galamo.jpg", // Placeholder - will need actual image
+    image: "/image - Oceane.jpg",
     name: "Oceane Galamo",
     title: "Community Outreach Specialist",
     status: "supportTeam",
@@ -917,7 +923,7 @@ const leaders = [
       email: "galamooceane@gmail.com"
     },
     gallery: [
-      "/gallery/oceane-galamo.jpg"
+      "/image - Oceane.jpg"
     ]
   }
 ]
