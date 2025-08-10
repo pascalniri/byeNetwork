@@ -257,8 +257,8 @@ const Leadership = () => {
           
           {/* Team Members Grid */}
           <div className="mb-8">
-            {/* Display National Directors and Support Team for Executive, Marketing & Branding, or Programming & Events department */}
-            {['marketing', 'programming', 'executive'].includes(activeRole) ? (
+            {/* Display National Directors and Support Team for Executive, Marketing & Branding, Programming & Events, or Member Relations department */}
+            {['marketing', 'programming', 'executive', 'memberRelations'].includes(activeRole) ? (
               <>
                 {/* National Directors Section */}
                 <h3 className="text-xl font-semibold mb-6">National Directors</h3>

@@ -378,7 +378,7 @@ const leaders = [
     image: "/gallery/Liv picture 2 - Olivia Gray.jpg",
     name: "Olivia Gray",
     title: "National Associate Director of Career & Academic Success",
-    status: "supportTeam",
+    status: "director",
     department: "Member Relations",
     longBio: "Olivia Gray is a third-year Elementary Education major at Spelman College. As National Associate Director of Career & Academic Success, she is dedicated to academic achievement and career development, and is recognized for her leadership and community impact.",
     empowermentQuote: "",
@@ -464,14 +464,14 @@ const leaders = [
     image: "/gallery/P1250750 - Travis Parrish.jpeg",
     name: "Travis Parrish",
     title: "Manager",
-    status: "director",
+    status: "supportTeam",
     department: "Executive Leadership",
-    longBio: "Travis Parrish is a sophomore Business Administration major at Morehouse College. As Interim National Director of Operations for BYEN, he is dedicated to organizational leadership and supporting the growth and success of Black youth.",
+    longBio: "Travis Parrish is a sophomore Business Administration major at Morehouse College. As Manager for BYEN, he is dedicated to supporting executive leadership and organizational success through his role in the support team.",
     empowermentQuote: "",
     achievements: [
       "Got accepted and currently attending my dream school. Morehouse College",
       "Became a recreation supervisor at the age of 17",
-      "Became the interim national director of operations for BYEN at the age of 18",
+      "Serves as Manager in BYEN's support team at the age of 18",
       "I’m happy with and where I am in life"
     ],
     education: "Morehouse college, Sophomore, Business administration",
@@ -710,12 +710,12 @@ const leaders = [
   // New Leadership Team Members - August 2025
   {
     id: "chloe-dasher",
-    image: "/IMG_7941 - Chloe Dasher.JPG",
-    name: "Chloe Dasher",
+    image: "/Chloe_Dasher.jpeg",
+    name: "Chole Dasher",
     title: "Member Relations Resource Specialist",
     status: "supportTeam",
     department: "Member Relations",
-    longBio: "Chloe Dasher is a sophomore at Spelman College majoring in Elementary Education. As Member Relations Resource Specialist for BYEN, she brings her passion for community service and academic excellence to support member engagement and development.",
+    longBio: "Chole Dasher is a sophomore at Spelman College majoring in Elementary Education. As Member Relations Resource Specialist for BYEN, she brings her passion for community service and academic excellence to support member engagement and development.",
     empowermentQuote: "",
     achievements: [
       "Obtained Associate of Arts Degree from St. John's River State College before high school graduation",
@@ -732,7 +732,7 @@ const leaders = [
       email: "chloedasher1@gmail.com"
     },
     gallery: [
-      "/IMG_7941 - Chloe Dasher.JPG"
+      "/Chloe_Dasher.jpeg"
     ]
   },
   {
@@ -901,7 +901,7 @@ const leaders = [
   },
   {
     id: "oceane-galamo",
-    image: "/image - Oceane.jpg",
+    image: "/Oceane_Galamo.jpeg",
     name: "Oceane Galamo",
     title: "Community Outreach Specialist",
     status: "supportTeam",
@@ -923,7 +923,7 @@ const leaders = [
       email: "galamooceane@gmail.com"
     },
     gallery: [
-      "/image - Oceane.jpg"
+      "/Oceane_Galamo.jpeg"
     ]
   }
 ]

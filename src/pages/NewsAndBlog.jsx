@@ -214,8 +214,7 @@ This interview is more than just a conversation; it's a journey through the lead
                 BYEN Voices
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-                BYEN Voices is a youth-led storytelling platform powered by the Black Youth Empowerment Network, created to celebrate changemakers, amplify lived experiences, and shed light on issues impacting Black youth. Rooted in BYEN's mission of vision and impact, this blog is a space where service meets storytelling — where our writers use their voices to give back, build community, and drive meaningful conversations. Through features like Member Spotlights, Impact Stories, Deep Dives, and Leadership in Action, BYEN Voices is a living archive of our movement — for the youth, by the youth.
-              </p>
+              BYEN Voices is a youth-led storytelling platform powered by the Black Youth Empowerment Network, created to celebrate changemakers, amplify lived experiences, and shed light on issues impacting Black youth. Rooted in BYEN’s mission of vision and impact, this blog is a space where service meets storytelling — where our writers use their voices to give back, build community, and drive meaningful conversations. Through features like Member Spotlights, Impact Stories, Deep Dives, and Leadership in Action, BYEN Voices is a living archive of our movement — for the youth, by the youth.              </p>
             </div>
           </Fade>
 
