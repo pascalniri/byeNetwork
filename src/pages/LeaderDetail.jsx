@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { BsFacebook, BsTwitterX, BsArrowLeft } from "react-icons/bs";
+import { BsFacebook, BsTwitterX, BsArrowLeft, BsX } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
 import { MdMarkEmailUnread } from "react-icons/md";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import leaders from "../api/data";
 
 const LeaderDetail = () => {
   const { id } = useParams();
   const [leader, setLeader] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Fetch leader data based on ID
   useEffect(() => {
@@ -33,7 +35,16 @@ const LeaderDetail = () => {
     fetchLeader();
   }, [id]);
 
+  // Image modal functions
+  const openImageModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
 
+  const closeImageModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
 
   // Animation variants
   const fadeIn = {
@@ -151,12 +162,21 @@ const LeaderDetail = () => {
               <h2 className="text-2xl font-bold text-[#693e2d] mb-6 pb-2 border-b border-gray-200">Gallery</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {leader.gallery.map((image, idx) => (
-                  <div key={idx} className="h-[180px] rounded-lg overflow-hidden">
+                  <div key={idx} className="relative h-[180px] rounded-lg overflow-hidden cursor-pointer group">
                     <img 
                       src={image} 
                       alt={`${leader.name} - Gallery ${idx + 1}`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 group-hover:scale-110" 
+                      onClick={() => openImageModal(image)}
                     />
+                    <div 
+                      className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center cursor-pointer"
+                      onClick={() => openImageModal(image)}
+                    >
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-sm font-medium">
+                        Click to view
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -243,6 +263,46 @@ const LeaderDetail = () => {
           )}
         </div>
       </div>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {isModalOpen && selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-90 z-[99999] flex items-center justify-center p-4"
+            onClick={closeImageModal}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full h-full flex items-center justify-center p-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
+                alt={`${leader.name} - Full View`}
+                className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-2xl"
+                style={{
+                  maxWidth: '95vw',
+                  maxHeight: '95vh',
+                  width: 'auto',
+                  height: 'auto'
+                }}
+              />
+              <button
+                onClick={closeImageModal}
+                className="absolute top-4 right-4 bg-white text-gray-800 p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-200 z-10"
+              >
+                <BsX size={24} />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

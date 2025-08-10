@@ -146,7 +146,7 @@ const Navbar = () => {
             <span>{item.label}</span>
             <FiChevronDown className={`transform transition-transform duration-300 w-4 h-4 sm:w-5 sm:h-5 ${openDropdowns[item.id] ? 'rotate-180' : ''}`} />
           </button>
-          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openDropdowns[item.id] ? 'max-h-32 pb-2' : 'max-h-0'}`}>
+          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openDropdowns[item.id] ? 'max-h-[500px] pb-2' : 'max-h-0'}`}>
             <div className="bg-gradient-to-br from-gray-50 to-white rounded-lg mx-2 p-1">
               {item.items.map((subItem, index) => (
                 <a 
