@@ -711,11 +711,11 @@ const leaders = [
   {
     id: "chloe-dasher",
     image: "/Chloe_Dasher.jpeg",
-    name: "Chole Dasher",
+    name: "Chloe Dasher",
     title: "Member Relations Resource Specialist",
     status: "supportTeam",
     department: "Member Relations",
-    longBio: "Chole Dasher is a sophomore at Spelman College majoring in Elementary Education. As Member Relations Resource Specialist for BYEN, she brings her passion for community service and academic excellence to support member engagement and development.",
+    longBio: "Chloe Dasher is a sophomore at Spelman College majoring in Elementary Education. As Member Relations Resource Specialist for BYEN, she brings her passion for community service and academic excellence to support member engagement and development.",
     empowermentQuote: "",
     achievements: [
       "Obtained Associate of Arts Degree from St. John's River State College before high school graduation",

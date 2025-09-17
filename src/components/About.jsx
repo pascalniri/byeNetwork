@@ -48,7 +48,7 @@ const About = () => {
   };
   return (
     <div className="font-montserrat bg-[#FAFAFA] flex flex-col lg:gap-[3rem] gap-y-[5rem] lg:flex-row justify-center items-start max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
-      <Advert />
+      {/* <Advert /> */}
       <motion.div
         variants={item1}
         initial="hidden"
