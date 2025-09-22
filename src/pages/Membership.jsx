@@ -100,7 +100,7 @@ const Membership = () => {
               </div>
             
               <p className="text-sm text-amber-800 text-center sm:text-left">
-                <span className="font-semibold">Important Dates:</span> Application opens July 15th.
+                <span className="font-semibold">Applications Are Closed.</span>
               </p>
             </div>
           </div>

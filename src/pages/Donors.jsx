@@ -138,7 +138,7 @@ export default function Donors() {
                 </motion.div>
 
                 {/* Become a Partner Section */}
-                <motion.div 
+                {/* <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -250,7 +250,7 @@ export default function Donors() {
                             Or email us at <a href="mailto:partners@wearebyen.org" className="underline hover:text-[#693e2d]">partners@wearebyen.org</a>
                         </p>
                     </div>
-                </motion.div>
+                </motion.div> */}
             </div>
         </div>
         </div>
