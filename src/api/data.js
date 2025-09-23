@@ -57,34 +57,34 @@ const leaders = [
     ]
   },
   // Tyler Gunter (no spreadsheet update, keep as is)
-  {
-    id: "tyler-gunter",
-    image: "/Tyler.jpg",
-    name: "Tyler Gunter",
-    title: "National Director of Finance & Fundraising",
-    status: "director",
-    department: "Finance & Development",
-    longBio:
-      "Tyler Gunter serves as the Director of Finance & Fundraising at the Black Youth Empowerment Network. Originally from Delaware, he brings over six years of experience in finance and leadership from his involvement with Business Professionals of America and as the highest-ranking Black member of the High School Democrats of America. A competitive swimmer for nearly a decade, Tyler's diverse experiences shape his authentic and resilient leadership style. As a young Black leader, he is dedicated to inspiring others to embrace their true selves and ensuring that Black youth receive the financial support and guidance needed to lead confidently.",
-    empowermentQuote: "Empowering Black youth means creating pathways to financial literacy and economic opportunity. It's about ensuring that young leaders have both the knowledge and resources to build sustainable futures for themselves and their communities.",
-    achievements: [
-      "Developed BYEN's financial management system",
-      "Created sustainable fundraising strategy",
-      "Launched financial literacy workshop series",
-      "Secured multiple partnership grants"
-    ],
-    education: "Finance and Leadership Studies",
-    socialMedia: {
-      ig: "None",
-      x: "None",
-      linkedIn: "None",
-      facebook: "None",
-      email: "None"
-    },
-    gallery: [
-      "/Tyler.jpg"
-    ]
-  },
+  // {
+  //   id: "tyler-gunter",
+  //   image: "/Tyler.jpg",
+  //   name: "Tyler Gunter",
+  //   title: "National Director of Finance & Fundraising",
+  //   status: "director",
+  //   department: "Finance & Development",
+  //   longBio:
+  //     "Tyler Gunter serves as the Director of Finance & Fundraising at the Black Youth Empowerment Network. Originally from Delaware, he brings over six years of experience in finance and leadership from his involvement with Business Professionals of America and as the highest-ranking Black member of the High School Democrats of America. A competitive swimmer for nearly a decade, Tyler's diverse experiences shape his authentic and resilient leadership style. As a young Black leader, he is dedicated to inspiring others to embrace their true selves and ensuring that Black youth receive the financial support and guidance needed to lead confidently.",
+  //   empowermentQuote: "Empowering Black youth means creating pathways to financial literacy and economic opportunity. It's about ensuring that young leaders have both the knowledge and resources to build sustainable futures for themselves and their communities.",
+  //   achievements: [
+  //     "Developed BYEN's financial management system",
+  //     "Created sustainable fundraising strategy",
+  //     "Launched financial literacy workshop series",
+  //     "Secured multiple partnership grants"
+  //   ],
+  //   education: "Finance and Leadership Studies",
+  //   socialMedia: {
+  //     ig: "None",
+  //     x: "None",
+  //     linkedIn: "None",
+  //     facebook: "None",
+  //     email: "None"
+  //   },
+  //   gallery: [
+  //     "/Tyler.jpg"
+  //   ]
+  // },
   // Elijah Hopkins (updated)
   {
     id: "elijah-hopkins",

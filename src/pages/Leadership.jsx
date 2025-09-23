@@ -84,13 +84,6 @@ const Leadership = () => {
       description: "Plans and executes all BYEN events, workshops, and initiatives to fulfill our mission and engage our community."
     },
 
- 
-    {
-      id: "chapter",
-      name: "Chapter Development",
-      icon: <FaUniversity className="text-2xl" />,
-      description: "Supports the establishment and growth of BYEN chapters across different campuses and communities."
-    },
 
   ];
 

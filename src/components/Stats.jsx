@@ -49,9 +49,9 @@ const StatItem = ({ number, label, suffix = '' }) => {
 
 export default function Stats() {
   const stats = [
-    { number: 200, label: 'Black Youth Connected Nationally', suffix: '+' },
-    { number: 25, label: 'States Reached', suffix: '+' },
-    { number: 2500, label: 'Community Service Hours', suffix: '+' },
+    { number: 500, label: 'Black Youth Connected Nationally', suffix: '+' },
+    { number: 30, label: 'States Reached', suffix: '+' },
+    { number: 100, label: 'Community Service Hours', suffix: 'k' },
   ];
 
   return (
