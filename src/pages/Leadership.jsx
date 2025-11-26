@@ -10,9 +10,9 @@ import leaders from "../api/data";
 const Leadership = () => {
   const [activeRole, setActiveRole] = useState('executive');
   const [selectedPerson, setSelectedPerson] = useState(null);
-  
- 
-  
+
+
+
   //  const departmentDirectors = { 
   //   executiveTeam: [
   //     {
@@ -50,10 +50,10 @@ const Leadership = () => {
   //   ],
 
   // };
-  
+
   // Department information
   const departments = [
-    { 
+    {
       id: "executive",
       name: "Executive Leadership",
       icon: <FaUserTie className="text-2xl" />,
@@ -73,7 +73,7 @@ const Leadership = () => {
     },
     {
       id: "memberRelations",
-      name: "Member Relations",
+      name: "Member Experience",
       icon: <FaUsers className="text-2xl" />,
       description: "Responsible for member engagement, recruitment, and ensuring a positive experience for all BYEN members."
     },
@@ -144,7 +144,7 @@ const Leadership = () => {
     if (activeRole === 'executive') {
       return leaders.filter(leader => leader.department.toLowerCase().includes('executive'));
     }
-    
+
     // For other departments, match the department name with the active role
     const activeDept = departments.find(dept => dept.id === activeRole);
     if (activeDept) {
@@ -159,7 +159,7 @@ const Leadership = () => {
     return [];
   };
 
- 
+
   return (
     <div className="font-montserrat">
       <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
@@ -169,71 +169,69 @@ const Leadership = () => {
           <MdOutlineHorizontalRule />
         </h1>
         <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-          Meet the dedicated team of leaders who guide the Black Youth Empowerment Network's mission and vision. 
+          Meet the dedicated team of leaders who guide the Black Youth Empowerment Network's mission and vision.
           Our leadership team is committed to creating opportunities, fostering growth, and empowering the next generation of Black leaders.
         </p>
       </div>
 
       <div className="font-montserrat mt-[5rem] max-w-screen-2xl w-[90%] mx-auto pb-20">
 
-      
-      {/* Tab-style Menu Layout */}
-      <div className="flex flex-col">
-        {/* Header */}
-        {/* <div className="text-center mb-8">
+
+        {/* Tab-style Menu Layout */}
+        <div className="flex flex-col">
+          {/* Header */}
+          {/* <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-[#693e2d] flex items-center justify-center">
             <FaStar className="mr-2" /> Leadership Team
           </h2>
           <p className="text-gray-600 mt-2">Select a department to view our leadership team</p>
         </div> */}
-        
-        {/* Tab Navigation */}
-        <div className="border-b border-gray-200 mb-8">
-          <div className="flex flex-wrap justify-center gap-1">
-            {departments.map((dept) => (
-              <motion.div
-                key={dept.id}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                whileHover="hover"
-                variants={menuItemVariants}
-              >
-                <button 
-                  onClick={() => handleRoleChange(dept.id)}
-                  className={`flex items-center px-4 py-3 text-sm lg:text-base font-medium whitespace-nowrap transition-all duration-300 border-b-2 ${
-                    activeRole === dept.id 
-                      ? 'border-[#693e2d] text-[#693e2d]' 
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  }`}
+
+          {/* Tab Navigation */}
+          <div className="border-b border-gray-200 mb-8">
+            <div className="flex flex-wrap justify-center gap-1">
+              {departments.map((dept) => (
+                <motion.div
+                  key={dept.id}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  whileHover="hover"
+                  variants={menuItemVariants}
                 >
-                  <div className="flex items-center">
-                    <span className={`mr-2 transition-colors duration-300 ${
-                      activeRole === dept.id ? 'text-[#693e2d]' : 'text-gray-400'
-                    }`}>
-                      {dept.icon}
-                    </span>
-                    <span>{dept.name}</span>
-                  </div>
-                </button>
-              </motion.div>
-            ))}
+                  <button
+                    onClick={() => handleRoleChange(dept.id)}
+                    className={`flex items-center px-4 py-3 text-sm lg:text-base font-medium whitespace-nowrap transition-all duration-300 border-b-2 ${activeRole === dept.id
+                        ? 'border-[#693e2d] text-[#693e2d]'
+                        : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                      }`}
+                  >
+                    <div className="flex items-center">
+                      <span className={`mr-2 transition-colors duration-300 ${activeRole === dept.id ? 'text-[#693e2d]' : 'text-gray-400'
+                        }`}>
+                        {dept.icon}
+                      </span>
+                      <span>{dept.name}</span>
+                    </div>
+                  </button>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-        
-        {/* Main Content */}
-        <div className="bg-white rounded-xl shadow-xl p-6 lg:p-8">
-          {/* Current Role Description */}
-          <div className="mb-8 border-b border-gray-200 pb-6">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeRole}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-              >
-                {departments.map((dept) => (
+
+          {/* Main Content */}
+          <div className="bg-white rounded-xl shadow-xl p-6 lg:p-8">
+            {/* Current Role Description */}
+            <div className="mb-8 border-b border-gray-200 pb-6">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeRole}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {departments.map((dept) => (
                     activeRole === dept.id && (
                       <div key={dept.id}>
                         <h2 className="text-2xl font-bold text-[#693e2d] mb-2 flex items-center gap-2">
@@ -244,51 +242,51 @@ const Leadership = () => {
                       </div>
                     )
                   ))}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          
-          {/* Team Members Grid */}
-          <div className="mb-8">
-            {/* Display National Directors and Support Team for Executive, Marketing & Branding, Programming & Events, or Member Relations department */}
-            {['marketing', 'programming', 'executive', 'memberRelations'].includes(activeRole) ? (
-              <>
-                {/* National Directors Section */}
-                <h3 className="text-xl font-semibold mb-6">National Directors</h3>
-                <AnimatePresence>
-                  <motion.div 
-                    variants={staggerContainer}
-                    initial="hidden"
-                    animate="visible"
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
-                  >
-                    {getCurrentTeam()
-                      .filter(person => person.status === 'director')
-                      .map((person, index) => (
-                        <Link key={index} to={`/leadership/${person.id}`}>
-                          <motion.div 
-                            whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
-                            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-                          >
-                            <div className="h-[240px] overflow-hidden">
-                              <img 
-                                src={person.image} 
-                                alt={person.name}
-                                className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
-                              />
-                            </div>
-                            <div className="p-4">
-                              <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
-                              <p className="text-sm text-gray-600">{person.title}</p>
-                            </div>
-                          </motion.div>
-                        </Link>
-                      ))}
-                  </motion.div>
-                </AnimatePresence>
-                {/* Support Team Section */}
-                <h3 className="text-xl font-semibold mb-6">Support Team</h3>
-                <AnimatePresence>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Team Members Grid */}
+            <div className="mb-8">
+              {/* Display National Directors and Support Team for Executive, Marketing & Branding, Programming & Events, or Member Relations department */}
+              {['marketing', 'programming', 'executive', 'memberRelations'].includes(activeRole) ? (
+                <>
+                  {/* National Directors Section */}
+                  <h3 className="text-xl font-semibold mb-6">National Directors</h3>
+                  <AnimatePresence>
+                    <motion.div
+                      variants={staggerContainer}
+                      initial="hidden"
+                      animate="visible"
+                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
+                    >
+                      {getCurrentTeam()
+                        .filter(person => person.status === 'director')
+                        .map((person, index) => (
+                          <Link key={index} to={`/leadership/${person.id}`}>
+                            <motion.div
+                              whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
+                              className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                            >
+                              <div className="h-[240px] overflow-hidden">
+                                <img
+                                  src={person.image}
+                                  alt={person.name}
+                                  className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                                />
+                              </div>
+                              <div className="p-4">
+                                <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
+                                <p className="text-sm text-gray-600">{person.title}</p>
+                              </div>
+                            </motion.div>
+                          </Link>
+                        ))}
+                    </motion.div>
+                  </AnimatePresence>
+                  {/* Support Team Section */}
+                  {/* <h3 className="text-xl font-semibold mb-6">Support kkTeam</h3> */}
+                  {/* <AnimatePresence>
                   <motion.div 
                     variants={staggerContainer}
                     initial="hidden"
@@ -318,146 +316,146 @@ const Leadership = () => {
                         </Link>
                       ))}
                   </motion.div>
-                </AnimatePresence>
-              </>
-            ) : (
-              // Default display for other departments
-              <>
-                <h3 className="text-xl font-semibold mb-6">
-                  {getCurrentTeam().some(leader => leader.status === 'director') ? 'National Directors' : 'Support Team'}
-                </h3>
-                <AnimatePresence>
-                  {getCurrentTeam().length > 0 ? (
-                    <motion.div 
-                      variants={staggerContainer}
-                      initial="hidden"
-                      animate="visible"
-                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                    >
-                      {getCurrentTeam().map((person, index) => (
-                        <Link key={index} to={`/leadership/${person.id}`}>
-                          <motion.div 
-                            whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
-                            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-                          >
-                            <div className="h-[240px] overflow-hidden">
-                              <img 
-                                src={person.image} 
-                                alt={person.name}
-                                className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
-                              />
-                            </div>
-                            <div className="p-4">
-                              <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
-                              <p className="text-sm text-gray-600">{person.title}</p>
-                            </div>
-                          </motion.div>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  ) : (
-                    <motion.div 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="text-center py-12 bg-gray-50 rounded-xl"
-                    >
-                      <p className="text-gray-500">Leadership information coming soon.</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </>
-            )}
-          </div>
-          
-          {/* Selected Person Details */}
-          <AnimatePresence>
-            {selectedPerson && (
-              <motion.div
-                key={selectedPerson.name}
-                variants={personCardVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200"
-              >
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/3 h-[300px] md:h-auto">
-                    <img 
-                      src={selectedPerson.image} 
-                      alt={selectedPerson.name}
-                      className="w-full h-full object-cover" 
-                    />
-                  </div>
-                  
-                  <div className="md:w-2/3 p-6">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="text-2xl font-bold text-[#693e2d]">{selectedPerson.name}</h3>
-                        <p className="text-gray-600 mb-4">{selectedPerson.title}</p>
-                      </div>
-                      <button 
-                        onClick={() => setSelectedPerson(null)}
-                        className="text-gray-400 hover:text-gray-600 p-1"
+                </AnimatePresence> */}
+                </>
+              ) : (
+                // Default display for other departments
+                <>
+                  <h3 className="text-xl font-semibold mb-6">
+                    {getCurrentTeam().some(leader => leader.status === 'director') ? 'National Directors' : 'Support Team'}
+                  </h3>
+                  <AnimatePresence>
+                    {getCurrentTeam().length > 0 ? (
+                      <motion.div
+                        variants={staggerContainer}
+                        initial="hidden"
+                        animate="visible"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                       >
-                        ✕
-                      </button>
-                    </div>
-                    
-                    <p className="text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
-                      {selectedPerson.description}
-                    </p>
-                    
-                    <div className="mt-4">
-                      <h4 className="font-bold mb-2">What does empowering Black youth mean to you?</h4>
-                      <p className="text-[15px] italic text-[#6C6A6A] mb-4">
-                        {selectedPerson.empowermentQuote}
-                      </p>
-                      
-                      <Link 
-                        to={`/leadership/${selectedPerson.id}`} 
-                        className="inline-block mt-2 bg-[#693e2d] text-white py-2 px-4 rounded-md hover:bg-[#985b3c] transition-colors"
+                        {getCurrentTeam().map((person, index) => (
+                          <Link key={index} to={`/leadership/${person.id}`}>
+                            <motion.div
+                              whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
+                              className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                            >
+                              <div className="h-[240px] overflow-hidden">
+                                <img
+                                  src={person.image}
+                                  alt={person.name}
+                                  className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                                />
+                              </div>
+                              <div className="p-4">
+                                <h4 className="font-semibold text-[#693e2d]">{person.name}</h4>
+                                <p className="text-sm text-gray-600">{person.title}</p>
+                              </div>
+                            </motion.div>
+                          </Link>
+                        ))}
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="text-center py-12 bg-gray-50 rounded-xl"
                       >
-                        View Full Profile
-                      </Link>
-                    </div>
-                    
-                    <div className="flex space-x-3 mt-6">
-                      <a href={selectedPerson.socialMedia.ig} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
-                        <RiInstagramFill size={22} />
-                      </a>
-                      <a href={selectedPerson.socialMedia.x} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
-                        <BsTwitterX size={20} />
-                      </a>
-                      <a href={selectedPerson.socialMedia.linkedIn} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
-                        <SiLinkedin size={20} />
-                      </a>
-                      <a href={selectedPerson.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
-                        <BsFacebook size={20} />
-                      </a>
-                      <a href={`mailto:${selectedPerson.socialMedia.email}`} className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
-                        <MdMarkEmailUnread size={22} />
-                      </a>
-                    </div>
-                    
-                    {selectedPerson.supportTeam && selectedPerson.supportTeam.length > 0 && (
-                      <div className="mt-6 pt-4 border-t border-gray-200">
-                        <h4 className="font-semibold text-gray-700 mb-2">Support Team</h4>
-                        <ul className="space-y-1">
-                          {selectedPerson.supportTeam.map((member, idx) => (
-                            <li key={idx} className="text-[14px] text-gray-600">
-                              {member.name} - <span className="italic">{member.title}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                        <p className="text-gray-500">Leadership information coming soon.</p>
+                      </motion.div>
                     )}
+                  </AnimatePresence>
+                </>
+              )}
+            </div>
+
+            {/* Selected Person Details */}
+            <AnimatePresence>
+              {selectedPerson && (
+                <motion.div
+                  key={selectedPerson.name}
+                  variants={personCardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200"
+                >
+                  <div className="flex flex-col md:flex-row">
+                    <div className="md:w-1/3 h-[300px] md:h-auto">
+                      <img
+                        src={selectedPerson.image}
+                        alt={selectedPerson.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <div className="md:w-2/3 p-6">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="text-2xl font-bold text-[#693e2d]">{selectedPerson.name}</h3>
+                          <p className="text-gray-600 mb-4">{selectedPerson.title}</p>
+                        </div>
+                        <button
+                          onClick={() => setSelectedPerson(null)}
+                          className="text-gray-400 hover:text-gray-600 p-1"
+                        >
+                          ✕
+                        </button>
+                      </div>
+
+                      <p className="text-[15px] leading-[22px] text-[#6C6A6A] mb-4">
+                        {selectedPerson.description}
+                      </p>
+
+                      <div className="mt-4">
+                        <h4 className="font-bold mb-2">What does empowering Black youth mean to you?</h4>
+                        <p className="text-[15px] italic text-[#6C6A6A] mb-4">
+                          {selectedPerson.empowermentQuote}
+                        </p>
+
+                        <Link
+                          to={`/leadership/${selectedPerson.id}`}
+                          className="inline-block mt-2 bg-[#693e2d] text-white py-2 px-4 rounded-md hover:bg-[#985b3c] transition-colors"
+                        >
+                          View Full Profile
+                        </Link>
+                      </div>
+
+                      <div className="flex space-x-3 mt-6">
+                        <a href={selectedPerson.socialMedia.ig} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
+                          <RiInstagramFill size={22} />
+                        </a>
+                        <a href={selectedPerson.socialMedia.x} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
+                          <BsTwitterX size={20} />
+                        </a>
+                        <a href={selectedPerson.socialMedia.linkedIn} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
+                          <SiLinkedin size={20} />
+                        </a>
+                        <a href={selectedPerson.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
+                          <BsFacebook size={20} />
+                        </a>
+                        <a href={`mailto:${selectedPerson.socialMedia.email}`} className="text-[#693e2d] hover:text-[#985b3c] transition-colors">
+                          <MdMarkEmailUnread size={22} />
+                        </a>
+                      </div>
+
+                      {selectedPerson.supportTeam && selectedPerson.supportTeam.length > 0 && (
+                        <div className="mt-6 pt-4 border-t border-gray-200">
+                          <h4 className="font-semibold text-gray-700 mb-2">Support Team</h4>
+                          <ul className="space-y-1">
+                            {selectedPerson.supportTeam.map((member, idx) => (
+                              <li key={idx} className="text-[14px] text-gray-600">
+                                {member.name} - <span className="italic">{member.title}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

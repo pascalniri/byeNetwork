@@ -33,7 +33,7 @@ const leaders = [
     id: "james-brazzell",
     image: "/james.jpg",
     name: "James Brazzell",
-    title: "Co-Founder, Deputy Executive Director",
+    title: "Deputy Executive Director of Operations",
     status: "director",
     department: "Executive Leadership",
     longBio: "James Brazzell is a sophomore at Morehouse College majoring in Business Administration. As Deputy Executive Director of BYEN, he is dedicated to empowering youth through leadership and service, and is committed to building strong communities and expanding opportunities for young Black leaders.",
@@ -155,7 +155,7 @@ const leaders = [
     image: "/montreal.png",
     name: "Montreal Gatson",
     title: "Graphic Designer",
-    status: "supportTeam",
+    status: "director",
     department: "Marketing & Branding",
     longBio:
       "Montreal Gatson is a Political Science major at Morehouse College and a dedicated member of the Black Youth Empowerment Network (BYEN), where he works to empower and inspire Black youth through mentorship, education, and service. Deeply passionate about representation and access, Montreal holds active leadership roles in both the Morehouse-Spelman Pre-Law Society and the Residence Hall Association, using his voice to uplift his peers and advocate for meaningful change. His commitment to youth development is grounded in the belief that every young person deserves the opportunity to envision their potential and pursue their dreams. With aspirations of becoming a criminal defense lawyer, Montreal is driven to fight for justice while continuing to center the needs and voices of the next generation.",
@@ -183,7 +183,7 @@ const leaders = [
     image: "/matthew.png",
     name: "Matthew Roland",
     title: "Graphic Designer",
-    status: "supportTeam",
+    status: "director",
     department: "Marketing & Branding",
     longBio: "Matthew Roland is a rising junior at Morehouse College, double majoring in Applied Physics and Mathematics, and pursuing mechanical engineering. As a Graphic Designer for BYEN, he brings a passion for engineering, research, and creative design to support the organization's mission.",
     empowermentQuote: "",
@@ -211,9 +211,9 @@ const leaders = [
     id: "morgan-robinson",
     image: "/morgan.png",
     name: "Morgan Robinson",
-    title: "National Co-Director of Member Relations",
+    title: "Director of Member Experience",
     status: "director",
-    department: "Member Relations",
+    department: "Member Experience",
     longBio:
       "Morgan Robinson is a rising sophomore at Spelman College, majoring in sociology with a minor in management and organization on the pre-law track. She is also a proud resident of Montgomery County, Maryland. Morgan has experience in marketing, communications, and event planning through roles at Caprock Creative and Marriott International. At Spelman, she has deepened her love for community-centered work and is passionate about using strategy, storytelling, and intentional engagement to amplify Black voices and cultivate impactful, authentic spaces.",
     empowermentQuote: "Empowering Black Youth is especially important to me, as someone who grew up in a predominantly white community. Images of Black success, power, and pride weren’t always visible. That absence shaped my mission today and why I am so loud about the importance of community and mentorship. I want to be the representation I once needed and help create platforms centered around Black excellence. It is crucial to center our voices and make space for the next generation to feel seen and supported.",
@@ -236,33 +236,33 @@ const leaders = [
     ]
   },
   // Cameron Barnes (updated)
-  {
-    id: "cameron-barnes",
-    image: "/cameron.png",
-    name: "Cameron Barnes",
-    title: "Director of Programming and Events",
-    status: "director",
-    department: "Programming & Events",
-    longBio: "Cameron Barnes is a sophomore at Morehouse College majoring in Business Finance with a minor in Data Science and Analytics. As Director of Programming and Events, he is committed to organizing impactful initiatives that empower Black youth and foster academic and personal excellence.",
-    empowermentQuote: "",
-    achievements: [
-      "Morehouse Honor Roll ‘24-25",
-      "Morehouse Deans list ‘24-25",
-      "Morehouse top ranking student ‘24-25",
-      "Top or outstanding math student award ‘24"
-    ],
-    education: "Morehouse, Sophomore, Business Finance (Minor in data science and analytics)",
-    socialMedia: {
-      ig: "https://www.instagram.com/cameron8.17/profilecard/?igsh=MmUyeGl1ODQydThp",
-      x: "https://x.com/cameronbarnes84?s=21&t=_zB1V8-zRLHT__lK1y6b0g",
-      linkedIn: "https://www.linkedin.com/in/victor-cam-barnes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "None",
-      email: "Victor.barnes@morehouse.edu"
-    },
-    gallery: [
-      "/cameron.png",
-    ]
-  },
+  // {
+  //   id: "cameron-barnes",
+  //   image: "/cameron.png",
+  //   name: "Cameron Barnes",
+  //   title: "Director of Programming and Events",
+  //   status: "director",
+  //   department: "Programming & Events",
+  //   longBio: "Cameron Barnes is a sophomore at Morehouse College majoring in Business Finance with a minor in Data Science and Analytics. As Director of Programming and Events, he is committed to organizing impactful initiatives that empower Black youth and foster academic and personal excellence.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "Morehouse Honor Roll ‘24-25",
+  //     "Morehouse Deans list ‘24-25",
+  //     "Morehouse top ranking student ‘24-25",
+  //     "Top or outstanding math student award ‘24"
+  //   ],
+  //   education: "Morehouse, Sophomore, Business Finance (Minor in data science and analytics)",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/cameron8.17/profilecard/?igsh=MmUyeGl1ODQydThp",
+  //     x: "https://x.com/cameronbarnes84?s=21&t=_zB1V8-zRLHT__lK1y6b0g",
+  //     linkedIn: "https://www.linkedin.com/in/victor-cam-barnes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  //     facebook: "None",
+  //     email: "Victor.barnes@morehouse.edu"
+  //   },
+  //   gallery: [
+  //     "/cameron.png",
+  //   ]
+  // },
   // chelsea mendes (updated)
   {
     id: "chelsea-mendes",
@@ -293,65 +293,65 @@ const leaders = [
     ]
   },
   // Theron White (updated)
-  {
-    id: "theron-white",
-    image: "/theron.png",
-    name: "Theron White",
-    title: "Community Advocacy Strategist",
-    status: "supportTeam",
-    department: "Programming & Events",
-    longBio: "Theron White is a rising junior at Morehouse College majoring in Political Science. As Community Advocacy Strategist for BYEN, he is passionate about social justice, community engagement, and empowering marginalized voices through education and advocacy.",
-    empowermentQuote: "",
-    achievements: [
-      "Class of 1979 Endowed Scholarship",
-      "The Rodney Thaxton Justice Scholarship Award",
-      "Top Ranking Morehouse Scholar",
-      "Deans list student"
-    ],
-    education: "Morehouse College, Rising Junior, Political Science",
-    socialMedia: {
-      ig: "https://www.instagram.com/theronlw?igsh=Y3dicjExZ2szanRx&utm_source=qr",
-      x: "None",
-      linkedIn: "https://www.linkedin.com/in/theron-white-70a16b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "None",
-      email: "theronl.white@gmail.com"
-    },
-    gallery: [
-      "/theron.png"
-    ]
-  },
+  // {
+  //   id: "theron-white",
+  //   image: "/theron.png",
+  //   name: "Theron White",
+  //   title: "Community Advocacy Strategist",
+  //   status: "director",
+  //   department: "Programming & Events",
+  //   longBio: "Theron White is a rising junior at Morehouse College majoring in Political Science. As Community Advocacy Strategist for BYEN, he is passionate about social justice, community engagement, and empowering marginalized voices through education and advocacy.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "Class of 1979 Endowed Scholarship",
+  //     "The Rodney Thaxton Justice Scholarship Award",
+  //     "Top Ranking Morehouse Scholar",
+  //     "Deans list student"
+  //   ],
+  //   education: "Morehouse College, Rising Junior, Political Science",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/theronlw?igsh=Y3dicjExZ2szanRx&utm_source=qr",
+  //     x: "None",
+  //     linkedIn: "https://www.linkedin.com/in/theron-white-70a16b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  //     facebook: "None",
+  //     email: "theronl.white@gmail.com"
+  //   },
+  //   gallery: [
+  //     "/theron.png"
+  //   ]
+  // },
   // Jalen Fortson (updated)
-  {
-    id: "jalen-fortson",
-    image: "/jalen.png",
-    name: "Jalen Fortson",
-    title: "Event Operations Manager",
-    status: "supportTeam",
-    department: "Programming & Events",
-    longBio: "Jalen Fortson is a sophomore Biology major at Morehouse College. As Event Operations Manager for BYEN, he is dedicated to organizing events that empower and engage the community, and is committed to uplifting others through education and service.",
-    empowermentQuote: "",
-    achievements: [
-      "I like what’s on the website now"
-    ],
-    education: "Morehouse College, Sophomore, Biology",
-    socialMedia: {
-      ig: "https://www.instagram.com/official.jf_/profilecard/?igsh=YzR3eWYxaW55enln",
-      x: "None",
-      linkedIn: "https://www.linkedin.com/in/jalen-fortson-a11bb6332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "None",
-      email: "Jalenfortson31@gmail.com"
-    },
-    gallery: [
-      "/jalen.png"
-    ]
-  },
+  // {
+  //   id: "jalen-fortson",
+  //   image: "/jalen.png",
+  //   name: "Jalen Fortson",
+  //   title: "Event Operations Manager",
+  //   status: "director",
+  //   department: "Programming & Events",
+  //   longBio: "Jalen Fortson is a sophomore Biology major at Morehouse College. As Event Operations Manager for BYEN, he is dedicated to organizing events that empower and engage the community, and is committed to uplifting others through education and service.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "I like what’s on the website now"
+  //   ],
+  //   education: "Morehouse College, Sophomore, Biology",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/official.jf_/profilecard/?igsh=YzR3eWYxaW55enln",
+  //     x: "None",
+  //     linkedIn: "https://www.linkedin.com/in/jalen-fortson-a11bb6332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  //     facebook: "None",
+  //     email: "Jalenfortson31@gmail.com"
+  //   },
+  //   gallery: [
+  //     "/jalen.png"
+  //   ]
+  // },
   // New leaders from spreadsheet
   {
     id: "zendo-rouson",
     image: "/gallery/IMG_4334 - Katanaz.jpeg",
     name: "Zendo Rouson",
     title: "Photographer/Graphic Designer",
-    status: "supportTeam",
+    status: "director",
     department: "Marketing & Branding",
     longBio: "Zendo Rouson is a sophomore Psychology major at Morehouse College, serving as Photographer and Graphic Designer for BYEN. He is passionate about creative media and marketing, and brings experience in brand management and media development to the team.",
     empowermentQuote: "",
@@ -379,7 +379,7 @@ const leaders = [
     name: "Olivia Gray",
     title: "National Associate Director of Career & Academic Success",
     status: "director",
-    department: "Member Relations",
+    department: "Member Experience",
     longBio: "Olivia Gray is a third-year Elementary Education major at Spelman College. As National Associate Director of Career & Academic Success, she is dedicated to academic achievement and career development, and is recognized for her leadership and community impact.",
     empowermentQuote: "",
     achievements: [
@@ -408,7 +408,7 @@ const leaders = [
     image: "/Headshot - De'Von Lewis.jpg",
     name: "De'Von Lewis",
     title: "Public Relations Specialist",
-    status: "supportTeam",
+    status: "director",
     department: "Executive Leadership",
     longBio: "De'Von Lewis is a senior Business Administration major at Morehouse College. As Public Relations Specialist for BYEN, he is committed to community engagement, mentorship, and empowering others through leadership and service.",
     empowermentQuote: "",
@@ -432,39 +432,39 @@ const leaders = [
       "/gallery/IMG_0007 - De'Von Lewis.jpeg"
     ]
   },
-  {
-    id: "rai-elle-ingram",
-    image: "/gallery/DeWatermark.ai_1741141069199 - Rai Brown.jpg",
-    name: "Rai-Elle Ingram",
-    title: "Social Justice & Advocacy Event Lead",
-    status: "supportTeam",
-    department: "Programming & Events",
-    longBio: "Rai-Elle Ingram is an incoming freshman at Spelman College majoring in Sociology (Pre-Med/Pre-Nursing). As Social Justice & Advocacy Event Lead for BYEN, she is passionate about youth wellness, civic engagement, and community empowerment.",
-    empowermentQuote: "",
-    achievements: [
-      "NYC Student Wellness Advocates (February 2024)",
-      "2x Annual Community Book bag + School Supplies Giveaway, The Elle Foundation (Co-Founder)",
-      "Bronx Youth Council - Working alongside the Borough President, Vanessa Gibson",
-      "Black Votes Matter Volunteer (January 2025 - Present)"
-    ],
-    education: "Spelman College, (Incoming) Freshman, Sociology (Pre-Med/Pre-Nursing)",
-    socialMedia: {
-      ig: "https://www.instagram.com/beautifulblackscholar_/",
-      x: "None",
-      linkedIn: "https://www.linkedin.com/in/rai-elle-ingram-219367339/",
-      facebook: "None",
-      email: "raibrown6@gmail.com / raielleingram@spelman.edu"
-    },
-    gallery: [
-      "/gallery/DeWatermark.ai_1741141069199 - Rai Brown.jpg"
-    ]
-  },
+  // {
+  //   id: "rai-elle-ingram",
+  //   image: "/gallery/DeWatermark.ai_1741141069199 - Rai Brown.jpg",
+  //   name: "Rai-Elle Ingram",
+  //   title: "Social Justice & Advocacy Event Lead",
+  //   status: "director",
+  //   department: "Programming & Events",
+  //   longBio: "Rai-Elle Ingram is an incoming freshman at Spelman College majoring in Sociology (Pre-Med/Pre-Nursing). As Social Justice & Advocacy Event Lead for BYEN, she is passionate about youth wellness, civic engagement, and community empowerment.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "NYC Student Wellness Advocates (February 2024)",
+  //     "2x Annual Community Book bag + School Supplies Giveaway, The Elle Foundation (Co-Founder)",
+  //     "Bronx Youth Council - Working alongside the Borough President, Vanessa Gibson",
+  //     "Black Votes Matter Volunteer (January 2025 - Present)"
+  //   ],
+  //   education: "Spelman College, (Incoming) Freshman, Sociology (Pre-Med/Pre-Nursing)",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/beautifulblackscholar_/",
+  //     x: "None",
+  //     linkedIn: "https://www.linkedin.com/in/rai-elle-ingram-219367339/",
+  //     facebook: "None",
+  //     email: "raibrown6@gmail.com / raielleingram@spelman.edu"
+  //   },
+  //   gallery: [
+  //     "/gallery/DeWatermark.ai_1741141069199 - Rai Brown.jpg"
+  //   ]
+  // },
   {
     id: "travis-parrish",
     image: "/gallery/P1250750 - Travis Parrish.jpeg",
     name: "Travis Parrish",
     title: "Manager",
-    status: "supportTeam",
+    status: "director",
     department: "Executive Leadership",
     longBio: "Travis Parrish is a sophomore Business Administration major at Morehouse College. As Manager for BYEN, he is dedicated to supporting executive leadership and organizational success through his role in the support team.",
     empowermentQuote: "",
@@ -488,40 +488,40 @@ const leaders = [
       "/gallery/P1250940 - Travis Parrish.jpeg"
     ]
   },
-  {
-    id: "jason-adams",
-    image: "/gallery/IMG_6882 - Jason Adams.jpeg",
-    name: "Jason Adams",
-    title: "Social Events Lead",
-    status: "supportTeam",
-    department: "Programming & Events",
-    longBio: "Jason Adams is a senior Accounting major at Dillard University. As Social Events Lead for BYEN, he is committed to creating engaging events and building a vibrant community that celebrates Black excellence and student achievement.",
-    empowermentQuote: "",
-    achievements: [
-      "Mister Junior Elect",
-      "TMCF Scholar",
-      "2x Andrew Young Emerging Leader",
-      "Bloomberg HBCU Fellow"
-    ],
-    education: "Dillard University, Senior, Accounting",
-    socialMedia: {
-      ig: "https://www.instagram.com/mistrrwestwood?igsh=MXRrZGdrdW5ydDJsbg%3D%3D&utm_source=qr",
-      x: "None",
-      linkedIn: "https://www.linkedin.com/in/jason-adams-",
-      facebook: "None",
-      email: "jason.adams@dillard.edu"
-    },
-    gallery: [
-      "/gallery/IMG_6882 - Jason Adams.jpeg",
-      "/gallery/IMG_6241 - Jason Adams.jpeg"
-    ]
-  },
+  // {
+  //   id: "jason-adams",
+  //   image: "/gallery/IMG_6882 - Jason Adams.jpeg",
+  //   name: "Jason Adams",
+  //   title: "Social Events Lead",
+  //   status: "director",
+  //   department: "Programming & Events",
+  //   longBio: "Jason Adams is a senior Accounting major at Dillard University. As Social Events Lead for BYEN, he is committed to creating engaging events and building a vibrant community that celebrates Black excellence and student achievement.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "Mister Junior Elect",
+  //     "TMCF Scholar",
+  //     "2x Andrew Young Emerging Leader",
+  //     "Bloomberg HBCU Fellow"
+  //   ],
+  //   education: "Dillard University, Senior, Accounting",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/mistrrwestwood?igsh=MXRrZGdrdW5ydDJsbg%3D%3D&utm_source=qr",
+  //     x: "None",
+  //     linkedIn: "https://www.linkedin.com/in/jason-adams-",
+  //     facebook: "None",
+  //     email: "jason.adams@dillard.edu"
+  //   },
+  //   gallery: [
+  //     "/gallery/IMG_6882 - Jason Adams.jpeg",
+  //     "/gallery/IMG_6241 - Jason Adams.jpeg"
+  //   ]
+  // },
   {
     id: "genesis-price",
     image: "/gallery/IMG_3010 - Genesis Price.jpeg",
     name: "Genesis Price",
-    title: "Community Impact Event Lead",
-    status: "supportTeam",
+    title: "Program Coordinator",
+    status: "director",
     department: "Programming & Events",
     longBio: "Genesis Price is a junior at Spelman College majoring in Sociology and Pre-Law. As Community Impact Event Lead for BYEN, she is passionate about social justice, leadership, and empowering others through impactful programming.",
     empowermentQuote: "",
@@ -575,7 +575,7 @@ const leaders = [
     image: "/gallery/60DCE5C3-76AA-4B40-8C90-5DDC7A4F7CA6 - Solana Escoffery.jpeg",
     name: "Solana Escoffery",
     title: "Creative Media & Marketing Team Member",
-    status: "supportTeam",
+    status: "director",
     department: "Marketing & Branding",
     longBio: "Solana Escoffery is a junior at Spelman College majoring in Theatre and Performance. As a Creative Media & Marketing Team Member for BYEN, she brings creativity and leadership to support the organization's mission and empower Black youth.",
     empowermentQuote: "",
@@ -597,68 +597,68 @@ const leaders = [
       "/gallery/60DCE5C3-76AA-4B40-8C90-5DDC7A4F7CA6 - Solana Escoffery.jpeg"
     ]
   },
-  {
-    id: "tobias-brown",
-    image: "/gallery/IMG_7828 - Tobias Brown.jpeg",
-    name: "Tobias Brown",
-    title: "Community Advocacy Strategist",
-    status: "supportTeam",
-    department: "Programming & Events",
-    longBio: "Tobias Brown is a graduate of Morehouse College (C/O 25) with a background in Political Science Pre-Law. As Community Advocacy Strategist for BYEN, he is committed to social justice, advocacy, and supporting the next generation of leaders through policy work and community engagement.",
-    empowermentQuote: "",
-    achievements: [
-      "Featured in National Documentary 'Thriving: Black Men in Higher Education' by Roadtrip Nation",
-      "Senior Policy Advisor to GA State Rep. LC Myles, Jr., shaping legislative strategy and advancing policy priorities",
-      "Fellowship Coordinator at Men4Choice, leading advocacy for reproductive justice and organizing statewide community conversations",
-      "Congressional Campaign Manager for Carlos Moore's campaign for Congress (GA-13), overseeing field, events, and outreach",
-      "Researcher & Conference Speaker - researched Black male teens' social media use for career exploration and presented at JFF Horizons Conference"
-    ],
-    education: "Graduate of Morehouse College C/O 25, Political Science Pre Law",
-    socialMedia: {
-      ig: "https://www.instagram.com/tobiasbrown._",
-      x: "None",
-      linkedIn: "http://linkedin.com/in/tobiasmbrown",
-      facebook: "None",
-      email: "tobiasmbrown06@gmail.com"
-    },
-    gallery: [
-      "/gallery/IMG_7828 - Tobias Brown.jpeg"
-    ]
-  },
-  {
-    id: "tylar-sparks",
-    image: "/gallery/IMG_3599 - Tylar Sparks.jpeg",
-    name: "Tylar Sparks",
-    title: "Co- Event Lead for STEM and Wellness",
-    status: "supportTeam",
-    department: "Programming & Events",
-    longBio: "Tylar Sparks is a sophomore at Spelman College majoring in Computer Science & Computer Engineering. As Co-Event Lead for STEM and Wellness at BYEN, she is passionate about technology, innovation, and creating opportunities for Black youth in STEM.",
-    empowermentQuote: "",
-    achievements: [
-      "Grew up in Japan for majority of my life",
-      "Presidential Scholar at Spelman College",
-      "Developing a Black Hair App",
-      "Chip Design Intern at Purdue University's School of Engineering"
-    ],
-    education: "Spelman College, Sophomore, Computer Science & Computer Engineering",
-    socialMedia: {
-      ig: "https://www.instagram.com/tylarsparks?igsh=MWVxMGd0bTVudXlvaw%3D%3D&utm_source=qr",
-      x: "None",
-      linkedIn: "https://www.linkedin.com/in/tylarsparks?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      facebook: "None",
-      email: "tylarsparks06@gmail.com"
-    },
-    gallery: [
-      "/gallery/IMG_3599 - Tylar Sparks.jpeg",
-      "gallery/IMG_3616 - Tylar Sparks.jpeg"
-    ]
-  },
+  // {
+  //   id: "tobias-brown",
+  //   image: "/gallery/IMG_7828 - Tobias Brown.jpeg",
+  //   name: "Tobias Brown",
+  //   title: "Community Advocacy Strategist",
+  //   status: "director",
+  //   department: "Programming & Events",
+  //   longBio: "Tobias Brown is a graduate of Morehouse College (C/O 25) with a background in Political Science Pre-Law. As Community Advocacy Strategist for BYEN, he is committed to social justice, advocacy, and supporting the next generation of leaders through policy work and community engagement.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "Featured in National Documentary 'Thriving: Black Men in Higher Education' by Roadtrip Nation",
+  //     "Senior Policy Advisor to GA State Rep. LC Myles, Jr., shaping legislative strategy and advancing policy priorities",
+  //     "Fellowship Coordinator at Men4Choice, leading advocacy for reproductive justice and organizing statewide community conversations",
+  //     "Congressional Campaign Manager for Carlos Moore's campaign for Congress (GA-13), overseeing field, events, and outreach",
+  //     "Researcher & Conference Speaker - researched Black male teens' social media use for career exploration and presented at JFF Horizons Conference"
+  //   ],
+  //   education: "Graduate of Morehouse College C/O 25, Political Science Pre Law",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/tobiasbrown._",
+  //     x: "None",
+  //     linkedIn: "http://linkedin.com/in/tobiasmbrown",
+  //     facebook: "None",
+  //     email: "tobiasmbrown06@gmail.com"
+  //   },
+  //   gallery: [
+  //     "/gallery/IMG_7828 - Tobias Brown.jpeg"
+  //   ]
+  // },
+  // {
+  //   id: "tylar-sparks",
+  //   image: "/gallery/IMG_3599 - Tylar Sparks.jpeg",
+  //   name: "Tylar Sparks",
+  //   title: "Co- Event Lead for STEM and Wellness",
+  //   status: "director",
+  //   department: "Programming & Events",
+  //   longBio: "Tylar Sparks is a sophomore at Spelman College majoring in Computer Science & Computer Engineering. As Co-Event Lead for STEM and Wellness at BYEN, she is passionate about technology, innovation, and creating opportunities for Black youth in STEM.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "Grew up in Japan for majority of my life",
+  //     "Presidential Scholar at Spelman College",
+  //     "Developing a Black Hair App",
+  //     "Chip Design Intern at Purdue University's School of Engineering"
+  //   ],
+  //   education: "Spelman College, Sophomore, Computer Science & Computer Engineering",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/tylarsparks?igsh=MWVxMGd0bTVudXlvaw%3D%3D&utm_source=qr",
+  //     x: "None",
+  //     linkedIn: "https://www.linkedin.com/in/tylarsparks?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  //     facebook: "None",
+  //     email: "tylarsparks06@gmail.com"
+  //   },
+  //   gallery: [
+  //     "/gallery/IMG_3599 - Tylar Sparks.jpeg",
+  //     "gallery/IMG_3616 - Tylar Sparks.jpeg"
+  //   ]
+  // },
   // {
   //   id: "rai-elle-ingram-team-lead",
   //   image: "/default.jpg",
   //   name: "Rai-Elle Ingram",
   //   title: "Team Lead for Social Justice & Advocacy",
-  //   status: "supportTeam",
+  //   status: "director",
   //   department: "Programming & Events",
   //   longBio: "Rai-Elle Ingram is a freshman at Spelman College majoring in Sociology (Pre-Med). As Team Lead for Social Justice & Advocacy at BYEN, she is dedicated to youth advocacy, wellness, and unifying her community through service.",
   //   empowermentQuote: "",
@@ -712,9 +712,9 @@ const leaders = [
     id: "chloe-dasher",
     image: "/Chloe_Dasher.jpeg",
     name: "Chloe Dasher",
-    title: "Member Relations Resource Specialist",
-    status: "supportTeam",
-    department: "Member Relations",
+    title: "Resource & Support Manager",
+    status: "director",
+    department: "Member Experience",
     longBio: "Chloe Dasher is a sophomore at Spelman College majoring in Elementary Education. As Member Relations Resource Specialist for BYEN, she brings her passion for community service and academic excellence to support member engagement and development.",
     empowermentQuote: "",
     achievements: [
@@ -739,8 +739,8 @@ const leaders = [
     id: "jibri-wright",
     image: "/IMG_0386 - Jibri Wright.jpeg",
     name: "Jibri Wright",
-    title: "Community Service Lead",
-    status: "supportTeam",
+    title: "National Events & Partnerships Lead",
+    status: "director",
     department: "Programming & Events",
     longBio: "Jibri Wright is a junior at Morehouse College majoring in Business Finance. As Community Service Lead for BYEN, he brings his entrepreneurial spirit and commitment to community service to lead impactful programming and events.",
     empowermentQuote: "",
@@ -794,7 +794,7 @@ const leaders = [
     image: "/Jabari.jpg",
     name: "Jabari Morrison",
     title: "Marketing Lead",
-    status: "supportTeam",
+    status: "director",
     department: "Marketing & Branding",
     longBio: "Jabari Morrison is a freshman at University of West Georgia majoring in Mass Communications. As Marketing Lead for BYEN, he brings his creative vision and storytelling expertise to enhance the organization's brand presence and marketing initiatives.",
     empowermentQuote: "",
@@ -821,7 +821,7 @@ const leaders = [
     image: "/IMG_3774 - Joseph Collins.jpeg",
     name: "Joseph Collins",
     title: "Brand Strategist",
-    status: "supportTeam",
+    status: "director",
     department: "Marketing & Branding",
     longBio: "Joseph Collins is a freshman at University of West Georgia majoring in Computing. As Brand Strategist for BYEN, he combines his technical skills with creative vision to develop strategic branding initiatives and creative solutions.",
     empowermentQuote: "",
@@ -846,7 +846,7 @@ const leaders = [
     id: "khalil-jackson",
     image: "/DSC00276 - Khalil Jackson.jpeg",
     name: "Khalil Jackson",
-    title: "National Director of Strategic Initiatives and Policy",
+    title: "Deputy Executive Director of Strategic Initiatives",
     status: "director",
     department: "Executive Leadership",
     longBio: "Khalil Jackson is a first-year graduate student at Emory University, having graduated from Clark Atlanta University in 2025 with a degree in Political Science. As Director of Strategic Initiatives and Policy for BYEN, he brings extensive experience in public policy, community development, and leadership.",
@@ -877,7 +877,7 @@ const leaders = [
     image: "/Jayden.jpeg",
     name: "Eloy Jayden Perez 'Mayol",
     title: "Creative Media Specialist",
-    status: "supportTeam",
+    status: "director",
     department: "Marketing & Branding",
     longBio: "Eloy Jayden Perez 'Mayol is a talented creative professional who specializes in film and music production. As Creative Media Specialist for BYEN, he brings his award-winning filmmaking skills and musical talents to support the organization's creative initiatives and media production.",
     empowermentQuote: "Helping with BYEN's start up will always be such a meaningful achievement and experience for me. I thrive and love everything I do in regards to film and music.",
@@ -899,31 +899,56 @@ const leaders = [
       "/Jayden.jpeg"
     ]
   },
-  {
-    id: "oceane-galamo",
-    image: "/Oceane_Galamo.jpeg",
-    name: "Oceane Galamo",
-    title: "Community Outreach Specialist",
-    status: "supportTeam",
-    department: "Member Relations",
-    longBio: "Oceane Galamo is a dedicated student leader at Howard University with a strong commitment to educational equity and community service. As Community Outreach Specialist for BYEN, she brings her experience in advocacy and community organizing to expand the network's impact and reach.",
-    empowermentQuote: "",
+  // {
+  //   id: "oceane-galamo",
+  //   image: "/Oceane_Galamo.jpeg",
+  //   name: "Oceane Galamo",
+  //   title: "Community Outreach Specialist",
+  //   status: "director",
+  //   department: "Member Experience",
+  //   longBio: "Oceane Galamo is a dedicated student leader at Howard University with a strong commitment to educational equity and community service. As Community Outreach Specialist for BYEN, she brings her experience in advocacy and community organizing to expand the network's impact and reach.",
+  //   empowermentQuote: "",
+  //   achievements: [
+  //     "Vice President of the Petey Greene Program at Howard University, supporting educational access for incarcerated individuals",
+  //     "Co-founded The Crowned Path, an initiative promoting HBCU awareness for Black students in Montgomery County, Maryland",
+  //     "Interned with advocacy organizations including the NAACP and Brothers in Law",
+  //     "Regular volunteer at local food banks combating food insecurity"
+  //   ],
+  //   education: "Howard University",
+  //   socialMedia: {
+  //     ig: "https://www.instagram.com/oceanegalamo?igsh=MWd3M3ZnbHE5dDZ1Zw%3D%3D&utm_source=qr",
+  //     x: "N/A",
+  //     linkedIn: "https://www.linkedin.com/in/oceane-galamo05?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  //     facebook: "N/A",
+  //     email: "galamooceane@gmail.com"
+  //   },
+  //   gallery: [
+  //     "/Oceane_Galamo.jpeg"
+  //   ]
+  // },
+   {
+    id: "isac-banks-smith",
+    image: "/isac-banks-smith.jpeg",
+    name: "Isac Banks-Smith",
+    title: "National Director of Finance & Development",
+    status: "director",
+    department: "Finance & Development",
+    longBio: "Isaac Banks-Smith is a student at Emory University's Goizueta Business School pursuing a Bachelor of Business Administration with concentration in Organizational Management alongside a Master of Professional Accounting. Isaac is also an incoming tax consulting intern at Deloitte LLP. With a 3.87 GPA and a passion for ethical leadership, Isaac combines academic excellence with community service and mentorship to advance opportunities for underrepresented voices in business. ",
+    empowermentQuote: "Empowering Black youth means creating the space, access, and belief necessary for them to see themselves as limitless. It’s not just about providing resources. It’s about reshaping narratives, dismantling barriers, and showing young Black men and women that leadership, innovation, and excellence already exist within them. Empowerment is when mentorship, education, and representation intersect to turn potential into purpose. For me, it's a lifelong commitment to lifting as I climb and building bridges of opportunity so that the next generation doesn't have to cross the same waters alone.",
     achievements: [
-      "Vice President of the Petey Greene Program at Howard University, supporting educational access for incarcerated individuals",
-      "Co-founded The Crowned Path, an initiative promoting HBCU awareness for Black students in Montgomery County, Maryland",
-      "Interned with advocacy organizations including the NAACP and Brothers in Law",
-      "Regular volunteer at local food banks combating food insecurity"
+      "", 
+
     ],
-    education: "Howard University",
+    education: "Emory University's Goizueta Business School",
     socialMedia: {
-      ig: "https://www.instagram.com/oceanegalamo?igsh=MWd3M3ZnbHE5dDZ1Zw%3D%3D&utm_source=qr",
+      ig: "https://www.instagram.com/smitty_wrldwide?igsh=eHJiMWYxb2F1YWFw",
       x: "N/A",
-      linkedIn: "https://www.linkedin.com/in/oceane-galamo05?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      linkedIn: "https://www.linkedin.com/in/isaac-banks-smith?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       facebook: "N/A",
-      email: "galamooceane@gmail.com"
+      email: "isaac@wearebyen.org"
     },
     gallery: [
-      "/Oceane_Galamo.jpeg"
+      "/isac-banks-smith.jpeg"
     ]
   }
 ]

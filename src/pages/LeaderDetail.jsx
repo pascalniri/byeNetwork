@@ -198,18 +198,18 @@ const LeaderDetail = () => {
               <a href={leader.socialMedia.ig} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
                 <RiInstagramFill size={20} />
               </a>
-              <a href={leader.socialMedia.x} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
+              {/* <a href={leader.socialMedia.x} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
                 <BsTwitterX size={18} />
-              </a>
+              </a> */}
               <a href={leader.socialMedia.linkedIn} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
                 <SiLinkedin size={18} />
               </a>
-              <a href={leader.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
+              {/* <a href={leader.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
                 <BsFacebook size={18} />
+              </a> */}
+              <a href={`mailto:${leader.socialMedia.email}`} className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
+                <MdMarkEmailUnread size={20} />
               </a>
-                              <a href={`mailto:${leader.socialMedia.email}`} className="bg-[#693e2d] text-white p-3 rounded-full hover:bg-[#985b3c] transition-colors">
-                  <MdMarkEmailUnread size={20} />
-                </a>
             </div>
           </motion.section>
 
