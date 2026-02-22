@@ -24,6 +24,8 @@ import NewsAndBlog from "./pages/NewsAndBlog";
 import WaysToPartner from "./pages/WaysToPartner";
 import BYENAccess from "./pages/BYENAccess";
 import Advert from "./components/Advert";
+import ScrollingAdvert from "./components/scrolling-advert";
+
 function TrackPageViews() {
   const location = useLocation();
 
@@ -43,6 +45,7 @@ function App() {
   return (
     <BrowserRouter>
     <TrackPageViews />
+    <ScrollingAdvert />
     <Advert />
       <Navbar />
       <Routes>
