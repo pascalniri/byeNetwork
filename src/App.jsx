@@ -23,6 +23,7 @@ import CivicEngagement from "./pages/CivicEngagement";
 import NewsAndBlog from "./pages/NewsAndBlog";
 import WaysToPartner from "./pages/WaysToPartner";
 import BYENAccess from "./pages/BYENAccess";
+import Advert from "./components/Advert";
 function TrackPageViews() {
   const location = useLocation();
 
@@ -42,6 +43,7 @@ function App() {
   return (
     <BrowserRouter>
     <TrackPageViews />
+    <Advert />
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />

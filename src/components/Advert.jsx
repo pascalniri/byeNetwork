@@ -103,21 +103,21 @@ export default function Advert() {
                         <div className="space-y-2">
                             <motion.div 
                                 variants={itemVariants}
-                                className="inline-block px-3 py-1 bg-amber-900/30 text-amber-300 text-xs font-medium rounded-full mb-2"
+                                className="inline-block px-3 py-1 bg-amber-900/30 text-amber-300 text-xs font-medium rounded-full mb-2 uppercase tracking-wider"
                             >
-                                EXCLUSIVE OPPORTUNITY
+                                Upcoming Event • Feb 28th
                             </motion.div>
                             <motion.h2 
                                 variants={itemVariants}
-                                className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-100 to-amber-200 bg-clip-text text-transparent"
+                                className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-amber-100 to-amber-200 bg-clip-text text-transparent leading-tight"
                             >
-                                Apply to Become a Member
+                                Teach To Empower: Law & Public Policy Forum
                             </motion.h2>
                             <motion.p 
                                 variants={itemVariants}
-                                className="text-amber-100/90 leading-relaxed text-lg"
+                                className="text-amber-100/90 leading-relaxed text-base"
                             >
-
+                                Connecting Future Leaders to Careers, Insights, and Opportunities in Law and Policy
                             </motion.p>
                         </div>
                         
@@ -126,7 +126,7 @@ export default function Advert() {
                             className="pt-2"
                         >
                             <motion.a
-                                href="https://form.jotform.com/251785009779067"
+                                href="https://givebutter.com/CmZwOc"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ 
@@ -136,7 +136,7 @@ export default function Advert() {
                                 whileTap={{ scale: 0.98 }}
                                 className="inline-block w-full text-center bg-gradient-to-r from-amber-400 to-amber-500 text-[#3a241a] hover:text-[#2a1a12] font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-amber-500/30"
                             >
-                                Apply Now!
+                                RSVP Now
                             </motion.a>
                         </motion.div>
                         
