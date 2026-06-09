@@ -167,7 +167,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`font-montserrat text-sm sm:text-[14px] bg-white/95 backdrop-blur-[10px] border-b border-gray-200/60 fixed w-full top-[44px] z-[100] transition-all duration-300 ease-in-out shadow-lg ${!isVisible ? '-translate-y-[calc(100%+44px)]' : 'translate-y-0'}`}>
+      <nav className={`font-montserrat text-sm sm:text-[14px] bg-white/95 backdrop-blur-[10px] border-b border-gray-200/60 fixed w-full top-0 z-[100] transition-all duration-300 ease-in-out shadow-lg ${!isVisible ? '-translate-y-full' : 'translate-y-0'}`}>
         <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-center justify-between w-full">
           {/* Logo */}
           <a href="/" className="w-[100px] h-[100px] flex items-center justify-center">
