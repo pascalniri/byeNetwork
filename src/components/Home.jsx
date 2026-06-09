@@ -64,16 +64,13 @@ const BackgroundSlideshow = () => {
         <motion.div
           key={index}
           className="absolute inset-0 w-full h-full"
-          initial={{ opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0 }}
           animate={{ 
-            opacity: index === currentSlide ? 1 : 0,
-            scale: index === currentSlide ? 1 : 1.1,
-            filter: index === currentSlide ? "blur(0px)" : "blur(2px)"
+            opacity: index === currentSlide ? 1 : 0
           }}
           transition={{ 
             duration: 1.5, 
-            ease: [0.43, 0.13, 0.23, 0.96],
-            delay: index === currentSlide ? 0 : 0.2
+            ease: "easeInOut"
           }}
         >
           <img
@@ -89,16 +86,8 @@ const BackgroundSlideshow = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
       
       {/* Additional animated overlay for extra visual interest */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"
-        animate={{
-          opacity: [0.3, 0.1, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
+      <div
+        className="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent opacity-20"
       />
       
       {/* Slideshow indicators */}
@@ -164,7 +153,7 @@ const Home = () => {
       {/* Decorative elements - Only show on larger screens */}
       <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none select-none">
         {[...Array(5)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
             className="absolute rounded-full bg-amber-500/10"
             style={{
@@ -174,18 +163,7 @@ const Home = () => {
               maxHeight: '400px',
               left: `${Math.random() * 90}%`, // avoid overflow
               top: `${Math.random() * 90}%`, // avoid overflow
-              filter: 'blur(40px)',
-              willChange: 'transform'
-            }}
-            animate={{
-              y: [0, Math.random() * 10 - 5, 0],
-              x: [0, Math.random() * 10 - 5, 0],
-            }}
-            transition={{
-              duration: 20 + Math.random() * 20,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut'
+              filter: 'blur(40px)'
             }}
           />
         ))}
