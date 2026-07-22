@@ -11,18 +11,15 @@ import Partners from "./pages/Partners";
 import Events from "./pages/Events";
 import Mentorship from "./pages/Mentorship";
 import AllAbout from "./pages/AllAbout";
-import Foundation from "./pages/Foundation";
 import Gallery from "./pages/Gallery";
 import HistoryAndBackground from "./pages/HistoryAndBackground";
 import { initGA, trackPageView } from "./analytics";
-import BoldAccelerator from "./pages/BoldAccelerator";
 import StartChapter from "./pages/StartChapter";
 import Donors from "./pages/Donors";
-import Internship from "./pages/Internship";
-import CivicEngagement from "./pages/CivicEngagement";
 import NewsAndBlog from "./pages/NewsAndBlog";
 import WaysToPartner from "./pages/WaysToPartner";
-import BYENAccess from "./pages/BYENAccess";
+import YoungBlackAndSafe from "./pages/YoungBlackAndSafe";
+import InThePress from "./pages/InThePress";
 import Advert from "./components/Advert";
 function TrackPageViews() {
   const location = useLocation();
@@ -54,17 +51,14 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/mentorship" element={<Mentorship />} />
         <Route path="/about" element={<AllAbout />} />
-        <Route path="/foundation" element={<Foundation />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/history-and-background" element={<HistoryAndBackground />} />
-        <Route path="/bold-accelerator" element={<BoldAccelerator />} />
         <Route path="/start-chapter" element={<StartChapter />} />
         <Route path="/donors-and-sponsors" element={<Donors />} />
-        <Route path="/BYEN-national-internship" element={<Internship />} />
-        <Route path="/boots-on-the-ground" element={<CivicEngagement />} />
         <Route path="/news-and-blog" element={<NewsAndBlog />} />
         <Route path="/become-partner" element={<WaysToPartner />} />
-        <Route path="/byen-access" element={<BYENAccess />} />
+        <Route path="/young-black-and-safe" element={<YoungBlackAndSafe />} />
+        <Route path="/in-the-press" element={<InThePress />} />
       </Routes>
       <Footer />
     </BrowserRouter>

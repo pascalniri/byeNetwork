@@ -72,8 +72,14 @@ const Leadership = () => {
       description: "Creates and maintains BYEN's brand identity, manages communications, and promotes our mission and initiatives."
     },
     {
+      id: "communication",
+      name: "Communication",
+      icon: <FaPaintBrush className="text-2xl" />,
+      description: "Drives visual strategy, design, and brand communication across all platforms."
+    },
+    {
       id: "memberRelations",
-      name: "Member Experience",
+      name: "Membership & Engagement",
       icon: <FaUsers className="text-2xl" />,
       description: "Responsible for member engagement, recruitment, and ensuring a positive experience for all BYEN members."
     },
@@ -83,8 +89,18 @@ const Leadership = () => {
       icon: <FaCalendarAlt className="text-2xl" />,
       description: "Plans and executes all BYEN events, workshops, and initiatives to fulfill our mission and engage our community."
     },
-
-
+    {
+      id: "policy",
+      name: "Policy & Advocacy",
+      icon: <FaUniversity className="text-2xl" />,
+      description: "Develops initiatives that empower youth through violence prevention, policy formulation, and strategic advocacy."
+    },
+    {
+      id: "chapter",
+      name: "Chapter Development",
+      icon: <FaStar className="text-2xl" />,
+      description: "Supports local chapter growth, operational guidance, and leadership development."
+    }
   ];
 
   // Set selected person when role changes
