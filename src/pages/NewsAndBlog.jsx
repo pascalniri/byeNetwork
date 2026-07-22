@@ -5,41 +5,21 @@ import { FiArrowRight, FiCalendar, FiUser, FiTag, FiX } from "react-icons/fi";
 import { MdOutlineHorizontalRule } from "react-icons/md";
 
 const NewsAndBlog = () => {
-  const [activeTab, setActiveTab] = useState('voices');
   const [selectedStory, setSelectedStory] = useState(null);
   const [activeCategory, setActiveCategory] = useState('all');
-
-  const news = [
-    {
-      id: 1,
-      image: "/atlanta-news.png",
-      title: "Black Youth Empowerment Network Featured on Atlanta News First",
-      description:
-        "Founder Jay'Shun Mathews recently appeared on Atlanta News First to represent the Black Youth Empowerment Network, using his voice to shed light on the ongoing gun violence epidemic affecting communities across the country. During the segment, he spoke passionately about the importance of youth-led advocacy and raised awareness about a powerful event organized by the Network in partnership with Students Demand Action. The event served as both a call to action and a safe space for young people to unite, heal, and demand change. Jay'Shun's appearance underscores BYEN's unwavering commitment to empowering Black youth to lead movements that address urgent social issues and reimagine a safer, more just future.",
-      link: "https://www.atlantanewsfirst.com/2025/03/29/local-leaders-address-gun-violence-awareness-morehouse-college-event/",
-    },
-    {
-      id: 2,
-      image: "/collegiate-chapters.jpg",
-      title: "Black Youth Empowerment Network Launches Collegiate Chapters",
-      description:
-        "BYEN is proud to announce the official launch of chapters at Morehouse College and the University of Georgia. This expansion marks a powerful next step in our mission to equip Black youth with the tools, community, and platform to lead with purpose and create lasting change. Each chapter will serve as a hub for leadership development, advocacy, and innovation and rooted in our core values of empowerment, collaboration, impact, and intentional leadership.",
-      link: "https://www.instagram.com/wearebyen/",
-    },
-  ];
 
   const byenVoicesSections = [
     {
       id: 'leadership-in-action',
       title: 'BYEN Leadership in Action',
       description: 'Highlights the work and initiatives led by BYEN\'s leadership team across various departments, providing insight into the behind-the-scenes efforts that drive the organization\'s impact.',
-      icon: <FiCalendar className="w-6 h-6" />,
+      icon: <FiCalendar className="w-5 h-5" />,
       color: 'from-[#693e2d] to-[#985b3c]',
       posts: [
         {
           title: "Behind the Vision: An Exclusive Interview with BYEN's Leadership",
           excerpt: "Maya Evans sits down with National Executive Director Jay'Shun Mathews to discuss the driving vision for BYEN's upcoming program year, leadership philosophy, and the exciting announcement of James Brazzell as Co-Founder...",
-          date: "Featured Story",
+          date: "August 2025",
           readTime: "12 min read",
           featured: true,
           fullStory: `Ever wonder what it takes to build a nationwide network of over 200 young Black leaders? Well, this is your chance to find out. We're pulling back the curtain to give you an exclusive look into the minds behind the Black Youth Empowerment Network (BYEN), a collective dedicated to empowering a community that's too often made to feel invisible.
@@ -100,14 +80,15 @@ This interview is more than just a conversation; it's a journey through the lead
       id: 'member-spotlights',
       title: 'Member Spotlights',
       description: 'Regular interview-style features highlighting BYEN members (outside of the leadership team). These stories explore their personal journeys, motivations, goals, and how BYEN supports their growth and leadership.',
-      icon: <FiUser className="w-6 h-6" />,
+      icon: <FiUser className="w-5 h-5" />,
       color: 'from-[#693e2d] to-[#985b3c]',
       posts: [
         {
           title: "Member Spotlights Coming Soon",
           excerpt: "Stay tuned for inspiring stories from our BYEN members...",
           date: "Coming Soon",
-          readTime: "5 min read"
+          readTime: "5 min read",
+          featured: false
         }
       ]
     },
@@ -115,14 +96,15 @@ This interview is more than just a conversation; it's a journey through the lead
       id: 'impact-stories',
       title: 'Impact Stories',
       description: 'Showcases BYEN\'s work in communities through the efforts of members addressing important issues and uplifting those who are often overlooked or underserved.',
-      icon: <FiArrowRight className="w-6 h-6" />,
+      icon: <FiArrowRight className="w-5 h-5" />,
       color: 'from-[#693e2d] to-[#985b3c]',
       posts: [
         {
           title: "Impact Stories Coming Soon",
           excerpt: "Discover how BYEN members are making a difference...",
           date: "Coming Soon",
-          readTime: "4 min read"
+          readTime: "4 min read",
+          featured: false
         }
       ]
     },
@@ -130,346 +112,292 @@ This interview is more than just a conversation; it's a journey through the lead
       id: 'perspectives-deep-dives',
       title: 'Perspectives x Deep Dives',
       description: 'Opinion pieces, essays, and in-depth articles that examine challenges and opportunities facing Black youth. These writings emphasize the importance of equal opportunity, social justice, and community engagement.',
-      icon: <FiTag className="w-6 h-6" />,
+      icon: <FiTag className="w-5 h-5" />,
       color: 'from-[#693e2d] to-[#985b3c]',
       posts: [
         {
           title: "Perspectives & Deep Dives Coming Soon",
           excerpt: "In-depth analysis and thought-provoking content...",
           date: "Coming Soon",
-          readTime: "8 min read"
+          readTime: "8 min read",
+          featured: false
         }
       ]
     }
   ];
+
+  const allPosts = byenVoicesSections.flatMap(section => 
+    section.posts.map(post => ({...post, categoryId: section.id, categoryTitle: section.title}))
+  );
+
+  const featuredPost = allPosts.find(p => p.featured) || allPosts[0];
+  const otherPosts = allPosts.filter(p => p !== featuredPost);
+  const displayedPosts = activeCategory === 'all' 
+    ? otherPosts 
+    : otherPosts.filter(p => p.categoryId === activeCategory);
 
   const container = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.4,
-        staggerChildren: 0.2,
+        delayChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const item = {
-    hidden: { y: 60, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.5,
       },
     },
   };
 
   return (
-    <div className="font-montserrat">
+    <div className="font-montserrat bg-[#FAFAFA] min-h-screen">
       {/* Hero Section */}
-      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[7rem]">
-      <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
-          <MdOutlineHorizontalRule />
-          <p className='uppercase'>NEWS & BLOG</p>
-          <MdOutlineHorizontalRule />
-      </h1>
-      <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-      Stay updated with the latest from BYEN and explore our youth-led storytelling platform
-      </p>
-  </div>
-    <div className="font-montserrat bg-white mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
-     
-      {/* Navigation Tabs */}
-      <div className="flex flex-col sm:flex-row justify-center mb-12 bg-gray-50 p-2 rounded-xl max-w-md mx-auto">
-        <button
-          onClick={() => setActiveTab('voices')}
-          className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mb-2 sm:mb-0 sm:mr-2 ${
-            activeTab === 'voices'
-              ? 'bg-[#693e2d] text-white shadow-lg'
-              : 'text-gray-600 hover:text-[#693e2d]'
-          }`}
-        >
-          BYEN Voices
-        </button>
-        <button
-          onClick={() => setActiveTab('media')}
-          className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-            activeTab === 'media'
-              ? 'bg-[#693e2d] text-white shadow-lg'
-              : 'text-gray-600 hover:text-[#693e2d]'
-          }`}
-        >
-          Media/Press
-        </button>
+      <div className="bg-white flex flex-col justify-center items-center py-[4rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat w-full mt-[7rem] border-b border-gray-200">
+        <h1 className="flex flex-row items-center gap-2 md:text-[60px] text-[#693e2d] text-[40px] font-bold tracking-tight">
+          BYEN VOICES
+        </h1>
+        <p className="text-[15px] md:text-[18px] mt-4 text-[#333] md:w-[60%] mx-auto font-medium">
+          A youth-led storytelling platform celebrating changemakers, amplifying lived experiences, and shedding light on issues impacting Black youth.
+        </p>
       </div>
 
-      {/* BYEN Voices Tab */}
-      {activeTab === 'voices' && (
-        <div>
-          {/* BYEN Voices Introduction */}
-          <Fade>
-            <div className="bg-gradient-to-br from-[#693e2d]/5 to-[#985b3c]/5 rounded-2xl p-8 mb-16 border border-[#693e2d]/10">
-              <h2 className="text-3xl font-bold text-[#693e2d] mb-6 text-center">
-                BYEN Voices
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-              BYEN Voices is a youth-led storytelling platform powered by the Black Youth Empowerment Network, created to celebrate changemakers, amplify lived experiences, and shed light on issues impacting Black youth. Rooted in BYEN’s mission of vision and impact, this blog is a space where service meets storytelling — where our writers use their voices to give back, build community, and drive meaningful conversations. Through features like Member Spotlights, Impact Stories, Deep Dives, and Leadership in Action, BYEN Voices is a living archive of our movement — for the youth, by the youth.              </p>
-            </div>
-          </Fade>
-
-          {/* Category Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button
-              onClick={() => setActiveCategory('all')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeCategory === 'all'
-                  ? 'bg-[#693e2d] text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-12">
+        {/* Featured Story */}
+        <Fade>
+          <div className="mb-16">
+            <h2 className="text-sm font-bold tracking-widest text-[#693e2d] uppercase mb-4 border-b-2 border-[#985b3c] inline-block pb-1">Featured Story</h2>
+            <div 
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col lg:flex-row hover:shadow-xl transition-shadow cursor-pointer"
+              onClick={() => featuredPost.fullStory && setSelectedStory(featuredPost)}
             >
-              All Categories
-            </button>
-            {byenVoicesSections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => setActiveCategory(section.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                  activeCategory === section.id
-                    ? 'bg-[#693e2d] text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {section.icon}
-                {section.title}
-              </button>
-            ))}
-          </div>
-
-          {/* Blog Content Grid */}
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.2 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-          >
-            {byenVoicesSections
-              .filter(section => activeCategory === 'all' || activeCategory === section.id)
-              .flatMap(section => 
-                section.posts.map((post, postIndex) => (
-                  <div
-                    key={`${section.id}-${postIndex}`}
-                    className={`${post.fullStory ? 'cursor-pointer hover:shadow-lg transition-all duration-300' : ''}`}
-                    onClick={() => post.fullStory && setSelectedStory(post)}
-                  >
-                    <div className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-                      {/* Blog Image */}
-                      <div className="h-48 bg-gradient-to-br from-[#693e2d]/10 to-[#985b3c]/10 flex items-center justify-center">
-                        {post.featured ? (
-                          <div className="text-center">
-                            <div className="w-16 h-16 bg-gradient-to-br from-[#693e2d] to-[#985b3c] rounded-full flex items-center justify-center mx-auto mb-3">
-                              <FiCalendar className="w-8 h-8 text-white" />
-                            </div>
-                            <span className="text-[#693e2d] font-semibold text-sm">Featured Story</span>
-                          </div>
-                        ) : (
-                          <div className="text-center">
-                            <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-3">
-                              <FiUser className="w-8 h-8 text-gray-400" />
-                            </div>
-                            <span className="text-gray-500 font-medium text-sm">Coming Soon</span>
-                          </div>
-                        )}
-                      </div>
-                      
-                      {/* Blog Content */}
-                      <div className="p-6">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-xs text-gray-500 uppercase tracking-wide font-medium">
-                            {section.title}
-                          </span>
-                          {post.featured && (
-                            <span className="bg-gradient-to-r from-[#693e2d] to-[#985b3c] text-white text-xs px-3 py-1 rounded-full font-medium">
-                              Featured
-                            </span>
-                          )}
-                        </div>
-                        
-                        <h4 className={`font-bold text-xl text-gray-900 mb-3 leading-tight ${post.fullStory ? 'hover:text-[#693e2d] transition-colors duration-300' : ''}`}>
-                          {post.title}
-                        </h4>
-                        
-                        <p className="text-gray-600 text-base leading-relaxed mb-4 line-clamp-3">
-                          {post.excerpt}
-                        </p>
-                        
-                        {/* Blog Metadata */}
-                        <div className="flex items-center justify-between text-sm text-gray-500 border-t border-gray-100 pt-4">
-                          <div className="flex items-center space-x-4">
-                            <span className="flex items-center">
-                              <FiCalendar className="w-4 h-4 mr-2" />
-                              {post.date}
-                            </span>
-                            <span className="flex items-center">
-                              <FiUser className="w-4 h-4 mr-2" />
-                              {post.featured ? 'Maya Evans' : 'BYEN Team'}
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <span className="text-gray-400">{post.readTime}</span>
-                            {post.fullStory && (
-                              <span className="text-[#693e2d] font-semibold hover:underline flex items-center group">
-                                Read Full Story
-                                <FiArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" />
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      </div>
+              <div className="lg:w-1/2 bg-gradient-to-br from-[#693e2d]/10 to-[#985b3c]/10 flex items-center justify-center p-12 lg:p-20 min-h-[300px]">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#693e2d] to-[#985b3c] rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <FiCalendar className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+              </div>
+              <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-[#693e2d]/10 text-[#693e2d] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                    {featuredPost.categoryTitle}
+                  </span>
+                  <span className="text-gray-500 text-sm flex items-center">
+                    <FiCalendar className="w-4 h-4 mr-1" />
+                    {featuredPost.date}
+                  </span>
+                </div>
+                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight hover:text-[#693e2d] transition-colors">
+                  {featuredPost.title}
+                </h3>
+                <p className="text-[#6C6A6A] text-[15px] leading-[20px] mb-6">
+                  {featuredPost.excerpt}
+                </p>
+                <div className="mt-auto flex items-center justify-between">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                      <FiUser className="w-5 h-5 text-gray-500" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">Maya Evans</p>
+                      <p className="text-xs text-gray-500">{featuredPost.readTime}</p>
                     </div>
                   </div>
-                ))
-              )}
-          </motion.div>
-        </div>
-      )}
-
-      {/* Media/Press Tab */}
-      {activeTab === 'media' && (
-        <div>
-          <Fade>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#693e2d] mb-4">
-                Media & Press
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Latest news coverage and press features highlighting BYEN's impact and initiatives
-              </p>
-            </div>
-          </Fade>
-
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {news.map((newsItem, index) => (
-          <motion.div
-            variants={item}
-                key={newsItem.id}
-                className="bg-white shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group"
-          >
-            <div className="h-[240px] overflow-hidden">
-              <img 
-                    src={newsItem.image} 
-                    alt={newsItem.title} 
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" 
-              />
-            </div>
-            <div className="flex flex-col p-6">
-                  <h2 className="text-[22px] font-semibold text-[#693e2d] mb-3 group-hover:text-[#985b3c] transition-colors duration-300">
-                    {newsItem.title}
-                  </h2>
-                  <p className="text-[15px] leading-[22px] text-[#6C6A6A] line-clamp-4 mb-5">
-                    {newsItem.description}
-                  </p>
-                  <a 
-                    href={newsItem.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="mt-auto self-start relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group/button"
-                  >
-                    <span className="relative z-10 flex items-center">
-                      READ MORE
-                      <FiArrowRight className="ml-2 w-4 h-4" />
-                    </span>
-                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover/button:scale-100 transition-transform duration-300 ease-out"></div>
-              </a>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-      
-          <div className="flex justify-center mt-12">
-            <a 
-              href="https://www.instagram.com/wearebyen/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="relative text-[#693e2d] bg-white border-2 border-[#693e2d] rounded-full py-4 px-8 hover:bg-gradient-to-r hover:from-[#693e2d] hover:to-[#985b3c] hover:text-white hover:border-transparent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group"
-            >
-              <span className="relative z-10 flex items-center font-semibold">
-                VIEW MORE PRESS
-                <FiArrowRight className="ml-2 w-4 h-4" />
-                            </span>
-          <div className="absolute inset-0 bg-[#693e2d]/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-        </a>
-      </div>
-        </div>
-      )}
-
-      {/* Story Modal */}
-      {selectedStory && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999] flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
-            {/* Modal Header */}
-            <div className="bg-gradient-to-r from-[#693e2d] to-[#985b3c] text-white p-6 flex items-start justify-between sticky top-0 z-10">
-              <div className="flex-1 pr-4">
-                <h2 className="text-xl lg:text-2xl font-bold mb-2 leading-tight">{selectedStory.title}</h2>
-                <div className="flex items-center gap-4 text-white/90 text-sm">
-                  <span className="flex items-center">
-                    <FiCalendar className="w-4 h-4 mr-1" />
-                    {selectedStory.date}
+                  <span className="text-[#693e2d] font-bold flex items-center group">
+                    Read Story
+                    <FiArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <span>{selectedStory.readTime}</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </Fade>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-10 border-b border-gray-200 pb-6">
+          <span className="text-gray-500 font-semibold mr-2 hidden md:block">Filter by:</span>
+          <button
+            onClick={() => setActiveCategory('all')}
+            className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${
+              activeCategory === 'all'
+                ? 'bg-[#693e2d] text-white shadow-md'
+                : 'bg-white text-gray-600 border border-gray-200 hover:border-[#693e2d] hover:text-[#693e2d]'
+            }`}
+          >
+            All News
+          </button>
+          {byenVoicesSections.map((section) => (
+            <button
+              key={section.id}
+              onClick={() => setActiveCategory(section.id)}
+              className={`px-5 py-2 rounded-full text-sm font-bold transition-all flex items-center gap-2 ${
+                activeCategory === section.id
+                  ? 'bg-[#693e2d] text-white shadow-md'
+                  : 'bg-white text-gray-600 border border-gray-200 hover:border-[#693e2d] hover:text-[#693e2d]'
+              }`}
+            >
+              {section.icon}
+              <span className="hidden sm:inline">{section.title}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Latest News Grid */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Articles</h2>
+          
+          {displayedPosts.length > 0 ? (
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.1 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {displayedPosts.map((post, index) => (
+                <motion.div
+                  key={index}
+                  variants={item}
+                  className={`bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 flex flex-col ${post.fullStory ? 'hover:shadow-lg cursor-pointer transition-shadow' : ''}`}
+                  onClick={() => post.fullStory && setSelectedStory(post)}
+                >
+                  <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200">
+                    <div className="text-center text-gray-400">
+                      <FiUser className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                      <span className="text-sm font-medium">Coming Soon</span>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="text-xs font-bold text-[#693e2d] uppercase tracking-wider">
+                        {post.categoryTitle}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-snug hover:text-[#693e2d] transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-[#6C6A6A] text-[15px] leading-[20px] mb-6 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm text-gray-500">
+                      <span className="flex items-center">
+                        <FiCalendar className="w-4 h-4 mr-1.5" />
+                        {post.date}
+                      </span>
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">No articles found in this category.</p>
+              <button 
+                onClick={() => setActiveCategory('all')}
+                className="mt-4 text-[#693e2d] font-semibold hover:underline"
+              >
+                View all articles
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Story Modal (Reading View) */}
+      {selectedStory && (
+        <div className="fixed inset-0 bg-white z-[9999] overflow-y-auto">
+          <div className="max-w-screen-md mx-auto relative min-h-screen flex flex-col pb-20">
+            
+            {/* Modal Navigation */}
+            <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-200 p-4 flex justify-between items-center z-50">
+              <div className="text-[#693e2d] font-bold uppercase tracking-widest text-sm">
+                BYEN Voices
               </div>
               <button 
                 onClick={() => setSelectedStory(null)}
-                className="p-2 hover:bg-white/20 rounded-full transition-colors duration-200 flex-shrink-0 ml-2"
-                aria-label="Close modal"
+                className="flex items-center gap-2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full font-medium transition-colors"
               >
-                <FiX className="w-6 h-6" />
+                <FiX className="w-5 h-5" />
+                Close Article
               </button>
             </div>
             
-            {/* Modal Content */}
-            <div className="p-4 lg:p-8 overflow-y-auto" style={{maxHeight: 'calc(90vh - 200px)'}}>
-              <div className="prose prose-lg max-w-none">
-                {selectedStory.fullStory.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="mb-4 text-gray-700 leading-relaxed">
-                    {paragraph.startsWith('**') && paragraph.endsWith('**') ? (
-                      <strong className="text-[#693e2d]">{paragraph.slice(2, -2)}</strong>
-                    ) : paragraph.startsWith('*') && paragraph.endsWith('*') ? (
-                      <em className="text-gray-600">{paragraph.slice(1, -1)}</em>
-                    ) : (
-                      paragraph
-                    )}
-                  </p>
-                ))}
+            {/* Modal Header */}
+            <div className="px-6 md:px-12 pt-16 pb-8 text-center">
+              <span className="text-[#693e2d] font-bold tracking-widest uppercase text-sm mb-4 inline-block">
+                {selectedStory.categoryTitle}
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8">
+                {selectedStory.title}
+              </h1>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-500">
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                    <FiUser className="w-6 h-6 text-gray-500" />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-bold text-gray-900 text-sm">Written by {selectedStory.featured ? 'Maya Evans' : 'BYEN Team'}</p>
+                    <p className="text-xs">National Communications Manager</p>
+                  </div>
+                </div>
+                <div className="hidden md:block w-px h-8 bg-gray-300"></div>
+                <div className="flex items-center gap-4 text-sm font-medium">
+                  <span className="flex items-center"><FiCalendar className="mr-2" />{selectedStory.date}</span>
+                  <span>{selectedStory.readTime}</span>
+                </div>
               </div>
             </div>
             
-            {/* Modal Footer */}
-            <div className="bg-gray-50 px-4 lg:px-8 py-4 border-t border-gray-200 sticky bottom-0">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div className="text-sm text-gray-600 text-center sm:text-left">
-                  Written by Maya Evans, National Communications Manager
-                </div>
-                <button 
-                  onClick={() => setSelectedStory(null)}
-                  className="bg-[#693e2d] text-white px-6 py-2 rounded-lg hover:bg-[#985b3c] transition-colors duration-200 w-full sm:w-auto"
-                >
-                  Close
-                </button>
-              </div>
+            {/* Modal Content */}
+            <div className="px-6 md:px-12 prose prose-lg md:prose-xl max-w-none text-gray-800 flex-grow text-[15px] leading-[22px]">
+              {selectedStory.fullStory && selectedStory.fullStory.split('\\n\\n').map((paragraph, index) => {
+                if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+                  const content = paragraph.slice(2, -2);
+                  const isSpeaker = content.includes(':');
+                  if (isSpeaker) {
+                    const [speaker, ...rest] = content.split(':');
+                    return (
+                      <p key={index} className="mb-6 leading-relaxed">
+                        <strong className="text-[#693e2d] font-bold">{speaker}:</strong> {rest.join(':')}
+                      </p>
+                    );
+                  }
+                  return <h3 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">{content}</h3>;
+                }
+                if (paragraph.startsWith('*') && paragraph.endsWith('*')) {
+                  return <p key={index} className="italic text-gray-500 mb-6 text-center border-t border-gray-200 pt-8 mt-12">{paragraph.slice(1, -1)}</p>;
+                }
+                
+                // Handle dialogue formatted with bold speaker names at the start of a paragraph
+                if (paragraph.startsWith('**') && paragraph.includes('**')) {
+                  const endBoldIndex = paragraph.indexOf('**', 2);
+                  if (endBoldIndex !== -1) {
+                    const speaker = paragraph.substring(2, endBoldIndex);
+                    const rest = paragraph.substring(endBoldIndex + 2);
+                    return (
+                      <p key={index} className="mb-6 leading-relaxed">
+                        <strong className="text-[#693e2d] font-bold">{speaker}</strong>{rest}
+                      </p>
+                    );
+                  }
+                }
+                
+                return <p key={index} className="mb-6 leading-relaxed">{paragraph}</p>;
+              })}
             </div>
           </div>
         </div>
       )}
-    </div>
     </div>
   );
 };
