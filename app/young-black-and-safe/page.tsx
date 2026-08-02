@@ -256,7 +256,7 @@ export default function YoungBlackAndSafe() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
-            <a href="#" className="notch-sm text-xs font-semibold uppercase tracking-wide text-white bg-brand-chili hover:bg-brand-brown py-3 px-6 transition-colors duration-200">
+            <a href="#" className="flex items-center justify-center notch-sm text-xs font-semibold uppercase tracking-wide text-white bg-brand-chili hover:bg-brand-brown py-3 px-6 transition-colors duration-200">
               Join Young, Black, and Safe
             </a>
             <a href="#" className="notch-sm group bg-brand-brown p-0.5 transition-colors duration-200">
@@ -268,7 +268,7 @@ export default function YoungBlackAndSafe() {
               href="https://givebutter.com/4zAepQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="notch-sm text-xs font-semibold uppercase tracking-wide text-brand-brown bg-brand-cream hover:bg-brand-brown/10 py-3 px-6 transition-colors duration-200"
+              className="flex items-center justify-center notch-sm text-xs font-semibold uppercase tracking-wide text-brand-brown bg-brand-cream hover:bg-brand-brown/10 py-3 px-6 transition-colors duration-200"
             >
               Support the Initiative
             </a>
