@@ -130,7 +130,7 @@ const leaders: Leader[] = [
     socialMedia: {
       ig: "https://www.instagram.com/mayaevanns?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       x: "N/A",
-      linkedIn: "www.linkedin.com/in/maya-evans-46b7762a8",
+      linkedIn: "https://www.linkedin.com/in/maya-evans-46b7762a8",
       facebook: "N/A",
       email: "mevans2444@gmail.com",
     },

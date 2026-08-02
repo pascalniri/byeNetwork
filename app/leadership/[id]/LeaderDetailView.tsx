@@ -9,8 +9,8 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { FiArrowRight } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Leader } from "@/types/leader";
-
-const isRealLink = (value: string) => value && value !== "None" && value !== "..";
+import { useRouter } from "next/navigation";
+import { isRealSocialLink } from "@/lib/social";
 
 export default function LeaderDetailView({ leader }: { leader: Leader | null }) {
   const [activeImage, setActiveImage] = useState(leader?.gallery?.[0] ?? leader?.image ?? "");
@@ -32,7 +32,7 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
   }
 
   const gallery = leader.gallery?.length ? leader.gallery : [leader.image];
-
+  const router = useRouter();
   return (
     <div className="lg:flex lg:min-h-screen">
       {/* Photo panel */}
@@ -61,22 +61,22 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
           <p className="text-sm sm:text-base opacity-90 mb-6">{leader.title}</p>
 
           <div className="flex items-center gap-3 mb-6">
-            {isRealLink(leader.socialMedia.ig) && (
+            {isRealSocialLink(leader.socialMedia.ig) && (
               <a href={leader.socialMedia.ig} target="_blank" rel="noopener noreferrer" className="notch-sm bg-white/10 hover:bg-brand-chili p-2.5 transition-colors">
                 <RiInstagramFill size={18} />
               </a>
             )}
-            {isRealLink(leader.socialMedia.x) && (
+            {isRealSocialLink(leader.socialMedia.x) && (
               <a href={leader.socialMedia.x} target="_blank" rel="noopener noreferrer" className="notch-sm bg-white/10 hover:bg-brand-chili p-2.5 transition-colors">
                 <BsTwitterX size={16} />
               </a>
             )}
-            {isRealLink(leader.socialMedia.linkedIn) && (
+            {isRealSocialLink(leader.socialMedia.linkedIn) && (
               <a href={leader.socialMedia.linkedIn} target="_blank" rel="noopener noreferrer" className="notch-sm bg-white/10 hover:bg-brand-chili p-2.5 transition-colors">
                 <FaLinkedin size={16} />
               </a>
             )}
-            {isRealLink(leader.socialMedia.facebook) && (
+            {isRealSocialLink(leader.socialMedia.facebook) && (
               <a href={leader.socialMedia.facebook} target="_blank" rel="noopener noreferrer" className="notch-sm bg-white/10 hover:bg-brand-chili p-2.5 transition-colors">
                 <BsFacebook size={16} />
               </a>
@@ -184,13 +184,13 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
             </div>
           </motion.div>
 
-          <Link
-            href="/leadership"
+          <button
+            onClick={() => router.back()}
             className="notch-md inline-flex items-center gap-2 bg-brand-brown hover:bg-brand-chili text-white text-xs font-semibold uppercase tracking-wide py-3 px-6 transition-colors"
           >
             Meet the Rest of the Team
             <FiArrowRight />
-          </Link>
+          </button>
         </div>
       </div>
 
