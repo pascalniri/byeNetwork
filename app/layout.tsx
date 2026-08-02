@@ -10,7 +10,11 @@ import PageViewTracker from "@/components/analytics/PageViewTracker";
 export const metadata: Metadata = {
   title: "We Are BYEN",
   icons: {
-    icon: "/logo.jpg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
   },
 };
 

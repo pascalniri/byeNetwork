@@ -147,7 +147,7 @@ const stories = [
 const Home = () => {
   return (
     <div className="relative w-full">
-      <section className="relative w-full h-[78vh] min-h-[560px] overflow-hidden">
+      <section className="relative w-full h-[62vh] sm:h-[70vh] md:h-[78vh] min-h-[420px] sm:min-h-[480px] md:min-h-[560px] overflow-hidden">
         <BackgroundSlideshow />
 
         <div className="relative z-10 h-full flex items-center">
