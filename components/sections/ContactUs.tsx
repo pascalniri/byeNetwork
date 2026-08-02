@@ -27,7 +27,7 @@ const ContactUs = () => {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="notch-md group inline-flex items-center gap-2 bg-brand-chili hover:bg-brand-brown text-white font-semibold uppercase tracking-wide text-xs sm:text-sm py-3 px-6 mt-8 transition-colors duration-200"
+            className="notch-md group inline-flex items-center gap-2 bg-brand-chili hover:bg-brand-brown text-white font-semibold uppercase tracking-wide text-xs py-3 px-6 mt-8 transition-colors duration-200"
           >
             Contact via E-Mail
             <BiSolidConversation className="w-4 h-4" />

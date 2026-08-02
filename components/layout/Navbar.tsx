@@ -4,6 +4,12 @@ import { useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { MdOutlineMail } from "react-icons/md";
+import { LuPhoneCall } from "react-icons/lu";
+import { IoLocationOutline } from "react-icons/io5";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa";
+import { BsFacebook } from "react-icons/bs";
 
 type NavLinkItem = {
   id: string;
@@ -73,20 +79,19 @@ const navigationItems: NavItem[] = [
   },
 ];
 
-const quickLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Programs", href: "/young-black-and-safe" },
-  { label: "Get Involved", href: "/membership" },
-  { label: "News & Blog", href: "/news-and-blog" },
+const contactDetails = [
+  { icon: MdOutlineMail, label: "info@wearebyen.org", href: "mailto:info@wearebyen.org" },
+  { icon: LuPhoneCall, label: "+1 (478) 283-3665", href: "tel:+14782833665" },
+  { icon: IoLocationOutline, label: "USA", href: undefined },
+];
+
+const socialLinks = [
+  { icon: RiInstagramFill, href: "https://www.instagram.com/wearebyen/", label: "Instagram" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/company/black-youth-empowerment-network/", label: "LinkedIn" },
+  { icon: BsFacebook, href: "https://www.facebook.com/profile.php?id=61554206687351", label: "Facebook" },
 ];
 
 const donateHref = "https://givebutter.com/4zAepQ";
-
-// Each nav item gets its own loud brand-accent personality on hover — the
-// same color-coded energy the brand guide gives its Impact/Collaboration/
-// Leadership pillars, instead of one neutral hover state for every link.
-// Kept as hex + CSS custom properties (not Tailwind hover: classes) since
-// Tailwind can't statically discover class names built at runtime.
 const ACCENTS: Record<string, CSSProperties> = {
   home: { "--accent-bg": "#EF5018", "--accent-text": "#FFFFFF" } as CSSProperties,
   aboutus: { "--accent-bg": "#158BFF", "--accent-text": "#FFFFFF" } as CSSProperties,
@@ -213,39 +218,56 @@ const Navbar = () => {
           }}
         >
           <div className="absolute inset-0 bg-brand-brown/90" />
-          <div className="relative container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-center justify-between h-8">
-            <div className="hidden md:flex items-center gap-5 uppercase tracking-widest font-medium">
-              {quickLinks.map((link, i) => (
-                <span key={link.href} className="flex items-center gap-5">
-                  {i > 0 && <span className="text-brand-tan">/</span>}
-                  <Link href={link.href} className="hover:text-brand-lime transition-colors duration-150">
-                    {link.label}
-                  </Link>
-                </span>
-              ))}
+          <div className="relative container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-center h-10">
+            <div className="hidden md:flex items-center gap-5 tracking-wide font-medium">
+              {contactDetails.map((detail) => {
+                const Icon = detail.icon;
+                const content = (
+                  <span className="flex items-center gap-1.5">
+                    <Icon className="text-brand-lime text-sm" />
+                    {detail.label}
+                  </span>
+                );
+                return detail.href ? (
+                  <a key={detail.label} href={detail.href} className="hover:text-brand-lime transition-colors duration-150">
+                    {content}
+                  </a>
+                ) : (
+                  <span key={detail.label}>{content}</span>
+                );
+              })}
             </div>
-            <a
-              href={donateHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-auto md:ml-0 bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown notch-sm uppercase tracking-widest font-semibold px-4 py-1 transition-colors duration-150"
-            >
-              Donate
-            </a>
+
+            <div className="flex items-center gap-4 ml-auto">
+              <div className="flex items-center gap-3">
+                {socialLinks.map((social) => (
+                  <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                    <social.icon className="text-brand-cream/80 hover:text-brand-lime transition-colors duration-150 text-lg" />
+                  </a>
+                ))}
+              </div>
+
+              <a
+                href={donateHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown notch-sm uppercase tracking-widest font-semibold px-4 py-1 transition-colors duration-150"
+              >
+                Donate
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Main nav */}
         <nav className="bg-brand-cream">
           <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-stretch justify-between w-full h-[76px] sm:h-[88px]">
-            <Link href="/" className="flex items-center py-2.5 my-auto">
-              <span className="bg-brand-brown notch-md flex items-center px-3 sm:px-4 h-full">
-                <img
-                  src="/branding/02_ Logos/Stacked Logo/PNG/Logo_Stacked_Cream.png"
-                  alt="Black Youth Empowerment Network"
-                  className="h-9 sm:h-11 w-auto object-contain"
-                />
-              </span>
+            <Link href="/" className="flex items-center my-auto">
+              <img
+                src="/branding/02_ Logos/Stacked Logo/PNG/Logo_Stacked_DarkBrown.png"
+                alt="Black Youth Empowerment Network"
+                className="h-12 sm:h-14 w-auto object-contain"
+              />
             </Link>
 
             <div className="hidden lg:flex items-stretch">
