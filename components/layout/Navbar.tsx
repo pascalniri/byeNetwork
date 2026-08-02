@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
@@ -99,25 +99,6 @@ const ACCENTS: Record<string, CSSProperties> = {
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>({});
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 150) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
@@ -132,7 +113,7 @@ const Navbar = () => {
         <Link
           href={item.href}
           style={accentStyle}
-          className="nav-accent relative flex items-center h-full px-4 xl:px-5 text-[13px] xl:text-sm font-black uppercase tracking-wide text-brand-brown"
+          className="nav-accent relative flex items-center h-full px-4 xl:px-5 text-xs font-medium uppercase tracking-wide text-brand-brown"
         >
           <span className="relative z-10">{item.label}</span>
           <span className="nav-accent-underline absolute bottom-0 left-0 h-[5px] w-full" />
@@ -142,7 +123,7 @@ const Navbar = () => {
 
     return (
       <div className="relative group h-full" style={accentStyle}>
-        <button className="nav-accent flex items-center gap-1.5 h-full px-4 xl:px-5 text-[13px] xl:text-sm font-black uppercase tracking-wide text-brand-brown">
+        <button className="nav-accent flex items-center gap-1.5 h-full px-4 xl:px-5 text-xs font-medium uppercase tracking-wide text-brand-brown">
           <span className="relative z-10">{item.label}</span>
           <FiChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" />
           <span className="nav-accent-underline absolute bottom-0 left-0 h-[5px] w-full" />
@@ -154,7 +135,7 @@ const Navbar = () => {
                 key={index}
                 href={subItem.href}
                 style={accentStyle}
-                className="nav-accent block px-5 py-3 text-[13px] font-bold uppercase tracking-wide text-brand-cream"
+                className="nav-accent block px-5 py-3 text-xs font-medium uppercase tracking-wide text-brand-cream"
               >
                 {subItem.label}
               </Link>
@@ -174,7 +155,7 @@ const Navbar = () => {
           href={item.href}
           onClick={closeMobileMenu}
           style={accentStyle}
-          className="nav-accent block py-4 px-4 mb-2 notch-sm text-lg font-black uppercase tracking-wide text-brand-cream bg-brand-brown/40"
+          className="nav-accent block py-4 px-4 mb-2 notch-sm text-xs font-medium uppercase tracking-wide text-brand-cream bg-brand-brown/40"
         >
           {item.label}
         </Link>
@@ -187,7 +168,7 @@ const Navbar = () => {
           onClick={() => toggleDropdown(item.id)}
           data-open={openDropdowns[item.id] || undefined}
           style={accentStyle}
-          className="nav-accent flex justify-between items-center w-full py-4 px-4 notch-sm text-lg font-black uppercase tracking-wide text-brand-cream bg-brand-brown/40"
+          className="nav-accent flex justify-between items-center w-full py-4 px-4 notch-sm text-xs font-medium uppercase tracking-wide text-brand-cream bg-brand-brown/40"
         >
           <span>{item.label}</span>
           <FiChevronDown
@@ -207,7 +188,7 @@ const Navbar = () => {
                 key={index}
                 href={subItem.href}
                 onClick={closeMobileMenu}
-                className="block py-3 pl-5 text-base font-bold uppercase tracking-wide text-brand-cream hover:text-white transition-colors duration-150"
+                className="block py-3 pl-5 text-xs font-medium uppercase tracking-wide text-brand-cream hover:text-white transition-colors duration-150"
               >
                 {subItem.label}
               </Link>
@@ -220,14 +201,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        className={`font-nunito fixed w-full top-0 z-[100] transition-transform duration-300 ease-in-out ${
-          !isVisible ? "-translate-y-full" : "translate-y-0"
-        }`}
-      >
+      <div className="font-nunito w-full">
         {/* Utility bar */}
         <div
-          className="relative bg-brand-brown text-brand-cream text-[11px] overflow-hidden"
+          className="relative bg-brand-brown text-brand-cream text-xs overflow-hidden"
           style={{
             backgroundImage: 'url("/branding/SVG/Pattern_Cream.svg")',
             backgroundRepeat: "repeat-x",
@@ -237,7 +214,7 @@ const Navbar = () => {
         >
           <div className="absolute inset-0 bg-brand-brown/90" />
           <div className="relative container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-center justify-between h-8">
-            <div className="hidden md:flex items-center gap-5 uppercase tracking-widest font-bold">
+            <div className="hidden md:flex items-center gap-5 uppercase tracking-widest font-medium">
               {quickLinks.map((link, i) => (
                 <span key={link.href} className="flex items-center gap-5">
                   {i > 0 && <span className="text-brand-tan">/</span>}
@@ -251,7 +228,7 @@ const Navbar = () => {
               href={donateHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto md:ml-0 bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown notch-sm uppercase tracking-widest font-black px-4 py-1 transition-colors duration-150"
+              className="ml-auto md:ml-0 bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown notch-sm uppercase tracking-widest font-semibold px-4 py-1 transition-colors duration-150"
             >
               Donate
             </a>
@@ -259,7 +236,7 @@ const Navbar = () => {
         </div>
 
         {/* Main nav */}
-        <nav className="bg-brand-cream border-b-4 border-brand-brown">
+        <nav className="bg-brand-cream">
           <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-stretch justify-between w-full h-[76px] sm:h-[88px]">
             <Link href="/" className="flex items-center py-2.5 my-auto">
               <span className="bg-brand-brown notch-md flex items-center px-3 sm:px-4 h-full">
@@ -320,7 +297,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobileMenu}
-              className="block text-center bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown notch-md w-full py-4 px-6 transition-colors duration-150 font-black uppercase tracking-widest text-lg"
+              className="block text-center bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown notch-md w-full py-4 px-6 transition-colors duration-150 font-semibold uppercase tracking-widest text-xs"
             >
               Donate
             </a>

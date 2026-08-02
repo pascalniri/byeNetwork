@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Fade } from "react-awesome-reveal";
 import { motion, type Variants } from "framer-motion";
 import { FiArrowRight, FiCalendar, FiUser, FiTag, FiX } from "react-icons/fi";
+import PageHero from "@/components/layout/PageHero";
 
 type Post = {
   title: string;
@@ -19,7 +19,6 @@ type Section = {
   title: string;
   description: string;
   icon: React.ReactNode;
-  color: string;
   posts: Post[];
 };
 
@@ -30,7 +29,6 @@ const byenVoicesSections: Section[] = [
     description:
       "Highlights the work and initiatives led by BYEN's leadership team across various departments, providing insight into the behind-the-scenes efforts that drive the organization's impact.",
     icon: <FiCalendar className="w-5 h-5" />,
-    color: "from-[#693e2d] to-[#985b3c]",
     posts: [
       {
         title: "Behind the Vision: An Exclusive Interview with BYEN's Leadership",
@@ -99,7 +97,6 @@ This interview is more than just a conversation; it's a journey through the lead
     description:
       "Regular interview-style features highlighting BYEN members (outside of the leadership team). These stories explore their personal journeys, motivations, goals, and how BYEN supports their growth and leadership.",
     icon: <FiUser className="w-5 h-5" />,
-    color: "from-[#693e2d] to-[#985b3c]",
     posts: [
       {
         title: "Member Spotlights Coming Soon",
@@ -116,7 +113,6 @@ This interview is more than just a conversation; it's a journey through the lead
     description:
       "Showcases BYEN's work in communities through the efforts of members addressing important issues and uplifting those who are often overlooked or underserved.",
     icon: <FiArrowRight className="w-5 h-5" />,
-    color: "from-[#693e2d] to-[#985b3c]",
     posts: [
       {
         title: "Impact Stories Coming Soon",
@@ -133,7 +129,6 @@ This interview is more than just a conversation; it's a journey through the lead
     description:
       "Opinion pieces, essays, and in-depth articles that examine challenges and opportunities facing Black youth. These writings emphasize the importance of equal opportunity, social justice, and community engagement.",
     icon: <FiTag className="w-5 h-5" />,
-    color: "from-[#693e2d] to-[#985b3c]",
     posts: [
       {
         title: "Perspectives & Deep Dives Coming Soon",
@@ -182,75 +177,80 @@ export default function NewsAndBlog() {
     activeCategory === "all" ? otherPosts : otherPosts.filter((p) => p.categoryId === activeCategory);
 
   return (
-    <div className="font-montserrat bg-[#FAFAFA] min-h-screen">
-      <div className="bg-white flex flex-col justify-center items-center py-[4rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat w-full mt-[9rem] border-b border-gray-200">
-        <h1 className="flex flex-row items-center gap-2 md:text-[60px] text-[#693e2d] text-[40px] font-bold tracking-tight">
-          BYEN VOICES
-        </h1>
-        <p className="text-[15px] md:text-[18px] mt-4 text-[#333] md:w-[60%] mx-auto font-medium">
-          A youth-led storytelling platform celebrating changemakers, amplifying lived experiences, and shedding light on issues impacting Black youth.
-        </p>
-      </div>
+    <div className="bg-brand-cream min-h-screen">
+      <PageHero
+        eyebrow="News & Blog"
+        title="BYEN Voices"
+        description="A youth-led storytelling platform celebrating changemakers, amplifying lived experiences, and shedding light on issues impacting Black youth."
+        accent="green"
+      />
 
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-12">
-        <Fade>
-          <div className="mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-[#693e2d] uppercase mb-4 border-b-2 border-[#985b3c] inline-block pb-1">
-              Featured Story
-            </h2>
-            <div
-              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col lg:flex-row hover:shadow-xl transition-shadow cursor-pointer"
-              onClick={() => featuredPost.fullStory && setSelectedStory(featuredPost)}
-            >
-              <div className="lg:w-1/2 bg-gradient-to-br from-[#693e2d]/10 to-[#985b3c]/10 flex items-center justify-center p-12 lg:p-20 min-h-[300px]">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#693e2d] to-[#985b3c] rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <FiCalendar className="w-10 h-10 text-white" />
-                  </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="mb-16">
+          <h2 className="text-xs font-bold tracking-widest text-brand-chili uppercase mb-4 border-b-2 border-brand-chili inline-block pb-1">
+            Featured Story
+          </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="notch-lg bg-brand-brown/10 p-0.5 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            onClick={() => featuredPost.fullStory && setSelectedStory(featuredPost)}
+          >
+            <div className="notch-lg-inner bg-white overflow-hidden flex flex-col lg:flex-row">
+              <div className="lg:w-1/2 bg-brand-brown flex items-center justify-center p-12 lg:p-20 min-h-[280px] relative overflow-hidden">
+                <img
+                  src="/branding/SVG/Pattern_Cream.svg"
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover opacity-10"
+                />
+                <div className="notch-md relative w-20 h-20 bg-brand-green flex items-center justify-center shadow-md">
+                  <FiCalendar className="w-9 h-9 text-brand-brown" />
                 </div>
               </div>
               <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-[#693e2d]/10 text-[#693e2d] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                  <span className="notch-sm bg-brand-green/20 text-brand-brown px-3 py-1 text-xs font-bold uppercase tracking-wide">
                     {featuredPost.categoryTitle}
                   </span>
-                  <span className="text-gray-500 text-sm flex items-center">
-                    <FiCalendar className="w-4 h-4 mr-1" />
+                  <span className="text-brand-brown/60 text-xs flex items-center">
+                    <FiCalendar className="w-3.5 h-3.5 mr-1" />
                     {featuredPost.date}
                   </span>
                 </div>
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight hover:text-[#693e2d] transition-colors">
+                <h3 className="text-2xl lg:text-3xl font-bold text-brand-brown mb-4 leading-tight hover:text-brand-chili transition-colors">
                   {featuredPost.title}
                 </h3>
-                <p className="text-[#6C6A6A] text-[15px] leading-[20px] mb-6">{featuredPost.excerpt}</p>
+                <p className="text-brand-brown/70 text-sm mb-6">{featuredPost.excerpt}</p>
                 <div className="mt-auto flex items-center justify-between">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                      <FiUser className="w-5 h-5 text-gray-500" />
+                    <div className="notch-sm w-10 h-10 bg-brand-cream flex items-center justify-center mr-3">
+                      <FiUser className="w-5 h-5 text-brand-brown/60" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-gray-900">Maya Evans</p>
-                      <p className="text-xs text-gray-500">{featuredPost.readTime}</p>
+                      <p className="text-sm font-bold text-brand-brown">Maya Evans</p>
+                      <p className="text-xs text-brand-brown/60">{featuredPost.readTime}</p>
                     </div>
                   </div>
-                  <span className="text-[#693e2d] font-bold flex items-center group">
+                  <span className="text-brand-chili font-bold flex items-center group text-sm">
                     Read Story
-                    <FiArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                    <FiArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
               </div>
             </div>
-          </div>
-        </Fade>
+          </motion.div>
+        </div>
 
-        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-10 border-b border-gray-200 pb-6">
-          <span className="text-gray-500 font-semibold mr-2 hidden md:block">Filter by:</span>
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-10 border-b border-brand-brown/10 pb-6">
+          <span className="text-brand-brown/60 font-semibold mr-2 hidden md:block text-sm">Filter by:</span>
           <button
             onClick={() => setActiveCategory("all")}
-            className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${
+            className={`notch-sm px-5 py-2 text-xs font-bold uppercase tracking-wide transition-all ${
               activeCategory === "all"
-                ? "bg-[#693e2d] text-white shadow-md"
-                : "bg-white text-gray-600 border border-gray-200 hover:border-[#693e2d] hover:text-[#693e2d]"
+                ? "bg-brand-brown text-white shadow-md"
+                : "bg-white text-brand-brown/70 border border-brand-brown/20 hover:border-brand-brown"
             }`}
           >
             All News
@@ -259,10 +259,10 @@ export default function NewsAndBlog() {
             <button
               key={section.id}
               onClick={() => setActiveCategory(section.id)}
-              className={`px-5 py-2 rounded-full text-sm font-bold transition-all flex items-center gap-2 ${
+              className={`notch-sm px-5 py-2 text-xs font-bold uppercase tracking-wide transition-all flex items-center gap-2 ${
                 activeCategory === section.id
-                  ? "bg-[#693e2d] text-white shadow-md"
-                  : "bg-white text-gray-600 border border-gray-200 hover:border-[#693e2d] hover:text-[#693e2d]"
+                  ? "bg-brand-brown text-white shadow-md"
+                  : "bg-white text-brand-brown/70 border border-brand-brown/20 hover:border-brand-brown"
               }`}
             >
               {section.icon}
@@ -272,47 +272,47 @@ export default function NewsAndBlog() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Articles</h2>
+          <h2 className="text-xl font-bold uppercase text-brand-brown mb-8">Latest Articles</h2>
 
           {displayedPosts.length > 0 ? (
             <motion.div
               variants={container}
               initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0.1 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              viewport={{ once: true, amount: 0.1 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {displayedPosts.map((post, index) => (
                 <motion.div
                   key={index}
                   variants={item}
-                  className={`bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 flex flex-col ${
+                  className={`notch-md bg-brand-brown/10 p-0.5 shadow-sm ${
                     post.fullStory ? "hover:shadow-lg cursor-pointer transition-shadow" : ""
                   }`}
                   onClick={() => post.fullStory && setSelectedStory(post)}
                 >
-                  <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200">
-                    <div className="text-center text-gray-400">
-                      <FiUser className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                      <span className="text-sm font-medium">Coming Soon</span>
+                  <div className="notch-md-inner bg-white overflow-hidden flex flex-col h-full">
+                    <div className="h-40 bg-brand-cream flex items-center justify-center border-b border-brand-brown/10">
+                      <div className="text-center text-brand-brown/30">
+                        <FiUser className="w-10 h-10 mx-auto mb-2 opacity-60" />
+                        <span className="text-xs font-medium">Coming Soon</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex justify-between items-start mb-3">
-                      <span className="text-xs font-bold text-[#693e2d] uppercase tracking-wider">
+                    <div className="p-6 flex flex-col flex-grow">
+                      <span className="text-xs font-bold text-brand-chili uppercase tracking-wider mb-3">
                         {post.categoryTitle}
                       </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-snug hover:text-[#693e2d] transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-[#6C6A6A] text-[15px] leading-[20px] mb-6 line-clamp-3">{post.excerpt}</p>
-                    <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm text-gray-500">
-                      <span className="flex items-center">
-                        <FiCalendar className="w-4 h-4 mr-1.5" />
-                        {post.date}
-                      </span>
-                      <span>{post.readTime}</span>
+                      <h3 className="text-base font-bold text-brand-brown mb-3 leading-snug hover:text-brand-chili transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="text-brand-brown/70 text-sm mb-6 line-clamp-3">{post.excerpt}</p>
+                      <div className="mt-auto pt-4 border-t border-brand-brown/10 flex items-center justify-between text-xs text-brand-brown/60">
+                        <span className="flex items-center">
+                          <FiCalendar className="w-3.5 h-3.5 mr-1.5" />
+                          {post.date}
+                        </span>
+                        <span>{post.readTime}</span>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -320,8 +320,8 @@ export default function NewsAndBlog() {
             </motion.div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No articles found in this category.</p>
-              <button onClick={() => setActiveCategory("all")} className="mt-4 text-[#693e2d] font-semibold hover:underline">
+              <p className="text-brand-brown/60 text-base">No articles found in this category.</p>
+              <button onClick={() => setActiveCategory("all")} className="mt-4 text-brand-chili text-sm font-semibold hover:underline">
                 View all articles
               </button>
             </div>
@@ -332,36 +332,36 @@ export default function NewsAndBlog() {
       {selectedStory && (
         <div className="fixed inset-0 bg-white z-[9999] overflow-y-auto">
           <div className="max-w-screen-md mx-auto relative min-h-screen flex flex-col pb-20">
-            <div className="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-200 p-4 flex justify-between items-center z-50">
-              <div className="text-[#693e2d] font-bold uppercase tracking-widest text-sm">BYEN Voices</div>
+            <div className="sticky top-0 bg-white/95 backdrop-blur-md border-b border-brand-brown/10 p-4 flex justify-between items-center z-50">
+              <div className="text-brand-chili font-bold uppercase tracking-widest text-xs">BYEN Voices</div>
               <button
                 onClick={() => setSelectedStory(null)}
-                className="flex items-center gap-2 text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full font-medium transition-colors"
+                className="notch-sm flex items-center gap-2 text-brand-brown/70 hover:text-brand-brown bg-brand-cream hover:bg-brand-cream/70 px-4 py-2 text-xs font-medium transition-colors"
               >
-                <FiX className="w-5 h-5" />
+                <FiX className="w-4 h-4" />
                 Close Article
               </button>
             </div>
 
             <div className="px-6 md:px-12 pt-16 pb-8 text-center">
-              <span className="text-[#693e2d] font-bold tracking-widest uppercase text-sm mb-4 inline-block">
+              <span className="text-brand-chili font-bold tracking-widest uppercase text-xs mb-4 inline-block">
                 {selectedStory.categoryTitle}
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8">{selectedStory.title}</h1>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-500">
+              <h1 className="text-3xl md:text-4xl font-bold text-brand-brown leading-tight mb-8">{selectedStory.title}</h1>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-brand-brown/60">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                    <FiUser className="w-6 h-6 text-gray-500" />
+                  <div className="notch-sm w-12 h-12 bg-brand-cream flex items-center justify-center mr-3">
+                    <FiUser className="w-6 h-6 text-brand-brown/60" />
                   </div>
                   <div className="text-left">
-                    <p className="font-bold text-gray-900 text-sm">
+                    <p className="font-bold text-brand-brown text-sm">
                       Written by {selectedStory.featured ? "Maya Evans" : "BYEN Team"}
                     </p>
                     <p className="text-xs">National Communications Manager</p>
                   </div>
                 </div>
-                <div className="hidden md:block w-px h-8 bg-gray-300"></div>
-                <div className="flex items-center gap-4 text-sm font-medium">
+                <div className="hidden md:block w-px h-8 bg-brand-brown/20"></div>
+                <div className="flex items-center gap-4 text-xs font-medium">
                   <span className="flex items-center">
                     <FiCalendar className="mr-2" />
                     {selectedStory.date}
@@ -371,7 +371,7 @@ export default function NewsAndBlog() {
               </div>
             </div>
 
-            <div className="px-6 md:px-12 prose prose-lg md:prose-xl max-w-none text-gray-800 flex-grow text-[15px] leading-[22px]">
+            <div className="px-6 md:px-12 max-w-none text-brand-brown/80 flex-grow text-sm leading-relaxed">
               {selectedStory.fullStory &&
                 selectedStory.fullStory.split("\n\n").map((paragraph, index) => {
                   if (paragraph.startsWith("**") && paragraph.endsWith("**")) {
@@ -381,19 +381,19 @@ export default function NewsAndBlog() {
                       const [speaker, ...rest] = content.split(":");
                       return (
                         <p key={index} className="mb-6 leading-relaxed">
-                          <strong className="text-[#693e2d] font-bold">{speaker}:</strong> {rest.join(":")}
+                          <strong className="text-brand-chili font-bold">{speaker}:</strong> {rest.join(":")}
                         </p>
                       );
                     }
                     return (
-                      <h3 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                      <h3 key={index} className="text-xl font-bold text-brand-brown mt-8 mb-4">
                         {content}
                       </h3>
                     );
                   }
                   if (paragraph.startsWith("*") && paragraph.endsWith("*")) {
                     return (
-                      <p key={index} className="italic text-gray-500 mb-6 text-center border-t border-gray-200 pt-8 mt-12">
+                      <p key={index} className="italic text-brand-brown/60 mb-6 text-center border-t border-brand-brown/10 pt-8 mt-12">
                         {paragraph.slice(1, -1)}
                       </p>
                     );
@@ -406,7 +406,7 @@ export default function NewsAndBlog() {
                       const rest = paragraph.substring(endBoldIndex + 2);
                       return (
                         <p key={index} className="mb-6 leading-relaxed">
-                          <strong className="text-[#693e2d] font-bold">{speaker}</strong>
+                          <strong className="text-brand-chili font-bold">{speaker}</strong>
                           {rest}
                         </p>
                       );

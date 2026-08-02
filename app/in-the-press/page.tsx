@@ -2,7 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import { MdOutlineHorizontalRule } from "react-icons/md";
+import PageHero from "@/components/layout/PageHero";
 
 const news = [
   {
@@ -47,31 +47,27 @@ const item: Variants = {
 
 export default function InThePress() {
   return (
-    <div className="font-montserrat">
-      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[9rem]">
-        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
-          <MdOutlineHorizontalRule />
-          <p className="uppercase">IN THE PRESS</p>
-          <MdOutlineHorizontalRule />
-        </h1>
-        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-          Latest news coverage and press features highlighting BYEN's impact and initiatives.
-        </p>
-      </div>
+    <div>
+      <PageHero
+        eyebrow="News & Blog"
+        title="In the Press"
+        description="Latest news coverage and press features highlighting BYEN's impact and initiatives."
+        accent="green"
+      />
 
-      <div className="font-montserrat bg-white mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[5rem]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
-          viewport={{ amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {news.map((newsItem) => (
             <motion.div
               variants={item}
               key={newsItem.id}
-              className="bg-white shadow-xl rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col"
+              className="notch-lg bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col"
             >
               <div className="h-[240px] overflow-hidden flex-shrink-0">
                 <img
@@ -81,21 +77,18 @@ export default function InThePress() {
                 />
               </div>
               <div className="flex flex-col p-6 flex-grow">
-                <h2 className="text-[22px] font-semibold text-[#693e2d] mb-3 group-hover:text-[#985b3c] transition-colors duration-300">
+                <h2 className="text-lg font-bold text-brand-brown mb-3 group-hover:text-brand-chili transition-colors duration-300">
                   {newsItem.title}
                 </h2>
-                <p className="text-[15px] leading-[20px] text-[#6C6A6A] line-clamp-4 mb-5">{newsItem.description}</p>
+                <p className="text-sm text-brand-brown/70 line-clamp-4 mb-5">{newsItem.description}</p>
                 <a
                   href={newsItem.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto self-start relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group/button"
+                  className="notch-sm mt-auto self-start inline-flex items-center bg-brand-chili hover:bg-brand-brown text-white text-xs font-semibold uppercase tracking-wide py-3 px-6 transition-colors duration-200"
                 >
-                  <span className="relative z-10 flex items-center">
-                    READ MORE
-                    <FiArrowRight className="ml-2 w-4 h-4" />
-                  </span>
-                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover/button:scale-100 transition-transform duration-300 ease-out"></div>
+                  Read More
+                  <FiArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </div>
             </motion.div>
@@ -107,13 +100,10 @@ export default function InThePress() {
             href="https://www.instagram.com/wearebyen/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative text-[#693e2d] bg-white border-2 border-[#693e2d] rounded-full py-4 px-8 hover:bg-gradient-to-r hover:from-[#693e2d] hover:to-[#985b3c] hover:text-white hover:border-transparent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group"
+            className="notch-md inline-flex items-center text-brand-brown border-2 border-brand-brown hover:bg-brand-brown hover:text-white text-xs font-semibold uppercase tracking-wide py-3 px-8 transition-colors duration-200"
           >
-            <span className="relative z-10 flex items-center font-semibold">
-              VIEW MORE PRESS
-              <FiArrowRight className="ml-2 w-4 h-4" />
-            </span>
-            <div className="absolute inset-0 bg-[#693e2d]/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
+            View More Press
+            <FiArrowRight className="ml-2 w-4 h-4" />
           </a>
         </div>
       </div>

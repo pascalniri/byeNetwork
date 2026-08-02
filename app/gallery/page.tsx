@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { MdOutlineHorizontalRule } from "react-icons/md";
+import PageHero from "@/components/layout/PageHero";
 
 const images = [
   { id: 1, src: "/1.jpeg", alt: "Team member 1" },
@@ -18,54 +18,41 @@ export default function Gallery() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   return (
-    <div className="font-montserrat">
-      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[9rem]">
-        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
-          <MdOutlineHorizontalRule />
-          <p>GALLERY</p>
-          <MdOutlineHorizontalRule />
-        </h1>
-        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-          Step into our gallery and relive the moments that define our journey.
-          From inspiring events to impactful collaborations, explore the visuals
-          that capture the essence of our mission and the vibrant community
-          we've built together.
-        </p>
-      </div>
+    <div>
+      <PageHero
+        eyebrow="About Us"
+        title="Gallery"
+        description="Step into our gallery and relive the moments that define our journey. From inspiring events to impactful collaborations, explore the visuals that capture the essence of our mission and the vibrant community we've built together."
+        accent="ocean"
+      />
 
-      <div className=" max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
+      <div className="max-w-screen-2xl mx-auto px-4 md:px-16 lg:px-24 py-16 sm:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((image) => (
             <motion.div
               key={image.id}
               layoutId={image.id.toString()}
               onClick={() => setSelectedId(image.id)}
-              className="cursor-pointer"
+              className="cursor-pointer notch-md overflow-hidden shadow-lg"
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover rounded-lg border shadow-lg"
-              />
+              <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
             </motion.div>
           ))}
         </div>
 
         <AnimatePresence>
           {selectedId && (
-            <div className="">
-              <motion.div
-                layoutId={selectedId.toString()}
-                className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50"
-                onClick={() => setSelectedId(null)}
-              >
-                <motion.img
-                  src={images.find((img) => img.id === selectedId)?.src}
-                  className="w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] rounded-lg"
-                  alt="Selected"
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              layoutId={selectedId.toString()}
+              className="fixed inset-0 bg-brand-brown/95 flex justify-center items-center z-50"
+              onClick={() => setSelectedId(null)}
+            >
+              <motion.img
+                src={images.find((img) => img.id === selectedId)?.src}
+                className="w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] notch-lg"
+                alt="Selected"
+              />
+            </motion.div>
           )}
         </AnimatePresence>
       </div>

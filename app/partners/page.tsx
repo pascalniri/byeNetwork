@@ -1,5 +1,5 @@
 import { IoArrowForwardOutline } from "react-icons/io5";
-import { MdOutlineHorizontalRule } from "react-icons/md";
+import PageHero from "@/components/layout/PageHero";
 
 const partners = [
   {
@@ -27,37 +27,31 @@ const partners = [
 
 export default function Partners() {
   return (
-    <div className="font-montserrat">
-      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[9rem]">
-        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
-          <MdOutlineHorizontalRule />
-          <p>OUR PARTNERS</p>
-          <MdOutlineHorizontalRule />
-        </h1>
-        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-          Our success is built on strong collaborations with our trusted
-          partners. Together, we work towards shared goals, driving impact and
-          innovation. These partnerships empower us to expand our reach, create
-          meaningful change, and deliver exceptional value to the communities we
-          serve.
-        </p>
-      </div>
+    <div>
+      <PageHero
+        eyebrow="About Us"
+        title="Our Partners"
+        description="Our success is built on strong collaborations with our trusted partners. Together, we work towards shared goals, driving impact and innovation. These partnerships empower us to expand our reach, create meaningful change, and deliver exceptional value to the communities we serve."
+        accent="ocean"
+      />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-2xl mx-auto px-4 md:px-16 lg:px-24 py-16 sm:py-20">
         {partners.map((partner, index) => (
-          <div key={index} className="bg-[#F0F0F0] shadow-xl rounded-[10px] p-2">
-            <img src={partner.image} alt="" className="w-full rounded-[9px]" />
-            <div className="flex flex-col items-start px-3 mb-3">
-              <h2 className=" text-[24px] leading-[28px] mt-3 font-semibold">{partner.title}</h2>
-              <p className="text-[15px] leading-[20px] mt-2 text-[#6C6A6A]">{partner.description}</p>
-              <a href={partner.link} target="_blank" rel="noopener noreferrer">
-                <button className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-8">
-                  <span className="relative z-10 flex items-center gap-2">
-                    VISIT THEM
-                    <IoArrowForwardOutline />
-                  </span>
-                  <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-                </button>
+          <div key={index} className="notch-lg bg-brand-cream shadow-lg p-3">
+            <div className="notch-md overflow-hidden bg-white">
+              <img src={partner.image} alt="" className="w-full" />
+            </div>
+            <div className="flex flex-col items-start px-3 py-4">
+              <h2 className="text-lg font-bold uppercase text-brand-brown">{partner.title}</h2>
+              <p className="text-sm leading-relaxed mt-2 text-brand-brown/70">{partner.description}</p>
+              <a
+                href={partner.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="notch-sm inline-flex items-center gap-2 bg-brand-chili hover:bg-brand-brown text-white text-xs font-semibold uppercase tracking-wide py-3 px-6 mt-6 transition-colors duration-200"
+              >
+                Visit Them
+                <IoArrowForwardOutline />
               </a>
             </div>
           </div>

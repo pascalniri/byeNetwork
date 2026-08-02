@@ -47,6 +47,23 @@
   .notch-lg {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
   }
+
+  /* A plain `border` on a notched element doesn't work — clip-path slices the
+     box (and any border with it) along a straight diagonal, but nothing ever
+     draws a stroke along that new cut edge, so the corner just looks sliced
+     open. Fix: nest a `.notch-*` wrapper (painted in the border color, full
+     depth cut) around a `.notch-*-inner` child (painted in the fill color,
+     inset by the frame's padding, cut 2px shallower) so the border color
+     shows as a uniform 2px frame that continues around the diagonal too. */
+  .notch-sm-inner {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
+  }
+  .notch-md-inner {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+  }
+  .notch-lg-inner {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26px), calc(100% - 26px) 100%, 0 100%);
+  }
 }
 
 /* Per-item nav accent colors, driven by --accent-bg / --accent-text custom

@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 
 const AnimatedText = ({
   texts,
@@ -25,37 +27,33 @@ const AnimatedText = ({
     }, delay);
     return () => clearTimeout(timer);
   }, [currentIndex, delay, texts.length]);
-
   return (
-    <motion.div
-      key={currentIndex}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{
-        opacity: isVisible ? 1 : 0,
-        y: isVisible ? 0 : -20,
-      }}
-      transition={{
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
-      className={`${className}`}
-    >
-      {texts[currentIndex]}
-    </motion.div>
+    <div className="grid">
+      {texts.map((text, index) => (
+        <motion.div
+          key={text}
+          animate={{
+            opacity: index === currentIndex && isVisible ? 1 : 0,
+            y: index === currentIndex ? (isVisible ? 0 : -20) : 0,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: [0.25, 0.1, 0.25, 1],
+          }}
+          aria-hidden={index !== currentIndex}
+          className={`col-start-1 row-start-1 ${className}`}
+        >
+          {text}
+        </motion.div>
+      ))}
+    </div>
   );
 };
 
+const backgroundImages = ["/BYEN1.jpeg", "/BYEN2.jpeg", "/BYEN3.jpeg", "/BYEN4.jpeg", "/BYEN5.jpeg", "/BYEN6.jpeg"];
+
 const BackgroundSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const backgroundImages = [
-    "/BYEN1.jpeg",
-    "/BYEN2.jpeg",
-    "/BYEN3.jpeg",
-    "/BYEN4.jpeg",
-    "/BYEN5.jpeg",
-    "/BYEN6.jpeg",
-  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,7 +61,7 @@ const BackgroundSlideshow = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [backgroundImages.length]);
+  }, []);
 
   return (
     <div className="absolute inset-0 w-full h-full z-[-2] pointer-events-none select-none overflow-hidden">
@@ -72,164 +70,158 @@ const BackgroundSlideshow = () => {
           key={index}
           className="absolute inset-0 w-full h-full"
           initial={{ opacity: 0 }}
-          animate={{
-            opacity: index === currentSlide ? 1 : 0,
-          }}
-          transition={{
-            duration: 1.5,
-            ease: "easeInOut",
-          }}
+          animate={{ opacity: index === currentSlide ? 1 : 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         >
+          {/* Brand photography direction: high-contrast duotone, not full color */}
           <img
             src={image}
             alt={`Background ${index + 1}`}
             className="w-full h-full object-cover"
+            style={{ filter: "grayscale(1) contrast(1.15) brightness(0.85)" }}
             draggable={false}
           />
         </motion.div>
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
+      {/* Brown duotone wash over the grayscale photos, heavier on the left where the headline sits */}
+      <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-brown via-brand-brown/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-brown/95 via-transparent to-transparent" />
 
-      <div className="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent opacity-20" />
 
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {backgroundImages.map((_, index) => (
-          <motion.div
-            key={index}
-            className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
-              index === currentSlide ? "bg-white" : "bg-white/40"
-            }`}
-            whileHover={{ scale: 1.2 }}
-            onClick={() => setCurrentSlide(index)}
-            style={{ pointerEvents: "auto" }}
-          />
-        ))}
-      </div>
     </div>
   );
 };
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
+const stories = [
+  {
+    tag: "Advocacy",
+    tagBg: "bg-brand-chili",
+    tagText: "text-white",
+    image: "/gun-violence-awareness.jpg",
+    title: "Gun Violence Awareness Day at Morehouse College",
+    href: "/events",
+  },
+  {
+    tag: "Community",
+    tagBg: "bg-brand-ocean",
+    tagText: "text-white",
+    image: "/feed-homeless.jpg",
+    title: "BYEN Members Feed Atlanta's Homeless Community",
+    href: "/events",
+  },
+  {
+    tag: "Workshops",
+    tagBg: "bg-brand-yellow",
+    tagText: "text-brand-brown",
+    image: "/financial-literacy.png",
+    title: "Financial Literacy 101 Ft. Luvswallet",
+    href: "/events",
+  },
+];
+
 const Home = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1] as const,
-      },
-    },
-  };
-
-  const buttonItem = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "spring" as const,
-        stiffness: 100,
-        damping: 10,
-      },
-    },
-  };
-
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-x-hidden">
-      <BackgroundSlideshow />
+    <div className="relative w-full">
+      <section className="relative w-full h-[78vh] min-h-[560px] overflow-hidden">
+        <BackgroundSlideshow />
 
-      <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none select-none">
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-amber-500/10"
-            style={{
-              width: `${Math.random() * 20 + 10}vw`,
-              height: `${Math.random() * 20 + 10}vw`,
-              maxWidth: "400px",
-              maxHeight: "400px",
-              left: `${Math.random() * 90}%`,
-              top: `${Math.random() * 90}%`,
-              filter: "blur(40px)",
-            }}
-          />
-        ))}
-      </div>
-
-      <motion.div
-        className="font-montserrat min-h-screen w-full flex flex-col justify-center items-center px-2 sm:px-4 py-16 sm:py-20 relative z-10 overflow-x-hidden"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div
-          className="max-w-2xl w-full text-center space-y-6 sm:space-y-8 px-2 sm:px-4 mx-auto"
-          variants={item}
-        >
-          <div className="relative min-h-[4rem] sm:min-h-[5rem] md:min-h-[6rem] flex items-center justify-center w-full">
-            <AnimatedText
-              texts={["BLACK YOUTH EMPOWERMENT NETWORK", "WELCOME TO BYEN"]}
-              delay={4000}
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-tight tracking-tight text-white drop-shadow-lg px-2 sm:px-4 break-words"
-            />
-          </div>
-
-          <motion.p
-            className="text-base sm:text-lg md:text-xl text-white max-w-xl mx-auto px-2 sm:px-4"
-            variants={item}
-          >
-            Empowering the next generation through education, mentorship, and community building.
-          </motion.p>
-
+        <div className="relative z-10 h-full flex items-center">
           <motion.div
-            className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 w-full px-2 sm:px-0"
-            variants={item}
+            className="font-nunito container mx-auto px-4 sm:px-6 md:px-10"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            <motion.a
-              href="/membership"
-              className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-2 sm:mt-8 text-base sm:text-lg"
-              variants={buttonItem}
-            >
-              <span className="relative z-10 flex items-center">
-                BECOME A MEMBER
-                <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-              <span className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-            </motion.a>
+            <div className="max-w-2xl">
+            
 
-            <motion.a
-              href="https://givebutter.com/4zAepQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-2 sm:mt-8 text-base sm:text-lg"
-              variants={buttonItem}
-            >
-              <span className="relative z-10 flex items-center">
-                DONATE NOW
-                <svg className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                </svg>
-              </span>
-              <span className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-            </motion.a>
+              <AnimatedText
+                texts={["BLACK YOUTH EMPOWERMENT NETWORK", "WELCOME TO BYEN"]}
+                delay={4000}
+                className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight uppercase tracking-tight text-white break-words"
+              />
+
+              <motion.p variants={item} className="text-sm text-brand-cream/90 max-w-lg mt-3">
+                Empowering the next generation through education, mentorship, and community building.
+              </motion.p>
+
+              <motion.div variants={item} className="mt-6">
+                <Link
+                  href="/membership"
+                  className="notch-md group inline-flex items-center gap-2 bg-brand-chili hover:bg-white text-white hover:text-brand-brown font-medium uppercase tracking-wide text-xs py-3 px-6 transition-colors duration-200"
+                >
+                  Become a Member
+                  <FiArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                </Link>
+              </motion.div>
+            </div>
           </motion.div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </section>
+
+      {/* Story cards overlapping the hero's bottom edge */}
+      <div className="relative z-20 -mt-16 sm:-mt-20 md:-mt-24">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+            {stories.map((story, index) => (
+              <motion.div
+                key={story.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
+              >
+                <Link
+                  href={story.href}
+                  className="group block bg-white shadow-xs overflow-hidden border border-black/10 hover:shadow-2xl transition-shadow duration-300"
+                >
+                  <div className="h-36 sm:h-40 overflow-hidden">
+                    <img
+                      src={story.image}
+                      alt={story.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-5">
+                    <span
+                      className={`notch-sm inline-block ${story.tagBg} ${story.tagText} text-xs font-medium uppercase tracking-widest px-3 py-1 mb-3`}
+                    >
+                      {story.tag}
+                    </span>
+                    <h3 className="text-sm font-semibold text-brand-brown leading-snug group-hover:text-brand-chili transition-colors duration-200">
+                      {story.title}
+                    </h3>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
