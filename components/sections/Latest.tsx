@@ -1,109 +1,150 @@
 "use client";
 
-import { Fade } from "react-awesome-reveal";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
+
+const news = [
+  {
+    tag: "TV Feature",
+    image: "/atlanta-news.png",
+    title: "Black Youth Empowerment Network Featured on Atlanta News First",
+    description:
+      "Founder Jay'Shun Mathews appeared on Atlanta News First to shed light on the ongoing gun violence epidemic affecting communities across the country, spotlighting a powerful youth-led advocacy event held in partnership with Students Demand Action.",
+    link: "https://www.atlantanewsfirst.com/2025/03/29/local-leaders-address-gun-violence-awareness-morehouse-college-event/",
+  },
+  {
+    tag: "Expansion",
+    image: "/collegiate-chapters.jpg",
+    title: "BYEN Launches Collegiate Chapters at Morehouse & UGA",
+    description:
+      "A powerful next step in equipping Black youth with the tools, community, and platform to lead with purpose — each chapter a local hub for leadership development, advocacy, and innovation.",
+    link: "https://www.instagram.com/wearebyen/",
+  },
+];
+
+const tickerText =
+  "BYEN FEATURED ON ATLANTA NEWS FIRST     •     NEW COLLEGIATE CHAPTERS AT MOREHOUSE & UGA     •     JOIN THE MOVEMENT     •     ";
 
 const Latest = () => {
-  const news = [
-    {
-      id: 1,
-      image: "/atlanta-news.png",
-      title: "Black Youth Empowerment Network Featured on Atlanta News First",
-      description:
-        "Founder Jay'Shun Mathews recently appeared on Atlanta News First to represent the Black Youth Empowerment Network, using his voice to shed light on the ongoing gun violence epidemic affecting communities across the country. During the segment, he spoke passionately about the importance of youth-led advocacy and raised awareness about a powerful event organized by the Network in partnership with Students Demand Action. The event served as both a call to action and a safe space for young people to unite, heal, and demand change. Jay'Shun's appearance underscores BYEN's unwavering commitment to empowering Black youth to lead movements that address urgent social issues and reimagine a safer, more just future.",
-      link: "https://www.atlantanewsfirst.com/2025/03/29/local-leaders-address-gun-violence-awareness-morehouse-college-event/",
-    },
-    {
-      id: 2,
-      image: "/collegiate-chapters.jpg",
-      title: "Black Youth Empowerment Network Launches Collegiate Chapters",
-      description:
-        "BYEN is proud to announce the official launch of chapters at Morehouse College and the University of Georgia. This expansion marks a powerful next step in our mission to equip Black youth with the tools, community, and platform to lead with purpose and create lasting change. Each chapter will serve as a hub for leadership development, advocacy, and innovation and rooted in our core values of empowerment, collaboration, impact, and intentional leadership.",
-      link: "https://www.instagram.com/wearebyen/",
-    },
-  ];
-
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.4,
-        staggerChildren: 0.5,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { y: 60, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-      },
-    },
-  };
-
   return (
-    <div className="font-montserrat bg-white mx-auto max-w-screen-2xl px-4 md:px-[5rem] lg:px-[6rem] py-[8rem]">
-      <Fade>
-        <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[30px] leading-[35px]">
-          LATEST <span className="text-[#693e2d]">NEWS</span>
-        </h1>
-      </Fade>
+    <section className="relative bg-white overflow-hidden">
+      {/* Ticker */}
+      <div className="relative bg-brand-brown text-brand-cream py-2.5 overflow-hidden whitespace-nowrap border-b-4 border-brand-chili">
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+          className="inline-block"
+        >
+          {Array.from({ length: 4 }).map((_, i) => (
+            <span key={i} className="text-xs font-semibold uppercase tracking-widest mx-4">
+              {tickerText}
+            </span>
+          ))}
+        </motion.div>
+      </div>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-[3rem]"
-      >
-        {news.map((newsItem, index) => (
-          <motion.div
-            variants={item}
-            key={index}
-            className="bg-white shadow-xl rounded-[10px] overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 py-20 sm:py-24">
+        <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
+          <div>
+            <span className="notch-sm inline-block bg-brand-ocean text-white text-xs font-medium uppercase tracking-widest px-4 py-2">
+              Newsroom
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight text-brand-brown mt-4">
+              BYEN <span className="text-brand-chili">In The News</span>
+            </h2>
+          </div>
+
+          <Link
+            href="/in-the-press"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-brand-brown border-b-2 border-brand-brown/30 pb-1 hover:border-brand-chili hover:text-brand-chili transition-colors duration-200"
           >
-            <div className="h-[240px] overflow-hidden">
+            All press coverage
+            <FiArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid lg:grid-cols-5 gap-6">
+          {/* Featured story — big cover tile */}
+          <motion.a
+            href={news[0].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="group relative lg:col-span-3 notch-lg overflow-hidden shadow-xl min-h-[380px] sm:min-h-[440px] flex flex-col justify-end"
+          >
+            <img
+              src={news[0].image}
+              alt={news[0].title}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-brown via-brand-brown/60 to-transparent" />
+
+            <div className="relative p-6 sm:p-9">
+              <span className="notch-sm inline-block bg-brand-chili text-white text-xs font-medium uppercase tracking-widest px-3 py-1.5 mb-4">
+                {news[0].tag}
+              </span>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight text-white mb-3 max-w-2xl">
+                {news[0].title}
+              </h3>
+              <p className="text-sm text-white/80 leading-relaxed max-w-xl line-clamp-2 sm:line-clamp-none">
+                {news[0].description}
+              </p>
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-white mt-5 border-b border-white/40 pb-1 group-hover:border-white transition-colors duration-200">
+                Read the story
+                <FiArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+              </span>
+            </div>
+          </motion.a>
+
+          {/* Secondary story — clean editorial card */}
+          <motion.a
+            href={news[1].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="group relative lg:col-span-2 notch-lg overflow-hidden shadow-xl bg-brand-cream flex flex-col"
+          >
+            <div className="h-44 sm:h-48 overflow-hidden">
               <img
-                src={newsItem.image}
-                alt={newsItem.title}
-                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                src={news[1].image}
+                alt={news[1].title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-            <div className="flex flex-col p-6">
-              <h2 className="text-[22px] font-semibold text-[#693e2d]">{newsItem.title}</h2>
-              <p className="text-[15px] leading-[22px] mt-3 text-[#6C6A6A] line-clamp-4">
-                {newsItem.description}
-              </p>
-              <a
-                href={newsItem.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 self-start relative text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group"
-              >
-                <span className="relative z-10">LEARN MORE</span>
-                <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-              </a>
+            <div className="p-6 sm:p-7 flex flex-col flex-1">
+              <span className="notch-sm inline-block bg-brand-green text-white text-xs font-medium uppercase tracking-widest px-3 py-1.5 mb-3 w-fit">
+                {news[1].tag}
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold uppercase leading-tight text-brand-brown mb-2">
+                {news[1].title}
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-brown/70 leading-relaxed">{news[1].description}</p>
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-brand-brown mt-auto pt-5 border-t border-brand-brown/15 group-hover:text-brand-chili transition-colors duration-200">
+                Read the story
+                <FiArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+              </span>
             </div>
-          </motion.div>
-        ))}
-      </motion.div>
+          </motion.a>
+        </div>
 
-      <div className="flex justify-center mt-8">
-        <a
-          href="https://www.instagram.com/wearebyen/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative text-[#693e2d] bg-white border-2 border-[#693e2d] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:bg-gradient-to-r hover:from-[#693e2d] hover:to-[#985b3c] hover:text-white hover:border-transparent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group"
-        >
-          <span className="relative z-10">VIEW MORE</span>
-          <div className="absolute inset-0 bg-[#693e2d]/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-        </a>
+        <div className="flex sm:hidden justify-center mt-8">
+          <Link
+            href="/in-the-press"
+            className="notch-sm inline-flex items-center gap-2 bg-brand-brown text-white text-xs font-semibold uppercase tracking-widest px-5 py-3"
+          >
+            All press coverage
+            <FiArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

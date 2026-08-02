@@ -1,49 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MdOutlineHorizontalRule } from "react-icons/md";
+import PageHero from "@/components/layout/PageHero";
 
 export default function StartChapter() {
   return (
-    <div className="font-montserrat">
-      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[9rem]">
-        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
-          <MdOutlineHorizontalRule />
-          <p className="uppercase">Start a Chapter</p>
-          <MdOutlineHorizontalRule />
-        </h1>
-        <p className="text-[15px] leading-[20px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-          Bring BYEN to Your Community
-        </p>
-      </div>
-      <div className="font-montserrat max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-[5rem]">
-        <div className=" mx-auto space-y-12">
+    <div>
+      <PageHero eyebrow="Get Involved" title="Start a Chapter" description="Bring BYEN to Your Community" accent="pink" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="mx-auto space-y-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white p-8 rounded-xl shadow-lg"
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="notch-lg bg-white p-8 shadow-lg"
           >
-            <p className="text-[#6C6A6A] leading-relaxed text-[15px]">
-              Are you ready to lead where you are? The Black Youth Empowerment Network is expanding, and we're looking for bold, committed leaders to launch new chapters across the country. Starting a BYEN chapter means creating space for Black youth in your community to grow as leaders, serve their neighborhoods, and build power together.
+            <p className="text-brand-brown/70 leading-relaxed text-sm">
+              Are you ready to lead where you are? The Black Youth Empowerment Network is expanding, and
+              we&apos;re looking for bold, committed leaders to launch new chapters across the country. Starting
+              a BYEN chapter means creating space for Black youth in your community to grow as leaders, serve
+              their neighborhoods, and build power together.
             </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-gradient-to-br from-[#f9f5f3] to-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]"
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="notch-lg bg-brand-cream p-8 shadow-lg border-l-4 border-brand-chili"
           >
-            <h2 className="text-2xl font-bold text-[#693e2d] mb-6 flex items-center">
-              <MdOutlineHorizontalRule className="mr-2" />
-              What Is a BYEN Chapter?
-            </h2>
-            <p className="text-[#6C6A6A] mb-6 leading-relaxed text-[15px]">
-              A BYEN chapter is a youth-led extension of our national movement, based in a local school, college, or community. Chapters organize events, host service projects, lead issue-based campaigns, and represent the values of BYEN at the local level.
+            <h2 className="text-lg sm:text-xl font-bold uppercase text-brand-brown mb-6">What Is a BYEN Chapter?</h2>
+            <p className="text-brand-brown/70 mb-6 leading-relaxed text-sm">
+              A BYEN chapter is a youth-led extension of our national movement, based in a local school, college,
+              or community. Chapters organize events, host service projects, lead issue-based campaigns, and
+              represent the values of BYEN at the local level.
             </p>
 
-            <h3 className="text-lg font-semibold text-[#693e2d] mt-8 mb-4">Every chapter receives:</h3>
+            <h3 className="text-sm font-bold uppercase text-brand-brown mt-8 mb-4">Every chapter receives:</h3>
             <ul className="space-y-3">
               {[
                 "A step-by-step Chapter Launch Toolkit",
@@ -51,10 +47,10 @@ export default function StartChapter() {
                 "A direct line to our National Team for support and resources",
                 "Visibility on our national platforms and in BYEN campaigns",
                 "A community of youth leaders across the country",
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-[#985b3c] mr-2">•</span>
-                  <span className="text-[#6C6A6A] text-[15px]">{item}</span>
+              ].map((item) => (
+                <li key={item} className="flex items-start">
+                  <span className="text-brand-chili mr-2">•</span>
+                  <span className="text-brand-brown/70 text-sm">{item}</span>
                 </li>
               ))}
             </ul>
@@ -62,29 +58,28 @@ export default function StartChapter() {
 
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white p-8 rounded-xl shadow-lg"
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="notch-lg bg-white p-8 shadow-lg"
           >
-            <h2 className="text-2xl font-bold text-[#693e2d] mb-6 flex items-center">
-              <MdOutlineHorizontalRule className="mr-2" />
-              Who Can Start a Chapter?
-            </h2>
-            <p className="text-[#6C6A6A] mb-6 leading-relaxed text-[15px]">
-              Chapters are open to Black youth ages 16–24 who are committed to BYEN's mission of leadership, service, and empowerment.
+            <h2 className="text-lg sm:text-xl font-bold uppercase text-brand-brown mb-6">Who Can Start a Chapter?</h2>
+            <p className="text-brand-brown/70 mb-6 leading-relaxed text-sm">
+              Chapters are open to Black youth ages 16–24 who are committed to BYEN&apos;s mission of leadership,
+              service, and empowerment.
             </p>
 
-            <h3 className="text-lg font-semibold text-[#693e2d] mb-4">We especially welcome applications from:</h3>
+            <h3 className="text-sm font-bold uppercase text-brand-brown mb-4">We especially welcome applications from:</h3>
             <div className="grid md:grid-cols-2 gap-6 mt-6">
               {[
                 "High school student leaders",
                 "HBCU and college campus organizers",
                 "Youth-led community groups",
                 "Rural and underserved communities",
-              ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <span className="text-[#985b3c] mr-2">•</span>
-                  <p className="text-[#6C6A6A] text-[15px]">{item}</p>
+              ].map((item) => (
+                <div key={item} className="flex items-start">
+                  <span className="text-brand-chili mr-2">•</span>
+                  <p className="text-brand-brown/70 text-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -92,25 +87,23 @@ export default function StartChapter() {
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-br from-[#f9f5f3] to-white p-8 rounded-xl shadow-lg border-l-4 border-[#693e2d]"
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="notch-lg bg-brand-cream p-8 shadow-lg border-l-4 border-brand-chili"
           >
-            <h2 className="text-2xl font-bold text-[#693e2d] mb-6 flex items-center">
-              <MdOutlineHorizontalRule className="mr-2" />
-              What We're Looking For
-            </h2>
-            <p className="text-[#6C6A6A] mb-6 leading-relaxed text-[15px]">Strong chapter founders demonstrate:</p>
+            <h2 className="text-lg sm:text-xl font-bold uppercase text-brand-brown mb-6">What We&apos;re Looking For</h2>
+            <p className="text-brand-brown/70 mb-6 leading-relaxed text-sm">Strong chapter founders demonstrate:</p>
             <ul className="space-y-3">
               {[
                 "A commitment to grassroots leadership",
                 "Clear vision for impact in their community",
                 "Strong communication and organizing skills",
                 "Willingness to grow with and represent BYEN",
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-[#985b3c] mr-2">✓</span>
-                  <span className="text-[#6C6A6A] text-[15px]">{item}</span>
+              ].map((item) => (
+                <li key={item} className="flex items-start">
+                  <span className="text-brand-chili mr-2">✓</span>
+                  <span className="text-brand-brown/70 text-sm">{item}</span>
                 </li>
               ))}
             </ul>
@@ -118,33 +111,25 @@ export default function StartChapter() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-white p-8 rounded-xl shadow-lg text-center mb-16"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="notch-lg bg-white p-8 shadow-lg text-center"
           >
-            <h2 className="text-2xl font-bold text-[#693e2d] mb-6">Ready to Lead?</h2>
-            <p className="text-[#6C6A6A] mb-8 max-w-2xl mx-auto leading-relaxed text-[15px]">
-              Starting a chapter is a chance to turn your ideas into action and be part of something bigger. You don't have to do it alone—BYEN will walk with you every step of the way.
+            <h2 className="text-lg sm:text-xl font-bold uppercase text-brand-brown mb-6">Ready to Lead?</h2>
+            <p className="text-brand-brown/70 mb-8 max-w-2xl mx-auto leading-relaxed text-sm">
+              Starting a chapter is a chance to turn your ideas into action and be part of something bigger. You
+              don&apos;t have to do it alone—BYEN will walk with you every step of the way.
             </p>
 
-            <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-r">
-              <div className="flex flex-col sm:flex-row items-center justify-center">
-                <div className="flex-shrink-0 mb-2 sm:mb-0 sm:mr-3">
-                  <svg className="h-5 w-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <p className="text-sm text-amber-800 text-center sm:text-left">
-                  <span className="font-semibold">Important Dates:</span> Application opens July 15th, priority deadline is July 31st, and regular deadline is August 15th.
-                </p>
-              </div>
+            <div className="notch-sm bg-brand-yellow/20 border-l-4 border-brand-yellow p-4 mb-8 text-left sm:text-center">
+              <p className="text-sm text-brand-brown">
+                <span className="font-semibold">Important Dates:</span> Application opens July 15th, priority
+                deadline is July 31st, and regular deadline is August 15th.
+              </p>
             </div>
 
-            <p className="text-[#6C6A6A] text-[15px] mb-6">Chapter proposal applications open Fall 2025.</p>
+            <p className="text-brand-brown/70 text-sm">Chapter proposal applications open Fall 2025.</p>
           </motion.div>
         </div>
       </div>

@@ -5,27 +5,35 @@ import { BiSolidConversation } from "react-icons/bi";
 
 const ContactUs = () => {
   return (
-    <Fade triggerOnce={false} className="font-montserrat flex flex-col justify-center text-center">
-      <div className="flex bg-white flex-col justify-center items-center text-center py-[10rem] px-4 md:px-[5rem] lg:px-[10rem]">
-        <h1 className="lg:text-[44px] lg:leading-[44px] font-bold text-[26px] leading-[35px]">
-          LET'S CONNECT AND START <span className="text-[#985B3C]">A CONVERSATION TODAY!</span>
-        </h1>
-        <p className="text-[15px] mt-4 text-[#6C6A6A] md:w-[80%]">
-          We're here to support you every step of the way on your journey with BYEN.
-        </p>
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative inline-block text-white bg-gradient-to-r from-[#693e2d] to-[#985b3c] rounded-full py-3 px-6 xl:py-4 xl:px-8 hover:from-[#985b3c] hover:to-[#693e2d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group flex items-center gap-2 mt-8"
-        >
-          <span className="relative z-10 flex items-center gap-2">
-            CONTACT VIA E-MAIL
-            <BiSolidConversation />
-          </span>
-          <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
-        </a>
-      </div>
+    <Fade triggerOnce={false}>
+      <section className="relative bg-brand-cream flex flex-col justify-center items-center text-center py-20 sm:py-24 px-4 md:px-16 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage: 'url("/branding/SVG/Pattern_DarkBrown.svg")',
+            backgroundRepeat: "repeat",
+            backgroundSize: "220px auto",
+          }}
+        />
+
+        <div className="relative">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight text-brand-brown max-w-2xl">
+            Let&apos;s Connect And Start <span className="text-brand-chili">A Conversation Today!</span>
+          </h2>
+          <p className="text-sm text-brand-brown/70 mt-4 max-w-lg mx-auto">
+            We&apos;re here to support you every step of the way on your journey with BYEN.
+          </p>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=blackyouthempowermentnetwork@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="notch-md group inline-flex items-center gap-2 bg-brand-chili hover:bg-brand-brown text-white font-semibold uppercase tracking-wide text-xs sm:text-sm py-3 px-6 mt-8 transition-colors duration-200"
+          >
+            Contact via E-Mail
+            <BiSolidConversation className="w-4 h-4" />
+          </a>
+        </div>
+      </section>
     </Fade>
   );
 };

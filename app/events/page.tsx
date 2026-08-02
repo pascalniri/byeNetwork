@@ -1,7 +1,7 @@
 "use client";
 
-import { MdOutlineHorizontalRule } from "react-icons/md";
 import { motion, type Variants } from "framer-motion";
+import PageHero from "@/components/layout/PageHero";
 
 type Event = {
   image: string;
@@ -90,7 +90,7 @@ const EventCard = ({ event }: { event: Event }) => {
   return (
     <motion.div
       variants={fadeIn}
-      className="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      className="flex flex-col notch-lg bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
       <div className="h-[200px] overflow-hidden">
         <img
@@ -101,11 +101,11 @@ const EventCard = ({ event }: { event: Event }) => {
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
-        <h2 className="font-semibold text-[20px] leading-[28px] text-[#693e2d] mb-2">{event.title}</h2>
-        <div className="flex justify-between mb-4 text-[14px] text-gray-600">
+        <h2 className="font-bold uppercase text-base text-brand-brown mb-2">{event.title}</h2>
+        <div className="flex justify-between mb-4 text-xs font-semibold uppercase tracking-wide text-brand-brown/50">
           <p>{event.date}</p>
         </div>
-        <div className="text-[15px] leading-[22px] text-[#6C6A6A]">{event.description}</div>
+        <div className="text-sm leading-relaxed text-brand-brown/70">{event.description}</div>
       </div>
     </motion.div>
   );
@@ -113,22 +113,17 @@ const EventCard = ({ event }: { event: Event }) => {
 
 export default function Events() {
   return (
-    <div className="font-montserrat">
-      <div className="bg-[#FAFAFA] flex flex-col justify-center items-center py-[3rem] text-center max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] bg-[url('/transparent.svg')] bg-no-repeat h-full w-full mt-[9rem]">
-        <h1 className="flex flex-row items-center gap-2 md:text-[50px] text-[#693e2d] text-[30px] font-medium">
-          <MdOutlineHorizontalRule />
-          <p>EVENTS</p>
-          <MdOutlineHorizontalRule />
-        </h1>
-        <p className="text-[15px] leading-[22px] mt-4 text-[#6C6A6A] md:w-[80%] mx-auto">
-          Join us for unforgettable experiences! Explore our events designed to inspire, connect, and empower.
-          Don't miss the chance to be part of something special—check out the details below and reserve your spot today!
-        </p>
-      </div>
+    <div>
+      <PageHero
+        eyebrow="Events"
+        title="Events"
+        description="Join us for unforgettable experiences! Explore our events designed to inspire, connect, and empower. Don't miss the chance to be part of something special—check out the details below and reserve your spot today!"
+        accent="yellow"
+      />
 
-      <div className="max-w-screen-2xl mx-auto px-4 md:px-[5rem] lg:px-[6rem] py-[6rem]">
+      <div className="max-w-screen-2xl mx-auto px-4 md:px-16 lg:px-24 py-16 sm:py-20">
         <div className="mb-16">
-          <h2 className="text-[28px] font-bold mb-8 text-center border-b-2 border-[#693e2d] pb-2 inline-block">
+          <h2 className="text-xl sm:text-2xl font-bold uppercase mb-8 text-center border-b-2 border-brand-chili pb-2 inline-block text-brand-brown">
             Jan-May 2025
           </h2>
 
@@ -145,7 +140,7 @@ export default function Events() {
           </motion.div>
         </div>
         <div className="mb-16">
-          <h2 className="text-[28px] font-bold mb-8 text-center border-b-2 border-[#693e2d] pb-2 inline-block">
+          <h2 className="text-xl sm:text-2xl font-bold uppercase mb-8 text-center border-b-2 border-brand-chili pb-2 inline-block text-brand-brown">
             2024
           </h2>
 

@@ -10,7 +10,11 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
-        nunito: ["var(--font-nunito-sans)", "sans-serif"],
+        nunito: ["var(--font-nunito-sans)", "ui-sans-serif", "sans-serif"],
+        // Brand's actual typeface (the TTFs in public/branding), made the
+        // real site default so untouched components don't need an explicit
+        // font-nunito class to pick it up.
+        sans: ["var(--font-nunito-sans)", "ui-sans-serif", "sans-serif"],
       },
       colors: {
         brand: {
