@@ -122,10 +122,19 @@ export default function Events() {
       />
 
       <div className="max-w-screen-2xl mx-auto px-4 md:px-16 lg:px-24 py-16 sm:py-20">
+        <div className="mb-20 notch-lg bg-brand-brown text-white p-10 sm:p-14 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold uppercase mb-3">Upcoming Events</h2>
+          <p className="text-sm text-brand-cream/80 max-w-xl mx-auto">
+            Stay tuned for Fall 2026 events — new programming, workshops, and gatherings are in the works.
+          </p>
+        </div>
+
+        <h2 className="text-2xl sm:text-3xl font-bold uppercase mb-12 text-center text-brand-brown">Past Events</h2>
+
         <div className="mb-16">
-          <h2 className="text-xl sm:text-2xl font-bold uppercase mb-8 text-center border-b-2 border-brand-chili pb-2 inline-block text-brand-brown">
+          <h3 className="text-xl sm:text-2xl font-bold uppercase mb-8 text-center border-b-2 border-brand-chili pb-2 inline-block text-brand-brown">
             Jan-May 2025
-          </h2>
+          </h3>
 
           <motion.div
             variants={staggerContainer}
@@ -140,9 +149,9 @@ export default function Events() {
           </motion.div>
         </div>
         <div className="mb-16">
-          <h2 className="text-xl sm:text-2xl font-bold uppercase mb-8 text-center border-b-2 border-brand-chili pb-2 inline-block text-brand-brown">
+          <h3 className="text-xl sm:text-2xl font-bold uppercase mb-8 text-center border-b-2 border-brand-chili pb-2 inline-block text-brand-brown">
             2024
-          </h2>
+          </h3>
 
           <motion.div
             variants={staggerContainer}

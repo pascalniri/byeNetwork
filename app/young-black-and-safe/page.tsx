@@ -1,10 +1,12 @@
 import { FiArrowRight } from "react-icons/fi";
-import PageHero from "@/components/layout/PageHero";
+import { FaShieldAlt, FaBrain, FaBalanceScale, FaChalkboardTeacher, FaBullhorn, FaFolderOpen, FaUsers } from "react-icons/fa";
+import PhotoPageHero from "@/components/layout/PhotoPageHero";
 
 export default function YoungBlackAndSafe() {
   return (
     <div>
-      <PageHero
+      <PhotoPageHero
+        image="/gun-violence-awareness.jpg"
         eyebrow="Programs & Initiatives"
         title="Young, Black, and Safe"
         description="A National Community Safety and Advocacy Initiative of the Black Youth Empowerment Network. Building safer conditions for Black youth through education, advocacy, community engagement, and strategic partnership."
@@ -60,18 +62,21 @@ export default function YoungBlackAndSafe() {
             <h3 className="text-lg font-bold text-brand-brown mt-8 mb-4">Our work is organized around three areas:</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               <div className="notch-md bg-white p-6 shadow-md border-t-4 border-brand-chili">
+                <div className="text-brand-chili text-2xl mb-3"><FaShieldAlt /></div>
                 <h4 className="text-base font-bold text-brand-brown mb-3">Physical Safety</h4>
                 <p className="text-sm text-brand-brown/70">
                   Advancing education, prevention strategies, partnerships, and youth-led action in response to gun violence and other threats to the physical safety of Black youth.
                 </p>
               </div>
               <div className="notch-md bg-white p-6 shadow-md border-t-4 border-brand-chili">
+                <div className="text-brand-chili text-2xl mb-3"><FaBrain /></div>
                 <h4 className="text-base font-bold text-brand-brown mb-3">Mental Well-Being</h4>
                 <p className="text-sm text-brand-brown/70">
                   Connecting young people with information, professionals, support systems, and community spaces that recognize the effects of violence, grief, discrimination, and trauma.
                 </p>
               </div>
               <div className="notch-md bg-white p-6 shadow-md border-t-4 border-brand-chili">
+                <div className="text-brand-chili text-2xl mb-3"><FaBalanceScale /></div>
                 <h4 className="text-base font-bold text-brand-brown mb-3">Legal Awareness</h4>
                 <p className="text-sm text-brand-brown/70">
                   Equipping Black youth with accessible information to understand their rights, navigate public systems, and advocate for fair treatment in their schools, campuses, and communities.
@@ -118,12 +123,24 @@ export default function YoungBlackAndSafe() {
 
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
-                <h3 className="text-lg font-bold text-brand-brown">Community Violence Intervention Fellowship</h3>
+                <h3 className="text-lg font-bold text-brand-brown">BYEN Community Safety Fellowship</h3>
               </div>
               <div className="md:w-2/3">
-                <p className="text-sm text-brand-brown/70">
-                  In Fall 2026, BYEN will launch a competitive Community Violence Intervention Fellowship in partnership with the Everytown Community Safety Fund. The fellowship will select 15 emerging leaders to deepen their knowledge of community violence intervention and prepare them to advance safety within their communities.
+                <p className="text-sm text-brand-brown/70 mb-4">
+                  The BYEN Community Safety Fellowship is a four-week leadership development experience equipping
+                  emerging leaders with the knowledge, skills, and relationships to advance community safety,
+                  address gun violence, and explore community violence intervention strategies. The program
+                  includes virtual learning and an in-person convening in Memphis, Tennessee, held in partnership
+                  with the Everytown Community Safety Fund.
                 </p>
+                <a
+                  href="https://forms.gle/mcBHq55tqXN9zgFP6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="notch-sm inline-flex items-center bg-brand-chili hover:bg-brand-brown text-white text-xs font-semibold uppercase tracking-wide py-2.5 px-5 transition-colors duration-200"
+                >
+                  Apply to the Fellowship
+                </a>
               </div>
             </div>
           </div>
@@ -140,6 +157,7 @@ export default function YoungBlackAndSafe() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="notch-md bg-brand-brown/10 p-0.5 shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="notch-md-inner bg-white p-6 h-full">
+                <div className="text-brand-chili text-2xl mb-3"><FaChalkboardTeacher /></div>
                 <h3 className="text-base font-bold text-brand-brown mb-3">Workshops and Trainings</h3>
                 <p className="text-sm text-brand-brown/70">
                   Educational sessions on gun violence prevention, personal safety, mental health awareness, legal rights, and community advocacy, designed so participants leave with information they can understand, apply, and share within their own networks.
@@ -148,6 +166,7 @@ export default function YoungBlackAndSafe() {
             </div>
             <div className="notch-md bg-brand-brown/10 p-0.5 shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="notch-md-inner bg-white p-6 h-full">
+                <div className="text-brand-chili text-2xl mb-3"><FaBullhorn /></div>
                 <h3 className="text-base font-bold text-brand-brown mb-3">Public Advocacy</h3>
                 <p className="text-sm text-brand-brown/70">
                   We engage young people in policy conversations, public education campaigns, and community initiatives addressing gun violence prevention and the broader safety and well-being of Black youth, ensuring they are not only represented in these conversations but prepared to shape the solutions.
@@ -156,6 +175,7 @@ export default function YoungBlackAndSafe() {
             </div>
             <div className="notch-md bg-brand-brown/10 p-0.5 shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="notch-md-inner bg-white p-6 h-full">
+                <div className="text-brand-chili text-2xl mb-3"><FaFolderOpen /></div>
                 <h3 className="text-base font-bold text-brand-brown mb-3">Resource Development and Distribution</h3>
                 <p className="text-sm text-brand-brown/70">
                   We create and distribute accessible materials that connect young people and families with information on legal rights, mental health services, safety resources, and community-based support systems.
@@ -164,6 +184,7 @@ export default function YoungBlackAndSafe() {
             </div>
             <div className="notch-md bg-brand-brown/10 p-0.5 shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="notch-md-inner bg-white p-6 h-full">
+                <div className="text-brand-chili text-2xl mb-3"><FaUsers /></div>
                 <h3 className="text-base font-bold text-brand-brown mb-3">Community Convenings</h3>
                 <p className="text-sm text-brand-brown/70">
                   We host forums, workshops, listening sessions, and public events that bring together young people, community leaders, professionals, and institutions, strengthening relationships and creating pathways for coordinated action.
@@ -273,6 +294,13 @@ export default function YoungBlackAndSafe() {
               Support the Initiative
             </a>
           </div>
+
+          <p className="text-sm text-brand-brown/70 mt-8">
+            Questions about the initiative? Email us at{" "}
+            <a href="mailto:ybs@wearebyen.org" className="font-bold text-brand-chili hover:underline">
+              ybs@wearebyen.org
+            </a>
+          </p>
         </section>
       </div>
     </div>

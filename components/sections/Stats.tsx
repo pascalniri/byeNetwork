@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { number: 500, label: "Black Youth Connected Nationally", suffix: "+" },
-  { number: 30, label: "States Reached", suffix: "+" },
+  { number: 700, label: "Black Youth Connected Nationally", suffix: "+" },
+  { number: 10, label: "Chapters", suffix: "+" },
   { number: 100, label: "Community Service Hours", suffix: "k" },
 ];
 

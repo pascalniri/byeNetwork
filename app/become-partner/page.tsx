@@ -2,26 +2,31 @@
 
 import { motion } from "framer-motion";
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import PageHero from "@/components/layout/PageHero";
+import { FaUniversity, FaLightbulb, FaChalkboardTeacher, FaCalendarAlt } from "react-icons/fa";
+import PhotoPageHero from "@/components/layout/PhotoPageHero";
 
 const waysToPartner = [
   {
     title: "Host a Chapter",
+    icon: <FaUniversity />,
     description:
       "We partner with schools and community organizations to help launch and sustain local BYEN chapters. Hosts provide meeting space, guidance, and local context, while BYEN provides structure, training, and national support.",
   },
   {
     title: "Co-Design Programs or Campaigns",
+    icon: <FaLightbulb />,
     description:
       "From mental health initiatives to civic engagement drives, we welcome collaboration with organizations that want to align on mission and create innovative, youth-centered solutions.",
   },
   {
     title: "Provide Mentorship or Workshops",
+    icon: <FaChalkboardTeacher />,
     description:
       "If your organization can offer coaching, technical assistance, or professional development to BYEN members, we would love to connect.",
   },
   {
     title: "Support Events or Retreats",
+    icon: <FaCalendarAlt />,
     description:
       "We're always looking for partners to support our leadership retreats, youth summits, and training days through sponsorships, speakers, and in-kind support.",
   },
@@ -30,7 +35,8 @@ const waysToPartner = [
 export default function WaysToPartner() {
   return (
     <div>
-      <PageHero
+      <PhotoPageHero
+        image="/events.jpg"
         eyebrow="Get Involved"
         title="Become a Partner!"
         description="Fuel the Movement. Invest in the Future of Black Youth."
@@ -58,7 +64,7 @@ export default function WaysToPartner() {
               <ul className="space-y-2 text-brand-brown/70 text-sm">
                 {[
                   "Believe in youth-led change",
-                  "Serve or support Black youth ages 13 to 25",
+                  "Serve or support Black youth ages 16 to 24",
                   "Share our values of equity, collaboration, and cultural relevance",
                   "Want to co-create programs, campaigns, or events with lasting impact",
                 ].map((item) => (
@@ -78,7 +84,7 @@ export default function WaysToPartner() {
               <ul className="space-y-2 text-brand-brown/70 text-sm">
                 {[
                   "200+ Black youth engaged nationally since Spring 2025",
-                  "Active presence in 25 states and growing",
+                  "Active 10+ chapter network growing along the Southeast and East Coast",
                   "Programs led by youth, shaped by lived experience",
                   "Track record of organizing, advocacy, and community building",
                   "Partnerships with HBCUs, schools, and youth-led groups",
@@ -97,6 +103,7 @@ export default function WaysToPartner() {
             <div className="grid md:grid-cols-2 gap-6">
               {waysToPartner.map((item) => (
                 <div key={item.title} className="notch-md bg-white p-6 shadow-sm">
+                  <div className="text-brand-chili text-2xl mb-3">{item.icon}</div>
                   <h4 className="text-base font-bold uppercase text-brand-brown mb-2">{item.title}</h4>
                   <p className="text-brand-brown/70 text-sm">{item.description}</p>
                 </div>
@@ -118,11 +125,10 @@ export default function WaysToPartner() {
               >
                 Become a Partner
               </a>
-              <a
-                href="mailto:info@wearebyen.org"
-                className="notch-md text-brand-brown border-2 border-brand-brown hover:bg-brand-brown hover:text-white text-xs font-semibold uppercase tracking-wide py-2.5 px-6 transition-colors duration-200 text-center"
-              >
-                Email Us
+              <a href="mailto:info@wearebyen.org" className="notch-md group bg-brand-brown p-0.5 transition-colors duration-200">
+                <span className="notch-md-inner flex items-center justify-center h-full bg-white group-hover:bg-brand-brown text-brand-brown group-hover:text-white text-xs font-semibold uppercase tracking-wide py-2.5 px-6 transition-colors duration-200 text-center">
+                  Email Us
+                </span>
               </a>
             </div>
             <p className="mt-4 text-sm text-brand-brown/70">

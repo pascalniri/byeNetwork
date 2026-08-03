@@ -60,9 +60,8 @@ export default function HistoryAndBackground() {
         accent="ocean"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div>
             <Section title="Our Foundation">
               <p>
                 The Black Youth Empowerment Network (BYEN) was founded on January 2, 2024, by Jay&apos;Shun
@@ -127,28 +126,6 @@ export default function HistoryAndBackground() {
                 </TimelineItem>
               </div>
             </Section>
-          </div>
-
-          <div className="lg:col-span-1">
-            <div className="notch-lg bg-brand-cream p-6 shadow-lg sticky top-28">
-              <h3 className="text-lg font-bold uppercase text-brand-brown mb-4">Key Milestones</h3>
-              <ul className="space-y-4">
-                {[
-                  "200+ members nationwide",
-                  "25 states reached",
-                  "2,500+ community service hours",
-                  "10+ community initiatives launched",
-                ].map((milestone, index) => (
-                  <li key={milestone} className="flex items-center">
-                    <span className="notch-sm inline-flex items-center justify-center w-7 h-7 bg-brand-chili text-white text-sm font-bold mr-3 flex-shrink-0">
-                      {index + 1}
-                    </span>
-                    <span className="text-sm text-brand-brown/70">{milestone}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </div>

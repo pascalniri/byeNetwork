@@ -5,7 +5,6 @@ import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { MdOutlineMail } from "react-icons/md";
-import { LuPhoneCall } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
@@ -39,11 +38,17 @@ const navigationItems: NavItem[] = [
     label: "About Us",
     type: "dropdown",
     items: [
-      { label: "History & Background", href: "/history-and-background" },
-      { label: "Leadership Team", href: "/leadership" },
+      { label: "Our History", href: "/history-and-background" },
+      { label: "Our Team", href: "/leadership" },
       { label: "Partners", href: "/partners" },
-      { label: "Board of Advisors", href: "#" },
+      { label: "Our Board of Directors", href: "/board-of-directors" },
     ],
+  },
+  {
+    id: "chapters",
+    label: "Chapters",
+    href: "/chapters",
+    type: "link",
   },
   {
     id: "resources",
@@ -81,7 +86,6 @@ const navigationItems: NavItem[] = [
 
 const contactDetails = [
   { icon: MdOutlineMail, label: "info@wearebyen.org", href: "mailto:info@wearebyen.org" },
-  { icon: LuPhoneCall, label: "+1 (478) 283-3665", href: "tel:+14782833665" },
   { icon: IoLocationOutline, label: "USA", href: undefined },
 ];
 
@@ -95,6 +99,7 @@ const donateHref = "https://givebutter.com/4zAepQ";
 const ACCENTS: Record<string, CSSProperties> = {
   home: { "--accent-bg": "#EF5018", "--accent-text": "#FFFFFF" } as CSSProperties,
   aboutus: { "--accent-bg": "#158BFF", "--accent-text": "#FFFFFF" } as CSSProperties,
+  chapters: { "--accent-bg": "#C69C6D", "--accent-text": "#2D1807" } as CSSProperties,
   resources: { "--accent-bg": "#ABFF1E", "--accent-text": "#2D1807" } as CSSProperties,
   events: { "--accent-bg": "#E8D631", "--accent-text": "#2D1807" } as CSSProperties,
   getinvolved: { "--accent-bg": "#F27585", "--accent-text": "#FFFFFF" } as CSSProperties,
@@ -133,7 +138,11 @@ const Navbar = () => {
           <FiChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" />
           <span className="nav-accent-underline absolute bottom-0 left-0 h-[5px] w-full" />
         </button>
-        <div className="absolute left-0 top-full w-64 bg-brand-brown notch-md opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50">
+        <div
+          className={`absolute top-full w-64 bg-brand-brown notch-md opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50 ${
+            item.id === "newsandblog" ? "right-0" : "left-0"
+          }`}
+        >
           <div className="py-2">
             {item.items.map((subItem, index) => (
               <Link
