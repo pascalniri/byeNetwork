@@ -100,10 +100,12 @@ export default function InThePress() {
             href="https://www.instagram.com/wearebyen/"
             target="_blank"
             rel="noopener noreferrer"
-            className="notch-md inline-flex items-center text-brand-brown border-2 border-brand-brown hover:bg-brand-brown hover:text-white text-xs font-semibold uppercase tracking-wide py-3 px-8 transition-colors duration-200"
+            className="notch-md group bg-brand-brown p-0.5 transition-colors duration-200"
           >
-            View More Press
-            <FiArrowRight className="ml-2 w-4 h-4" />
+            <span className="notch-md-inner flex items-center justify-center h-full gap-2 bg-white group-hover:bg-brand-brown text-brand-brown group-hover:text-white text-xs font-semibold uppercase tracking-wide py-3 px-8 transition-colors duration-200">
+              View More Press
+              <FiArrowRight className="w-4 h-4" />
+            </span>
           </a>
         </div>
       </div>

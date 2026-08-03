@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
+import { FaAward, FaStar } from "react-icons/fa";
 
 const AnimatedText = ({
   texts,
@@ -166,6 +167,10 @@ const Home = () => {
                 className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight uppercase tracking-tight text-white break-words"
               />
 
+              <motion.p variants={item} className="text-sm sm:text-base font-semibold text-brand-lime uppercase tracking-wide mt-4">
+                Building America&apos;s Network of Young Black Leaders
+              </motion.p>
+
               <motion.p variants={item} className="text-sm text-brand-cream/90 max-w-lg mt-3">
                 Empowering the next generation through education, mentorship, and community building.
               </motion.p>
@@ -220,6 +225,66 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Chapter Spotlight + Member Spotlight */}
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-20">
+        <div className="grid md:grid-cols-2 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="notch-lg bg-brand-brown text-white p-8 sm:p-10"
+          >
+            <div className="notch-sm inline-flex items-center justify-center bg-brand-lime w-12 h-12 mb-5">
+              <FaAward className="text-brand-brown text-xl" />
+            </div>
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-lime">Chapter Spotlight</span>
+            <h3 className="text-xl font-bold uppercase mt-2 mb-4">BYEN House at Morehouse College</h3>
+            <p className="text-sm text-brand-cream/80 leading-relaxed mb-3">
+              BYEN House at Morehouse College was recognized with a{" "}
+              <span className="font-bold text-white">Lux Award for Best Registered Student Organization</span>,
+              celebrating the chapter&apos;s leadership, campus presence, and commitment to developing and
+              empowering young Black leaders.
+            </p>
+            <p className="text-sm text-brand-cream/80 leading-relaxed mb-4">
+              Through meaningful programming, community building, and service, BYEN House continues to demonstrate
+              what it looks like when members turn vision into impact.
+            </p>
+            <p className="text-sm font-semibold text-brand-lime">
+              Congratulations to BYEN House for continuing to set the standard for chapter excellence.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="notch-lg bg-brand-cream p-8 sm:p-10"
+          >
+            <div className="notch-sm inline-flex items-center justify-center bg-brand-chili w-12 h-12 mb-5">
+              <FaStar className="text-white text-xl" />
+            </div>
+            <span className="text-xs font-bold uppercase tracking-widest text-brand-chili">Member Spotlight</span>
+            <h3 className="text-xl font-bold uppercase text-brand-brown mt-2 mb-1">Ethan Ipaye</h3>
+            <p className="text-xs font-semibold text-brand-brown/60 mb-4">University of Georgia</p>
+            <p className="text-sm text-brand-brown/70 leading-relaxed mb-3">
+              BYEN proudly recognizes Ethan Ipaye on his initiation into{" "}
+              <span className="font-bold text-brand-brown">Omega Psi Phi Fraternity, Inc.</span>, through the Beta
+              Zeta Chapter at the University of Georgia.
+            </p>
+            <p className="text-sm text-brand-brown/70 leading-relaxed mb-4">
+              Ethan&apos;s achievement reflects his continued commitment to brotherhood, leadership, scholarship,
+              and service — representing the driven, community-minded young Black leaders who make our national
+              network exceptional.
+            </p>
+            <p className="text-sm font-semibold text-brand-chili">
+              Congratulations, Ethan, on this meaningful achievement and the beginning of this new chapter.
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>

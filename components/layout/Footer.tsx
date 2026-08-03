@@ -4,17 +4,20 @@ import { FaYoutube, FaLinkedin } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
-import { LuPhoneCall } from "react-icons/lu";
 
 const footerLinks = [
   {
     label: "About",
     links: [
-      { label: "History & Background", href: "/history-and-background" },
-      { label: "Leadership Team", href: "/leadership" },
+      { label: "Our History", href: "/history-and-background" },
+      { label: "Our Team", href: "/leadership" },
       { label: "Partners", href: "/partners" },
-      { label: "Board of Advisors", href: "#" },
+      { label: "Our Board of Directors", href: "/board-of-directors" },
     ],
+  },
+  {
+    label: "Chapters",
+    links: [{ label: "Our Chapters", href: "/chapters" }],
   },
   {
     label: "Programs",
@@ -106,12 +109,6 @@ const Footer = () => {
             <li className="flex items-center gap-2 text-brand-cream/70 text-sm">
               <IoLocationOutline className="text-brand-lime text-xl" />
               <span>USA</span>
-            </li>
-            <li className="flex items-center gap-2 text-brand-cream/70 text-sm">
-              <LuPhoneCall className="text-brand-lime text-lg" />
-              <a href="tel:+1 (478) 283-3665" className="hover:text-white transition-colors duration-200">
-                +1 (478) 283-3665
-              </a>
             </li>
           </ul>
           <a

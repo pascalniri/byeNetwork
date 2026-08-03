@@ -61,6 +61,7 @@ export default function LeadershipDirectory({ activeRole }: { activeRole: string
                 <Link
                   key={dept.id}
                   href={`/leadership/department/${dept.id}`}
+                  scroll={false}
                   className={`flex-shrink-0 flex items-center gap-3 notch-md px-4 py-3 text-left text-xs font-bold uppercase tracking-wide transition-colors duration-200 whitespace-nowrap lg:whitespace-normal ${
                     activeRole === dept.id
                       ? "bg-brand-brown text-white shadow-md"

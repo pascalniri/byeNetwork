@@ -5,7 +5,7 @@ const leaders: Leader[] = [
     id: "jayshun-mathews",
     image: "/Shun.jpg",
     name: "Jay'Shun Mathews",
-    title: "National Executive Director & Founder",
+    title: "Founder & Executive Director",
     status: "director",
     department: "Executive Leadership",
     longBio:
@@ -18,7 +18,7 @@ const leaders: Leader[] = [
       "Led partnership development with Students Demand Action",
       "Organized Gun Violence Awareness Day at Morehouse College",
     ],
-    education: "Morehouse College, Business Administration",
+    education: "Morehouse College, Sociology",
     socialMedia: {
       ig: "https://www.instagram.com/j4yshun/",
       x: "None",
@@ -110,33 +110,6 @@ const leaders: Leader[] = [
     gallery: ["/isac-banks-smith.jpeg"],
   },
   {
-    id: "maya-evans",
-    image: "/IMG_3304 - Maya Evans.JPG",
-    name: "Maya Evans",
-    title: "National Director of Communications",
-    status: "director",
-    department: "Marketing & Branding",
-    longBio:
-      "Maya Evans is a sophomore at Spelman College majoring in Art History with minors in Curatorial Studies and Economics. As National Director of Communications, she leads the organization's storytelling platform and communications strategy.",
-    empowermentQuote: "",
-    achievements: [
-      "2025-26 WISDOM (Women in Spiritual Discernment of Ministry) Scholar and Chapel Assistant Program Co-Lead at Spelman College",
-      "52 Walker/David Zwirner Sales and Operations Summer 2025 Intern",
-      "The Spelman College Blueprint's (the official publication of the College) Communications Specialist",
-      "Founder of 'College Navigator: Peer-to-Peer Guidance' Summer Program",
-    ],
-    education:
-      "Spelman College, Sophomore, Art History major with minors in Curatorial Studies and Economics",
-    socialMedia: {
-      ig: "https://www.instagram.com/mayaevanns?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-      x: "N/A",
-      linkedIn: "https://www.linkedin.com/in/maya-evans-46b7762a8",
-      facebook: "N/A",
-      email: "mevans2444@gmail.com",
-    },
-    gallery: ["/IMG_3304 - Maya Evans.JPG"],
-  },
-  {
     id: "jibri-wright",
     image: "/IMG_0386 - Jibri Wright.jpeg",
     name: "Jibri Wright",
@@ -166,12 +139,13 @@ const leaders: Leader[] = [
     id: "olivia-robinson",
     image: "/AEBA149A-ED58-4696-92DB-4C70884761CC - Olivia Robinson.png",
     name: "Olivia Robinson",
-    title: "Director of Membership & Network Engagement",
+    title: "National Director of Membership & Network Engagement",
     status: "director",
     department: "Membership & Engagement",
     longBio:
-      "Olivia Robinson is a Rising- Sophomore at Spelman College majoring in Health Science (Pre-Med). As Director of Membership & Network Engagement, she is dedicated to fostering community and supporting the development of Black youth.",
-    empowermentQuote: "",
+      "Olivia Robinson is a Rising- Sophomore at Spelman College majoring in Health Science (Pre-Med). As National Director of Membership & Network Engagement, she is dedicated to fostering community and supporting the development of Black youth.",
+    empowermentQuote:
+      "Empowering black youth means to me - giving them the support and tools needed to succeed. Giving them the lessons and answers earlier so they are prepared to enter the world unapologetically. Building them up so that they are the representation and resource that this community needs.",
     achievements: [
       "Spelman College Ethel Waddell Githii Honors Scholar",
       "Spelman Health Careers Global Health Study Abroad Participant",
@@ -201,7 +175,8 @@ const leaders: Leader[] = [
     department: "Policy & Advocacy",
     longBio:
       "Jordan Fischer is a Sophomore at Spelman College majoring in Political Science. As Director of Policy and Civic Engagement, she brings a wealth of experience in policy formulation and advocacy.",
-    empowermentQuote: "",
+    empowermentQuote:
+      "Empowering Black youth means equipping them with the knowledge, resources, and platforms to advocate for themselves and shape the future they want to see. It means recognizing that talent and ambition exist in every community, but opportunity is not always distributed equally. True empowerment is about removing barriers, expanding access, and ensuring Black youth are not only prepared to enter spaces of leadership but are also confident enough to redefine those spaces.",
     achievements: [
       "Built the Foundations of BYEN's Policy & Advocacy Department as National Policy Director",
       "Founder & Executive Director of Plays2Empower",
@@ -248,12 +223,13 @@ const leaders: Leader[] = [
     id: "alex-chambers",
     image: "/IMG_4356 - Alex Chambers.jpeg",
     name: "Alex Chambers",
-    title: "Creative Director",
+    title: "National Creative Director",
     status: "director",
-    department: "Communication",
+    department: "Marketing & Branding",
     longBio:
-      "Alex Chambers is a Sophomore at Morehouse College majoring in Business Admin. As Creative Director, he drives visual strategy and brand communication.",
-    empowermentQuote: "",
+      "Alex Chambers is a Sophomore at Morehouse College majoring in Business Admin. As National Creative Director, he drives visual strategy and brand communication.",
+    empowermentQuote:
+      "It means giving space for others to learn for themselves. A lot of the time we listen to other generations on what we should do, like they have all the answers. However providing the information in which black youth can use at the disposal to create their own story within whatever career they choose, allows them to have total control and confidence in themselves because they're the ones actively bringing their dreams to life.",
     achievements: [
       "Morehouse Human Right Film Festival Selection",
       "Adobe Student Ambassador",

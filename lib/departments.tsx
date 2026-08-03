@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { FaUsers, FaCalendarAlt, FaChartLine, FaUniversity, FaBullhorn, FaUserTie, FaPaintBrush, FaStar } from "react-icons/fa";
+import { FaUsers, FaCalendarAlt, FaChartLine, FaUniversity, FaBullhorn, FaUserTie, FaStar } from "react-icons/fa";
 
 export type Department = {
   id: string;
@@ -28,12 +28,6 @@ export const departments: Department[] = [
     icon: <FaBullhorn />,
     description:
       "Creates and maintains BYEN's brand identity, manages communications, and promotes our mission and initiatives.",
-  },
-  {
-    id: "communication",
-    name: "Communication",
-    icon: <FaPaintBrush />,
-    description: "Drives visual strategy, design, and brand communication across all platforms.",
   },
   {
     id: "memberRelations",
