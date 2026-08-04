@@ -27,6 +27,11 @@ const otherWaysToSupport = [
   "Employee volunteers and speakers",
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 export default function Donors() {
   return (
     <div>
@@ -39,30 +44,89 @@ export default function Donors() {
         accent="pink"
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        {/* Intro/CTA + What Your Support Makes Possible */}
         <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          variants={fadeUp}
+          className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16"
         >
-          <p className="text-sm text-brand-brown/70 leading-relaxed mb-8 max-w-2xl mx-auto">
-            Support from donors and sponsors helps BYEN create leadership experiences, expand access to
-            opportunity, strengthen collegiate chapters, and equip young people to make an impact in their
-            communities.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <div>
+            <p className="text-sm text-brand-brown/70 leading-relaxed mb-8">
+              Support from donors and sponsors helps BYEN create leadership experiences, expand access to
+              opportunity, strengthen collegiate chapters, and equip young people to make an impact in their
+              communities.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <a
+                href={donateHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="notch-md inline-flex items-center gap-2 bg-brand-chili hover:bg-brand-brown text-white font-semibold uppercase tracking-wide text-xs py-3 px-6 transition-colors duration-200"
+              >
+                Donate to BYEN
+              </a>
+              <p className="text-sm text-brand-brown">
+                Become a Sponsor:{" "}
+                <a href={`mailto:${givingEmail}`} className="font-bold text-brand-chili hover:underline">
+                  {givingEmail}
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="notch-lg bg-brand-cream p-6 sm:p-8">
+            <h2 className="text-lg font-bold uppercase text-brand-brown mb-2">What Your Support Makes Possible</h2>
+            <p className="text-sm text-brand-brown/70 mb-5">Your investment helps BYEN:</p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {supportMakesPossible.map((item) => (
+                <div key={item.text} className="notch-md bg-white p-4 flex items-start gap-3 shadow-sm">
+                  <span className="text-brand-chili text-lg mt-0.5 flex-shrink-0">{item.icon}</span>
+                  <span className="text-sm text-brand-brown/70">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Make a Donation + Become a Sponsor */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16"
+        >
+          <div className="notch-lg bg-white border-t-4 border-brand-chili p-6 sm:p-8 shadow-sm">
+            <h2 className="text-lg font-bold uppercase text-brand-brown mb-4">Make a Donation</h2>
+            <p className="text-sm text-brand-brown/70 leading-relaxed mb-2">
+              Every contribution helps BYEN continue investing in the growth, leadership, and success of its
+              members.
+            </p>
+            <p className="text-sm text-brand-brown/70 leading-relaxed mb-6">
+              Supporters can make a one-time gift or become recurring donors to help sustain BYEN&apos;s work
+              throughout the year.
+            </p>
             <a
               href={donateHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="notch-md inline-flex items-center gap-2 bg-brand-chili hover:bg-brand-brown text-white font-semibold uppercase tracking-wide text-xs py-3 px-6 transition-colors duration-200"
+              className="notch-sm inline-flex items-center bg-brand-chili hover:bg-brand-brown text-white text-xs font-semibold uppercase tracking-wide py-3 px-6 transition-colors duration-200"
             >
-              Donate to BYEN
+              Donate Today
             </a>
-            <p className="text-sm text-brand-brown">
-              Become a Sponsor:{" "}
+          </div>
+
+          <div className="notch-lg bg-white border-t-4 border-brand-ocean p-6 sm:p-8 shadow-sm">
+            <h2 className="text-lg font-bold uppercase text-brand-brown mb-4">Become a Sponsor</h2>
+            <p className="text-sm text-brand-brown/70 leading-relaxed mb-4">
+              Companies, foundations, institutions, and community partners can sponsor BYEN programs, events,
+              fellowships, chapter initiatives, and member experiences.
+            </p>
+            <p className="text-sm text-brand-brown/70">
+              To discuss sponsorship opportunities or personalized giving, email:{" "}
               <a href={`mailto:${givingEmail}`} className="font-bold text-brand-chili hover:underline">
                 {givingEmail}
               </a>
@@ -70,91 +134,26 @@ export default function Donors() {
           </div>
         </motion.section>
 
+        {/* Other Ways to Support */}
         <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 notch-lg bg-brand-cream p-8 sm:p-10"
+          variants={fadeUp}
+          className="grid lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-12 items-center mb-16 notch-lg bg-brand-cream p-6 sm:p-10"
         >
-          <h2 className="text-xl sm:text-2xl font-bold uppercase text-brand-brown mb-6">
-            What Your Support Makes Possible
-          </h2>
-          <p className="text-sm text-brand-brown/70 mb-6">Your investment helps BYEN:</p>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {supportMakesPossible.map((item) => (
-              <div key={item.text} className="notch-md bg-white p-4 flex items-start gap-3 shadow-sm">
-                <span className="text-brand-chili text-lg mt-0.5 flex-shrink-0">{item.icon}</span>
-                <span className="text-sm text-brand-brown/70">{item.text}</span>
-              </div>
-            ))}
+          <div>
+            <h2 className="text-lg font-bold uppercase text-brand-brown mb-2">Other Ways to Support BYEN</h2>
+            <p className="text-sm text-brand-brown/70 mb-4">Organizations may also support the network through:</p>
+            <p className="text-sm text-brand-brown/70">
+              To discuss an in-kind contribution, email{" "}
+              <a href={`mailto:${givingEmail}`} className="font-bold text-brand-chili hover:underline">
+                {givingEmail}
+              </a>
+              .
+            </p>
           </div>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <h2 className="text-xl sm:text-2xl font-bold uppercase text-brand-brown mb-4 border-b-2 border-brand-chili inline-block pb-2">
-            Make a Donation
-          </h2>
-          <p className="text-sm text-brand-brown/70 leading-relaxed mt-6 mb-2">
-            Every contribution helps BYEN continue investing in the growth, leadership, and success of its
-            members.
-          </p>
-          <p className="text-sm text-brand-brown/70 leading-relaxed mb-6">
-            Supporters can make a one-time gift or become recurring donors to help sustain BYEN&apos;s work
-            throughout the year.
-          </p>
-          <a
-            href={donateHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="notch-sm inline-flex items-center bg-brand-chili hover:bg-brand-brown text-white text-xs font-semibold uppercase tracking-wide py-3 px-6 transition-colors duration-200"
-          >
-            Donate Today
-          </a>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <h2 className="text-xl sm:text-2xl font-bold uppercase text-brand-brown mb-4 border-b-2 border-brand-chili inline-block pb-2">
-            Become a Sponsor
-          </h2>
-          <p className="text-sm text-brand-brown/70 leading-relaxed mt-6 mb-4">
-            Companies, foundations, institutions, and community partners can sponsor BYEN programs, events,
-            fellowships, chapter initiatives, and member experiences.
-          </p>
-          <p className="text-sm text-brand-brown/70 leading-relaxed mb-4">
-            Sponsorship opportunities can be personalized around shared goals and may include recognition, member
-            engagement, program visibility, and direct support for emerging Black leaders.
-          </p>
-          <p className="text-sm text-brand-brown/70">
-            To discuss sponsorship opportunities or personalized giving, email:{" "}
-            <a href={`mailto:${givingEmail}`} className="font-bold text-brand-chili hover:underline">
-              {givingEmail}
-            </a>
-          </p>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 notch-lg bg-brand-cream p-8 sm:p-10"
-        >
-          <h2 className="text-xl sm:text-2xl font-bold uppercase text-brand-brown mb-6">Other Ways to Support BYEN</h2>
-          <p className="text-sm text-brand-brown/70 mb-6">Organizations may also support the network through:</p>
-          <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
+          <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
             {otherWaysToSupport.map((item) => (
               <li key={item} className="flex items-start">
                 <span className="text-brand-chili mr-2">•</span>
@@ -162,20 +161,13 @@ export default function Donors() {
               </li>
             ))}
           </ul>
-          <p className="text-sm text-brand-brown/70">
-            To discuss an in-kind contribution, email{" "}
-            <a href={`mailto:${givingEmail}`} className="font-bold text-brand-chili hover:underline">
-              {givingEmail}
-            </a>
-            .
-          </p>
         </motion.section>
 
         <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          variants={fadeUp}
           className="notch-lg bg-brand-brown text-white p-8 sm:p-10 text-center"
         >
           <h2 className="text-xl sm:text-2xl font-bold uppercase mb-4">Invest in What Comes Next</h2>

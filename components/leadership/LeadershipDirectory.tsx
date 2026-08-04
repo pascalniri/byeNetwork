@@ -115,7 +115,7 @@ export default function LeadershipDirectory({ activeRole }: { activeRole: string
                         />
                         <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-20" />
                         <span className="notch-sm absolute bottom-4 left-4 bg-brand-lime text-brand-brown text-xs font-bold uppercase tracking-wide px-3 py-1">
-                          {spotlight.status === "director" ? "National Director" : "Support Team"}
+                          {spotlight.status === "director" ? "National Team Member" : "Support Team"}
                         </span>
                       </div>
 

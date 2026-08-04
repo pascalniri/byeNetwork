@@ -7,7 +7,7 @@ export default function YoungBlackAndSafe() {
     <div>
       <PhotoPageHero
         image="/gun-violence-awareness.jpg"
-        eyebrow="Programs & Initiatives"
+        eyebrow="National Program & Initiatives"
         title="Young, Black, and Safe"
         description="A National Community Safety and Advocacy Initiative of the Black Youth Empowerment Network. Building safer conditions for Black youth through education, advocacy, community engagement, and strategic partnership."
         accent="lime"

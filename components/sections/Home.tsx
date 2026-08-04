@@ -6,6 +6,14 @@ import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import { FaAward, FaStar } from "react-icons/fa";
 
+const partners: { name: string; image?: string }[] = [
+  { name: "Civics Unplugged", image: "/images/logo-1.png" },
+  { name: "Everytown Community Safety Fund", image: "/images/logo-2.png" },
+  { name: "ACLU", image: "/images/logo-3.png" },
+  { name: "ONYX IMPACT", image: "/images/logo-4.png" },
+  { name: "Center for Strong Public Schools", image: "/images/logo-5.png" },
+];
+
 const AnimatedText = ({
   texts,
   delay = 3000,
@@ -118,33 +126,6 @@ const item = {
   },
 };
 
-const stories = [
-  {
-    tag: "Advocacy",
-    tagBg: "bg-brand-chili",
-    tagText: "text-white",
-    image: "/gun-violence-awareness.jpg",
-    title: "Gun Violence Awareness Day at Morehouse College",
-    href: "/events",
-  },
-  {
-    tag: "Community",
-    tagBg: "bg-brand-ocean",
-    tagText: "text-white",
-    image: "/feed-homeless.jpg",
-    title: "BYEN Members Feed Atlanta's Homeless Community",
-    href: "/events",
-  },
-  {
-    tag: "Workshops",
-    tagBg: "bg-brand-yellow",
-    tagText: "text-brand-brown",
-    image: "/financial-literacy.png",
-    title: "Financial Literacy 101 Ft. Luvswallet",
-    href: "/events",
-  },
-];
-
 const Home = () => {
   return (
     <div className="relative w-full">
@@ -189,73 +170,72 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Story cards overlapping the hero's bottom edge */}
-      <div className="relative z-20 -mt-16 sm:-mt-20 md:-mt-24">
+      {/* Supported By — scrolling partner logo strip, overlapping the hero's bottom edge */}
+      <div className="relative z-20 -mt-10 sm:-mt-12">
         <div className="container mx-auto px-4 sm:px-6 md:px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
-            {stories.map((story, index) => (
+          <div className="notch-lg bg-white shadow-xl py-6 sm:py-8 overflow-hidden">
+            <p className="text-center text-xs font-bold uppercase tracking-widest text-brand-brown/40 mb-5">
+              Supported By
+            </p>
+            <div className="overflow-hidden">
               <motion.div
-                key={story.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ duration: 26, repeat: Infinity, ease: "linear" }}
+                className="flex items-center gap-12 sm:gap-16 w-max"
               >
-                <Link
-                  href={story.href}
-                  className="group block bg-white shadow-xs overflow-hidden border border-black/10 hover:shadow-2xl transition-shadow duration-300"
-                >
-                  <div className="h-36 sm:h-40 overflow-hidden">
+                {[...partners, ...partners].map((partner, index) =>
+                  partner.image ? (
                     <img
-                      src={story.image}
-                      alt={story.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      key={partner.name + index}
+                      src={partner.image}
+                      alt={partner.name}
+                      className="h-8 sm:h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-200 flex-shrink-0"
                     />
-                  </div>
-                  <div className="p-4 sm:p-5">
+                  ) : (
                     <span
-                      className={`notch-sm inline-block ${story.tagBg} ${story.tagText} text-xs font-medium uppercase tracking-widest px-3 py-1 mb-3`}
+                      key={partner.name + index}
+                      className="text-sm sm:text-base font-bold uppercase tracking-wide text-brand-brown/40 hover:text-brand-brown/70 transition-colors duration-200 flex-shrink-0 whitespace-nowrap"
                     >
-                      {story.tag}
+                      {partner.name}
                     </span>
-                    <h3 className="text-sm font-semibold text-brand-brown leading-snug group-hover:text-brand-chili transition-colors duration-200">
-                      {story.title}
-                    </h3>
-                  </div>
-                </Link>
+                  )
+                )}
               </motion.div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
 
       {/* Chapter Spotlight + Member Spotlight */}
       <div className="container mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-20">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="notch-lg bg-brand-brown text-white p-8 sm:p-10"
+            className="notch-lg bg-brand-brown text-white overflow-hidden flex"
           >
-            <div className="notch-sm inline-flex items-center justify-center bg-brand-lime w-12 h-12 mb-5">
-              <FaAward className="text-brand-brown text-xl" />
+            <div className="w-28 sm:w-36 flex-shrink-0 relative">
+              <img
+                src="/images/image7.jpg"
+                alt="BYEN House at Morehouse College"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-lime">Chapter Spotlight</span>
-            <h3 className="text-xl font-bold uppercase mt-2 mb-4">BYEN House at Morehouse College</h3>
-            <p className="text-sm text-brand-cream/80 leading-relaxed mb-3">
-              BYEN House at Morehouse College was recognized with a{" "}
-              <span className="font-bold text-white">Lux Award for Best Registered Student Organization</span>,
-              celebrating the chapter&apos;s leadership, campus presence, and commitment to developing and
-              empowering young Black leaders.
-            </p>
-            <p className="text-sm text-brand-cream/80 leading-relaxed mb-4">
-              Through meaningful programming, community building, and service, BYEN House continues to demonstrate
-              what it looks like when members turn vision into impact.
-            </p>
-            <p className="text-sm font-semibold text-brand-lime">
-              Congratulations to BYEN House for continuing to set the standard for chapter excellence.
-            </p>
+            <div className="p-5 sm:p-6 flex flex-col justify-center min-w-0">
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-lime flex items-center gap-1.5">
+                <FaAward className="text-sm" /> Chapter Spotlight
+              </span>
+              <h3 className="text-base sm:text-lg font-bold uppercase mt-1.5 mb-2 leading-snug">
+                BYEN House at Morehouse College
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-cream/80 leading-relaxed">
+                Recognized with a <span className="font-bold text-white">Lux Award for Best Registered Student
+                Organization</span> for its leadership, campus presence, and commitment to empowering young Black
+                leaders.
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -263,29 +243,65 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="notch-lg bg-brand-cream p-8 sm:p-10"
+            className="notch-lg bg-brand-cream overflow-hidden flex"
           >
-            <div className="notch-sm inline-flex items-center justify-center bg-brand-chili w-12 h-12 mb-5">
-              <FaStar className="text-white text-xl" />
+            <div className="w-28 sm:w-36 flex-shrink-0 relative">
+              <img
+                src="/ethan.jpeg"
+                alt="Ethan Ipaye"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-chili">Member Spotlight</span>
-            <h3 className="text-xl font-bold uppercase text-brand-brown mt-2 mb-1">Ethan Ipaye</h3>
-            <p className="text-xs font-semibold text-brand-brown/60 mb-4">University of Georgia</p>
-            <p className="text-sm text-brand-brown/70 leading-relaxed mb-3">
-              BYEN proudly recognizes Ethan Ipaye on his initiation into{" "}
-              <span className="font-bold text-brand-brown">Omega Psi Phi Fraternity, Inc.</span>, through the Beta
-              Zeta Chapter at the University of Georgia.
-            </p>
-            <p className="text-sm text-brand-brown/70 leading-relaxed mb-4">
-              Ethan&apos;s achievement reflects his continued commitment to brotherhood, leadership, scholarship,
-              and service — representing the driven, community-minded young Black leaders who make our national
-              network exceptional.
-            </p>
-            <p className="text-sm font-semibold text-brand-chili">
-              Congratulations, Ethan, on this meaningful achievement and the beginning of this new chapter.
-            </p>
+            <div className="p-5 sm:p-6 flex flex-col justify-center min-w-0">
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-chili flex items-center gap-1.5">
+                <FaStar className="text-sm" /> Member Spotlight
+              </span>
+              <h3 className="text-base sm:text-lg font-bold uppercase text-brand-brown mt-1.5 leading-snug">
+                Ethan Ipaye
+              </h3>
+              <p className="text-xs font-semibold text-brand-brown/50 mb-2">University of Georgia</p>
+              <p className="text-xs sm:text-sm text-brand-brown/70 leading-relaxed">
+                Recognized on his initiation into{" "}
+                <span className="font-bold text-brand-brown">Omega Psi Phi Fraternity, Inc.</span>, reflecting his
+                commitment to brotherhood, leadership, and service.
+              </p>
+            </div>
           </motion.div>
         </div>
+      </div>
+
+      {/* BYEN Community Safety Fellowship CTA */}
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 pb-16 sm:pb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="notch-lg bg-brand-chili text-white p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6"
+        >
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-white/80">
+              Now Accepting Applications
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold uppercase mt-1 mb-2">
+              BYEN Community Safety Fellowship
+            </h3>
+            <p className="text-sm text-white/90 leading-relaxed max-w-xl">
+              A four-week leadership development experience equipping emerging leaders to advance community
+              safety, address gun violence, and explore community violence intervention strategies — with
+              virtual learning and an in-person convening in Memphis, Tennessee.
+            </p>
+          </div>
+          <a
+            href="https://forms.gle/WHFqdcfXMNkBsJ5N6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="notch-md flex-shrink-0 inline-flex items-center gap-2 bg-white text-brand-chili hover:bg-brand-brown hover:text-white font-semibold uppercase tracking-wide text-xs py-3 px-6 transition-colors duration-200"
+          >
+            Apply Now
+            <FiArrowRight className="w-3.5 h-3.5" />
+          </a>
+        </motion.div>
       </div>
     </div>
   );

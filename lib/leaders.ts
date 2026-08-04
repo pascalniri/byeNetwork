@@ -3,7 +3,7 @@ import type { Leader } from "@/types/leader";
 const leaders: Leader[] = [
   {
     id: "jayshun-mathews",
-    image: "/Shun.jpg",
+    image: "/images/image3.jpg",
     name: "Jay'Shun Mathews",
     title: "Founder & Executive Director",
     status: "director",
@@ -26,7 +26,7 @@ const leaders: Leader[] = [
       facebook: "None",
       email: "blackyouthempowermentnetwork@gmail.com",
     },
-    gallery: ["/Shun.jpg"],
+    gallery: ["/Shun.jpg", "/images/image3.jpg"],
   },
   {
     id: "james-brazzell",
