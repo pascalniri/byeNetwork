@@ -60,7 +60,7 @@ const Offers = () => {
                 onClick={() => setActiveIndex(index)}
                 animate={{ flexGrow: isActive ? 3 : 1 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className={`relative notch-lg overflow-hidden cursor-pointer shadow-xl basis-0 min-h-[180px] lg:min-h-0 ${pillar.bg}`}
+                className={`relative notch-lg lg:overflow-hidden cursor-pointer shadow-xl basis-auto lg:basis-0 min-h-[180px] lg:min-h-0 ${pillar.bg}`}
               >
                 <div
                   className="absolute inset-0 opacity-[0.12] pointer-events-none"
@@ -71,7 +71,7 @@ const Offers = () => {
                   }}
                 />
 
-                <div className="relative h-full p-6 sm:p-8 flex flex-col justify-center overflow-hidden">
+                <div className="relative h-full p-6 sm:p-8 flex flex-col justify-center lg:overflow-hidden">
                   <span className={`block text-xs font-semibold uppercase tracking-widest opacity-70 ${pillar.text}`}>
                     0{index + 1}
                   </span>
