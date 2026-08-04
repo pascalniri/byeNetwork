@@ -52,7 +52,7 @@ const navigationItems: NavItem[] = [
   },
   {
     id: "resources",
-    label: "Programs & Initiatives",
+    label: "National Program & Initiatives",
     type: "dropdown",
     items: [{ label: "Young, Black, and Safe", href: "/young-black-and-safe" }],
   },
