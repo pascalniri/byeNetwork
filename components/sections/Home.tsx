@@ -170,37 +170,31 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Supported By — scrolling partner logo strip, overlapping the hero's bottom edge */}
+      {/* Supported By — static partner logo row, overlapping the hero's bottom edge */}
       <div className="relative z-20 -mt-10 sm:-mt-12">
         <div className="container mx-auto px-4 sm:px-6 md:px-10">
-          <div className="notch-lg bg-white shadow-xl py-6 sm:py-8 overflow-hidden">
-            <p className="text-center text-xs font-bold uppercase tracking-widest text-brand-brown/40 mb-5">
+          <div className="notch-lg bg-white shadow-xl py-8 sm:py-10 px-6">
+            <p className="text-center text-xs font-bold uppercase tracking-widest text-brand-brown/40 mb-6">
               Supported By
             </p>
-            <div className="overflow-hidden">
-              <motion.div
-                animate={{ x: ["0%", "-50%"] }}
-                transition={{ duration: 26, repeat: Infinity, ease: "linear" }}
-                className="flex items-center gap-12 sm:gap-16 w-max"
-              >
-                {[...partners, ...partners].map((partner, index) =>
-                  partner.image ? (
-                    <img
-                      key={partner.name + index}
-                      src={partner.image}
-                      alt={partner.name}
-                      className="h-8 sm:h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-200 flex-shrink-0"
-                    />
-                  ) : (
-                    <span
-                      key={partner.name + index}
-                      className="text-sm sm:text-base font-bold uppercase tracking-wide text-brand-brown/40 hover:text-brand-brown/70 transition-colors duration-200 flex-shrink-0 whitespace-nowrap"
-                    >
-                      {partner.name}
-                    </span>
-                  )
-                )}
-              </motion.div>
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14">
+              {partners.map((partner) =>
+                partner.image ? (
+                  <img
+                    key={partner.name}
+                    src={partner.image}
+                    alt={partner.name}
+                    className="h-12 sm:h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-200"
+                  />
+                ) : (
+                  <span
+                    key={partner.name}
+                    className="text-base sm:text-lg font-bold uppercase tracking-wide text-brand-brown/40 hover:text-brand-brown/70 transition-colors duration-200 whitespace-nowrap"
+                  >
+                    {partner.name}
+                  </span>
+                )
+              )}
             </div>
           </div>
         </div>
