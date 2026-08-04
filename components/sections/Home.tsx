@@ -184,7 +184,7 @@ const Home = () => {
                     key={partner.name}
                     src={partner.image}
                     alt={partner.name}
-                    className="h-12 sm:h-16 w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
+                    className="h-12 sm:h-16 object-contain w-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
                   />
                 ) : (
                   <span
