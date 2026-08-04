@@ -184,7 +184,7 @@ const Home = () => {
                     key={partner.name}
                     src={partner.image}
                     alt={partner.name}
-                    className="h-12 sm:h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-200"
+                    className="h-12 sm:h-16 w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
                   />
                 ) : (
                   <span
@@ -265,7 +265,7 @@ const Home = () => {
       </div>
 
       {/* BYEN Community Safety Fellowship CTA */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-10 pb-16 sm:pb-20">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 sm:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
