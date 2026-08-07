@@ -2,39 +2,63 @@
 
 import { motion } from "framer-motion";
 
-export default function ScrollingAdvert() {
-  const announcement =
-    "Upcoming Event Feb 28th • Teach To Empower: Law & Public Policy Forum • Connecting Future Leaders to Careers, Insights, and Opportunities in Law and Policy • RSVP Now • ";
+const AdvertBar = () => (
+  <div className="flex items-center space-x-8 py-2.5">
+    {[1, 2, 3, 4, 5].map((i) => (
+      <div key={i} className="flex items-center space-x-8">
+        <span className="font-semibold text-xs tracking-wide">
+          BYEN Community Safety Fellowship • Now Accepting Applications • Four-Week Leadership Program on
+          Community Safety &amp; Gun Violence Prevention •{" "}
+        </span>
+        <a
+          href="https://forms.gle/WHFqdcfXMNkBsJ5N6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="notch-sm bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown px-4 py-1 text-xs font-semibold uppercase tracking-widest transition-colors duration-150"
+        >
+          Apply Now
+        </a>
+      </div>
+    ))}
+  </div>
+);
 
+export default function ScrollingAdvert() {
   return (
-    <div className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#5a3526] via-[#7a4a32] to-[#5a3526] text-amber-200 py-2.5 z-[101] overflow-hidden border-b border-amber-900/30 whitespace-nowrap shadow-md">
-      <motion.div
-        animate={{
-          x: [0, -1000],
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="inline-block"
-      >
-        <div className="flex items-center space-x-8">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div key={i} className="flex items-center space-x-8">
-              <span className="font-semibold text-xs tracking-wide">{announcement}</span>
-              <a
-                href="https://givebutter.com/CmZwOc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-amber-400 text-[#3a241a] px-4 py-0.5 rounded-full text-xs font-bold hover:bg-amber-300 transition-colors uppercase"
-              >
-                RSVP Now
-              </a>
-            </div>
-          ))}
+    <>
+      <div className="fixed top-0 left-0 w-full z-[101] shadow-md overflow-hidden">
+        <div
+          className="relative bg-brand-brown text-brand-cream overflow-hidden whitespace-nowrap"
+          style={{
+            backgroundImage: 'url("/branding/SVG/Pattern_Cream.svg")',
+            backgroundRepeat: "repeat-x",
+            backgroundSize: "260px auto",
+            backgroundPosition: "left center",
+          }}
+        >
+          <div className="absolute inset-0 bg-brand-brown/90" />
+          <motion.div
+            animate={{
+              x: [0, -1000],
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="relative inline-block"
+          >
+            <AdvertBar />
+          </motion.div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+
+      {/* Invisible clone in normal flow: reserves exactly as much space as the
+          fixed bar above actually renders, so the Navbar below is never
+          covered even if the bar's content/padding changes later. */}
+      <div className="invisible overflow-hidden whitespace-nowrap" aria-hidden="true">
+        <AdvertBar />
+      </div>
+    </>
   );
 }

@@ -134,7 +134,7 @@ export default function YoungBlackAndSafe() {
                   with the Everytown Community Safety Fund.
                 </p>
                 <a
-                  href="https://forms.gle/mcBHq55tqXN9zgFP6"
+                  href="https://forms.gle/MLi9q1xz47VBC4tU9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="notch-sm inline-flex items-center bg-brand-chili hover:bg-brand-brown text-white text-xs font-semibold uppercase tracking-wide py-2.5 px-5 transition-colors duration-200"

@@ -31,7 +31,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <section className="relative bg-white py-20 sm:py-4 overflow-hidden">
+    <section className="relative bg-white py-20 sm:py-24 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Photo */}

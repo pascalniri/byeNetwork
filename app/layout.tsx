@@ -4,6 +4,7 @@ import { nunitoSans } from "./fonts";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Advert from "@/components/layout/Advert";
+import ScrollingAdvert from "@/components/layout/ScrollingAdvert";
 import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
 import PageViewTracker from "@/components/analytics/PageViewTracker";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className={nunitoSans.variable}>
       <body>
         <PageViewTracker />
+        <ScrollingAdvert />
         <Navbar />
         {children}
         <Footer />
