@@ -1,14 +1,13 @@
 const partners: { name: string; image?: string }[] = [
   { name: "Civics Unplugged", image: "/images/logo-1.png" },
   { name: "Everytown Community Safety Fund", image: "/images/logo-2.png" },
-  { name: "ACLU", image: "/images/logo-3.png" },
   { name: "ONYX IMPACT", image: "/images/logo-4.png" },
   { name: "Center for Strong Public Schools", image: "/images/logo-5.png" },
 ];
 
 const Supporters = () => {
   return (
-    <section className="relative bg-white py-20 sm:py-24">
+    <section className="relative bg-white py-10">
       <div className="container mx-auto px-4 sm:px-6 md:px-10">
         <p className="text-center text-sm sm:text-base font-bold uppercase tracking-widest text-brand-brown/40 mb-8">
           Supported By
