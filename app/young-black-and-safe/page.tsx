@@ -126,21 +126,13 @@ export default function YoungBlackAndSafe() {
                 <h3 className="text-lg font-bold text-brand-brown">BYEN Community Safety Fellowship</h3>
               </div>
               <div className="md:w-2/3">
-                <p className="text-sm text-brand-brown/70 mb-4">
+                <p className="text-sm text-brand-brown/70">
                   The BYEN Community Safety Fellowship is a four-week leadership development experience equipping
                   emerging leaders with the knowledge, skills, and relationships to advance community safety,
                   address gun violence, and explore community violence intervention strategies. The program
                   includes virtual learning and an in-person convening in Memphis, Tennessee, held in partnership
                   with the Everytown Community Safety Fund.
                 </p>
-                <a
-                  href="https://forms.gle/MLi9q1xz47VBC4tU9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="notch-sm inline-flex items-center bg-brand-chili hover:bg-brand-brown text-white text-xs font-semibold uppercase tracking-wide py-2.5 px-5 transition-colors duration-200"
-                >
-                  Apply to the Fellowship
-                </a>
               </div>
             </div>
           </div>
