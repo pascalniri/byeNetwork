@@ -8,7 +8,7 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { FaLinkedin, FaQuoteLeft } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import { useLeaders } from "@/hooks/useLeaders";
+import leaders from "@/lib/leaders";
 import { departments } from "@/lib/departments";
 import { isRealSocialLink } from "@/lib/social";
 import type { Leader } from "@/types/leader";
@@ -36,7 +36,6 @@ function getTeamForDept(leaders: Leader[], deptId: string): Leader[] {
 }
 
 export default function LeadershipDirectory({ activeRole }: { activeRole: string }) {
-  const { leaders, isLoading } = useLeaders();
   const [activeLeaderId, setActiveLeaderId] = useState<string | null>(null);
 
   const currentTeam = useMemo(() => getTeamForDept(leaders, activeRole), [leaders, activeRole]);
@@ -90,11 +89,7 @@ export default function LeadershipDirectory({ activeRole }: { activeRole: string
               </motion.p>
             </AnimatePresence>
 
-            {isLoading ? (
-              <div className="notch-lg bg-brand-cream text-center py-16 animate-pulse">
-                <p className="text-sm text-brand-brown/60">Loading leadership team…</p>
-              </div>
-            ) : spotlight ? (
+            {spotlight ? (
               <>
                 <AnimatePresence mode="wait">
                   <motion.div

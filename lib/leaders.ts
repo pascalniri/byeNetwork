@@ -283,6 +283,95 @@ const leaders: Leader[] = [
       "/D1281DE5-835A-411D-917D-666B5B120BAB - Ivan Walker.jpeg",
     ],
   },
+  {
+    id: "tyler-gunter",
+    image: "/IMG_0181 - Tyler Gunter.jpeg",
+    name: "Tyler Gunter",
+    title: "Chief of Staff",
+    status: "director",
+    department: "Executive Leadership",
+    longBio:
+      "Tyler Gunter is a Freshman at Hampton University majoring in Political Science & International Relations. As Chief of Staff, he supports BYEN's executive leadership operations and organizational strategy, drawing on his experience in public education advocacy and civic engagement.",
+    empowermentQuote:
+      "Empowering Black youth means showing them that leadership isn't about having a title—it's about serving others and creating opportunities that didn't exist before. It means equipping young people with the confidence, mentorship, and experiences they need to lead with purpose, while inspiring them to open doors for the next generation. That's how we build stronger communities and create lasting change.",
+    achievements: [
+      "Appointed by the Governor to serve on the Delaware State Board of Education, Delaware Public Education Funding Commission, and Delaware AI Assurance Lab Steering Committee",
+      "Conducted 40+ Student Town Halls and School Visits Across Delaware",
+      "National Secondary Parliamentarian, Business Professionals of America (2025-2026)",
+      "National Human Resource Management Champion",
+    ],
+    education: "Hampton University, Freshman, Political Science & International Relations",
+    socialMedia: {
+      ig: "https://www.instagram.com/tylergunterofficial?igsh=OWtnbjhzc3R6Z3cw&utm_source=qr",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/tylergunter?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+      facebook: "N/A",
+      email: "tyler@wearebyen.org",
+    },
+    gallery: [
+      "/IMG_0181 - Tyler Gunter.jpeg",
+      "/DSC07371 - Tyler Gunter.jpeg",
+      "/IMG_0005 - Tyler Gunter.jpeg",
+      "/IMG_7377 - Tyler Gunter.jpeg",
+    ],
+  },
+  {
+    id: "suryah-mathurin",
+    image: "/IMG_3554 - suryah.png",
+    name: "Suryah Mathurin",
+    title: "National Director of Programming",
+    status: "director",
+    department: "Programming & Events",
+    longBio:
+      "Suryah Mathurin is a Sophomore at Spelman College majoring in Economics with a minor in Management and Organization. As National Director of Programming, she leads BYEN's programming and events, drawing on her experience founding community-centered mentorship and entrepreneurial initiatives.",
+    empowermentQuote:
+      "To me, empowering Black youth is the driving force towards the uplift of the Black community. Our Black youth are the new voices paving the way for what our future can look like as a community. By empowering Black youth, we are actively shaping what opportunity and representation for Black individuals nationwide can be.",
+    achievements: [
+      "Founder of \"Our Journey Upwards,\" a mentorship program providing minority girls a safe space within predominantly white environments during their middle school years, centered on self-worth and community",
+      "Collegiate Advisor for Suite Dreams, a nonprofit providing comfortable living spaces to those in need through donated bedroom furnishings",
+      "Founder and CEO of a successful cosmetology business",
+      "Membership Chair of the Spelman Society of Cosmetics",
+    ],
+    education: "Spelman College, Sophomore, Economics with a minor in Management and Organization",
+    socialMedia: {
+      ig: "https://www.instagram.com/svryah/",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/suryah-mathurin-8b85b1383",
+      facebook: "N/A",
+      email: "suryah@wearebyen.org",
+    },
+    gallery: ["/IMG_3554 - suryah.png"],
+  },
+  {
+    id: "jasmin-prothro",
+    image: "/IMG_6641 - Jasmin Prothro.jpeg",
+    name: "Jasmin Prothro",
+    title: "National Program Coordinator",
+    status: "director",
+    department: "Programming",
+    longBio:
+      "Jasmin Prothro is a Senior at Alabama A&M University majoring in Accounting. As National Program Coordinator, she supports BYEN's national programming initiatives.",
+    empowermentQuote:
+      "Empowering Black youth means creating an environment where young people feel confident in their identity, recognize their potential, and have access to the resources and opportunities needed to succeed. It means more than simply encouraging youth; it means providing mentorship, education, leadership opportunities, and spaces where their voices are valued.",
+    achievements: [
+      "National Program Coordinator for BYEN",
+      "Financial Secretary, Gamma Mu Chapter of Alpha Kappa Alpha Sorority, Inc.",
+      "Thurgood Marshall College Fund Scholar",
+      "Alabama A&M University Honors Program",
+    ],
+    education: "Alabama A&M University, Senior, Accounting",
+    socialMedia: {
+      ig: "https://www.instagram.com/_jasmindeneane?igsi=MTZrdXU0ZnlkbGxvaw%3D%3D&utm_source=qr",
+      x: "N/A",
+      linkedIn: "https://www.linkedin.com/in/jasmin-prothro-99376032a?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+      facebook: "N/A",
+      email: "jasmin@wearebyen.org",
+    },
+    gallery: [
+      "/IMG_6641 - Jasmin Prothro.jpeg",
+      "/IMG_9249 - Jasmin Prothro.jpeg",
+    ],
+  },
 ];
 
 export default leaders;
