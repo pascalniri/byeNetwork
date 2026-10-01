@@ -71,7 +71,7 @@ const Spotlights = () => {
         </div>
       </div>
 
-      {/* BYEN Community Safety Fellowship CTA */}
+      {/* 478 to SpelHouse CTA */}
       <div className="container mx-auto px-4 sm:px-6 md:px-10 mt-5 sm:mt-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 20 }}
@@ -82,24 +82,24 @@ const Spotlights = () => {
         >
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-white/80">
-              Now Accepting Applications
+              478 to SpelHouse
             </span>
             <h3 className="text-xl sm:text-2xl font-bold uppercase mt-1 mb-2">
-              BYEN Community Safety Fellowship
+              The College Exposure Experience
             </h3>
             <p className="text-sm text-white/90 leading-relaxed max-w-xl">
-              A four-week leadership development experience equipping emerging leaders to advance community
-              safety, address gun violence, and explore community violence intervention strategies — with
-              virtual learning and an in-person convening in Memphis, Tennessee.
+              Join Black Youth Empowerment Network &amp; Overcame &amp; Overcoming on October 15 for a college
+              exposure experience at Morehouse College and Spelman College. Explore campus life, connect with
+              current students, and discover new possibilities for your future.
             </p>
           </div>
           <a
-            href="https://forms.gle/WHFqdcfXMNkBsJ5N6"
+            href="https://forms.gle/ojdxbQBpZkVGjiLA6"
             target="_blank"
             rel="noopener noreferrer"
             className="notch-md flex-shrink-0 inline-flex items-center gap-2 bg-white text-brand-chili hover:bg-brand-brown hover:text-white font-semibold uppercase tracking-wide text-xs py-3 px-6 transition-colors duration-200"
           >
-            Apply Now
+            Learn More &amp; Register
             <FiArrowRight className="w-3.5 h-3.5" />
           </a>
         </motion.div>

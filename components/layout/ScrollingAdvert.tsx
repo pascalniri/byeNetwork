@@ -7,16 +7,16 @@ const AdvertBar = () => (
     {[1, 2, 3, 4, 5].map((i) => (
       <div key={i} className="flex items-center space-x-8">
         <span className="font-semibold text-xs tracking-wide">
-          BYEN Community Safety Fellowship • Now Accepting Applications • Four-Week Leadership Program on
-          Community Safety &amp; Gun Violence Prevention •{" "}
+          478 to SpelHouse: The College Exposure Experience • Join BYEN &amp; Overcame &amp; Overcoming on October
+          15 at Morehouse College and Spelman College •{" "}
         </span>
         <a
-          href="https://forms.gle/WHFqdcfXMNkBsJ5N6"
+          href="https://forms.gle/ojdxbQBpZkVGjiLA6"
           target="_blank"
           rel="noopener noreferrer"
           className="notch-sm bg-brand-chili hover:bg-brand-lime text-white hover:text-brand-brown px-4 py-1 text-xs font-semibold uppercase tracking-widest transition-colors duration-150"
         >
-          Apply Now
+          Learn More &amp; Register
         </a>
       </div>
     ))}

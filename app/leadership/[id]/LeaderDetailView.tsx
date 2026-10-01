@@ -32,7 +32,7 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
   }
 
   const gallery = leader.gallery?.length ? leader.gallery : [leader.image];
-  const isTrustee = leader.status === "trustee";
+  const isBoardMember = leader.status === "trustee";
   const router = useRouter();
   return (
     <div className="lg:flex lg:min-h-screen">
@@ -48,10 +48,10 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
         <div className="absolute inset-0 bg-gradient-to-t from-brand-brown via-brand-brown/20 to-transparent" />
 
         <Link
-          href={isTrustee ? "/board-of-directors" : "/leadership"}
+          href={isBoardMember ? "/board-of-directors" : "/leadership"}
           className="absolute top-6 left-6 notch-sm inline-flex items-center gap-2 bg-white/90 backdrop-blur text-brand-brown text-xs font-semibold uppercase tracking-wide px-4 py-2 hover:bg-white transition-colors"
         >
-          <BsArrowLeft /> {isTrustee ? "Board of Directors" : "Leadership"}
+          <BsArrowLeft /> {isBoardMember ? "Board of Directors" : "Leadership"}
         </Link>
 
         <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10 text-white">
@@ -191,7 +191,7 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
             onClick={() => router.back()}
             className="notch-md inline-flex items-center gap-2 bg-brand-brown hover:bg-brand-chili text-white text-xs font-semibold uppercase tracking-wide py-3 px-6 transition-colors"
           >
-            {isTrustee ? "Meet the Rest of the Board" : "Meet the Rest of the Team"}
+            {isBoardMember ? "Meet the Rest of the Board" : "Meet the Rest of the Team"}
             <FiArrowRight />
           </button>
         </div>
