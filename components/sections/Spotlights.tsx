@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiArrowRight } from "react-icons/fi";
 import { FaAward, FaStar } from "react-icons/fa";
 
 const Spotlights = () => {
@@ -69,40 +68,6 @@ const Spotlights = () => {
             </div>
           </motion.div>
         </div>
-      </div>
-
-      {/* 478 to SpelHouse CTA */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-10 mt-5 sm:mt-8">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ type: "spring", stiffness: 260, damping: 20 }}
-          className="notch-lg bg-brand-chili text-white p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6"
-        >
-          <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-white/80">
-              478 to SpelHouse
-            </span>
-            <h3 className="text-xl sm:text-2xl font-bold uppercase mt-1 mb-2">
-              The College Exposure Experience
-            </h3>
-            <p className="text-sm text-white/90 leading-relaxed max-w-xl">
-              Join Black Youth Empowerment Network &amp; Overcame &amp; Overcoming on October 15 for a college
-              exposure experience at Morehouse College and Spelman College. Explore campus life, connect with
-              current students, and discover new possibilities for your future.
-            </p>
-          </div>
-          <a
-            href="https://forms.gle/ojdxbQBpZkVGjiLA6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="notch-md flex-shrink-0 inline-flex items-center gap-2 bg-white text-brand-chili hover:bg-brand-brown hover:text-white font-semibold uppercase tracking-wide text-xs py-3 px-6 transition-colors duration-200"
-          >
-            Learn More &amp; Register
-            <FiArrowRight className="w-3.5 h-3.5" />
-          </a>
-        </motion.div>
       </div>
     </div>
   );
