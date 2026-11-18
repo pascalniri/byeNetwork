@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 
 const AnimatedText = ({
@@ -63,26 +64,40 @@ const BackgroundSlideshow = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const nextSlide = (currentSlide + 1) % backgroundImages.length;
+
   return (
-    <div className="absolute inset-0 w-full h-full z-[-2] pointer-events-none select-none overflow-hidden">
-      {backgroundImages.map((image, index) => (
+    <div className="absolute inset-0 w-full h-full z-[-2] pointer-events-none select-none overflow-hidden" aria-hidden="true">
+      {/* Only the visible slide is mounted, plus a hidden copy of the one after it
+          (below) so it is already cached when the crossfade starts. Mounting all
+          six at once made every visitor download the whole set up front. */}
+      <AnimatePresence initial={false}>
         <motion.div
-          key={index}
+          key={currentSlide}
           className="absolute inset-0 w-full h-full"
           initial={{ opacity: 0 }}
-          animate={{ opacity: index === currentSlide ? 1 : 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          {/* Brand photography direction: high-contrast duotone, not full color */}
-          <img
-            src={image}
-            alt={`Background ${index + 1}`}
-            className="w-full h-full object-cover"
-            style={{ filter: "grayscale(1) contrast(1.15) brightness(0.85)" }}
+          {/* Brand photography direction: high-contrast duotone, not full color.
+              The grayscale/contrast treatment is baked into the JPEGs themselves
+              instead of a CSS filter, which was expensive to repaint every frame. */}
+          <Image
+            src={backgroundImages[currentSlide]}
+            alt=""
+            fill
+            priority={currentSlide === 0}
+            sizes="100vw"
+            className="object-cover"
             draggable={false}
           />
         </motion.div>
-      ))}
+      </AnimatePresence>
+
+      <div className="absolute inset-0 w-full h-full opacity-0">
+        <Image src={backgroundImages[nextSlide]} alt="" fill loading="eager" sizes="100vw" className="object-cover" />
+      </div>
 
       {/* Brown duotone wash over the grayscale photos, heavier on the left where the headline sits */}
       <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-80" />

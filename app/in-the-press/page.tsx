@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import PageHero from "@/components/layout/PageHero";
@@ -7,7 +8,7 @@ import PageHero from "@/components/layout/PageHero";
 const news = [
   {
     id: 1,
-    image: "/atlanta-news.png",
+    image: "/atlanta-news.jpg",
     title: "Black Youth Empowerment Network Featured on Atlanta News First",
     description:
       "Founder Jay'Shun Mathews recently appeared on Atlanta News First to represent the Black Youth Empowerment Network, using his voice to shed light on the ongoing gun violence epidemic affecting communities across the country. During the segment, he spoke passionately about the importance of youth-led advocacy and raised awareness about a powerful event organized by the Network in partnership with Students Demand Action. The event served as both a call to action and a safe space for young people to unite, heal, and demand change. Jay'Shun's appearance underscores BYEN's unwavering commitment to empowering Black youth to lead movements that address urgent social issues and reimagine a safer, more just future.",
@@ -69,11 +70,13 @@ export default function InThePress() {
               key={newsItem.id}
               className="notch-lg bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col"
             >
-              <div className="h-[240px] overflow-hidden flex-shrink-0">
-                <img
+              <div className="relative h-[240px] overflow-hidden flex-shrink-0">
+                <Image
                   src={newsItem.image}
                   alt={newsItem.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="flex flex-col p-6 flex-grow">

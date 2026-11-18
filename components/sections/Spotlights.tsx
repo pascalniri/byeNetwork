@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaAward, FaStar } from "react-icons/fa";
 
@@ -17,10 +18,12 @@ const Spotlights = () => {
             className="notch-lg bg-brand-brown text-white overflow-hidden flex"
           >
             <div className="w-28 sm:w-36 flex-shrink-0 relative">
-              <img
+              <Image
                 src="/images/image7.jpg"
                 alt="BYEN House at Morehouse College"
-                className="w-full h-full object-cover"
+                fill
+                sizes="144px"
+                className="object-cover"
               />
             </div>
             <div className="p-5 sm:p-6 flex flex-col justify-center min-w-0">
@@ -46,10 +49,12 @@ const Spotlights = () => {
             className="notch-lg bg-brand-cream overflow-hidden flex"
           >
             <div className="w-28 sm:w-36 flex-shrink-0 relative">
-              <img
+              <Image
                 src="/ethan.jpeg"
                 alt="Ethan Ipaye"
-                className="w-full h-full object-cover"
+                fill
+                sizes="144px"
+                className="object-cover"
               />
             </div>
             <div className="p-5 sm:p-6 flex flex-col justify-center min-w-0">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BsArrowLeft, BsX, BsFacebook, BsTwitterX } from "react-icons/bs";
@@ -38,11 +39,14 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
     <div className="lg:flex lg:min-h-screen">
       {/* Photo panel */}
       <div className="relative lg:w-2/5 lg:h-screen lg:sticky lg:top-0 h-[70vh] sm:h-[80vh]">
-        <img
+        <Image
           src={activeImage}
           alt={leader.name}
           onClick={() => setIsModalOpen(true)}
-          className="w-full h-full object-cover object-center cursor-zoom-in"
+          fill
+          priority
+          sizes="(min-width: 1024px) 40vw, 100vw"
+          className="object-cover object-center cursor-zoom-in"
           style={{ filter: "grayscale(0.15) contrast(1.05)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-brown via-brand-brown/20 to-transparent" />
@@ -99,8 +103,8 @@ export default function LeaderDetailView({ leader }: { leader: Leader | null }) 
                     img === activeImage ? "bg-brand-lime" : "bg-white/30 hover:bg-white/70"
                   }`}
                 >
-                  <div className="notch-sm-inner w-full h-full overflow-hidden">
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                  <div className="notch-sm-inner relative w-full h-full overflow-hidden">
+                    <Image src={img} alt="" fill sizes="48px" className="object-cover" />
                   </div>
                 </button>
               ))}

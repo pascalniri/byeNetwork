@@ -1,17 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import PageHero from "@/components/layout/PageHero";
 
 const images = [
-  { id: 1, src: "/1.jpeg", alt: "Team member 1" },
-  { id: 2, src: "/2.jpg", alt: "Team member 2" },
-  { id: 3, src: "/3.jpg", alt: "Team member 3" },
-  { id: 4, src: "/4.jpg", alt: "Team member 4" },
-  { id: 5, src: "/5.jpg", alt: "Team member 5" },
-  { id: 6, src: "/6.jpg", alt: "Team member 6" },
-  { id: 7, src: "/7.jpg", alt: "Team member 7" },
+  { id: 1, src: "/1.jpeg", alt: "Team member 1", width: 1600, height: 1067 },
+  { id: 2, src: "/2.jpg", alt: "Team member 2", width: 1440, height: 1748 },
+  { id: 3, src: "/3.jpg", alt: "Team member 3", width: 1440, height: 1799 },
+  { id: 4, src: "/4.jpg", alt: "Team member 4", width: 1318, height: 1600 },
+  { id: 5, src: "/5.jpg", alt: "Team member 5", width: 1440, height: 1748 },
+  { id: 6, src: "/6.jpg", alt: "Team member 6", width: 1440, height: 1799 },
+  { id: 7, src: "/7.jpg", alt: "Team member 7", width: 1440, height: 1799 },
 ];
 
 export default function Gallery() {
@@ -35,7 +36,14 @@ export default function Gallery() {
               onClick={() => setSelectedId(image.id)}
               className="cursor-pointer notch-md overflow-hidden shadow-lg"
             >
-              <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           ))}
         </div>
