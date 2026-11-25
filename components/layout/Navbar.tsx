@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
@@ -272,9 +273,13 @@ const Navbar = () => {
         <nav className="bg-brand-cream">
           <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 flex items-stretch justify-between w-full h-[76px] sm:h-[88px]">
             <Link href="/" className="flex items-center my-auto">
-              <img
+              <Image
                 src="/branding/02_ Logos/Stacked Logo/PNG/Logo_Stacked_DarkBrown.png"
                 alt="Black Youth Empowerment Network"
+                width={883}
+                height={356}
+                priority
+                sizes="140px"
                 className="h-12 sm:h-14 w-auto object-contain"
               />
             </Link>

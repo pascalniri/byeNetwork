@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube, FaLinkedin } from "react-icons/fa";
@@ -51,9 +52,12 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-12 md:gap-0">
         <div className="flex-1 min-w-[220px] flex flex-col gap-4 md:pr-8">
           <Link href="/" className="w-fit">
-            <img
+            <Image
               src="/branding/02_ Logos/Stacked Logo/PNG/Logo_Stacked_Cream.png"
               alt="Black Youth Empowerment Network"
+              width={884}
+              height={356}
+              sizes="140px"
               className="h-14 w-auto object-contain"
             />
           </Link>

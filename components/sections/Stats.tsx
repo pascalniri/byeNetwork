@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -66,10 +67,12 @@ export default function Stats() {
       <div className="grid lg:grid-cols-2">
         {/* Photo side */}
         <div className="relative h-64 sm:h-80 lg:h-auto min-h-[320px]">
-          <img
+          <Image
             src="/collaboration.jpg"
             alt="BYEN members collaborating"
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
             style={{ filter: "grayscale(1) contrast(1.1) brightness(0.9)" }}
           />
           <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-60" />

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const fadeFromLeft = {
@@ -44,10 +45,13 @@ const About = () => {
           >
             <div className="hidden sm:block absolute -left-4 -top-4 w-24 h-24 bg-brand-yellow notch-sm rotate-6" />
             <div className="relative notch-lg overflow-hidden shadow-xl">
-              <img
+              <Image
                 src="/aboutImg.jpg"
                 alt="BYEN members at a community event"
-                className="w-full h-full object-cover"
+                width={1600}
+                height={1442}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="w-full h-auto object-cover"
                 style={{ filter: "grayscale(1) contrast(1.1) brightness(0.95)" }}
               />
               <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-40" />

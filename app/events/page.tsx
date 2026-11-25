@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import PageHero from "@/components/layout/PageHero";
 
@@ -48,7 +49,7 @@ const eventsJanMay2025: Event[] = [
       "Through our partnership with Students Demand Action, members of the Black Youth Empowerment Network took bold steps to advocate for stronger gun safety laws, using their voices and stories to push for change in communities that are too often overlooked.",
   },
   {
-    image: "/financial-literacy.png",
+    image: "/financial-literacy.jpg",
     title: "Financial Literacy 101 Ft. Luvswallet",
     date: "2025-02-06",
     time: "6:00 pm - 8:00 pm (EDT)",
@@ -56,7 +57,7 @@ const eventsJanMay2025: Event[] = [
       "Black Youth Empowerment Network is thrilled to present Financial Literacy 101, featuring insights and actionable advice from the expert LuvsWallet. Whether you're a budgeting beginner or looking to grow your wealth, this event is tailored to equip you with the tools and knowledge to make smart money moves.",
   },
   {
-    image: "/hot-coco-run.png",
+    image: "/hot-coco-run.jpg",
     title: "Hot Coco Run",
     date: "2025-01-31",
     time: "9:00 am - 12:00 pm (EDT)",
@@ -92,12 +93,13 @@ const EventCard = ({ event }: { event: Event }) => {
       variants={fadeIn}
       className="flex flex-col notch-lg bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
-      <div className="h-[200px] overflow-hidden">
-        <img
+      <div className="relative h-[200px] overflow-hidden">
+        <Image
           src={event.image}
           alt={event.title}
-          className="h-full w-full object-cover transform hover:scale-105 transition-transform duration-500"
-          loading="lazy"
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="object-cover transform hover:scale-105 transition-transform duration-500"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">

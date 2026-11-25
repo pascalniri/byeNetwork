@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import type { PageHeroAccent } from "./PageHero";
 
@@ -33,11 +34,14 @@ export default function PhotoPageHero({
 
   return (
     <section className="relative w-full h-[46vh] sm:h-[52vh] min-h-[340px] sm:min-h-[400px] overflow-hidden">
-      <img
+      <Image
         src={image}
         alt=""
         aria-hidden
-        className="absolute inset-0 w-full h-full object-cover"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
         style={{ objectPosition: imagePosition, filter: "grayscale(1) contrast(1.1) brightness(0.85)" }}
       />
       <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-80" />

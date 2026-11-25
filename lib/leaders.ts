@@ -137,7 +137,7 @@ const leaders: Leader[] = [
   },
   {
     id: "olivia-robinson",
-    image: "/AEBA149A-ED58-4696-92DB-4C70884761CC - Olivia Robinson.png",
+    image: "/AEBA149A-ED58-4696-92DB-4C70884761CC - Olivia Robinson.jpg",
     name: "Olivia Robinson",
     title: "National Director of Membership & Network Engagement",
     status: "director",
@@ -162,13 +162,13 @@ const leaders: Leader[] = [
       email: "olivia@wearebyen.org",
     },
     gallery: [
-      "/AEBA149A-ED58-4696-92DB-4C70884761CC - Olivia Robinson.png",
+      "/AEBA149A-ED58-4696-92DB-4C70884761CC - Olivia Robinson.jpg",
       "/IMG_4974 - Olivia Robinson.jpeg",
     ],
   },
   {
     id: "jordan-fischer",
-    image: "/Jordan Fischer Headshot - Jordan Fischer.PNG",
+    image: "/Jordan Fischer Headshot - Jordan Fischer.jpg",
     name: "Jordan Fischer",
     title: "Director of Policy and Civic Engagement",
     status: "director",
@@ -191,7 +191,7 @@ const leaders: Leader[] = [
       facebook: "N/A",
       email: "jordan@wearebyen.org",
     },
-    gallery: ["/Jordan Fischer Headshot - Jordan Fischer.PNG"],
+    gallery: ["/Jordan Fischer Headshot - Jordan Fischer.jpg"],
   },
   {
     id: "alex-chambers",
@@ -291,7 +291,7 @@ const leaders: Leader[] = [
   },
   {
     id: "suryah-mathurin",
-    image: "/IMG_3554 - suryah.png",
+    image: "/IMG_3554 - suryah.jpg",
     name: "Suryah Mathurin",
     title: "National Director of Programming",
     status: "director",
@@ -314,7 +314,7 @@ const leaders: Leader[] = [
       facebook: "N/A",
       email: "suryah@wearebyen.org",
     },
-    gallery: ["/IMG_3554 - suryah.png"],
+    gallery: ["/IMG_3554 - suryah.jpg"],
   },
   {
     id: "jasmin-prothro",

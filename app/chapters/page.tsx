@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
@@ -44,10 +45,13 @@ export default function OurChapters() {
     <div>
       {/* Hero */}
       <section className="relative w-full h-[56vh] sm:h-[64vh] min-h-[380px] sm:min-h-[440px] overflow-hidden">
-        <img
+        <Image
           src="/community.jpg"
           alt="BYEN members connecting on campus"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
           style={{ filter: "grayscale(1) contrast(1.1) brightness(0.85)" }}
         />
         <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-80" />
@@ -152,10 +156,12 @@ export default function OurChapters() {
 
       {/* Closing CTA band */}
       <section className="relative w-full py-20 sm:py-28 overflow-hidden">
-        <img
+        <Image
           src="/join.jpg"
           alt="BYEN members"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          fill
+          sizes="100vw"
+          className="object-cover object-top"
           style={{ filter: "grayscale(1) contrast(1.1) brightness(0.7)" }}
         />
         <div className="absolute inset-0 bg-brand-brown/85" />

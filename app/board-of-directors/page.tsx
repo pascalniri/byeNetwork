@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import PageHero from "@/components/layout/PageHero";
@@ -29,8 +30,8 @@ export default function BoardOfDirectors() {
         <div className="flex flex-wrap justify-center gap-x-12 gap-y-14">
           {boardMembers.map((member) => (
             <div key={member.id} className="w-full sm:w-72 flex flex-col items-center text-center">
-              <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden border-4 border-brand-cream shadow-md">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+              <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden border-4 border-brand-cream shadow-md">
+                <Image src={member.image} alt={member.name} fill sizes="208px" className="object-cover object-top" />
               </div>
               <h3 className="text-base sm:text-lg font-bold uppercase text-brand-brown mt-6">{member.name}</h3>
               <p className="text-sm text-brand-chili font-semibold mt-1 mb-4">{member.title}</p>

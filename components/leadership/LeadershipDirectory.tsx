@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { BsFacebook, BsTwitterX } from "react-icons/bs";
@@ -102,10 +103,12 @@ export default function LeadershipDirectory({ activeRole }: { activeRole: string
                   >
                     <div className="notch-lg-inner bg-white overflow-hidden grid md:grid-cols-2">
                       <div className="relative h-[280px] md:h-full min-h-[320px] overflow-hidden">
-                        <img
+                        <Image
                           src={spotlight.image}
                           alt={spotlight.name}
-                          className="w-full h-full object-cover"
+                          fill
+                          sizes="(min-width: 768px) 50vw, 100vw"
+                          className="object-cover"
                           style={{ filter: "grayscale(0.3) contrast(1.05)" }}
                         />
                         <div className="absolute inset-0 bg-brand-brown mix-blend-multiply opacity-20" />
@@ -184,8 +187,8 @@ export default function LeadershipDirectory({ activeRole }: { activeRole: string
                             person.id === spotlight.id ? "bg-brand-chili" : "bg-transparent"
                           }`}
                         >
-                          <div className="notch-sm-inner w-full h-full overflow-hidden">
-                            <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                          <div className="notch-sm-inner relative w-full h-full overflow-hidden">
+                            <Image src={person.image} alt={person.name} fill sizes="96px" className="object-cover" />
                           </div>
                         </div>
                         <p className="text-[11px] font-semibold text-brand-brown/70 mt-2 text-center leading-tight line-clamp-2">

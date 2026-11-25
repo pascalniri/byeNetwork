@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -7,7 +8,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 const news = [
   {
     tag: "TV Feature",
-    image: "/atlanta-news.png",
+    image: "/atlanta-news.jpg",
     title: "Black Youth Empowerment Network Featured on Atlanta News First",
     description:
       "Founder Jay'Shun Mathews appeared on Atlanta News First to shed light on the ongoing gun violence epidemic affecting communities across the country, spotlighting a powerful youth-led advocacy event held in partnership with Students Demand Action.",
@@ -76,10 +77,12 @@ const Latest = () => {
             transition={{ duration: 0.6 }}
             className="group relative lg:col-span-3 notch-lg overflow-hidden shadow-xl min-h-[380px] sm:min-h-[440px] flex flex-col justify-end"
           >
-            <img
+            <Image
               src={news[0].image}
               alt={news[0].title}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              fill
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-brown via-brand-brown/60 to-transparent" />
 
@@ -111,11 +114,13 @@ const Latest = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="group relative lg:col-span-2 notch-lg overflow-hidden shadow-xl bg-brand-cream flex flex-col"
           >
-            <div className="h-44 sm:h-48 overflow-hidden">
-              <img
+            <div className="relative h-44 sm:h-48 overflow-hidden">
+              <Image
                 src={news[1].image}
                 alt={news[1].title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="p-6 sm:p-7 flex flex-col flex-1">
